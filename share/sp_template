@@ -1,0 +1,10 @@
+--Link1--
+%chk= 
+#level2 
+geom=check
+guess=read
+
+sp calc
+
+charge mult
+

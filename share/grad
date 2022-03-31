@@ -1,0 +1,12 @@
+my_result := gradient(
+  structure(
+  file='grad.xyz'
+  charge = carga
+  )
+  print_level = 1
+  xtb(
+  fock_damping = 0.9
+  fock_damping_gradient_threshold = 0.3
+  ) 
+)
+

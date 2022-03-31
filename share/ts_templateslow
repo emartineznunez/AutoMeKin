@@ -1,0 +1,3 @@
+ts recalc=10 method precise cycles=1000 t=500 ddmax=0.2 denout
+title
+title

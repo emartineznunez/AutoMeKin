@@ -1,0 +1,21 @@
+--General--
+molecule  FA
+LowLevel  mopac pm7 
+HighLevel g09 b3lyp/6-31g*//mpwb95/6-31G*
+HL_rxn_network complete
+iop iop(3/76=0560004400)
+charge 0
+mult   1
+
+--Method--
+sampling external 
+ntraj    10
+
+--Screening--
+imagmin 200
+MAPEmax 1e-4
+BAPEmax 1 
+eigLmax 0.1
+
+--Kinetics--
+Energy 150

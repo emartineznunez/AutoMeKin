@@ -1,0 +1,22 @@
+my_result := optimize(
+  structure(
+  file = 'min.xyz'
+  charge = carga
+  )
+  xyz_output = 'min_opt.xyz'
+  xtb(
+  fock_damping = 0.9
+  fock_damping_gradient_threshold = 0.3
+  )
+)
+my_result := hessian(
+  structure(
+  file = 'min_opt.xyz'
+  charge = carga
+  )
+  save_normal_modes = 'freq.molden'
+  xtb(
+  fock_damping = 0.9
+  fock_damping_gradient_threshold = 0.3
+  )
+)

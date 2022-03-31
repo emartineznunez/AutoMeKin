@@ -1,0 +1,9 @@
+%mem=MemGB
+#level1 
+opt=(ts,noeigentest,calcall,noraman) iop
+temperature=tkmc
+IOP(2/17=4) pseudo
+
+ts search
+
+charge mult

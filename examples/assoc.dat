@@ -1,0 +1,14 @@
+--General--
+molecule  Bz-N2
+fragmentA Bz
+fragmentB N2
+
+--Method--
+sampling association
+rotate   com com 4.0 1.5
+Nassoc   20
+
+--Screening--
+MAPEmax 0.0001	
+BAPEmax 0.5
+eigLmax 0.01		

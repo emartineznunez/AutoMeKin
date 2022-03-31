@@ -1,0 +1,15 @@
+my_result := optimize(
+  structure(
+  file = 'min.xyz'
+  charge = carga
+  )
+  xyz_output = 'min_opt.xyz'
+  gradient_max = 5e-2
+  gradient_rms = 5e-2
+  translation(atoms=[labels]
+           frozen = true)
+  xtb(
+  fock_damping = 0.9
+  fock_damping_gradient_threshold = 0.3
+  )
+)

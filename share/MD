@@ -1,0 +1,15 @@
+my_result := aimd(
+  structure(
+  file = 'opt_start.xyz'
+  charge = carga
+  )
+  n_steps = 500
+  velocities (file = 'v0')
+  save_to_file = true
+  output_coordinates = 'traj'
+  xtb(
+  fock_damping = 0.9
+  fock_damping_gradient_threshold = 0.3
+  ) 
+)
+

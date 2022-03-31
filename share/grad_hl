@@ -1,0 +1,9 @@
+my_result := gradient(
+  structure(
+  file='tag.xyz'
+  charge = carga
+  )
+  print_level = 1
+  dft
+)
+

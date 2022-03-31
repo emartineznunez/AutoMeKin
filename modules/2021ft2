@@ -1,0 +1,49 @@
+#%Module1.0#####################################################################
+
+#module dependencies ####################
+#Carga de modulos de otras aplicaciones necesarias (por ej mopac)
+module load g09 gnuplot parallel anaconda2 sqlite/3.11.0 molden
+#########################################
+
+#Application/version ####################
+set curMod [module-info name]
+set app [lrange [split $curMod "/"] 0 0]
+set version [lrange [split $curMod "/"] 1 1]
+#set *** ***
+#########################################
+
+set rootdir [string range $ModulesCurrentModulefile 0 [expr {[string first "modules" $ModulesCurrentModulefile]-2}]]
+
+proc ModulesHelp { } {
+global app version curMod rootdir ModulesCurrentModulefile
+
+puts stderr "\t${app} \n\tVersion $version\n"
+}
+
+module-whatis "Loads $curMod (use help for more info)"
+
+
+#basedir ################################
+set modroot $rootdir
+#########################################
+
+#specific variables ####################
+## setting variables used in AMK
+#export AMK=/home/usc/qf/emn/Programs/TSSCDS1.1
+#export PATH=${AMK}/bin:${TSSCDS}/bin/CATscripts:${TSSCDS}/bin/HLscripts:$PATH
+prepend-path PATH $modroot/bin:$modroot/bin/CATscripts:$modroot/bin/HLscripts:$modroot/bin/MOPAC_DEV
+prepend-path LD_LIBRARY_PATH $modroot/lib:$modroot/bin/MOPAC_DEV
+#prepend-path LIBRARY_PATH $modroot/lib
+#prepend-path LD_RUN_PATH $modroot/lib
+#prepend-path CMAKE_LIBRARY_PATH $modroot/lib
+#prepend-path INCLUDE $modroot/include
+#prepend-path CPATH $modroot/include
+#prepend-path FPATH $modroot/include
+#prepend-path CMAKE_INCLUDE_PATH $modroot/include
+prepend-path MANPATH $modroot/share/man
+prepend-path INFOPATH $modroot/share/info
+#prepend-path PKG_CONFIG_PATH $modroot/lib/pkgconfig
+
+#variables específicas
+setenv AMK $modroot
+#########################################

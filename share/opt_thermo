@@ -1,0 +1,16 @@
+hess := hessian(
+  structure(
+  file = 'opt.xyz'
+  charge = carga
+  )
+  save_normal_modes = 'freq.molden'
+  xtb(
+  fock_damping = 0.9
+  fock_damping_gradient_threshold = 0.3
+  )
+)
+my_result := thermodynamics(
+  structure(load = hess)
+  load = hess
+  temperature = temp_amk kelvin
+)

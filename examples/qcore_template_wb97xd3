@@ -1,0 +1,10 @@
+  dft(
+  grid(
+  batching_scheme = octree
+  neese = 7
+  )
+  xc = wb97XD3
+  ao = 'Def2-TZVP'
+  df = 'Def2-TZVP-JFIT'
+  ansatz = u
+  )
