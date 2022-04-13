@@ -24,7 +24,6 @@ cccc
       write(6,1) (d(ii),ii=1,natom)
 
 1     format(90f8.3)
-      stop
       end
 
 
