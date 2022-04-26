@@ -100,14 +100,19 @@ echo "Now running the IRCs"
 ##
 m=0
 sqlite3 ${tsdirhl}/IRC/inputs.db "drop table if exists gaussian; create table gaussian (id INTEGER PRIMARY KEY,name TEXT, input TEXT, unique (name));"
-for i in $(sqlite3 $tsdirhl/TSs/tshl.db "select name from tshl")
+for i in $(sqlite3 ${tsdirhl}/TSs/tshl.db "select name from tshl")
 do
-  en_ts=$(sqlite3 $tsdirhl/TSs/tshl.db "select energy,g from tshl where name='$i'" | sed 's@|@ @g' | awk '{printf "%20.10f\n",$1+$2}')
+  en_ts=$(sqlite3 ${tsdirhl}/TSs/tshl.db "select energy,g from tshl where name='$i'" | sed 's@|@ @g' | awk '{printf "%20.10f\n",$1+$2}')
   deltg="$(echo "$en_min0" "$en_ts" | awk '{printf "%20.10f\n",($2-$1)*627.51}')"
   res=$(echo "$deltg < $maxen" | bc )
-  if [ -f $tsdirhl/IRC/ircf_$i.log ] && [ -f $tsdirhl/IRC/ircr_$i.log ]; then
+  #if gaussian's irc is not complete, remove output 
+  if [ -f ${tsdirhl}/IRC/ircf_${i}.log ] && [ -f ${tsdirhl}/IRC/ircr_${i}.log ]; then  
+    if [ $(awk 'BEGIN{c=0};/Job /{c=1};END{print c}' ${tsdirhl}/IRC/ircf_${i}.log) -eq 0 ]; then rm -rf ${tsdirhl}/IRC/ircf_${i}.* ; fi
+    if [ $(awk 'BEGIN{c=0};/Job /{c=1};END{print c}' ${tsdirhl}/IRC/ircr_${i}.log) -eq 0 ]; then rm -rf ${tsdirhl}/IRC/ircr_${i}.* ; fi
+  fi
+  if [ -f ${tsdirhl}/IRC/ircf_${i}.log ] && [ -f ${tsdirhl}/IRC/ircr_${i}.log ]; then
     echo "IRC completed for $i"
-  elif [ -f $tsdirhl/IRC/irc_$i.log ]; then
+  elif [ -f ${tsdirhl}/IRC/irc_${i}.log ]; then
     echo "IRC completed for $i"
   elif [ $res -eq 0 ]; then
     echo "The energy of TS $i is: $deltg, which is greater than the threshold: $maxen" 
