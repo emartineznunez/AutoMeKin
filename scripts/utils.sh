@@ -362,7 +362,7 @@ function read_input {
    HLstring="$(echo "$HLstring0" | sed 's@//@ @')"
    reduce=$(awk 'BEGIN{red=-1};{if($1=="HL_rxn_network") {if($2=="complete") red=0;if($2=="reduced" && NF==3) red=$3}};END{print red}' $inputfile)
    noHLcalc=$(echo $HLstring | awk 'BEGIN{nc=0};{nc=NF};END{print nc}')
-   IRCpoints=$(awk 'BEGIN{if("'$program_opt'"~/g[01][96]/)np=100;if("'$program_hl'"=="qcore")np=500};{if($1=="IRCpoints") np=$2};END{print np}' $inputfile)
+   IRCpoints=$(awk 'BEGIN{if("'$program_hl'"~/g[01][96]/)np=100;if("'$program_hl'"=="qcore")np=500};{if($1=="IRCpoints") np=$2};END{print np}' $inputfile)
    iop=$(awk '{if($1=="iop") print $2}' $inputfile)
    mem=$(awk 'BEGIN{mem=1};{if($1=="Memory") mem=$2};END{print mem}' $inputfile)
    pseudo=$(awk '{if($1=="pseudo") print "pseudo=read" }' $inputfile)
@@ -885,7 +885,7 @@ if [ ! -f ${molecule}_freq.out ]; then
          echo "The input structure could not be optimized. Check your XYZ file"
          exit
       else
-         mv min_opt.xyz opt_start.xyz
+         awk 'NR!=2{print $0};NR==2{print ""}' min_opt.xyz> opt_start.xyz
          cat opt_start.xyz >> ${molecule}_freq.out
       fi
    elif [ "$program_md" = "xtb" ]; then
@@ -1118,8 +1118,8 @@ function g09_input {
    elif [ "$calc" = "min" ]; then
       cal="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/ts,noeigentest,//;s/tkmc/'$temperature'/;s@level1@'$levelc'@;s/charge/'$charge'/;s/mult/'$mult'/;s@iop@'$iop'@' $sharedir/hl_input_template)"
    elif [ "$calc" = "irc" ]; then
-      mv $tsdirhl"/IRC/"$i".chk" $tsdirhl"/IRC/ircf_"$i".chk"
-      cp $tsdirhl"/IRC/ircf_"$i".chk" $tsdirhl"/IRC/ircr_"$i".chk"
+      cp ${tsdirhl}/${i}.chk ${tsdirhl}/IRC/ircf_${i}.chk
+      cp ${tsdirhl}/${i}.chk ${tsdirhl}/IRC/ircr_${i}.chk
       #if imag <100 then stepsize=30
       imag=$(awk 'BEGIN{fl=0};/Frequencies/{f0=$3;f=sqrt(f0*f0);if(f<100)fl=1;print fl ;exit}' $tsdirhl/$i.log )
       if [ $imag -eq 1 ] ; then
@@ -1339,8 +1339,8 @@ if [ ! -d "$tsdirhl/TSs" ]; then
 else
    echo "$tsdirhl/TSs already exists"
 fi
-if [ "$program_hl" = "g09" ];then  cp $tsdirhl/ts*.chk $tsdirhl/IRC ; fi
-if [ "$program_hl" = "g16" ];then  cp $tsdirhl/ts*.chk $tsdirhl/IRC ; fi
+#if [ "$program_hl" = "g09" ];then  cp $tsdirhl/ts*.chk $tsdirhl/IRC ; fi
+#if [ "$program_hl" = "g16" ];then  cp $tsdirhl/ts*.chk $tsdirhl/IRC ; fi
 if [ -f "black_list.dat" ]; then rm black_list.dat; fi
 if [ -f "black_list.out" ]; then rm black_list.out; fi
 echo "List of disconnected (at least two fragments) TS structures" > $tsdirhl/TSs/tslist_disconnected
