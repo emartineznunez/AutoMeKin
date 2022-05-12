@@ -66,8 +66,10 @@ for sign in range(-1,3,2):
     write(gradxyz,rmol)
     if sign == -1:
         write(forward,rmol,append=True)
+        write(forward_last,rmol)
     else:
         write(reverse,rmol,append=True)
+        write(reverse_last,rmol)
 
     x = x / Bohr
     v = np.zeros( (natom,3) )

@@ -95,7 +95,6 @@ nnpro=0
 awk '{if(NR>2) print $0}' $tsdirll/KMC/$rxnfile > tmp_rxn
 for i in $(awk '{print NR}' tmp_rxn)
 do
-  ((nnpro=nnpro+1))
   ts=$(awk 'NR=='$i',NR=='$i'{print $3}' tmp_rxn)
   tsn=$(awk 'NR=='$i',NR=='$i'{print $2}' tmp_rxn)
   procn=$(awk 'NR=='$i',NR=='$i'{print $2}' tmp_rxn)
@@ -105,6 +104,23 @@ do
   state2=$(awk 'NR=='$i',NR=='$i'{print $11}' tmp_rxn)
   lmin1="MIN"$min1
   lts="TS"$tsn
+###Check freq field is not empty
+#TS check
+  emptyfreq=$(sqlite3 $tsdirll/TSs/SORTED/tss.db "select name from tss where freq is null or freq=''" | awk 'BEGIN{p=0};{if($1=="'$lts'") p=1};END{print p}')
+  if [ $emptyfreq -eq 1 ]; then
+     echo No freqs for $lts
+     continue 
+  fi
+#lmin1 check
+  emptyfreq=$(sqlite3 $tsdirll/MINs/SORTED/mins.db "select name from mins where freq is null or freq=''" | awk 'BEGIN{p=0};{if($1=="'$lmin1'") p=1};END{print p}')
+  if [ $emptyfreq -eq 1 ]; then
+     echo No freqs for $lmin1
+     continue 
+  fi
+###Check freq field is not empty
+
+
+  ((nnpro=nnpro+1))
   echo "Proc" $nnpro "TS" $tsn $state1 $state2 >> $tsdirll/KMC/processinformation
 
   if [ $nproc -eq 2 ]; then
@@ -156,11 +172,19 @@ do
         if(dif<0 && NR>(ns+2)) {print $2*'$units',p1,p2;exit}} }'  $tsdirll/KMC/RRKM/proc1_TS${procn}.out >> $tsdirll/KMC/RRKM/rate${energy}.out
   fi 
   if [ $nproc -eq 2 ]; then
-     ((nnpro=nnpro+1))
-     echo "Proc" $nnpro "TS" $tsn $state2 $state1 >> $tsdirll/KMC/processinformation
      min2=$(awk 'NR=='$i',NR=='$i'{print $11}' tmp_rxn)
      lmin2="MIN"$min2
+###Check freq field is not empty
+#lmin2 check
+     emptyfreq=$(sqlite3 $tsdirll/MINs/SORTED/mins.db "select name from mins where freq is null or freq=''" | awk 'BEGIN{p=0};{if($1=="'$lmin2'") p=1};END{print p}')
+     if [ $emptyfreq -eq 1 ]; then
+        echo No freqs for $lmin2
+        continue 
+     fi
+###Check freq field is not empty
      deg2=$(awk 'NR=='$i',NR=='$i'{print $15/$16/$13}' tmp_rxn)
+     ((nnpro=nnpro+1))
+     echo "Proc" $nnpro "TS" $tsn $state2 $state1 >> $tsdirll/KMC/processinformation
      if [ $rate -eq 0 ]; then
         g2="$(awk '{if($2=='$min2') printf "%10.3f\n",$4}' $tsdirll/MINs/SORTED/MINlist_sorted)"
         deltag="$(echo "$g1" "$g2" | awk '{printf "%10.2f",$1-$2}')"

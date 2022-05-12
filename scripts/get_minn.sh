@@ -85,6 +85,27 @@ do
   lmin1="MIN"$min1
   lmin2="MIN"$min2
   lts="TS"$tsn
+###Check freq field is not empty
+#TS check
+  emptyfreq=$(sqlite3 $dir/TSs/SORTED/tss${ext}.db "select name from tss${ext} where freq is null or freq=''" | awk 'BEGIN{p=0};{if($1=="'$lts'") p=1};END{print p}')
+  if [ $emptyfreq -eq 1 ]; then
+     echo No freqs for $lts
+     continue
+  fi
+#lmin1 check
+  emptyfreq=$(sqlite3 $dir/MINs/SORTED/mins${ext}.db "select name from mins${ext} where freq is null or freq=''" | awk 'BEGIN{p=0};{if($1=="'$lmin1'") p=1};END{print p}')
+  if [ $emptyfreq -eq 1 ]; then
+     echo No freqs for $lmin1
+     continue
+  fi
+#lmin2 check
+  emptyfreq=$(sqlite3 $dir/MINs/SORTED/mins${ext}.db "select name from mins${ext} where freq is null or freq=''" | awk 'BEGIN{p=0};{if($1=="'$lmin2'") p=1};END{print p}')
+  if [ $emptyfreq -eq 1 ]; then
+     echo No freqs for $lmin2
+     continue
+  fi
+###Check freq field is not empty
+
 #
   if [ $rate -eq 0 ]; then
      g1="$(awk 'NR=='$i',NR=='$i'{printf "%10.3f\n",$5}' tmp_rxn)"
