@@ -32,10 +32,10 @@ def get_G_index(rmol,weig,na,prt):
     #Printing connectivity matrix(ces)
     if prt and weig >=2:
         A = adjacency_matrix(G2) 
-        for line in np.matrix(A.A): np.savetxt(cm, line, fmt='%.5f')
+        for line in np.matrix(A.toarray()): np.savetxt(cm, line, fmt='%.5f')
     if prt and weig !=2:
         A = adjacency_matrix(G1) 
-        for line in np.matrix(A.A): np.savetxt(cm, line, fmt='%.0f')
+        for line in np.matrix(A.toarray()): np.savetxt(cm, line, fmt='%.0f')
     return G1,ind,jnd,ibn,jbn
 
 if __name__ == '__main__':
