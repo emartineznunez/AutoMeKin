@@ -113,12 +113,17 @@ if [ -f ${tsdirhl}/KMC/RXN_barrless ]; then
       if($(NF-1)=="PROD") $NF=p[$NF];print }
    }' tmp_rxn > ${tsdirhl}/KMC/RXN_barrless
    npr=0
-   for pr in $(awk '{print $2}' ${tsdirhl}/PRODs/PRlist_tags.log)
-   do
-      npr=$((npr+1))
-      form="$(echo $pr | sed 's@+@ + @g')"
-      echo "PROD $npr "$form"" >> ${tsdirhl}/KMC/RXN_barrless
-   done
+
+#EMN hack
+   awk 'NR>1{for(i=1;i<NF;i++) if(i!=3) printf $i " ";print $NF}' ${tsdirhl}/PRODs/PRlist_frag | sed 's/.q0//g;s/.qm1/-/g;s/.qm/-/g;s/.q1/+/g;s/.q/+/g;s/.m/ .m/g' | awk '{for(i=1;i<=NF;i++) if ($i !~/.m/) printf " %s",$i;print ""}' >> ${tsdirhl}/KMC/RXN_barrless 
+
+#   for pr in $(awk '{print $2}' ${tsdirhl}/PRODs/PRlist_tags.log)
+#   do
+#      npr=$((npr+1))
+#      form="$(echo $pr | sed 's@+@ + @g')"
+#      echo "PROD $npr "$form"" >> ${tsdirhl}/KMC/RXN_barrless
+#   done
+#EMN hack
 fi
 ##
 cat tmp_ep > tmp_RXNet
