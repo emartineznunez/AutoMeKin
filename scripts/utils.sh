@@ -363,7 +363,7 @@ function read_input {
    reduce=$(awk 'BEGIN{red=-1};{if($1=="HL_rxn_network") {if($2=="complete") red=0;if($2=="reduced" && NF==3) red=$3}};END{print red}' $inputfile)
    noHLcalc=$(echo $HLstring | awk 'BEGIN{nc=0};{nc=NF};END{print nc}')
    IRCpoints=$(awk 'BEGIN{if("'$program_hl'"~/g[01][96]/)np=100;if("'$program_hl'"=="qcore")np=500};{if($1=="IRCpoints") np=$2};END{print np}' $inputfile)
-   iop=$(awk '{if($1=="iop") print $2}' $inputfile)
+   iop=$(awk '{if($1=="iop") {$1="";print $0}}' $inputfile)
    mem=$(awk 'BEGIN{mem=1};{if($1=="Memory") mem=$2};END{print mem}' $inputfile)
    pseudo=$(awk '{if($1=="pseudo") print "pseudo=read" }' $inputfile)
    pseudo_metal=$(awk '{if($1 == "pseudo") print $2}' $inputfile)
@@ -1114,9 +1114,9 @@ function g09_input {
       levelc=$level1
    fi
    if [ "$calc" = "ts" ] ; then
-      cal="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/tkmc/'$temperature'/;s@calcall,noraman)@calcfc,noraman) freq=noraman@;s@iop@'$iop'@;s@level1@'$levelc'@;s/charge/'$charge'/;s/mult/'$mult'/' $sharedir/hl_input_template)"
+      cal="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/tkmc/'$temperature'/;s@calcall,noraman)@calcfc,noraman) freq=noraman@;s@iop@'"$iop"'@;s@level1@'$levelc'@;s/charge/'$charge'/;s/mult/'$mult'/' $sharedir/hl_input_template)"
    elif [ "$calc" = "min" ]; then
-      cal="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/ts,noeigentest,//;s/tkmc/'$temperature'/;s@level1@'$levelc'@;s/charge/'$charge'/;s/mult/'$mult'/;s@iop@'$iop'@' $sharedir/hl_input_template)"
+      cal="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/ts,noeigentest,//;s/tkmc/'$temperature'/;s@level1@'$levelc'@;s/charge/'$charge'/;s/mult/'$mult'/;s@iop@'"$iop"'@' $sharedir/hl_input_template)"
    elif [ "$calc" = "irc" ]; then
       cp ${tsdirhl}/${i}.chk ${tsdirhl}/IRC/ircf_${i}.chk
       cp ${tsdirhl}/${i}.chk ${tsdirhl}/IRC/ircr_${i}.chk
@@ -1126,15 +1126,17 @@ function g09_input {
          echo "ts $i has an imaginary freq lower than 100 cm-1"
          step_irc=30
       else
-         step_irc=10
+###EMN WARNING: step_irc=5 has been used to run the glycolonitrile calcs
+         #step_irc=10
+         step_irc=5
       fi
       if [ $noHLcalc -eq 1 ]; then
          fcc="rcfc"
       elif [ $noHLcalc -eq 2 ]; then
          fcc="calcfc"
       fi
-      calf="$(sed  's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s@iop@'$iop'@;s/opt=(ts,noeigentest,calcall,noraman)/guess=read geom=check irc=(forward,maxpoints='$IRCpoints','$fcc',recalc=10,stepsize='$step_irc') iop(1\/108=-1)/;s@level1@'$level1'@;s/charge/'$charge'/;s/mult/'$mult'/' $sharedir/hl_input_template_notemp)"
-      calr="$(sed  's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s@iop@'$iop'@;s/opt=(ts,noeigentest,calcall,noraman)/guess=read geom=check irc=(reverse,maxpoints='$IRCpoints','$fcc',recalc=10,stepsize='$step_irc') iop(1\/108=-1)/;s@level1@'$level1'@;s/charge/'$charge'/;s/mult/'$mult'/' $sharedir/hl_input_template_notemp)"
+      calf="$(sed  's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s@iop@'"$iop"'@;s/opt=(ts,noeigentest,calcall,noraman)/guess=read geom=check irc=(forward,maxpoints='$IRCpoints','$fcc',recalc=10,stepsize='$step_irc') iop(1\/108=-1)/;s@level1@'$level1'@;s/charge/'$charge'/;s/mult/'$mult'/' $sharedir/hl_input_template_notemp)"
+      calr="$(sed  's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s@iop@'"$iop"'@;s/opt=(ts,noeigentest,calcall,noraman)/guess=read geom=check irc=(reverse,maxpoints='$IRCpoints','$fcc',recalc=10,stepsize='$step_irc') iop(1\/108=-1)/;s@level1@'$level1'@;s/charge/'$charge'/;s/mult/'$mult'/' $sharedir/hl_input_template_notemp)"
       inp_hlf="$(echo -e "$chkf"'\n'"$calf"'\n'" "'\n'"$pseudo_end")"
       inp_hlr="$(echo -e "$chkr"'\n'"$calr"'\n'" "'\n'"$pseudo_end")"
       echo -e "insert or ignore into gaussian values (NULL,'ircf_$i','$inp_hlf');\n.quit" | sqlite3 ${tsdirhl}/IRC/inputs.db
@@ -1142,21 +1144,21 @@ function g09_input {
       echo -e "insert or ignore into gaussian values (NULL,'ircr_$i','$inp_hlr');\n.quit" | sqlite3 ${tsdirhl}/IRC/inputs.db
    elif [ "$calc" = "min_irc" ]; then
       if [ -f $tsdirhl"/IRC/"$chkfilef".chk" ]; then
-         calmf="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/ts,noeigentest,//;s/tkmc/'$temperature'/;s@level1@'$level1' pop=(mk,nbo) guess=read@;s/charge/'$charge'/;s/mult/'$mult'/;s@iop@'$iop'@' $sharedir/hl_input_template)"
+         calmf="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/ts,noeigentest,//;s/tkmc/'$temperature'/;s@level1@'$level1' pop=(mk,nbo) guess=read@;s/charge/'$charge'/;s/mult/'$mult'/;s@iop@'"$iop"'@' $sharedir/hl_input_template)"
       else 
-         calmf="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/ts,noeigentest,//;s/tkmc/'$temperature'/;s@level1@'$level1' pop=(mk,nbo)@;s/charge/'$charge'/;s/mult/'$mult'/;s@iop@'$iop'@' $sharedir/hl_input_template)"
+         calmf="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/ts,noeigentest,//;s/tkmc/'$temperature'/;s@level1@'$level1' pop=(mk,nbo)@;s/charge/'$charge'/;s/mult/'$mult'/;s@iop@'"$iop"'@' $sharedir/hl_input_template)"
       fi
       if [ -f $tsdirhl"/IRC/"$chkfiler".chk" ]; then
-         calmr="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/ts,noeigentest,//;s/tkmc/'$temperature'/;s@level1@'$level1' pop=(mk,nbo) guess=read@;s/charge/'$charge'/;s/mult/'$mult'/;s@iop@'$iop'@' $sharedir/hl_input_template)"
+         calmr="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/ts,noeigentest,//;s/tkmc/'$temperature'/;s@level1@'$level1' pop=(mk,nbo) guess=read@;s/charge/'$charge'/;s/mult/'$mult'/;s@iop@'"$iop"'@' $sharedir/hl_input_template)"
       else 
-         calmr="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/ts,noeigentest,//;s/tkmc/'$temperature'/;s@level1@'$level1' pop=(mk,nbo)@;s/charge/'$charge'/;s/mult/'$mult'/;s@iop@'$iop'@' $sharedir/hl_input_template)"
+         calmr="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/ts,noeigentest,//;s/tkmc/'$temperature'/;s@level1@'$level1' pop=(mk,nbo)@;s/charge/'$charge'/;s/mult/'$mult'/;s@iop@'"$iop"'@' $sharedir/hl_input_template)"
       fi
       calsnoiop="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s@level1@'$level1' sp pop=(mk,nbo)@;s/charge/'$charge'/;s/mult/'$mult'/;/opt/,/temp/d' $sharedir/hl_input_template)"
-      calsiop="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/opt=(ts,noeigentest,calcall,noraman)//;s@level1@'$level1' sp pop=(mk,nbo)@;s/charge/'$charge'/;s/mult/'$mult'/;/temp/d;s@iop@'$iop'@' $sharedir/hl_input_template)"
+      calsiop="$(sed 's@Mem@'$mem'@;s@pseudo@'$pseudo'@;s/opt=(ts,noeigentest,calcall,noraman)//;s@level1@'$level1' sp pop=(mk,nbo)@;s/charge/'$charge'/;s/mult/'$mult'/;/temp/d;s@iop@'"$iop"'@' $sharedir/hl_input_template)"
       if [ $(nfrag.sh tmp_geomf_$i ${nfrag_th} $nA) -eq 1 ]; then
          calf="$calmf"
       else
-         if [ -z $iop ]; then
+         if [ -z "$iop" ]; then
             calf="$calsnoiop"
          else
             calf="$calsiop"
@@ -1171,7 +1173,7 @@ function g09_input {
          if [ $(nfrag.sh tmp_geomr_$i ${nfrag_th} $nA) -eq 1 ]; then
             calr="$calmr"
          else
-            if [ -z $iop ]; then
+            if [ -z "$iop" ]; then
                calr="$calsnoiop"
             else
                calr="$calsiop"
