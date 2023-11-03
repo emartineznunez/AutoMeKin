@@ -361,13 +361,13 @@ print('Reactant optimized')
 Gr,ind,jnd,ibn,jbn = get_G_index(rmol,1,len(rmol),False)
 for n in range(n_dist):
     if Gr[ind[n]][jnd[n]]['weight'] == 0: Gr.remove_edge(ind[n],jnd[n])
-A  = nx.adjacency_matrix(Gr) ; Ar = A.A
+A  = nx.adjacency_matrix(Gr) ; Ar = A.toarray()
 for z in range(natom): Ar[z][z] = aton[z]
 ##################G of the expected product
 Gp = Gr.copy()
 for ele in breakl: Gp.remove_edge(ele[0],ele[1])
 for ele in forml:  Gp.add_edge(ele[0],ele[1])
-A  = nx.adjacency_matrix(Gp) ; Ap = A.A
+A  = nx.adjacency_matrix(Gp) ; Ap = A.toarray()
 for z in range(natom): Ap[z][z] = aton[z]
 ##################
 tag_p = np.array(sorted( [np.round(elem,3) for elem in np.linalg.eigvals(Ap) ] ))
@@ -455,7 +455,7 @@ print('Product optimized')
 Gx,ind,jnd,ibn,jbn = get_G_index(rmol,1,len(rmol),False)
 for n in range(n_dist):
     if Gx[ind[n]][jnd[n]]['weight'] == 0: Gx.remove_edge(ind[n],jnd[n])
-A  = nx.adjacency_matrix(Gx) ; Ax = A.A
+A  = nx.adjacency_matrix(Gx) ; Ax = A.toarray()
 for z in range(natom): Ax[z][z] = aton[z]
 ###Check for barrierless processes
 Adiff = Ar - Ax
