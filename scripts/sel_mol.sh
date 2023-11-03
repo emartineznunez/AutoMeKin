@@ -57,6 +57,24 @@ if [ -f $minfilell ] && [ -f $kmcfilell ] && [ $mm -eq 1 ]; then
       }' )
    fi
    echo ""
+   if [ -z $selm ]; then
+      echo "get_minn.sh failed selecting a minimum"
+      echo "Try now with get_minx.sh..."
+      selm=$( get_minx.sh $kmcfilell $minok $en $factor | awk 'BEGIN{srand('$srandseed');rn=rand()}
+      NF==1{++nmin;n[nmin]=$1}
+      END{
+      for(i=1;i<=nmin;i++) den+='$factor'^(nmin-i)
+      p[nmin]=1/den
+      i=1
+      ptot=0
+      while(i<=nmin){
+        p[i]='$factor'^(nmin-i)*p[nmin]
+        ptot+=p[i]
+        if(rn<ptot) {print n[i];exit}
+        i++
+        }
+      }' )
+   fi
    echo "MD simulations start from MIN $selm"
    names="MIN"$selm
    sqlite3 $mindirll/mins.db "select natom,geom from mins where name='$names'" | sed 's@|@\n\n@g' > ${molecule}.xyz
