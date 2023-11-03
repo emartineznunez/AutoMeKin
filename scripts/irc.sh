@@ -193,7 +193,7 @@ do
      ((m=m+1))
      if [ "$program_opt" != "qcore" ];then
         #thermo
-        sed 's/thermo/thermo('$temperature','$temperature')/;s/method/'"$method"' charge='$charge'/' $sharedir/thermo_template > $tsdirll/TSs/${name}_thermo.mop
+        sed 's/thermo/thermo('$temperature','$temperature')/;s/method/'"$method"' charge='$charge' oldens/' $sharedir/thermo_template > $tsdirll/TSs/${name}_thermo.mop
         cat tmp_geom >> $tsdirll/TSs/${name}_thermo.mop 
         #IRC
         sed 's/method/'"$method"' charge='$charge' irc= 1 oldens/g' $sharedir/freq_template1 > $tsdirll/IRC/${name}_ircf.mop
@@ -201,9 +201,11 @@ do
         if [ -f ${tsdirll}/${name}.den ]; then
            cp ${tsdirll}/${name}.den ${tsdirll}/IRC/${name}_ircf.den
            cp ${tsdirll}/${name}.den ${tsdirll}/IRC/${name}_ircr.den
+           cp ${tsdirll}/${name}.den ${tsdirll}/TSs/${name}_thermo.den
         elif [ -f ${tsdirll}/${name}_mop.den ]; then
            cp ${tsdirll}/${name}_mop.den ${tsdirll}/IRC/${name}_ircf.den
            cp ${tsdirll}/${name}_mop.den ${tsdirll}/IRC/${name}_ircr.den
+           cp ${tsdirll}/${name}_mop.den ${tsdirll}/TSs/${name}_thermo.den
         fi
         cat tmp_geom >> $tsdirll/IRC/${name}_ircf.mop
         cat tmp_geom >> $tsdirll/IRC/${name}_ircr.mop
