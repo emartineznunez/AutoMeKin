@@ -22,6 +22,7 @@ dist_bin_SCRIPTS = chemical_formula.sh \
               format_rxnet.sh DVV.py DVV_hl.py entos.py amk_frag.sh \
               modeanalysis.py LocateTs.py Integrators.py cyclic_graph.py \
               com.sh tag_prod.py bond_order.py mdiss.py locate_barrierless.sh \
-              emax_from_temp.py mdiss.sh runbarless.sh neb_barrless.py
+              emax_from_temp.py mdiss.sh runbarless.sh neb_barrless.py \
+              get_minx.sh
 
 
