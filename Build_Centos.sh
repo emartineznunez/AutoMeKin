@@ -37,9 +37,9 @@ pip3 install ase
 pip3 install networkx
 mkdir /install_dir
 cd /install_dir
-curl -O https://rxnkin.usc.es/images/1/1a/amk-SOURCE-2021.tar.gz
-tar zxvf amk-SOURCE-2021.tar.gz
-cd amk-SOURCE-2021
+git clone https://github.com/emartineznunez/AutoMeKin.git
+cd AutoMeKin
+autoreconf -i
 ./configure --prefix=/opt/AutoMeKin
 make
 make install
