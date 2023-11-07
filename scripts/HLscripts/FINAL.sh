@@ -48,13 +48,13 @@ cp ${tsdirhl}/PRODs/CALC/prodfhl.db $final
 sqlite3 ${final}/prodfhl.db "alter table prodfhl rename to prod"
 mv ${final}/prodfhl.db ${final}/prod.db
 ##put the right energy in RXN_barrless
-if [ -f ${tsdirhl}/KMC/RXN_barrless ]; then
-   for n in $(awk '{print NR}' ${tsdirhl}/KMC/RXN_barrless)
+if [ -f ${tsdirhl}/KMC/RXN_barrless0 ]; then
+   for n in $(awk '{print NR}' ${tsdirhl}/KMC/RXN_barrless0)
    do
       if [ $n -eq 1 ]; then
-         awk 'NR=='$n'{print $0}' ${tsdirhl}/KMC/RXN_barrless > tmp_rxn_barrless
+         awk 'NR=='$n'{print $0}' ${tsdirhl}/KMC/RXN_barrless0 > ${tsdirhl}/KMC/RXN_barrless1 
       else
-         id=$(awk 'NR=='$n'{print $NF}' ${tsdirhl}/KMC/RXN_barrless)
+         id=$(awk 'NR=='$n'{print $NF}' ${tsdirhl}/KMC/RXN_barrless0)
          if [ $rate -eq 1 ]; then
             sqlite3 ${tsdirhl}/MINs/minhl.db "select energy,zpe from minhl where name='min0'" | sed 's@|@ @g' > tmp_en
             sqlite3 ${tsdirhl}/PRODs/CALC/prodfhl.db "select energy,zpe from prodfhl where id='$id'" | sed 's@|@ @g' >> tmp_en
@@ -64,10 +64,9 @@ if [ -f ${tsdirhl}/KMC/RXN_barrless ]; then
             sqlite3 ${tsdirhl}/PRODs/CALC/prodfhl.db "select energy,g from prodfhl where id='$id'" | sed 's@|@ @g' >> tmp_en
             epro="$(awk '{e[NR]=$1;ezpe[NR]=$2};END{printf "%10.4f\n",(e[2]-e[1]+ezpe[2]-ezpe[1])*627.51}' tmp_en)"
          fi
-         awk 'NR=='$n'{$2='"$epro"'; print}' ${tsdirhl}/KMC/RXN_barrless >> tmp_rxn_barrless
+         awk 'NR=='$n'{$2='"$epro"'; print}' ${tsdirhl}/KMC/RXN_barrless0 >> ${tsdirhl}/KMC/RXN_barrless1
       fi
    done
-   mv tmp_rxn_barrless ${tsdirhl}/KMC/RXN_barrless
 fi
 ##put the right energy in RXN_barrless
 rm -rf ${tsdirhl}/PRODs/PRlist_tags.log
@@ -102,8 +101,8 @@ do
    sqlite3 $final/prod.db "delete from prod where id=$i"
 done
 ##correct barrless if exists
-if [ -f ${tsdirhl}/KMC/RXN_barrless ]; then
-   cat tmp_ep ${tsdirhl}/KMC/RXN_barrless > tmp_rxn
+if [ -f ${tsdirhl}/KMC/RXN_barrless1 ]; then
+   cat tmp_ep ${tsdirhl}/KMC/RXN_barrless1 > tmp_rxn
    awk 'BEGIN{lp=0;rep=0;for(i=1;i<=10e6;i++)p[i]=i}
    {if($1=="TS") lp=1}
    {
@@ -111,11 +110,11 @@ if [ -f ${tsdirhl}/KMC/RXN_barrless ]; then
       for(i=2;i<=NF;i++) p[$i]=$1 }
    else {
       if($(NF-1)=="PROD") $NF=p[$NF];print }
-   }' tmp_rxn > ${tsdirhl}/KMC/RXN_barrless
+   }' tmp_rxn > ${tsdirhl}/KMC/RXN_barrless2
    npr=0
 
 #EMN hack
-   awk 'NR>1{for(i=1;i<NF;i++) if(i!=3) printf $i " ";print $NF}' ${tsdirhl}/PRODs/PRlist_frag | sed 's/.q0//g;s/.qm1/-/g;s/.qm/-/g;s/.q1/+/g;s/.q/+/g;s/.m/ .m/g' | awk '{for(i=1;i<=NF;i++) if ($i !~/.m/) printf " %s",$i;print ""}' >> ${tsdirhl}/KMC/RXN_barrless 
+   awk 'NR>1{for(i=1;i<NF;i++) if(i!=3) printf $i " ";print $NF}' ${tsdirhl}/PRODs/PRlist_frag | sed 's/.q0//g;s/.qm1/-/g;s/.qm/-/g;s/.q1/+/g;s/.q/+/g;s/.m/ .m/g' | awk '{for(i=1;i<=NF;i++) if ($i !~/.m/) printf " %s",$i;print ""}' >> ${tsdirhl}/KMC/RXN_barrless2
 
 #   for pr in $(awk '{print $2}' ${tsdirhl}/PRODs/PRlist_tags.log)
 #   do
@@ -373,8 +372,8 @@ nx.sh HL
 format_rxnet.sh RXNet0 RXNet0 > ${final}/RXNet
 if [ -f RXNetcg0 ] ; then format_rxnet.sh RXNetcg0 RXNetcg0 > ${final}/RXNet.cg ; fi
 ###Adding barrless to rxn_all.txt
-if [ -f ${tsdirhl}/KMC/RXN_barrless ]; then
-   format_rxnet.sh ${tsdirhl}/KMC/RXN_barrless ${tsdirhl}/KMC/RXN_barrless > ${final}/RXNet.barrless
+if [ -f ${tsdirhl}/KMC/RXN_barrless2 ]; then
+   format_rxnet.sh ${tsdirhl}/KMC/RXN_barrless2 ${tsdirhl}/KMC/RXN_barrless2 > ${final}/RXNet.barrless
    #we now screen barrless file to ensure there is no corresponding channels with a barrier and that the min is connected
    rm -rf tmp_minprod tmp_rxnetbarrless_screened tmp_minprod.barrless tmp_rxnetbarrless_screened tmp_ref_barr
    sed 's@PR@PR @g;s@:@ @g' ${final}/RXNet.cg |awk '{if($6=="PR") print $4,$7}' >tmp_minprod

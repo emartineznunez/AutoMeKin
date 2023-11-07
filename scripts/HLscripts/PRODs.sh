@@ -39,29 +39,9 @@ dir=$tsdirhl/PRODs/CALC
 charge_t=$charge
 ##Creating working dir to compare frags
 working=$tsdirhl/PRODs/CALC/working
-if [ ! -d "$dir" ]; then
-   echo "$dir does not exist. It will be created"
-   mkdir $dir
-   mkdir $working
-   echo "Screening" > $working/fraglist_screened
-else
-   echo "$dir already exists. Gathering info to working dir to avoid repeating structures"
-   rm -rf $working
-   mkdir $working
-   echo "Screening" > $working/fraglist_screened
-   for file in $(ls $dir/*-*.log)
-   do
-      ((tnf=tnf+1))
-      if [ "$program_hl" = "g09" ] || [ "$program_hl" = "g16" ]; then
-         get_geom_g09.sh $file > tmp_geom
-      elif [ "$program_hl" = "qcore" ]; then
-         fileopt=$(basename $file .log)
-         awk 'NR>2{print $0}' ${dir}/${fileopt}_opt.xyz > tmp_geom
-      fi
-      nn=$(basename $file .log)
-      compare_frags.sh tmp_geom frag${tnf}_$nn $working
-   done
-fi
+if [ ! -d "$dir" ]; then mkdir $dir ; fi
+rm -rf $working && mkdir $working
+echo "Screening" > $working/fraglist_screened
 sqlite3 $dir/inputs.db "drop table if exists gaussian; create table gaussian (id INTEGER PRIMARY KEY,name TEXT, input TEXT);"
 
 number=0
@@ -133,11 +113,7 @@ do
       chargen=$(echo $charge | sed 's/-/m/')
       sqlnamep=${name}.q${chargen}.m${mult}
       nisql="$(sqlite3 $dir/inputs.db "select name from gaussian where name like '%$sqlnamep%'")"
-      if [ -f ${dir}/${sqlnamep}-1.log ] && [ -z "$nisql" ]; then
-         ni=$(ls ${dir}/${sqlnamep}-*.log | wc -l | awk '{print $1+1}')
-      else
-         ni="$(echo "$nisql" | awk 'BEGIN{FS="-"};{name=$1;n=$2};END{print n+1}')"
-      fi
+      ni="$(echo "$nisql" | awk 'BEGIN{FS="-"};{name=$1;n=$2};END{print n+1}')"
 
       nn=${name}.q${chargen}.m${mult}-$ni
       echo $nn >> ffchmu
@@ -145,9 +121,13 @@ do
       awk '{if(NF==4) print $0}' tmp_frag$j.xyz >tmp_geom
       compare_frags.sh tmp_geom frag${tnf}_$nn $working
       nl=$(awk 'END{print NF}' $working/fraglist)
-     ((m=m+1))
-##calc only if the frag is not repeated
-      if [ $nl -eq 2 ]; then
+      ((m=m+1))
+      calc=1
+      if [ -f ${dir}/${nn}.log ]; then
+         if [ $(awk 'BEGIN{c=0};/Job /{c=1};/ZPE/{c=1};END{print c}' ${dir}/${nn}.log) -eq 1 ]; then calc=0 ; fi
+      fi
+##calc only if the frag is not repeated and/or the calc is not completed
+      if [ $nl -eq 2 ] && [ $calc -eq 1 ]; then
          nnc=${name}_q${chargen}_m${mult}_$ni
          chkfile=$nnc
          if [ "$program_hl" = "g09" ] || [ "$program_hl" = "g16" ]; then

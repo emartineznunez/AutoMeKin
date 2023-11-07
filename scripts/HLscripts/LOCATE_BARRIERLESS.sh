@@ -45,9 +45,9 @@ sed -i '/min_diss/d' tsdir${tag}_${molecule}/PRODs/PRlist
 if [ ! -f tsdirLL_${molecule}/KMC/RXN_barrless ]; then exit ; fi
 if [ $(awk 'BEGIN{n=0};NR>1{if($1!="PROD") ++n};END{print n}' tsdirLL_${molecule}/KMC/RXN_barrless) -eq 0 ]; then exit ; fi
 if [ $rate -eq 0 ]; then 
-   echo " TS #    DG(kcal/mol)    -------Path info--------" > tsdir${tag}_${molecule}/KMC/RXN_barrless
+   echo " TS #    DG(kcal/mol)    -------Path info--------" > tsdir${tag}_${molecule}/KMC/RXN_barrless0
 elif [ $rate -eq 1 ]; then
-   echo " TS #    DE(kcal/mol)    -------Path info--------" > tsdir${tag}_${molecule}/KMC/RXN_barrless
+   echo " TS #    DE(kcal/mol)    -------Path info--------" > tsdir${tag}_${molecule}/KMC/RXN_barrless0
 fi
 touch tsdir${tag}_${molecule}/MINs/SORTED/correspondence
 for ii in $(awk 'NR>1{if($1!="PROD") print $1}' tsdirLL_${molecule}/KMC/RXN_barrless)
@@ -75,7 +75,7 @@ do
       geom="$(cat tmp_geom | awk 'NR>2{print $0}')"
       sqlite3 tsdir${tag}_${molecule}/PRODs/prodhl.db "insert into prodhl (natom,name,geom,formula) values ($natom,'$name','$geom','$formula0');"
       echo "PROD ${id} ${named}.rxyz" >> tsdir${tag}_${molecule}/PRODs/PRlist
-      echo "$nbl energy_rel MIN $equal <-->  PROD ${id}" >> tsdir${tag}_${molecule}/KMC/RXN_barrless
+      echo "$nbl energy_rel MIN $equal <-->  PROD ${id}" >> tsdir${tag}_${molecule}/KMC/RXN_barrless0
       chkfilef=diss_${nbl}
       chkfiler="nada"
       geof="$geom"
