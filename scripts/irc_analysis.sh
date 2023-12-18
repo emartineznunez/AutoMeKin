@@ -174,7 +174,7 @@ do
      if [ "$program_opt" != "qcore" ]; then
         ircn0=$(echo $namer | sed 's@min@@;s@_@ @')
         ircnr=$(echo $ircn0 | awk '{print $2"_irc"$1".xyz"}')
-        er=$(awk '/HEAT OF FORMATION/{heat=$(NF-4)};END{print heat}' $tsdirll/IRC/$ircnr)
+        er=$(awk '/HEAT OF FORMATION/{heat=$(NF-1)};END{print heat}' $tsdirll/IRC/$ircnr)
         geomr="$(awk '/HEAT OF FORMATION/{natom=0};{if(NF==4) {++natom;line[natom]=$0} };END{i=1;while(i<=natom){print line[i];i++}}' $tsdirll/IRC/$ircnr)"
      else
         ets=$(awk '/Energy=/{e0=$2};END{printf "%10.2f\n",e0*627.51}' $tsdirll/${name}.out )
