@@ -196,8 +196,8 @@ do
         sed 's/thermo/thermo('$temperature','$temperature')/;s/method/'"$method"' charge='$charge' oldens/' $sharedir/thermo_template > $tsdirll/TSs/${name}_thermo.mop
         cat tmp_geom >> $tsdirll/TSs/${name}_thermo.mop 
         #IRC
-        sed 's/method/'"$method"' charge='$charge' irc= 1 oldens/g' $sharedir/freq_template1 > $tsdirll/IRC/${name}_ircf.mop
-        sed 's/method/'"$method"' charge='$charge' irc=-1 oldens/g' $sharedir/freq_template1 > $tsdirll/IRC/${name}_ircr.mop
+        sed 's/method/T=1000 '"$method"' charge='$charge' irc= 1 oldens/g' $sharedir/freq_template1 > $tsdirll/IRC/${name}_ircf.mop
+        sed 's/method/T=1000 '"$method"' charge='$charge' irc=-1 oldens/g' $sharedir/freq_template1 > $tsdirll/IRC/${name}_ircr.mop
         if [ -f ${tsdirll}/${name}.den ]; then
            cp ${tsdirll}/${name}.den ${tsdirll}/IRC/${name}_ircf.den
            cp ${tsdirll}/${name}.den ${tsdirll}/IRC/${name}_ircr.den
