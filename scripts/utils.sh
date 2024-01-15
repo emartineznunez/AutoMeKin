@@ -189,8 +189,8 @@ function read_input {
    torsion=$(awk 'BEGIN{torsion=1};{if($1=="torsion" && $2=="no") torsion=0};END{print torsion}' $inputfile)
    md=$(awk 'BEGIN{md=2};{if($1=="sampling" && $2=="BXDE") md=0; if($1=="sampling" && $2=="MD-micro") md=1;if($1=="sampling" && $2=="MD") md=2;if($1=="sampling" && $2=="association") md=-1;if($1=="sampling" && $2=="vdW") md=0; if($1=="sampling" && $2=="external") md=-1};END{print md}'  $inputfile)
    rate=$(awk 'BEGIN{rate=-1};{if ($1=="Temperature") rate=0;if($1=="Energy") rate=1};END{print rate}' $inputfile)
-   ck_minima=$(awk 'BEGIN{ck=0};{if($1=="CK_minima" && $2=="all") ck=0;if($1=="CK_minima" && $2=="cg") ck=1};END{print ck}' $inputfile)
    tread=$(awk 'BEGIN{t=298};{if($1=="Temperature") t=$2};END{printf "%d",t+0.5}' $inputfile)
+   ck_minima=$(awk 'BEGIN{ck=0};{if($1=="CK_minima" && $2=="all") ck=0;if($1=="CK_minima" && $2=="cg") ck=1};END{print ck}' $inputfile)
    if (( $(echo "$tread >= 10000" |bc -l) )); then 
       temperature=9999  
       echo ""
