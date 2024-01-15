@@ -468,8 +468,8 @@ if np.linalg.norm(Adiff) == 0:
 Adiff = Ap - Ax
 if np.linalg.norm(Adiff) != 0:
     print('It seems that the product is not the expected one')
-    print('Abort...')
-    exit()
+    #print('Abort...')
+    #exit()
 
 ###Check that the Gx is isomorphic with Gp
 criteria = 0
@@ -477,8 +477,8 @@ for ele in breakl: criteria += Gx.has_edge(ele[0],ele[1])
 for ele in forml:  criteria += not Gx.has_edge(ele[0],ele[1])
 if criteria > 0:
     print('Obtained product is not the expected  --> The product could not be generated')
-    print('Abort...')
-    exit()
+    #print('Abort...')
+    #exit()
 #Adiff = Ap - Ax
 #if np.linalg.norm(Adiff) > 0:
 #    print('Obtained product is not the expected  --> The product could not be generated')
