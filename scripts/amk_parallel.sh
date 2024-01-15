@@ -66,7 +66,17 @@ opt_start
 nchan=0
 if [ $sampling -eq 3 ]; then
 ##select the initial minimum
-   minsf=${tsdirll}/MINs/SORTED/MINlist_sorted
+if [ ${ck_minima} -eq 0 ]; then
+   rxn_file=${tsdirll}/KMC/RXNet
+elif [ ${ck_minima} -eq 1 ]; then
+   rxn_file=${tsdirll}/KMC/RXNet_long.cg_groupedprods
+fi
+###EMN
+   if [ -f ${tsdirll}/MINs/SORTED/MINlist_sorted ] && [ -f ${rxn_file} ] ; then
+      awk 'NR==FNR{for(i=1;i<=NF;i++) if($i=="MIN") {ele=$(i+1);++n;ok=1; conf[n]=ele} };NR>FNR{ok=0;for(i=1;i<=n;i++) {if($2==conf[i]) ok=1 } ; if(ok==1 || $3 ~"min0") print $0}'  ${rxn_file} ${tsdirll}/MINs/SORTED/MINlist_sorted > ${tsdirll}/MINs/SORTED/MINlist_sorted_conn
+   fi
+###EMN
+   minsf=${tsdirll}/MINs/SORTED/MINlist_sorted_conn
    minrf=${tsdirll}/mins.inp
    mindb=${tsdirll}/MINs/SORTED/mins.db
 #   rm -rf ${tsdirll}/ts_bonds.inp
