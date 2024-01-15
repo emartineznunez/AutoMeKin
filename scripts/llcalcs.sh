@@ -138,13 +138,14 @@ while [ $iter -le $niter ]; do
    tt=$( echo "$end - $start" | bc -l | awk '{printf "%4.0f",$1}')
    echo "   time: $tt s"
 ###check that the nts is greater than the previous value
-   if [ $iter -eq 1 ]; then
+   cid=$(sqlite3 ${tsdirll}/track.db "select max(id) from track" | awk '{print $1+1-1}' )
+   if [ $cid -eq 1 ]; then
      ntsp=0
    else
-     ((itm1=iter-1))
+     ((itm1=cid-1))
      ntsp=$(sqlite3 ${tsdirll}/track.db "select nts from track where id=$itm1" | awk '{print $1+1-1}' )
    fi
-   ntsa=$(sqlite3 ${tsdirll}/track.db "select nts from track where id=$iter" | awk '{print $1+1-1}' )
+   ntsa=$(sqlite3 ${tsdirll}/track.db "select nts from track where id=$cid" | awk '{print $1+1-1}' )
    if (( $(echo "$ntsa <= $ntsp" |bc -l) )); then
       echo "   No new TSs found "
       echo "   Skip this iter   "
