@@ -462,7 +462,6 @@ Adiff = Ar - Ax
 if np.linalg.norm(Adiff) == 0:
     if not nx.is_connected(Gp): print('Final and initial states are the same --> Barrierless process')
     else: print('Final and initial states are the same')
-    print('We proceed anyway...')
     print('Abort...')
     exit()
 ###Check that the product is the expected
@@ -479,6 +478,7 @@ for ele in breakl: criteria += Gx.has_edge(ele[0],ele[1])
 for ele in forml:  criteria += not Gx.has_edge(ele[0],ele[1])
 if criteria > 0:
     print('Obtained product is not the expected  --> The product could not be generated')
+    print('We proceed anyway...')
     #print('Abort...')
     #exit()
 #Adiff = Ap - Ax
