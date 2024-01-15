@@ -462,12 +462,14 @@ Adiff = Ar - Ax
 if np.linalg.norm(Adiff) == 0:
     if not nx.is_connected(Gp): print('Final and initial states are the same --> Barrierless process')
     else: print('Final and initial states are the same')
+    print('We proceed anyway...')
     print('Abort...')
     exit()
 ###Check that the product is the expected
 Adiff = Ap - Ax
 if np.linalg.norm(Adiff) != 0:
     print('It seems that the product is not the expected one')
+    print('We proceed anyway...')
     #print('Abort...')
     #exit()
 
