@@ -26,7 +26,7 @@ downloads the last release container image from sylabs
 you use it unless a new image is available. Then, the script will detect
 singularity and the image (that must be located in your `$HOME`) and will
 only start an instance of the container. The container includes
-**[amk-tools](https://github.com/dgarayr/amk_tools)**
+**[amk-tools](https://github.com/dgarayr/amk_tools)**. **Follow these three steps to start the container**.
 
 1. Download auto installer: `curl -LJO <https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh>`
 
@@ -41,24 +41,20 @@ changed the parameters with your admin or root accounts, no further
 admin or root privilege will be needed. Return to your user account and
 run the auto installer again.
 
-4\) Once the above steps are completed, singularity will be installed
-under ${TMPDIR-/tmp}/amk_installer-${USER}/software in bash shell script
+Once the above steps are completed, singularity will be installed
+under `${TMPDIR-/tmp}/amk_installer-${USER}/software` in bash shell script
 syntax and an instance of the container will be started using a sandbox
-image deployed under /tmp/selfextract.XXXXXX folder (where XXXXXX is a
+image deployed under `/tmp/selfextract.XXXXXX` folder (where `XXXXXX` is a
 randomly generated character sequence). The container comes with all
-AutoMeKin's tools installed in $AMK plus vim, gnuplot and molden which
-can be run from the container. A bash shell session under $HOME will
+AutoMeKin's tools installed in `$AMK` plus vim, gnuplot and molden which
+can be run from the container. A bash shell session under `$HOME` will
 start under the deployed instance. Note that you can open new sessions
 and access AutoMeKin's output files from your Linux environment and use
 your own tools as well.
 
-5\) To exit the container just type:
+**To exit the container** just type: `exit`
 
-exit
-
-6\) Once your calculations are done, remember to stop the instance:
-
-./Automekin.sh stop
+**Once your calculations are done, remember to stop the instance:** `./Automekin.sh stop`
 
 Important notes:
 
