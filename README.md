@@ -177,7 +177,7 @@ needed (which can be easily installed with pip):
 
 - ASE (\>= 3.21.1), Matplotlib (\>= 3.3.4), NetworkX (\>= 2.5), NumPy (\>= 1.19.5), SciPy (\>= 1.5.4)
 
-The installation of [molden](https://www.theochem.ru.nl/molden/linux.html)) is highly recommended to analyze the results:
+The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is highly recommended to analyze the results:
 
 ### Installation
 
