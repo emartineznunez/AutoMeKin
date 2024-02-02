@@ -9,11 +9,6 @@ This is the official repository of the automated reaction discovery program Auto
 </p>
 
 
-[Uplo
-
-
-
-<!DOCTYPE html>
 <html lang="en">
   
   <head>
@@ -254,7 +249,7 @@ This is the official repository of the automated reaction discovery program Auto
     
   </body>
   
-</html>ading network_CHO.html…]()
+</html>
 
 
 AutoMeKin (formerly tsscds) has been designed to discover reaction mechanisms in an automated fashion. Transition states are located using MD simulations and Graph Theory algorithms. Monte Carlo simulations afford kinetic results. The only input is a starting structure in XYZ format. 
