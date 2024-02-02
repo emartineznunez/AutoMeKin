@@ -12,7 +12,7 @@ AutoMeKin (formerly tsscds) has been designed to discover reaction mechanisms in
 
 Further details: https://github.com/emartineznunez/AutoMeKin/wiki
 
-Try out a simple example here: 
+Try it out in Colab: 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb)
 
 ## Installation
@@ -125,9 +125,7 @@ You can build (system-wide) from source using this script (on a CentOS):
 `curl -LJO
 <https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Centos.sh>`
 
-You can also check how to install AutoMeKin using Ubuntu:
-
-`<https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb>`
+You can also check how to install AutoMeKin using Ubuntu: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb)
 
 which involves the installation of the following dependencies (before
 the installation of AutoMeKin):
