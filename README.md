@@ -31,12 +31,9 @@ only start an instance of the container. The container includes
 **Follow these three steps to start the container**.
 
 1. Download script: `
-  ```
-function test() {
-  console.log("This code will have a copy button to the right of it");
-}
-```
-   curl -LJO https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh`
+   ```
+   curl -LJO https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh
+   ```
 
 4. `chmod +x Automekin.sh`
 
