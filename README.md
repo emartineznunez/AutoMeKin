@@ -24,9 +24,9 @@ downloads the last release container image from sylabs
 (https://cloud.sylabs.io/library/emartineznunez/default/automekin) as
 `$HOME/automekin\_<tag>.sif`. Note that this is done only the first time
 you use it unless a new image is available. Then, the script will detect
-singularity and the image (that must be located in your $HOME) and will
+singularity and the image (that must be located in your `$HOME`) and will
 only start an instance of the container. The container includes
-amk-tools
+**[amk-tools](https://github.com/dgarayr/amk_tools)**
 
 1\) Download AutoMeKin's auto installer script Automekin.sh (Last update
 April 4, 2022) from your terminal:
