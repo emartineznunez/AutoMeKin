@@ -152,7 +152,7 @@ needed (which can be easily installed with pip):
 
 The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is highly recommended to analyze the results:
 
-### Installation
+#### Installing AutoMeKin
 
 Once the above packages are installed, you can now install AutoMeKin
 following these steps:. Clone AutoMeKin from GitHub:
