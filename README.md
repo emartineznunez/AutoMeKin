@@ -76,7 +76,7 @@ latest image (Tag) is by typing:
 
 `singularity search automekin`
 
-and replace <Tag> below by that number.
+and replace \<Tag\> below by that number.
 Then, from your $HOME type: 
 
 `singularity pull library://emartineznunez/default/automekin:<Tag>` 
