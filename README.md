@@ -77,7 +77,7 @@ Then, from your `$HOME` type:
 
 You can start an instance of the container and run it using:
 
-`singularity instance start automekin\_<Tag>.sif automekin` 
+`singularity instance start automekin_<Tag>.sif automekin` 
 
 `singularity run instance://automekin`
 
