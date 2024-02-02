@@ -177,7 +177,7 @@ autoreconf -i
 ```
 ./configure --prefix=path_to_program
 ```
-Where you can specify where you want to install it, e.g., `/opt/AutoMeKin`
+Where you can specify where you want to install it, _e.g._, `/opt/AutoMeKin`
 ```
 make 
 ```
