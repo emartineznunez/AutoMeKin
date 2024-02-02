@@ -63,7 +63,8 @@ your own tools as well.
 
 **To exit the container** just type: `exit`
 
-**Once your calculations are done, remember to stop the instance:** ```
+**Once your calculations are done, remember to stop the instance:** 
+```
 ./Automekin.sh stop
 ```
 
