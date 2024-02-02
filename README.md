@@ -107,21 +107,20 @@ singularity instance stop automekin
 
 Note, however, that if you want to use G09/G16 you must bind it to the
 container. To help you do so, we created the scripts `SingularitygXX.sh`
-(`XX`= 09 or 16), which can be downloaded as:
-
+(replace `XX` with 09 or 16), which can be downloaded as:
 ```
 curl -LJO https://github.com/emartineznunez/Singularity_amk/raw/main/SingularitygXX.sh
 ```
 The script should be run with the complete path to the sif file as
 argument as in the example:
-
-`SingularitygXX.sh $HOME/automekin_<Tag>.sif`
-
+```
+SingularitygXX.sh $HOME/automekin_<Tag>.sif
+```
 Note that `SingularitygXX.sh` will start a new instance of the container
 every time it is executed. To list the instances use:
-
-`singularity instance list`
-
+```
+singularity instance list
+```
 And stop them as indicated above.
 
 ### Build from source 
@@ -129,10 +128,9 @@ And stop them as indicated above.
 The most recent and up to date version is avaialable at this repository.
 
 You can build (system-wide and including dependencies) using this script (on a CentOS):
-
-`curl -LJO
-https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Centos.sh`
-
+```
+curl -LJO https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Centos.sh
+```
 You can also check how to install AutoMeKin and its dependencies in this Notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb)
 
 If you prefer to install everything manually, follow the next steps.
