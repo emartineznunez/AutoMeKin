@@ -4,7 +4,7 @@
 
 This is the official repository of the automated reaction discovery program AutoMeKin.
 
-<p align="center">
+<p align="left">
    <img src="logo.png" alt="alt text" width="200" height="100">
 </p>
 
