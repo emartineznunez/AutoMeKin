@@ -30,12 +30,12 @@ only start an instance of the container. The container includes
 
 **Follow these three steps to start the container**.
 
-1. Download script: `
+1. Download script: 
    ```
    curl -LJO https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh
    ```
 
-4. `chmod +x Automekin.sh`
+4. ```chmod +x Automekin.sh```
 
 3. `./Automekin.sh`
 
