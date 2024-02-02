@@ -88,7 +88,7 @@ using:
 
 Note, however, that if you want to use G09/G16 you must bind it to the
 container. To help you do so, we created the scripts `SingularitygXX.sh`
-(`XX`=09/16), which can be downloaded as:
+(`XX`= 09 or 16), which can be downloaded as:
 
 `curl -LJO
 <https://github.com/emartineznunez/Singularity_amk/raw/main/SingularitygXX.sh>`
