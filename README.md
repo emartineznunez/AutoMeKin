@@ -20,8 +20,7 @@ Try it out in Colab:
 ### Auto installer 
 This is the easiest way to install/use AutoMeKin. The
 auto installer script installs singularity in your computer and
-downloads the last release container image from sylabs
-(https://cloud.sylabs.io/library/emartineznunez/default/automekin) as
+downloads the last release container image from [sylabs](https://cloud.sylabs.io/library/emartineznunez/default/automekin) as
 `$HOME/automekin\_<tag>.sif`. Note that this is done only the first time
 you use it unless a new image is available. Then, the script will detect
 singularity and the image (that must be located in your `$HOME`) and will
