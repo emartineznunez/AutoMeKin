@@ -96,7 +96,7 @@ container. To help you do so, we created the scripts `SingularitygXX.sh`
 The script should be run with the complete path to the sif file as
 argument as in the example:
 
-`SingularitygXX.sh $HOME/automekin\_<Tag>.sif`
+`SingularitygXX.sh $HOME/automekin_<Tag>.sif`
 
 Note that `SingularitygXX.sh` will start a new instance of the container
 every time it is executed. To list the instances use:
