@@ -72,15 +72,19 @@ these Python packages might interfere in the execution of AutoMeKin.
 ### Singularity container 
 If singularity is already installed in your
 computer, you can obtain the container from sylabs. First check what the
-latest image (Tag) is by typing:
+latest image (Tag) is by typing: 
 
-singularity search automekin and replace <Tag> below by that number.
-Then, from your $HOME type: singularity pull
-library://emartineznunez/default/automekin:<Tag> You can start an
-instance of the container and run it using:
+`singularity search automekin`
 
-singularity instance start automekin\_<Tag>.sif automekin singularity
-run instance://automekin
+and replace <Tag> below by that number.
+Then, from your $HOME type: 
+
+`singularity pull library://emartineznunez/default/automekin:<Tag>` 
+
+You can start an instance of the container and run it using:
+
+`singularity instance start automekin\_<Tag>.sif automekin` 
+`singularity run instance://automekin`
 
 which will allow you to run low-level scripts. You can stop the instance
 using:
