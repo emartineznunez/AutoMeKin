@@ -18,8 +18,8 @@ Try it out in Colab:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb)
 
 ## Installation
-# Table of contents
-- [Auto installer](#Auto installer)
+### Table of contents
+- [Auto installer](#Autoinstaller)
 
 ### Auto installer 
 An auto installer script is provided to install singularity and
