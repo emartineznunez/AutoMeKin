@@ -149,7 +149,7 @@ The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is hi
 Once the above packages are installed, you can now install AutoMeKin
 following these steps:. Clone AutoMeKin from GitHub:
 
-`git clone <https://github.com/emartineznunez/AutoMeKin.git>`
+`git clone https://github.com/emartineznunez/AutoMeKin.git`
 
 `cd AutoMeKin`
 
