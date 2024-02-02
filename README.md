@@ -139,7 +139,7 @@ choices:
 
 1. `install-gnu-parallel-from-source.sh`. This script installs parallel
 latest version from source thanks to Ole Tange (the author). Also it can
-fallback to a user private installation into $HOME/bin if you have not
+fallback to a user private installation into `$HOME/bin` if you have not
 administrator permisions to install it globally.
 
 2. `install-gnu-parallel-from-epel.sh`. Enables the EPEL repository and
