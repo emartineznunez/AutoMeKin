@@ -32,13 +32,9 @@ only start an instance of the container. The container includes
 April 4, 2022) from your terminal:
 `curl -LJO <https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh>`
 
-3. Make the script executable:
+3. Make the script executable: `chmod +x Automekin.sh`
 
-chmod +x Automekin.sh
-
-3. Run the script:
-
-./Automekin.sh
+3. Run the script: `./Automekin.sh`
 
 Note that depending on your Linux configuration, before running the
 autoinstaller you might need to change some parameters which will
