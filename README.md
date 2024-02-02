@@ -61,18 +61,12 @@ your own tools as well.
 **Important notes:**
 
 - To download the file directly from your terminal, curl must be installed.
-- Make sure your auto installer is up to date.
-- The autoinstaller also works on Ubuntu 20.04 LTS on Windows 10. To install
-Ubuntu 20.04 LTS on Windows 10, follow these instructions:
-<https://docs.microsoft.com/en-us/windows/wsl/install-win10>.
-- AutoMeKin's third-party packages in the container are updated (see below the minimum
-required version numbers). Local installations of different versions of
-these Python packages might interfere in the execution of AutoMeKin.
+- The autoinstaller also works on Ubuntu 20.04 LTS on Windows.
 
 ### Singularity container 
 If singularity is already installed in your
-computer, you can obtain the container from sylabs. First check what the
-latest image (Tag) is by typing: 
+computer, you can obtain the container from sylabs. First check the
+latest image (Tag) by typing: 
 
 `singularity search automekin`
 
