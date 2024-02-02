@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb) [![Download AutoMeKin](https://img.shields.io/sourceforge/dm/automekin.svg)](https://sourceforge.net/projects/automekin/files/latest/download)
 
-This is the official repository of the automated reaction discovery program **AutoM**e**Kin**.
+This is the official repository of the automated reaction discovery program **AutoMeKin** (**Auto**mated **Me**chanisms and **Kin**etics).
 
 <p align="left">
    <img src="logo.png" alt="alt text" width="200" height="100">
