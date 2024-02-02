@@ -77,7 +77,7 @@ latest image (Tag) is by typing:
 `singularity search automekin`
 
 and replace \<Tag\> below by that number.
-Then, from your $HOME type: 
+Then, from your `$HOME` type: 
 
 `singularity pull library://emartineznunez/default/automekin:<Tag>` 
 
@@ -89,14 +89,14 @@ You can start an instance of the container and run it using:
 which will allow you to run low-level scripts. You can stop the instance
 using:
 
-singularity instance stop automekin
+`singularity instance stop automekin`
 
 Note, however, that if you want to use G09/G16 you must bind it to the
-container. To help you do so, we created the scripts SingularitygXX.sh
-(XX=09/16), which can be downloaded as:
+container. To help you do so, we created the scripts `SingularitygXX.sh`
+(`XX`=09/16), which can be downloaded as:
 
-curl -LJO
-<https://github.com/emartineznunez/Singularity_amk/raw/main/Singularityg09.sh>
+`curl -LJO
+<https://github.com/emartineznunez/Singularity_amk/raw/main/Singularityg09.sh>`
 
 curl -LJO
 <https://github.com/emartineznunez/Singularity_amk/raw/main/Singularityg16.sh>
