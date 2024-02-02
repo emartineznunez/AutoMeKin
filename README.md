@@ -9,9 +9,8 @@ This is the official repository of the automated reaction discovery program Auto
 </p>
 
 
+AutoMeKin (formerly tsscds) has been designed to discover reaction mechanisms in an automated fashion. Transition states are located using MD simulations and Graph Theory algorithms. Monte Carlo simulations afford kinetic results. The only input is a starting structure in XYZ format. The method is described in these two publications: [1](https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.23790) 2. At present MOPAC2016, Entos Qcore and Gaussian (G09/G16) are interfaced with AutoMeKin. The program has been tested on the following Linux distros: CentOS 7, Red Hat Enterprise Linux and Ubuntu 20.04 LTS.
 
-
-**AutoMeKin** (formerly tsscds) has been designed to discover reaction mechanisms in an automated fashion. Transition states are located using MD simulations and Graph Theory algorithms. Monte Carlo simulations afford kinetic results. The only input is a starting structure in XYZ format. 
 
 Further details: https://github.com/emartineznunez/AutoMeKin/wiki
 
