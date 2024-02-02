@@ -98,8 +98,8 @@ container. To help you do so, we created the scripts `SingularitygXX.sh`
 `curl -LJO
 <https://github.com/emartineznunez/Singularity_amk/raw/main/Singularityg09.sh>`
 
-curl -LJO
-<https://github.com/emartineznunez/Singularity_amk/raw/main/Singularityg16.sh>
+`curl -LJO
+<https://github.com/emartineznunez/Singularity_amk/raw/main/Singularityg16.sh>`
 
 The script should be run with the complete path to the sif file as
 argument as in the example:
