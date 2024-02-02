@@ -101,15 +101,18 @@ singularity run instance://automekin
 which will allow you to run low-level scripts. You can stop the instance
 using:
 
-`singularity instance stop automekin`
+```
+singularity instance stop automekin
+```
 
 Note, however, that if you want to use G09/G16 you must bind it to the
 container. To help you do so, we created the scripts `SingularitygXX.sh`
 (`XX`= 09 or 16), which can be downloaded as:
 
-`curl -LJO
-<https://github.com/emartineznunez/Singularity_amk/raw/main/SingularitygXX.sh>`
-
+```
+curl -LJO
+https://github.com/emartineznunez/Singularity_amk/raw/main/SingularitygXX.sh
+```
 The script should be run with the complete path to the sif file as
 argument as in the example:
 
