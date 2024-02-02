@@ -11,7 +11,7 @@ This is the official repository of the automated reaction discovery program Auto
 
 
 
-AutoMeKin (formerly tsscds) has been designed to discover reaction mechanisms in an automated fashion. Transition states are located using MD simulations and Graph Theory algorithms. Monte Carlo simulations afford kinetic results. The only input is a starting structure in XYZ format. 
+**AutoMeKin** (formerly tsscds) has been designed to discover reaction mechanisms in an automated fashion. Transition states are located using MD simulations and Graph Theory algorithms. Monte Carlo simulations afford kinetic results. The only input is a starting structure in XYZ format. 
 
 Further details: https://github.com/emartineznunez/AutoMeKin/wiki
 
