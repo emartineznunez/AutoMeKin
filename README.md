@@ -21,6 +21,7 @@ Try it out in Colab:
 ### Table of contents
 - [Auto installer](#autoinstaller)
 - [Singularity container](#singularity)
+- [Build from source](#build)
 
 ### Auto installer <a name="autoinstaller"></a>
 An auto installer script is provided to install singularity and
@@ -126,7 +127,7 @@ singularity instance list
 ```
 And stop them as indicated above.
 
-### Build from source 
+### Build from source <a name="build"></a>
 
 The most recent and up to date version is avaialable at this repository.
 
