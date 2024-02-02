@@ -136,25 +136,25 @@ aware that the following packages are needed:
 
 - [GNU Autoconf](https://www.gnu.org/software/autoconf/)
 
-- GNU Bash
+- [GNU Bash](https://www.gnu.org/software/bash/)
 
-\- GNU bc
+- [GNU bc](https://www.gnu.org/software/bc/)
 
-\- environment-modules
+- [environment-modules](https://github.com/cea-hpc/modules)
 
-\- GNU Awk (gawk)
+- [GNU Awk (gawk)](https://www.gnu.org/software/gawk/)
 
-\- GNU C Compiler (gcc)
+- [GNU C Compiler (gcc)](https://gcc.gnu.org/)
 
-\- Gnuplot
+- [Gnuplot](http://www.gnuplot.info/)
 
-\- GNU Fortran Compiler (gfortran)
+- [GNU Fortran Compiler (gfortran)](https://gcc.gnu.org/wiki/GFortran)
 
-\- GNU Parallel
+- [GNU Parallel](https://www.gnu.org/software/bash/manual/html_node/GNU-Parallel.html)
 
-\- SQLite (version \>= 3)
+- [SQLite (version \>= 3)](https://www.sqlite.org/index.html)
 
-\- Zenity
+- [Zenity](https://wiki.gnome.org/Projects/Zenity)
 
 You can install the missing ones manually, or you can use the scripts
 located in amk-SOURCE-2021 and called
@@ -164,62 +164,44 @@ script installs all dependencies, but for the RHEL derivatives (centos7
 and sl7) you have to install parallel separately, and you have two
 choices:
 
-a\) install-gnu-parallel-from-source.sh. This script installs parallel
+1. `install-gnu-parallel-from-source.sh`. This script installs parallel
 latest version from source thanks to Ole Tange (the author). Also it can
 fallback to a user private installation into $HOME/bin if you have not
 administrator permisions to install it globally.
 
-b\) install-gnu-parallel-from-epel.sh. Enables the EPEL repository and
+2. `install-gnu-parallel-from-epel.sh`. Enables the EPEL repository and
 installs parallel from it.
 
 The program employs python3 and the following python3 libraries are
 needed (which can be easily installed with pip):
 
-\- ASE (version \>= 3.21.1)
+- ASE (\>= 3.21.1), Matplotlib (\>= 3.3.4), NetworkX (\>= 2.5), NumPy (\>= 1.19.5), SciPy (\>= 1.5.4)
 
-\- Matplotlib (version \>= 3.3.4)
+The installation of [molden](http://cheminf.cmbi.ru.nl/molden/) is highly recommended to analyze the results:
 
-\- NetworkX (version \>= 2.5)
-
-\- NumPy (version \>= 1.19.5)
-
-\- SciPy (version \>= 1.5.4)
-
-These packages might also be useful to analyze the results:
-
-\- molden
-
-\- sqlitebrowser
-
-Installation
+### Installation
 
 Once the above packages are installed, you can now install AutoMeKin
 following these steps:. Clone AutoMeKin from GitHub:
 
-git clone <https://github.com/emartineznunez/AutoMeKin.git>
+`git clone <https://github.com/emartineznunez/AutoMeKin.git>`
 
-Go to the AutoMeKin folder.
+`cd AutoMeKin`
 
-cd AutoMeKin
+`autoreconf -i`
 
-Now type:
+`./configure --prefix=path_to_program`
 
-autoreconf -i
+Where you can specify where you want to install it, e.g., `/opt/AutoMeKin`
 
-./configure --prefix=path_to_program
+`make` 
 
-Where you can specify where you want to install it, e.g., /opt/AutoMeKin
-
-Finally, complete the installation:
-
-make make install make clean The last command (make clean) is only
-necessary if you want to remove from the src directory the object files
-and executables created in the compilation process.
+`make install` 
 
 For convenience, and once “Environment Modules” has been installed, you
-should add the following line to your .bashrc file:
+should add the following line to your `.bashrc` file:
 
-module use path_to_program/modules
+`module use path_to_program/modules`
 
-where path_to_program is the path where you installed amk (e.g.,
-$HOME/amk-2021).
+where `path_to_program` is the path where you installed amk (e.g.,
+`$HOME/amk-2021`).
