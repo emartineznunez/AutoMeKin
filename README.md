@@ -117,7 +117,7 @@ And stop them as indicated above.
 
 The most recent and up to date version is avaialable at:
 
-`<https://github.com/emartineznunez/AutoMeKin>`
+`[https://github.com/emartineznunez/AutoMeKin](https://github.com/emartineznunez/AutoMeKin)`
 
 You can build (system-wide) from source using this script (on a CentOS):
 
