@@ -130,7 +130,8 @@ You can also check how to install AutoMeKin using Ubuntu: [![Open In Colab](http
 which involves the installation of the following dependencies (before
 the installation of AutoMeKin):
 
-Installing dependencies Before installing amk for the first time, be
+#### Installing dependencies 
+Before installing amk for the first time, be
 aware that the following packages are needed:
 
 \- GNU Autoconf
