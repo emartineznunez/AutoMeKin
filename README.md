@@ -17,7 +17,8 @@ Try out a simple example here:
 
 ## Installation
 
-Auto installer This is the easiest way to install/use AutoMeKin. The
+### Auto installer 
+This is the easiest way to install/use AutoMeKin. The
 auto installer script installs singularity in your computer and
 downloads the last release container image from sylabs
 (https://cloud.sylabs.io/library/emartineznunez/default/automekin) as
