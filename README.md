@@ -127,8 +127,7 @@ You can also check how to install AutoMeKin and its dependencies in this Noteboo
 If you prefer to install everything manually, follow the next steps.
 
 #### Installing dependencies 
-Before installing amk for the first time, be
-aware that the following packages are needed:
+The following packages are required beforehand:
 
 - [GNU Autoconf](https://www.gnu.org/software/autoconf/), [GNU Bash](https://www.gnu.org/software/bash/), [GNU bc](https://www.gnu.org/software/bc/), [environment-modules](https://github.com/cea-hpc/modules), [GNU Awk (gawk)](https://www.gnu.org/software/gawk/), [GNU C Compiler (gcc)](https://gcc.gnu.org/), [Gnuplot](http://www.gnuplot.info/), [GNU Fortran Compiler (gfortran)](https://gcc.gnu.org/wiki/GFortran), [GNU Parallel](https://www.gnu.org/software/bash/manual/html_node/GNU-Parallel.html), [SQLite (version \>= 3)](https://www.sqlite.org/index.html), [Zenity](https://wiki.gnome.org/Projects/Zenity)
 
