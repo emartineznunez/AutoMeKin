@@ -15,6 +15,7 @@ Further details: https://github.com/emartineznunez/AutoMeKin/wiki
 Try out a simple example here: 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb)
 
+## Installation
 
 Auto installer This is the easiest way to install/use AutoMeKin. The
 auto installer script installs singularity in your computer and
