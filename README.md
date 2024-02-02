@@ -165,25 +165,29 @@ The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is hi
 
 Once the above packages are installed, you can now install AutoMeKin
 following these steps:. Clone AutoMeKin from GitHub:
-
-`git clone https://github.com/emartineznunez/AutoMeKin.git`
-
-`cd AutoMeKin`
-
-`autoreconf -i`
-
-`./configure --prefix=path_to_program`
-
+```
+git clone https://github.com/emartineznunez/AutoMeKin.git
+```
+```
+cd AutoMeKin
+```
+```
+autoreconf -i
+```
+```
+./configure --prefix=path_to_program
+```
 Where you can specify where you want to install it, e.g., `/opt/AutoMeKin`
-
-`make` 
-
-`make install` 
-
+```
+make 
+```
+```
+make install
+```
 For convenience, and once “Environment Modules” has been installed, you
 should add the following line to your `.bashrc` file:
-
-`module use path_to_program/modules`
-
+```
+module use path_to_program/modules
+```
 where `path_to_program` is the path where you installed amk (e.g.,
 `$HOME/amk-2021`).
