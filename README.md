@@ -93,6 +93,8 @@ You can start an instance of the container and run it using:
 
 ```
 singularity instance start automekin_<Tag>.sif automekin
+```
+```
 singularity run instance://automekin
 ```
 
