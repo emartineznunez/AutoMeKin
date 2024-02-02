@@ -28,17 +28,17 @@ singularity and the image (that must be located in your `$HOME`) and will
 only start an instance of the container. The container includes
 **[amk-tools](https://github.com/dgarayr/amk_tools)**
 
-1\) Download AutoMeKin's auto installer script Automekin.sh (Last update
+1. Download AutoMeKin's auto installer script Automekin.sh (Last update
 April 4, 2022) from your terminal:
 
 curl -LJO
 <https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh>
 
-2\) Make the script executable:
+2. Make the script executable:
 
 chmod +x Automekin.sh
 
-3\) Run the script:
+3. Run the script:
 
 ./Automekin.sh
 
