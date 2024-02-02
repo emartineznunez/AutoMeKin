@@ -130,31 +130,9 @@ If you prefer to install everything manually, follow the next steps.
 Before installing amk for the first time, be
 aware that the following packages are needed:
 
-- [GNU Autoconf](https://www.gnu.org/software/autoconf/)
+- [GNU Autoconf](https://www.gnu.org/software/autoconf/), [GNU Bash](https://www.gnu.org/software/bash/), [GNU bc](https://www.gnu.org/software/bc/), [environment-modules](https://github.com/cea-hpc/modules), [GNU Awk (gawk)](https://www.gnu.org/software/gawk/), [GNU C Compiler (gcc)](https://gcc.gnu.org/), [Gnuplot](http://www.gnuplot.info/), [GNU Fortran Compiler (gfortran)](https://gcc.gnu.org/wiki/GFortran), [GNU Parallel](https://www.gnu.org/software/bash/manual/html_node/GNU-Parallel.html), [SQLite (version \>= 3)](https://www.sqlite.org/index.html), [Zenity](https://wiki.gnome.org/Projects/Zenity)
 
-- [GNU Bash](https://www.gnu.org/software/bash/)
-
-- [GNU bc](https://www.gnu.org/software/bc/)
-
-- [environment-modules](https://github.com/cea-hpc/modules)
-
-- [GNU Awk (gawk)](https://www.gnu.org/software/gawk/)
-
-- [GNU C Compiler (gcc)](https://gcc.gnu.org/)
-
-- [Gnuplot](http://www.gnuplot.info/)
-
-- [GNU Fortran Compiler (gfortran)](https://gcc.gnu.org/wiki/GFortran)
-
-- [GNU Parallel](https://www.gnu.org/software/bash/manual/html_node/GNU-Parallel.html)
-
-- [SQLite (version \>= 3)](https://www.sqlite.org/index.html)
-
-- [Zenity](https://wiki.gnome.org/Projects/Zenity)
-
-You can install the missing ones manually, or you can use the scripts
-located in amk-SOURCE-2021 and called
-install-required-packages-distro.sh (where distro=ubuntu-16.4lts,
+For your convenience, you use the scripts: `install-required-packages-distro.sh` (where `distro`=ubuntu-16.4lts,
 centos7 or sl7), which will do the work for you.The ubuntu-16.4lts
 script installs all dependencies, but for the RHEL derivatives (centos7
 and sl7) you have to install parallel separately, and you have two
