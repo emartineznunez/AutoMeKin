@@ -20,9 +20,9 @@ Try it out in Colab:
 ## Installation
 ### Table of contents
 - [Auto installer](#autoinstaller)
-- [Singularity container](#Singularitycontainer)
+- [Singularity container](#singularity)
 
-### Auto installer 
+### Auto installer <a name="autoinstaller"></a>
 An auto installer script is provided to install singularity and
 download the last release container image from [sylabs](https://cloud.sylabs.io/library/emartineznunez/default/automekin) as
 `$HOME/automekin_<tag>.sif`. Note that this is done only the first time
@@ -76,7 +76,7 @@ your own tools as well.
 - To download the file directly from your terminal, curl must be installed.
 - The autoinstaller also works on Ubuntu 20.04 LTS on Windows.
 
-### Singularity container 
+### Singularity container <a name="singularity"></a>
 If singularity is already installed in your
 computer, you can obtain the container from sylabs. First check the
 latest image (Tag) by typing: 
