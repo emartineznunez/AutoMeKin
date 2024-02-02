@@ -19,7 +19,8 @@ Try it out in Colab:
 
 ## Installation
 ### Table of contents
-- [Auto installer](#Autoinstaller)
+- [Auto installer](#autoinstaller)
+- [Singularity container](#Singularitycontainer)
 
 ### Auto installer 
 An auto installer script is provided to install singularity and
