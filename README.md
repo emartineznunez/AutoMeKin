@@ -145,8 +145,8 @@ administrator permisions to install it globally.
 2. `install-gnu-parallel-from-epel.sh`. Enables the EPEL repository and
 installs parallel from it.
 
-The program employs python3 and the following python3 libraries are
-needed (which can be easily installed with pip):
+Additionally, the following python3 libraries (easily installed with pip) are
+needed:
 
 - ASE (\>= 3.21.1), Matplotlib (\>= 3.3.4), NetworkX (\>= 2.5), NumPy (\>= 1.19.5), SciPy (\>= 1.5.4)
 
