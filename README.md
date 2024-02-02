@@ -39,7 +39,9 @@ only start an instance of the container. The container includes
    chmod +x Automekin.sh
    ```
 
-3. `./Automekin.sh`
+3. ```
+   ./Automekin.sh
+   ```
 
 Note that depending on your Linux configuration, before running the
 autoinstaller you might need to change some parameters which will
