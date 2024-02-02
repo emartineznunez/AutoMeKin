@@ -197,4 +197,4 @@ module use path_to_program/modules
 where `path_to_program` is the path where you installed amk (_e.g._,
 `$HOME/amk-2021`).
 
-[^1]: For enquiries contact: emilio.nunez@usc.es
+[^1]: For enquiries please contact: emilio.nunez@usc.es
