@@ -26,7 +26,9 @@ downloads the last release container image from sylabs
 you use it unless a new image is available. Then, the script will detect
 singularity and the image (that must be located in your `$HOME`) and will
 only start an instance of the container. The container includes
-**[amk-tools](https://github.com/dgarayr/amk_tools)**. **Follow these three steps to start the container**.
+**[amk-tools](https://github.com/dgarayr/amk_tools)**. 
+
+**Follow these three steps to start the container**.
 
 1. Download auto installer: `curl -LJO <https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh>`
 
