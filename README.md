@@ -84,6 +84,7 @@ Then, from your `$HOME` type:
 You can start an instance of the container and run it using:
 
 `singularity instance start automekin\_<Tag>.sif automekin` 
+
 `singularity run instance://automekin`
 
 which will allow you to run low-level scripts. You can stop the instance
@@ -104,28 +105,29 @@ container. To help you do so, we created the scripts `SingularitygXX.sh`
 The script should be run with the complete path to the sif file as
 argument as in the example:
 
-SingularitygXX.sh $HOME/automekin\_<Tag>.sif
+`SingularitygXX.sh $HOME/automekin\_<Tag>.sif`
 
-Note that SingularitygXX.sh will start a new instance of the container
+Note that `SingularitygXX.sh` will start a new instance of the container
 every time it is executed. To list the instances use:
 
-singularity instance list
+`singularity instance list`
 
 And stop them as indicated above.
 
-Build from source The most recent and up to date version is avaialable
-at:
+### Build from source 
 
-<https://github.com/emartineznunez/AutoMeKin>
+The most recent and up to date version is avaialable at:
+
+`<https://github.com/emartineznunez/AutoMeKin>`
 
 You can build (system-wide) from source using this script (on a CentOS):
 
-curl -LJO
-<https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Centos.sh>
+`curl -LJO
+<https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Centos.sh>`
 
 You can also check how to install AutoMeKin using Ubuntu:
 
-<https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/master/AutoMeKin.ipynb>
+`<https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb>`
 
 which involves the installation of the following dependencies (before
 the installation of AutoMeKin):
