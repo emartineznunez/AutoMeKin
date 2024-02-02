@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+This is the official repository of the automated reaction discovery program AutoMeKin.
+
 <p align="center">
    <img src="logo.png" alt="alt text" width="400" height="200">
 </p>
