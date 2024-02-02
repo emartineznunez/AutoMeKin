@@ -134,9 +134,9 @@ the installation of AutoMeKin):
 Before installing amk for the first time, be
 aware that the following packages are needed:
 
-\- GNU Autoconf
+- [GNU Autoconf](https://www.gnu.org/software/autoconf/)
 
-\- GNU Bash
+- GNU Bash
 
 \- GNU bc
 
