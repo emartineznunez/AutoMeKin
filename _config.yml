@@ -1,6 +1,5 @@
 title: AutoMeKin Documentation
 theme: just-the-docs
-logo: "assets/images/logo.png"
 url: https://emartineznunez.github.io
 
 aux_links:
@@ -40,3 +39,10 @@ plugins:
   - jekyll-sitemap
   # autoformats publications
   - jekyll-scholar
+
+# social variables
+logo: "assets/images/logo.png"
+twitter_username: AutoMeKin2021
+github_username:  emartineznunez
+google_scholar: ebumcsQAAAAJ
+orcid: 0000-0001-5477-1503
