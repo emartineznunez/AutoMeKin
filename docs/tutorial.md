@@ -14,15 +14,10 @@ nav_order: 2
 - [Running the code](#run)
 - [Results](#res)
 - [Other capabilities](#oc)
+- [Summary of keywords and options](#sko)
 
-- 8. Other capabilities
-   - a) van der Waals complexes
-   - b) Scanning dihedral angles
-   - c) Fragmentation
-   - d) Advanced options
-   - e) Biased dynamics
-- 9. Summary of all keywords and options
 - 10. References
+
 
 ## Introduction <a name="introduction"></a>
 
@@ -1559,7 +1554,8 @@ The above examples can be tested using the amk.sh script:
 
 amk.sh inputfile
 
-## 9. Summary of all keywords and options
+## Summary of keywords and options<a name="sko"></a>
+
 
 ```
 sampling^1 LowLevel^2 General Method Screening Kinetics
