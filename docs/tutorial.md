@@ -8,13 +8,11 @@ nav_order: 2
 
 ## Content
 - [Introduction](#introduction)
+- [How to cite the program](#cite)
 
 
 
-## Contents
 
-- 1. Introduction
-- 2. How to cite the program
 - 3. Developers team
 - 4. Installation
 - 5. Description of the input files
@@ -68,7 +66,7 @@ also welcome.
 
 AutoMeKin wiki page: https://rxnkin.usc.es/index.php/AutoMeKin
 
-## 2. How to cite the program
+## How to cite the program<a name="cite"></a>
 
 If you use **AutoMeKin2021** , please cite the following publications:
 
