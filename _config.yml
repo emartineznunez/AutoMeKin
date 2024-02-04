@@ -13,6 +13,8 @@ nav_external_links:
     url: https://github.com/dgarayr/amk_tools
   - title: Try it on the Web
     url: https://rxnkin.usc.es/amk/
+  - title: Try it on Colab
+    url: https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb
     
 callouts_level: quiet # or loud
 callouts:
