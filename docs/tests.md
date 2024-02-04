@@ -21,7 +21,7 @@ run_test.sh
 {: .warning }  
 Note that each test takes from a few seconds to several minutes. The results of each test will be gathered in a different directory.  
 
-If you want to run a subset of tests use the following:  
+3. If you want to run a subset of tests use the following:  
 ```
 run_test.sh --tests=FA, FAthermo
 ```
