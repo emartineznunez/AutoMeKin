@@ -5,7 +5,7 @@ nav_order: 1
 ---
 
 
-# Installation
+# Installation of AutoMeKin
 ## Content
 - [Auto installer](#autoinstaller)
 - [Singularity container](#singularity)
