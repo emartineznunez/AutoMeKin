@@ -1,9 +1,0 @@
-%mem=MemGB
-#level1 
-opt=(ts,noeigentest,calcall,noraman) iop
-IOP(2/17=4) pseudo
-nosymm
-
-ts search
-
-charge mult
