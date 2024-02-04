@@ -176,7 +176,7 @@ additional lines right below the keyword line (see _Biased dynamics_).
 
 Below you will find a detailed explanation of the keywords grouped together in the different sections. For
 each section, only the most important keywords are described. Additional keywords can be found in
-Advanced options.
+__Advanced options__.
 
 
 **General.** In this section the electronic structure details are provided. The following is an example of the
