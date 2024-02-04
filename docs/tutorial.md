@@ -1,15 +1,8 @@
-**Auto** mated Reaction **Me** chanisms and **Kin** etics
-
-## January 15 , 2024 (rev 1137)
-
-```
-Emilio Martinez-Nunez
-Departamento de Química Física, Facultade de Química
-Avda. das Ciencias s/n
-15782 Santiago de Compostela, SPAIN
-emilio.nunez@usc.es
-```
-(^)
+---
+title: tutorial
+layout: home
+nav_order: 2
+---
 
 
 ## Contents
