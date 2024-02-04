@@ -11,18 +11,10 @@ nav_order: 2
 - [How to cite the program](#cite)
 - [Developers](#dev)
 - [Input files](#input)
+- [Running the code](#run)
 
 
 
-- 5. Description of the input files
-- 6. Running the program
-   - a) Tests
-   - b) Low-level calculations
-   - c) High-level calculations
-   - d) Step-by-step low-level calculations
-   - e) Step-by-step high-level calculations
-   - f) Aborting the calculations
-   - g) Directory tree structure of wrkdir
 - 7. Results
    - a) Relevant information
    - b) Visualization tools
@@ -595,7 +587,8 @@ value is the temperature (in K) for which thermal rate coefficients will be calc
 temperatures in the range 100 - 9999 K are allowed.
 
 
-## 6. Running the program
+## Running the code<a name="run"></a>
+
 
 ```
 To modify your environment information so that you can use the program, load the amk/2021 module
