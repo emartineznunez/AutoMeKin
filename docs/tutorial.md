@@ -15,8 +15,7 @@ nav_order: 2
 - [Results](#res)
 - [Other capabilities](#oc)
 - [Summary of keywords and options](#sko)
-
-- 10. References
+- [References](#ref)
 
 
 ## Introduction <a name="introduction"></a>
@@ -1967,7 +1966,8 @@ ImpPaths
 (^1) Value of sampling keyword (in section: Method). (^2) First value of LowLevel keyword, i.e., program, (in section
 General).
 
-## 10. References
+
+## References <a name="ref"></a>
 
 1. Martínez-Núñez, E., An automated transition state search using classical trajectories initialized at multiple
 minima. _Phys. Chem. Chem. Phys._ **2015,** _17_ , 14912-14921.
