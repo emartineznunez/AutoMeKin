@@ -1,6 +1,6 @@
 ---
 title: Getting started
-layout: default
+layout: home
 nav_order: 1
 ---
 
