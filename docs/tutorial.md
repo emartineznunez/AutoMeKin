@@ -112,10 +112,8 @@ Saulo A. Vazquez (Universidade de Santiago de Compostela, Spain)
 
 ## Input files<a name="input"></a>
 
-The first step in our strategy for finding reaction mechanisms involves Heuristics- or MD-based methods, for
-which MOPAC 2016 or Entos Qcore are used. The algorithm samples the potential energy surface to locate
-transition states by using the original BBFS algorithm,^1 -^2 or a new search algorithm.^9 Then, reactants and
-products are obtained by intrinsic reaction coordinate (IRC) calculations. Finally, a reaction network is
+The first step in our strategy for finding reaction mechanisms involves Heuristics- or MD-based methods, for which MOPAC 2016 or Entos Qcore are used. The algorithm samples the potential energy surface to locate
+transition states by using the original [BBFS algorithm](https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.23790), or a [bond-order-based search algorithm](https://pubs.acs.org/doi/abs/10.1021/acs.jctc.9b01039). Then, reactants and products are obtained by intrinsic reaction coordinate (IRC) calculations. Finally, a reaction network is
 constructed with all the elementary reactions predicted by the program. To increase the efficacy of
 AutoMeKin, this process may be carried out in an iterative fashion as described in reference 1. Once the
 reaction network has been predicted at the semiempirical level, the user can calculate rate constants for all
