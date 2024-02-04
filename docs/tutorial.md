@@ -13,7 +13,7 @@ nav_order: 2
 - [Input files](#input)
 - [Running the code](#run)
 - [Results](#res)
-
+- [Other capabilities](#oc)
 
 - 8. Other capabilities
    - a) van der Waals complexes
@@ -23,7 +23,6 @@ nav_order: 2
    - e) Biased dynamics
 - 9. Summary of all keywords and options
 - 10. References
-
 
 ## Introduction <a name="introduction"></a>
 
@@ -1107,8 +1106,7 @@ where 2 , 4 and 7 are the labels of the TSs to be removed (for the LL calculatio
 for the HL calculations is REMOVE_TS.sh. These two scripts will create a new FINAL_XL_FA (with X = H,L)
 directory where the selected TS structures have been removed.
 
-
-## 8. Other capabilities
+## Other capabilities<a name="oc"></a>
 
 ### a) van der Waals complexes
 
