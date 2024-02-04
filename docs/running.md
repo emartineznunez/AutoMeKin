@@ -1,5 +1,5 @@
 ---
-title: Run the code
+title: Run parallel calculations
 layout: home
 nav_order: 3
 ---
