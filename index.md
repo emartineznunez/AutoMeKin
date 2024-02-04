@@ -20,7 +20,7 @@ singularity and the image (that must be located in your `$HOME`) and will
 only start an instance of the container. The container includes
 [amk-tools](https://github.com/dgarayr/amk_tools). 
 
-**Follow these steps to start/stop the container**.
+**To start/stop the container follow these steps:**
 
 - Download script: 
    ```
