@@ -60,7 +60,7 @@ your own tools as well.
 ./Automekin.sh stop
 ```
 
-{: .note }
+{: .note }  
 - To download the file directly from your terminal, curl must be installed.
 - The autoinstaller also works on Ubuntu 20.04 LTS on Windows.
 
