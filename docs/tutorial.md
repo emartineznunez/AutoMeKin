@@ -37,7 +37,7 @@ The program is interfaced with MOPAC2016, Qcore and Gaussian (G09/G16), but work
 incorporate more electronic structure programs. This tutorial is thought to guide you through the various
 steps needed to predict reaction mechanisms and kinetics of unimolecular decompositions. To facilitate the
 presentation, we consider, as an example, the decomposition of formic acid (FA). Users are encouraged to
-read references [1](#ref1) - [2](#ref2) before using AutoMeKin package.
+read references [1](https://pubs.rsc.org/en/content/articlelanding/2015/cp/c5cp02175h)) - [2](https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.23790) before using AutoMeKin package.
 
 The present version has been tested on CentOS 7, Red Hat Enterprise Linux and Ubuntu 16.04.3 LTS. If you
 find a bug, please report it to the main developer (emilio.nunez@usc.es). Comments and suggestions are
