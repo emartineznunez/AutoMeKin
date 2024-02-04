@@ -208,23 +208,20 @@ The first value is the program and the second the semiempirical method. So far, 
 programs. For qcore only xtb method is implemented, and for mopac, any of the semiempirical methods
 of MOPAC2016 can be employed to run the MD simulations. You can use a combination of MOPAC keywords.
 In the example above, for instance, the pm7 semiempirical level together with a maximum CPU time (for any
-type of mopac calculation) of 3 minutes is requested. **The use of the MOPAC keyword t= (followed by an
-amount of time) is highly recommended to enhance the efficiency of the calculations.**
+type of mopac calculation) of 3 minutes is requested. _The use of the MOPAC keyword t= (followed by an
+amount of time) is highly recommended to enhance the efficiency of the calculations._
 
-If you do not employ the keyword LowLevel_TSopt, explained below in advanced options, both the low-
-level TS optimizations and MD simulations are carried out using the semiempirical method specified by the
-second value. This is in general a good choice both in terms of efficacy and efficiency, and also because all
-structures will be re-optimized later using ab initio/DFT methods as specified with the keyword HighLevel.
+If you do not employ the keyword <code>LowLevel_TSopt</code>, explained below in advanced options, both the low-level TS optimizations and MD simulations are carried out using the semiempirical method specified by the second value. This is in general a good choice both in terms of efficacy and efficiency, and also because all structures will be re-optimized later using ab initio/DFT methods as specified with the keyword HighLevel.
 
 However, if you know that semiempirical methods do not work well for your system, and although they are
 going to be employed for the MD sampling (there is no other choice at the moment), you can still pick one
 of the ab initio/DFT methods already at this stage for the TS optimizations using the keyword
-LowLevel_TSopt explained below in advanced options. However, note that this will be much more CPU
-time consuming.
+<code>LowLevel_TSopt</code> explained below in advanced options. However, note that this will be much more CPU time consuming.
 
 
-**HighLevel** [two values: two strings; no blank spaces in each string; **mandatory keyword except for
-association** ]
+### <code>HighLevel values</code>
+[two <code>values</code>: two strings; no blank spaces in each string; _mandatory keyword except for
+association_]
 
 The first value is the program (g09, g16 or qcore are the possible choices) and the second indicates the
 level of theory employed in the high-level calculations. For gaussian, you can employ a dual-level approach,
