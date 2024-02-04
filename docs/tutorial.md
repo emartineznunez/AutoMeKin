@@ -130,8 +130,7 @@ distribution**. Make a working directory (<code>wrkdir</code>) and copy files <c
 Use short names for the <code>wrkdir</code> and the input files. Good choices are short acronyms (using capital letters) like FA for formic acid. 
 
 
-The following are files read by amk, and therefore, they must be present in wrkdir.
-
+The following are files read by amk, and therefore, they must be present in <code>wrkdir</code>.
 
 **name.xyz** (<code>FA.xyz</code> in our example), where name refers to the name for our system; the recommendation
 is to use acronyms like FA for Formic Acid or short names. This file contains an initial input structure of our
@@ -191,9 +190,9 @@ IRCpoints 30
 charge 0  
 mult 1  
 ```
-List of “ **Keyword** value(s)” for this section:
+List of <code>Keyword value(s)</code for this section:
 
-**molecule** value
+<code>molecule value</code>
 
 [value is one string with no blank spaces; **mandatory keyword** ]
 
