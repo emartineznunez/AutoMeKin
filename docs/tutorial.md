@@ -199,8 +199,8 @@ value is the name of the system and _it must match the name of the XYZ file with
 our example). **For association and vdW sampling there is no XYZ file at the beginning and
 <code>value</code> is just the name of the system._
 
-{: .important }
-### <code>LowLevel values</code>  
+{: .important }  
+<code>LowLevel values</code>   
 [two <code>values</code>: two strings; the second string accepts blank spaces; default: <code>mopac pm7</code>]  
 The first value is the program and the second the semiempirical method. So far, qcore and mopac are valid
 programs. For qcore only xtb method is implemented, and for mopac, any of the semiempirical methods
