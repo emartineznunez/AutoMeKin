@@ -7,7 +7,19 @@ aux_links:
   Template Repository: https://github.com/emartineznunez/AutoMeKin
 
 
+callouts_level: quiet # or loud
 callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
   warning:
     title: Warning
     color: red
