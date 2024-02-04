@@ -8,10 +8,10 @@ aux_links:
 
 # External navigation links
 nav_external_links:
-  - title: Try it on the Web
-    url: https://rxnkin.usc.es/amk/
   - title: Network visualization tools
     url: https://github.com/dgarayr/amk_tools
+  - title: Try it on the Web
+    url: https://rxnkin.usc.es/amk/
     
 callouts_level: quiet # or loud
 callouts:
