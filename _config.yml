@@ -30,5 +30,5 @@ callouts:
     title: Warning
     color: red
 
-logo: "https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/logo.png"
+logo: "/assets/images/logo.png"
 
