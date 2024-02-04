@@ -28,6 +28,5 @@ callouts:
     title: Warning
     color: red
 
-# social variables
-logo: "assets/images/logo.png"
-
+avatar: "assets/images/logo.png"
+round-avatar: true
