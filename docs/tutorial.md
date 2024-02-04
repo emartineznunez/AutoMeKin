@@ -133,16 +133,17 @@ Use short names for the <code>wrkdir</code> and the input files. Good choices ar
 The following are files read by amk, and therefore, they must be present in wrkdir.
 
 
-**name.xyz** (FA.xyz in our example), where name refers to the name for our system; the recommendation
+**name.xyz** (<code>FA.xyz</code> in our example), where name refers to the name for our system; the recommendation
 is to use acronyms like FA for Formic Acid or short names. This file contains an initial input structure of our
 system in XYZ format:
 
 5
-C 0.000000 0.000000 0.
-O 0.000000 0.000000 1.
-O 1.212436 0.000000 -0.
-H -0.943102 0.000000 -0.
-H 1.038843 0.000000 -1.
+C 0.000000 0.000000 0.  
+O 0.000000 0.000000 1.  
+O 1.212436 0.000000 -0.  
+H -0.943102 0.000000 -0.  
+H 1.038843 0.000000 -1.  
+
 Please provide here a stable conformer of the reactant molecule. A general recommendation is to use a
 structure previously optimized with the method selected with the keyword LowLevel (or eventually
 LowLevel_TSopt). **If your input structure is fragmented, then, kinetics results (if available) are
