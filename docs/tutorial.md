@@ -32,7 +32,7 @@ algorithms.
 
 3) Kinetics simulations.
 
-The program is interfaced with MOPAC2016, Qcore and Gaussian (G09/G16), but work is in progress to
+The program is interfaced with [MOPAC2016](https://github.com/openmopac/mopac), [Qcore](https://software.entos.ai/qcore/documentation/) and [Gaussian (G09/G16)](https://gaussian.com/), but work is in progress to
 incorporate more electronic structure programs. This tutorial is thought to guide you through the various
 steps needed to predict reaction mechanisms and kinetics of unimolecular decompositions. To facilitate the
 presentation, we consider, as an example, the decomposition of formic acid (FA). Users are encouraged to
