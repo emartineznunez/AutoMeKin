@@ -5,3 +5,9 @@ url: https://emartineznunez.github.io
 
 aux_links:
   Template Repository: https://github.com/emartineznunez/AutoMeKin
+
+
+callouts:
+  warning:
+    title: Warning
+    color: red
