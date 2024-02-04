@@ -212,38 +212,34 @@ If you do not employ the keyword <code>LowLevel_TSopt</code>, explained below in
 However, if you know that semiempirical methods do not work well for your system, and although they are
 going to be employed for the MD sampling (there is no other choice at the moment), you can still pick one
 of the _ab initio_/DFT methods already at this stage for the TS optimizations using the keyword
-<code>LowLevel_TSopt</code> explained below in advanced options. However, note that this will be much more CPU time consuming.
+<code>LowLevel_TSopt</code> explained below in advanced options. However, note that this will be much more demanding.
 
 {: .important }  
-<code>HighLevel values</code>
+<code>HighLevel values</code>  
 [two <code>values</code>: two strings; no blank spaces in each string; _mandatory keyword except for
 association_]
 
 The first <code>value</code> is the program (<code>g09</code>, <code>g16</code> or <code>qcore</code> are the possible choices) and the second indicates the level of theory employed in the high-level calculations. For gaussian, you can employ a dual-level approach, which includes a higher level to refine the energy, as shown in the following example:
 ```
-HighLevel g 16 ccsd(t)/6-311+G(2d,2p)//b3lyp/6-31G(d,p)
+HighLevel g16 ccsd(t)/6-311+G(2d,2p)//b3lyp/6-31G(d,p)
 ```
 For <code>g09/g16</code>, supported methods are HF, MP2 and DFT for geometry optimizations and HF, MP2, DFT and CCSD(T) for single point energy calculations.
 
 For <code>qcore</code>, the method is specified in an additional file named qcore_template. An example of such file is given in the FA_qcore example. This option also allows an extra keyword: <code>hessianmethod</code>, which could accept the values <code>analytic</code> or <code>semianalytic</code>.
 
 {: .important }  
-<code>HL_rxn_network** value(s)</code>  
-[one or two values: first is a string, and second (if present) is an integer; default value: reduced]
+<code>HL_rxn_network value(s)</code>  
+[one or two <code>values</code>: first is a string, and second (if present) is an integer; default value: <code>reduced</code>]
 
-The first value can be complete or reduced_._ The value complete indicates that all the TSs will be
-reoptimized and in this case no second value is needed.
+The first value can be <code>complete</code> or <code>reduced</code>. <code>complete</code> indicates that all the TSs will be reoptimized and in this case no second value is needed.
 
-Alternatively, you may use reduced as the first value (the default), followed by a second value (an
-integer) which indicates the maximum energy (in kcal/mol and relative to the reference starting structure)
-of a transition state to be calculated at the high level.
+Alternatively, you may use <code>reduced</code> as the first value (the default), followed by a second <code>value</code> (an integer) which indicates the maximum energy (in kcal/mol and relative to the reference starting structure) of a transition state to be calculated at the high level.
 
-**IRCpoints** value
+{: .important }  
+<code>IRCpoints value</code>  
+[<code>value</code> is an integer; default value: <code>100</code> ]
 
-[value is an integer; default value: 100 ]
-
-value is the maximum number of IRC points (in each direction) computed at the high-level. Note that
-g09/g16 calculations need much fewer points than Entos Qcore.
+<code>value</code> is the maximum number of IRC points (in each direction) computed at the high-level. Note that g09/g16 calculations need much fewer points than Entos Qcore.
 
 **charge** value
 
