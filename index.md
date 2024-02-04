@@ -18,7 +18,7 @@ download the last release container image from [sylabs](https://cloud.sylabs.io/
 you use it unless a new image is available. Then, the script will detect
 singularity and the image (that must be located in your `$HOME`) and will
 only start an instance of the container. The container includes
-**[amk-tools](https://github.com/dgarayr/amk_tools)**. 
+[amk-tools](https://github.com/dgarayr/amk_tools). 
 
 **Follow these three steps to start the container**.
 
