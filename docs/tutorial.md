@@ -44,7 +44,7 @@ also welcome.
 
 ## How to cite the program<a name="cite"></a>
 
-If you use **AutoMeKin2021** , please cite the following publications:
+If you use AutoMeKin2021, please cite the following publications:
 
 ```
 1) Martinez-Nunez, E. et al. J. Comput. Chem. , 2021 , 42 , 2036-2048.
@@ -53,13 +53,8 @@ If you use **AutoMeKin2021** , please cite the following publications:
 4) MOPAC2016, Version: 21. 129 , James J. P. Stewart, Stewart Computational Chemistry, web-site:
 HTTP://OpenMOPAC.net.
 ```
-If you use the older version **tsscds2018** , please cite, instead of ref 1 above, the following one:
 
-```
-Rodriguez, A. et al. J. Comput. Chem. , 2018 , 39 , 1922– 1930.
-```
 If Entos Qcore code is employed for the low-level calculations, you must cite:
-
 
 ```
 Manby, F. R. et al. , ChemRxiv.7762646 (2019). DOI: 10.26434/chemrxiv.7762646.v 2
