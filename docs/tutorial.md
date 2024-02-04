@@ -127,8 +127,7 @@ involves the calculation of rate constants and product ratios. At present, the h
 distribution**. Make a working directory (<code>wrkdir</code>) and copy files <code>FA.dat</code> and <code>FA.xyz</code> from <code>path_to_program/examples</code> to your <code>wrkdir</code>. All scripts (described below) must be run from your <code>wrkdir</code>.
 
 {: .warning }
-Use short names for the wrkdir and the input files. Good choices are short acronyms (using capital
-letters) like FA for formic acid. 
+Use short names for the <code>wrkdir</code> and the input files. Good choices are short acronyms (using capital letters) like FA for formic acid. 
 
 
 The following are files read by amk, and therefore, they must be present in wrkdir.
