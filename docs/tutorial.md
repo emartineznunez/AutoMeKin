@@ -9,11 +9,10 @@ nav_order: 2
 ## Content
 - [Introduction](#introduction)
 - [How to cite the program](#cite)
+- [Developers](#dev)
 
 
 
-
-- 3. Developers team
 - 4. Installation
 - 5. Description of the input files
 - 6. Running the program
@@ -111,7 +110,7 @@ Finally, if you use the bots reactive event search algorithm, the following refe
 ```
 Hutchings M. et al., J. Chem. Theory Comput. 2020 , 16, 1606- 1617
 ```
-## 3. Developers team
+## Developers<a name="dev"></a>
 
 Emilio Martínez-Núñez (Universidade de Santiago de Compostela, Spain)
 
