@@ -6,6 +6,10 @@ url: https://emartineznunez.github.io
 aux_links:
   Template Repository: https://github.com/emartineznunez/AutoMeKin
 
+# External navigation links
+nav_external_links:
+  - title: Try it on the Web
+    url: https://rxnkin.usc.es/amk/
 
 callouts_level: quiet # or loud
 callouts:
