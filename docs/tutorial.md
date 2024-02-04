@@ -137,7 +137,8 @@ The following are files read by amk, and therefore, they must be present in wrkd
 is to use acronyms like FA for Formic Acid or short names. This file contains an initial input structure of our
 system in XYZ format:
 
-5
+5  
+  
 C 0.000000 0.000000 0.  
 O 0.000000 0.000000 1.  
 O 1.212436 0.000000 -0.  
