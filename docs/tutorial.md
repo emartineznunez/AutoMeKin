@@ -169,11 +169,10 @@ explained in detail below. Each section contains lines with several <code>keywor
 
 <code>keyword</code> is a case-sensitive string and it must be the first field of the line.
 
-<code>value(s)</code> can be strings, integers or floats and is/are the value(s) of the keyword:
-value(s)[keyword].
+<code>value(s)</code> can be strings, integers or floats and is/are the value(s) of the keyword.
 
-**At least one blank space must be kept between keywork and value(s)**. A few keywords include some
-additional lines right below the keyword line (see Biased dynamics).
+_At least one blank space must be kept between keywork and value(s)_. A few keywords include some
+additional lines right below the keyword line (see _Biased dynamics_).
 
 Below you will find a detailed explanation of the keywords grouped together in the different sections. For
 each section, only the most important keywords are described. Additional keywords can be found in
@@ -182,15 +181,16 @@ Advanced options.
 
 **General.** In this section the electronic structure details are provided. The following is an example of the
 keywords employed in this section for the FA.
-
---General--
-molecule FA
-LowLevel mopac pm7 t=3m
-HighLevel g 16 b3lyp/6-31G(d,p)
-HL_rxn_network complete
-IRCpoints 30
-charge 0
-mult 1
+```
+--General--  
+molecule FA  
+LowLevel mopac pm7 t=3m  
+HighLevel g 16 b3lyp/6-31G(d,p)  
+HL_rxn_network complete  
+IRCpoints 30  
+charge 0  
+mult 1  
+```
 List of “ **Keyword** value(s)” for this section:
 
 **molecule** value
