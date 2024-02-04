@@ -190,7 +190,7 @@ IRCpoints 30
 charge 0  
 mult 1  
 ```
-List of <code>Keyword value(s)</code for this section:
+List of <code>Keyword value(s)</code> for this section:
 
 <code>molecule value</code>
 
