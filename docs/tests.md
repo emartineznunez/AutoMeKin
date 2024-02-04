@@ -13,7 +13,7 @@ To run the tests follow these steps:
 ```
 module load amk/2021
 ```
-2) Run the following script to run all tests:
+2. Run the following script to run all tests:
 ```
 run_test.sh
 ```
