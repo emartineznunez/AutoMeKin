@@ -35,7 +35,8 @@ only start an instance of the container. The container includes
    ./Automekin.sh
    ```
 
-Note that depending on your Linux configuration, before running the
+{: .note }  
+Depending on your Linux configuration, before running the
 autoinstaller you might need to change some parameters which will
 require admin or root privilege. If that is the case and once you
 changed the parameters with your admin or root accounts, no further
