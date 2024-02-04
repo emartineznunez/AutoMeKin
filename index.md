@@ -5,13 +5,13 @@ nav_order: 1
 ---
 
 
-## Installation
-### Content
+# Installation
+## Content
 - [Auto installer](#autoinstaller)
 - [Singularity container](#singularity)
 - [Build from source](#build)
 
-### Auto installer <a name="autoinstaller"></a>
+## Auto installer <a name="autoinstaller"></a>
 An auto installer script is provided to install singularity and
 download the last release container image from [sylabs](https://cloud.sylabs.io/library/emartineznunez/default/automekin) as
 `$HOME/automekin_<tag>.sif`. Note that this is done only the first time
@@ -65,7 +65,7 @@ your own tools as well.
 - To download the file directly from your terminal, curl must be installed.
 - The autoinstaller also works on Ubuntu 20.04 LTS on Windows.
 
-### Singularity container <a name="singularity"></a>
+## Singularity container <a name="singularity"></a>
 If singularity is already installed in your
 computer, you can obtain the container from sylabs. First check the
 latest image (Tag) by typing: 
@@ -115,7 +115,7 @@ singularity instance list
 ```
 And stop them as indicated above.
 
-### Build from source <a name="build"></a>
+## Build from source <a name="build"></a>
 
 The most recent and up to date version is avaialable at this repository.
 
@@ -127,7 +127,7 @@ You can also check how to install AutoMeKin and its dependencies in this Noteboo
 
 If you prefer to install everything manually, follow the next steps.
 
-#### Installing dependencies 
+### Installing dependencies 
 The following packages are required beforehand:
 
 - [GNU Autoconf](https://www.gnu.org/software/autoconf/), [GNU Bash](https://www.gnu.org/software/bash/), [GNU bc](https://www.gnu.org/software/bc/), [environment-modules](https://github.com/cea-hpc/modules), [GNU Awk (gawk)](https://www.gnu.org/software/gawk/), [GNU C Compiler (gcc)](https://gcc.gnu.org/), [Gnuplot](http://www.gnuplot.info/), [GNU Fortran Compiler (gfortran)](https://gcc.gnu.org/wiki/GFortran), [GNU Parallel](https://www.gnu.org/software/bash/manual/html_node/GNU-Parallel.html), [SQLite (version \>= 3)](https://www.sqlite.org/index.html), [Zenity](https://wiki.gnome.org/Projects/Zenity)
@@ -153,7 +153,7 @@ needed:
 
 The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is highly recommended to analyze the results:
 
-#### Installing AutoMeKin
+### Installing AutoMeKin
 
 Once the above packages are installed, you can now install AutoMeKin
 following these steps:. Clone AutoMeKin from GitHub:
@@ -184,4 +184,3 @@ module use path_to_program/modules
 where `path_to_program` is the path where you installed amk (_e.g._,
 `$HOME/amk-2021`).
 
-[^1]: For enquiries please contact: emilio.nunez@usc.es
