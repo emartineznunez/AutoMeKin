@@ -20,18 +20,18 @@ singularity and the image (that must be located in your `$HOME`) and will
 only start an instance of the container. The container includes
 [amk-tools](https://github.com/dgarayr/amk_tools). 
 
-**Follow these three steps to start the container**.
+**Follow these steps to start/stop the container**.
 
-1. Download script: 
+- Download script: 
    ```
    curl -LJO https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh
    ```
 
-4. ```
+- ```
    chmod +x Automekin.sh
    ```
 
-3. ```
+- ```
    ./Automekin.sh
    ```
 
@@ -54,9 +54,9 @@ start under the deployed instance. Note that you can open new sessions
 and access AutoMeKin's output files from your Linux environment and use
 your own tools as well.
 
-**To exit the container** just type: `exit`
+- To exit the container just type: `exit`
 
-**Once your calculations are done, remember to stop the instance:** 
+- Once your calculations are done, remember to stop the instance:
 ```
 ./Automekin.sh stop
 ```
