@@ -160,18 +160,17 @@ calculations.
 
 **name.dat** (where name can be anything, from just the name of the system to something that identifies the
 type of calculation you are carrying out; in our case FA.dat). This file contains all parameters of the
-calculation and has different sections, which are explained as follows. **This file is mandatory in all cases.**
+calculation and has different sections, which are explained as follows. _This file is mandatory in all cases._
 
 The file name.dat is organized in four sections: General, Method, Screening and Kinetics, which are
-explained in detail below. Each section contains lines with several “ **keyword** value(s)” pairs with the
-following syntax:
+explained in detail below. Each section contains lines with several <code>keyword value(s)</code> pairs with the following syntax:
 
-**keyword** value(s)
+<code>keyword value(s)</code>
 
-**keyword is a case-sensitive string and it must be the first field of the line**.
+<code>keyword</code> is a case-sensitive string and it must be the first field of the line.
 
-**value(s) can be strings, integers or floats and is/are the value(s) of the keyword:
-value(s)[keyword].**
+<code>value(s)</code> can be strings, integers or floats and is/are the value(s) of the keyword:
+value(s)[keyword].
 
 **At least one blank space must be kept between keywork and value(s)**. A few keywords include some
 additional lines right below the keyword line (see Biased dynamics).
