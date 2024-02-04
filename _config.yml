@@ -28,3 +28,15 @@ callouts:
   warning:
     title: Warning
     color: red
+
+
+# Jekyll plugins go here
+plugins:
+  # generate a <head> tag for SEO automatically
+  - jekyll-seo-tag
+  # generates an rss feed from posts and news
+  - jekyll-feed
+  # generates a sitemap automatically
+  - jekyll-sitemap
+  # autoformats publications
+  - jekyll-scholar
