@@ -196,18 +196,13 @@ List of <code>Keyword value(s)</code> for this section:
 <code>molecule value</code>   
 [<code>value</code> is one string with no blank spaces; _mandatory keyword_]  
 value is the name of the system and _it must match the name of the XYZ file without the extension (FA in
-our example). **For association and vdW sampling there is no XYZ file at the beginning and
+our example). For association and vdW sampling there is no XYZ file at the beginning and
 <code>value</code> is just the name of the system._
 
 {: .important }  
 <code>LowLevel values</code>   
 [two <code>values</code>: two strings; the second string accepts blank spaces; default: <code>mopac pm7</code>]  
-The first value is the program and the second the semiempirical method. So far, qcore and mopac are valid
-programs. For qcore only xtb method is implemented, and for mopac, any of the semiempirical methods
-of MOPAC2016 can be employed to run the MD simulations. You can use a combination of MOPAC keywords.
-In the example above, for instance, the pm7 semiempirical level together with a maximum CPU time (for any
-type of mopac calculation) of 3 minutes is requested. _The use of the MOPAC keyword t= (followed by an
-amount of time) is highly recommended to enhance the efficiency of the calculations._
+The first value is the program and the second the semiempirical method. So far, <code>qcore</code> and <code>mopac</code> are valid programs. For qcore only xtb method is implemented, and for mopac, any of the semiempirical methods of MOPAC2016 can be employed to run the MD simulations. You can use a combination of MOPAC keywords. In the example above, for instance, the pm7 semiempirical level together with a maximum CPU time (for any type of mopac calculation) of 3 minutes is requested. _The use of the MOPAC keyword t= (followed by an amount of time) is highly recommended to enhance the efficiency of the calculations._
 
 If you do not employ the keyword <code>LowLevel_TSopt</code>, explained below in advanced options, both the low-level TS optimizations and MD simulations are carried out using the semiempirical method specified by the second value. This is in general a good choice both in terms of efficacy and efficiency, and also because all structures will be re-optimized later using ab initio/DFT methods as specified with the keyword HighLevel.
 
