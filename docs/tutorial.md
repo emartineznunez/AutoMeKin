@@ -127,7 +127,8 @@ involves the calculation of rate constants and product ratios. At present, the h
 distribution**. Make a working directory (<code>wrkdir</code>) and copy files <code>FA.dat</code> and <code>FA.xyz</code> from <code>path_to_program/examples</code> to your <code>wrkdir</code>. All scripts (described below) must be run from your <code>wrkdir</code>.
 
 > [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
+> Use short names for the wrkdir and the input files. Good choices are short acronyms (using capital
+letters) like FA for formic acid. 
 
 | :warning: WARNING          |
 |:---------------------------|
