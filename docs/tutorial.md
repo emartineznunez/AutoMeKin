@@ -12,14 +12,9 @@ nav_order: 2
 - [Developers](#dev)
 - [Input files](#input)
 - [Running the code](#run)
+- [Results](#res)
 
 
-
-- 7. Results
-   - a) Relevant information
-   - b) Visualization tools
-   - c) Kinetics simulations at different temperatures
-   - d) Removing unwanted TS structures
 - 8. Other capabilities
    - a) van der Waals complexes
    - b) Scanning dihedral angles
@@ -858,7 +853,7 @@ normal_modes normal_modes
 amk.sh amk_parallel.sh
 ```
 
-## 7. Results
+## Results<a name="res"></a>
 
 ### a) Relevant information
 
