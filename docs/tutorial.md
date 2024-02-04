@@ -154,7 +154,8 @@ the bimolecular process, like in the diels_alder example.**
 **This file is mandatory except for association and vdW samplings** where two XYZ files are needed instead
 (see below).
 
-**CAVEAT: Avoid using integers for any of the XYZ coordinates** , as this will cause problems with the high-level
+{: .warning }
+Avoid using integers for any of the XYZ coordinates, as this will cause problems with the high-level
 calculations.
 
 **name.dat** (where name can be anything, from just the name of the system to something that identifies the
