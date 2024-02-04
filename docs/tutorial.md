@@ -10,10 +10,10 @@ nav_order: 2
 - [Introduction](#introduction)
 - [How to cite the program](#cite)
 - [Developers](#dev)
+- [Input files](#input)
 
 
 
-- 4. Installation
 - 5. Description of the input files
 - 6. Running the program
    - a) Tests
@@ -138,17 +138,7 @@ Pablo G. Tahoces (Universidade de Santiago de Compostela, Spain)
 
 Saulo A. Vazquez (Universidade de Santiago de Compostela, Spain)
 
-
-## 4. Installation
-
-The recommended option is to use an auto-installer script, which eases the burden of installing third-party
-packages. The script installs singularity and downloads the latest container image from sylabs. An instance
-of the container is started using a sandbox image deployed under $(TMPDIR-/tmp) folder. The container
-comes with all AutoMeKin's tools installed in $AMK
-
-More details are given in the Wiki
-
-## 5. Description of the input files
+## Input files<a name="input"></a>
 
 The first step in our strategy for finding reaction mechanisms involves Heuristics- or MD-based methods, for
 which MOPAC 2016 or Entos Qcore are used. The algorithm samples the potential energy surface to locate
