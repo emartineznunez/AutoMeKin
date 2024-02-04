@@ -35,7 +35,7 @@ callouts:
     title: Warning
     color: red
 
-logo: "/assets/images/logo.png"
+logo: "/assets/images/Imagen1.png"
 
 # For copy button on code
 enable_copy_code_button: true
