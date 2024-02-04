@@ -14,11 +14,11 @@ To run the low-level calculations use:
 ```
 nohup llcalcs.sh molecule.dat ntasks niter runningtasks >llcalcs.log 2>&1 &
 ```
-where:
-<code>molecule</code> is the name of your molecule
-<code>ntasks</code> is the number of tasks
-<code>niter</code> is the number of iterations
-<code>runningtasks</code> is the number of simultaneous tasks
+where:  
+<code>molecule</code> is the name of your molecule  
+<code>ntasks</code> is the number of tasks  
+<code>niter</code> is the number of iterations  
+<code>runningtasks</code> is the number of simultaneous tasks  
 
 To run the high-level calculations use:
 ```
