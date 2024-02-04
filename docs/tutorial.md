@@ -25,12 +25,10 @@ method was originally designed to find transition states (TSs) from reactive mol
 simulations, several new tools have been incorporated throughout the past few years. The current pipeline
 consists of three steps:
 
-1) Exploration of reaction mechanisms through MD simulations or chemical knowledge-based
+1. Exploration of reaction mechanisms through MD simulations or chemical knowledge-based
 algorithms.
-
-2) Use of Graph Theory algorithms to build the reaction network (RXNet).
-
-3) Kinetics simulations.
+2. Use of Graph Theory algorithms to build the reaction network (RXNet).
+3. Kinetics simulations.
 
 The program is interfaced with [MOPAC2016](https://github.com/openmopac/mopac), [Qcore](https://software.entos.ai/qcore/documentation/) and [Gaussian (G09/G16)](https://gaussian.com/), but work is in progress to
 incorporate more electronic structure programs. This tutorial is thought to guide you through the various
