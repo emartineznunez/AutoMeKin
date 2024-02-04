@@ -84,7 +84,7 @@ Hutchings M. et al., J. Chem. Theory Comput. 2020 , 16, 1606- 1617
 ```
 ## Developers<a name="dev"></a>
 
-Emilio Martínez-Núñez (Universidade de Santiago de Compostela, Spain)
+[Emilio Martínez-Núñez (Universidade de Santiago de Compostela, Spain)](https://emartineznunez.github.io/)
 
 George L. Barnes (Siena College, USA)
 
