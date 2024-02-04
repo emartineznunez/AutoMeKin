@@ -175,7 +175,7 @@ additional lines right below the keyword line (see _Biased dynamics_).
 
 Below you will find a detailed explanation of the keywords grouped together in the different sections. For
 each section, only the most important keywords are described. Additional keywords can be found in
-__Advanced options__.
+_Advanced options_.
 
 
 **General.** In this section the electronic structure details are provided. The following is an example of the
@@ -202,7 +202,7 @@ our example). **For association and vdW sampling there is no XYZ file at the beg
 
 ### <code>LowLevel values</code>
 
-[two values: two strings; the second string accepts blank spaces; default values: mopac pm7]
+[two <code>values</code>: two strings; the second string accepts blank spaces; default: <code>mopac pm7</code>]
 
 The first value is the program and the second the semiempirical method. So far, qcore and mopac are valid
 programs. For qcore only xtb method is implemented, and for mopac, any of the semiempirical methods
