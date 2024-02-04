@@ -1,7 +1,7 @@
 ---
 title: Run the code
 layout: home
-nav_order: 2
+nav_order: 3
 ---
 
 # Running the code
