@@ -1,4 +1,5 @@
 title: AutoMeKin Documentation
+subtitle: AutoMeKin Documentation
 theme: just-the-docs
 url: https://emartineznunez.github.io
 
@@ -28,5 +29,5 @@ callouts:
     title: Warning
     color: red
 
-avatar: "assets/images/logo.png"
-round-avatar: true
+logo: "assets/images/logo.png"
+
