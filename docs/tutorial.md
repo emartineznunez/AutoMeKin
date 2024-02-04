@@ -185,7 +185,7 @@ keywords employed in this section for the FA.
 --General--  
 molecule FA  
 LowLevel mopac pm7 t=3m  
-HighLevel g 16 b3lyp/6-31G(d,p)  
+HighLevel g16 b3lyp/6-31G(d,p)  
 HL_rxn_network complete  
 IRCpoints 30  
 charge 0  
