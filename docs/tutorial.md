@@ -1979,12 +1979,7 @@ Molecular Dynamics Using Boxed Molecular Dynamics in Energy Space. _Journal of C
 4. Hjorth Larsen, A.; Jørgen Mortensen, J.; Blomqvist, J.; Castelli, I. E.; Christensen, R.; Dułak, M.; Friis, J.; Groves,
 M. N.; Hammer, B.; Hargus, C.; Hermes, E. D.; Jennings, P. C.; Bjerre Jensen, P.; Kermode, J.; Kitchin, J. R.; Leonhard
 Kolsbjerg, E.; Kubal, J.; Kaasbjerg, K.; Lysgaard, S.; Bergmann Maronsson, J.; Maxson, T.; Olsen, T.; Pastewka, L.;
-Peterson, A.; Rostgaard, C.; Schiøtz, J.; Schütt, O.; Strange, M.; Thygesen, K. S.; Vegge, T.; Vilhelmsen, L.; Walter, M.;
-
-
-Zeng, Z.; Jacobsen, K. W., The atomic simulation environment—a Python library for working with atoms. _Journal of
-Physics: Condensed Matter_ **2017,** _29_ (27), 273002.
-
+Peterson, A.; Rostgaard, C.; Schiøtz, J.; Schütt, O.; Strange, M.; Thygesen, K. S.; Vegge, T.; Vilhelmsen, L.; Walter, M.; Zeng, Z.; Jacobsen, K. W., The atomic simulation environment—a Python library for working with atoms. _Journal of Physics: Condensed Matter_ **2017,** _29_ (27), 273002.
 5. Pietrucci, F.; Andreoni, W., _Phys. Rev. Lett._ **2011,** _107_ , 085504.
 6. Hagberg, A. A.; Shult, D. A.; Swart, P. J. In _Exploring network structure, dynamics, and function using NetworkX_ ,
 7th Python in Science Conference (SciPy2008), Pasadena, CA USA, Varoquaux, G.; Vaught, T.; Millman, J., Eds.
