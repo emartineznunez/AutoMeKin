@@ -37,7 +37,7 @@ The program is interfaced with MOPAC2016, Qcore and Gaussian (G09/G16), but work
 incorporate more electronic structure programs. This tutorial is thought to guide you through the various
 steps needed to predict reaction mechanisms and kinetics of unimolecular decompositions. To facilitate the
 presentation, we consider, as an example, the decomposition of formic acid (FA). Users are encouraged to
-read references 1 - 2 before using AutoMeKin package.
+read references [1](#ref1) - [2](#ref2) before using AutoMeKin package.
 
 The present version has been tested on CentOS 7, Red Hat Enterprise Linux and Ubuntu 16.04.3 LTS. If you
 find a bug, please report it to the main developer (emilio.nunez@usc.es). Comments and suggestions are
@@ -1969,9 +1969,9 @@ General).
 
 ## References <a name="ref"></a>
 
-1. Martínez-Núñez, E., An automated transition state search using classical trajectories initialized at multiple
+1<a name="ref1"></a> Martínez-Núñez, E., An automated transition state search using classical trajectories initialized at multiple
 minima. _Phys. Chem. Chem. Phys._ **2015,** _17_ , 14912-14921.
-2. Martínez-Núñez, E., An automated method to find transition states using chemical dynamics simulations. _J.
+2<a name="ref2"></a> Martínez-Núñez, E., An automated method to find transition states using chemical dynamics simulations. _J.
 Comput. Chem._ **2015,** _36_ , 222-234.
 3. Shannon, R. J.; Amabilino, S.; O’Connor, M.; Shalishilin, D. V.; Glowacki, D. R., Adaptively Accelerating Reactive
 Molecular Dynamics Using Boxed Molecular Dynamics in Energy Space. _Journal of Chemical Theory and Computation_
