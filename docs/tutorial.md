@@ -1,8 +1,14 @@
 ---
-title: tutorial
+title: Tutorial
 layout: home
 nav_order: 2
 ---
+
+# Tutorial
+
+## Content
+- [Introduction](#introduction)
+
 
 
 ## Contents
@@ -35,7 +41,7 @@ nav_order: 2
 - 10. References
 
 
-## 1. Introduction
+## Introduction <a name="introduction"></a>
 
 AutoMeKin (amk), which stands for Automated Mechanisms and Kinetics, is an automated protocol to
 discover chemical reaction mechanisms and simulate the kinetics at the conditions of interest. Although the
