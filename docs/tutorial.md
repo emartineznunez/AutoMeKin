@@ -126,7 +126,7 @@ involves the calculation of rate constants and product ratios. At present, the h
 **To follow the guidelines of this tutorial, you can try the formic acid (FA) test case that comes with the
 distribution**. Make a working directory (<code>wrkdir</code>) and copy files <code>FA.dat</code> and <code>FA.xyz</code> from <code>path_to_program/examples</code> to your <code>wrkdir</code>. All scripts (described below) must be run from your <code>wrkdir</code>.
 
-[!WARNING]
+[!WARNING]  
 Use short names for the wrkdir and the input files. Good choices are short acronyms (using capital
 letters) like FA for formic acid.
 
