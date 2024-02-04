@@ -139,11 +139,11 @@ system in XYZ format:
 ```
 5  
   
-C 0.000000 0.000000 0.  
-O 0.000000 0.000000 1.  
-O 1.212436 0.000000 -0.  
-H -0.943102 0.000000 -0.  
-H 1.038843 0.000000 -1.  
+C  0.000000 0.000000  0.000000    
+O  0.000000 0.000000  1.220000    
+O  1.212436 0.000000 -0.700000    
+H -0.943102 0.000000 -0.544500     
+H  1.038843 0.000000 -1.634005     
 ```
 Please provide here a stable conformer of the reactant molecule. A general recommendation is to use a
 structure previously optimized with the method selected with the keyword LowLevel (or eventually
