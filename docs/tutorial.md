@@ -196,11 +196,11 @@ List of <code>Keyword value(s)</code> for this section:
 
 [<code>value</code> is one string with no blank spaces; _mandatory keyword_ ]
 
-value is the name of the system and **it must match the name of the XYZ file without the extension** (FA in
+value is the name of the system and _it must match the name of the XYZ file without the extension (FA in
 our example). **For association and vdW sampling there is no XYZ file at the beginning and
-value[molecule] is just the name of the system**.
+<code>value</code> is just the name of the system._
 
-**LowLevel** values
+### <code>LowLevel values</code>
 
 [two values: two strings; the second string accepts blank spaces; default values: mopac pm7]
 
