@@ -61,8 +61,8 @@ your own tools as well.
 ```
 
 {: .note }  
-- To download the file directly from your terminal, curl must be installed.
-- The autoinstaller also works on Ubuntu 20.04 LTS on Windows.
+- To download the file directly from your terminal, curl must be installed.  
+- The autoinstaller also works on Ubuntu 20.04 LTS on Windows.  
 
 ## Singularity container <a name="singularity"></a>
 If singularity is already installed in your
