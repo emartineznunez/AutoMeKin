@@ -138,12 +138,12 @@ script installs all dependencies, but for the RHEL derivatives (centos7
 and sl7) you have to install parallel separately, and you have two
 choices:
 
-1. `install-gnu-parallel-from-source.sh`. This script installs parallel
+- `install-gnu-parallel-from-source.sh`. This script installs parallel
 latest version from source thanks to Ole Tange (the author). Also it can
 fallback to a user private installation into `$HOME/bin` if you have not
 administrator permisions to install it globally.
 
-2. `install-gnu-parallel-from-epel.sh`. Enables the EPEL repository and
+- `install-gnu-parallel-from-epel.sh`. Enables the EPEL repository and
 installs parallel from it.
 
 {: .highlight }    
