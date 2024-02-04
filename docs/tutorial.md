@@ -192,7 +192,7 @@ mult 1
 ```
 List of <code>Keyword value(s)</code> for this section:
 
-<code>molecule value</code>
+**<code>molecule value</code>**
 
 [value is one string with no blank spaces; **mandatory keyword** ]
 
