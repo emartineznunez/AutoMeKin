@@ -15,7 +15,6 @@ nav_order: 2
 - [Results](#res)
 - [Other capabilities](#oc)
 - [Summary of keywords and options](#sko)
-- [References](#ref)
 
 
 ## Introduction <a name="introduction"></a>
@@ -1967,10 +1966,8 @@ ImpPaths
 General).
 
 
-## References <a name="ref"></a>
 
-1<a name="ref1"></a> Martínez-Núñez, E., An automated transition state search using classical trajectories initialized at multiple minima. _Phys. Chem. Chem. Phys._ **2015,** _17_ , 14912-14921.   
-2<a name="ref2"></a> Martínez-Núñez, E., An automated method to find transition states using chemical dynamics simulations. _J. Comput. Chem._ **2015,** _36_ , 222-234.   
+  
 3. Shannon, R. J.; Amabilino, S.; O’Connor, M.; Shalishilin, D. V.; Glowacki, D. R., Adaptively Accelerating Reactive
 Molecular Dynamics Using Boxed Molecular Dynamics in Energy Space. _Journal of Chemical Theory and Computation_
 **2018,** _14_ (9), 4541-4552.
