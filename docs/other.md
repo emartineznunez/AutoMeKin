@@ -328,7 +328,7 @@ post_proc bots 200 2.5
 {: .important }  
 `temp value`  
 [`value` is an integer or string with no blank spaces; _only with MD and BXDE_ ; no default]  
-If an integer, `value` is the temperature (in K) of the MD or BXDE simulations. If a range, _only valid for MD_, the temperature is randomly selected in the given range. In the absence of the temp keyword, the program automatically defines the following range of temperatures: $\scriptstyle{5452(s−1)/n−15517(s−1)/n}$ K, which has been optimized for formic acid and $\scriptstyle{n}$ being the number of atoms. However, as for `etraj`, the boundaries are adjusted _on the fly_ to obtain a minimum reactivity of 60%. _For BXDE, temp has only one value and 1000 K is the default)._
+If an integer, `value` is the temperature, in K, of the MD or BXDE simulations. If a range, _only valid for MD_, the temperature is randomly selected in the given range. In the absence of the temp keyword, the program automatically defines the following range of temperatures: $\scriptstyle{5452(s−1)/n−15517(s−1)/n}$ K, which has been optimized for formic acid and $\scriptstyle{n}$ being the number of atoms. However, as for `etraj`, the boundaries are adjusted _on the fly_ to obtain a minimum reactivity of 60%. _For BXDE, temp has only one value and 1000 K is the default)._
 
 {: .important }  
 `thmass value`   
