@@ -23,19 +23,13 @@ List of <code>Keyword value(s)</code> for this section:
 [<code>value</code> is one string with no blank spaces; default value: <code>MD</code>]  
 <code>value</code> can be: <code>MD</code>, <code>MD-micro</code>, <code>BXDE</code>, <code>external</code>, <code>ChemKnow</code>, <code>association</code> and <code>vdW</code>
 
-**MD** and **MD-micro** refer to the type of initial conditions used to run the MD simulations. **MD-micro has not
-been implemented yet for qcore** With **BXDE** the rare-event acceleration method named BXDE is invoked.^3
-The BXDE module employs the “Atomistic Simulation Environment” (ASE) library of Python,^4 which must be
-referenced whenever **BXDE** is employed.
+<code>MD</code> and <code>MD-micro</code> refer to the type of initial conditions used to run the MD simulations. <code>MD-micro</code> _has not been implemented yet for qcore. With <code>BXDE</code> the rare-event [acceleration method named BXDE](https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/syst.201900024) is invoked. 
 
-**MD** allows the user to include partial constraints in the trajectories, which may be useful for large systems
-(see the “advanced users” section for more details).
+<code>MD</code> allows the user to include partial constraints in the trajectories, which may be useful for large systems (see the “advanced users” section for more details).
 
-**external** allows trajectory data to be read from the results of an external (MD) program. The trajectory
-data (in XYZ format) must be stored in a directory named coordir using one file per trajectory which should
-be called name_dynX.xyz, where name is value[molecule], and X is the number of each trajectory (X =
-1 - ntraj). The keyword ntraj must be set accordingly.
-**ChemKnow** makes all possible combinations of bond breakages/formations which are consistent with preset
+<code>external</code> allows trajectory data to be read from the results of an external (MD) program. The trajectory data (in XYZ format) must be stored in a directory named coordir using one file per trajectory which should be called <code>name_dynX.xyz</code>, where name is <code>value[molecule]</code>, and X is the number of each trajectory (X = 1 - ntraj). The keyword <code>ntraj</code> must be set accordingly.
+
+<code>ChemKnow</code> makes all possible combinations of bond breakages/formations which are consistent with preset
 valencies of the atoms and with products lying below the maximum energy of the system. Once the
 combinations are known, the starting and ending points are obtained after a constrained MD simulation with
 external forces applied to break/form the selected bonds. Then, a NEB calculation tries to obtain a path
