@@ -5,7 +5,9 @@ parent: Input files
 nav_order: 1
 ---
 
-**General.** In this section the electronic structure details are provided. The following is an example of the
+# General section
+
+In this section the electronic structure details are provided. The following is an example of the
 keywords employed in this section for the FA.
 ```
 --General--  
