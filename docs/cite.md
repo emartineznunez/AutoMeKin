@@ -1,5 +1,5 @@
 ---
-title: cite
+title: Citation
 layout: home
 parent: Tutorial
 nav_order: 1
