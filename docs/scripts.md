@@ -37,105 +37,98 @@ ts # File name w_imag  Energy  w1  w2   w3   w4 traj #  Folder
 4    ts4_batch6 2010i -17.6124 327 473  523 1078     1  wrkdir
 ```
 where the first column is the label of each TS, the second is the filename of the optimized TS structure
-(located in the tsdirLL_FA directory), the third is the imaginary frequency (in cm−^1 ), the fourth one is the
-absolute energy of the TS (in kcal/mol for MOPAC2016 and Hartrees for qcore and gaussian) and the next
-four numbers are the four lowest vibrational frequencies (in cm−^1 ). Finally, the last two columns are the
-trajectory number and the name of the folder where the structure was obtained.
+(located in the tsdirLL_FA directory), the third is the imaginary frequency (in cm<sup>-1</sup ), the fourth one is the absolute energy of the TS (in kcal/mol for MOPAC2016 and Hartrees for qcore and gaussian) and the next four numbers are the four lowest vibrational frequencies (in cm<sup>−1</sup>). Finally, the last two columns are the trajectory number and the name of the folder where the structure was obtained.
 
-**CAVEAT:** since the dynamics employ random number seeds, the above results may differ for this type of
-calculations although using a sufficiently large number of trajectories (see below), the important TSs should
-appear in all runs.
+{: .warning }  
+Since the dynamics employ random number seeds, the above results may differ for this type of
+calculations although using a sufficiently large number of trajectories (see below), the important TSs should appear in all runs.
 
 
-As already mentioned, the output files of the optimized TSs are stored in tsdirLL_FA. You can use a
+As already mentioned, the output files of the optimized TSs are stored in `tsdirLL_FA`. You can use a
 visualization program (e.g., molden) to analyze your results. Try, for instance:
-
+```
 molden tsdirLL_FA/ts1_FA.molden
-
-You can also watch the animation of trajectories, which are stored in the coordir folder inside wrkdir:
-
+```` 
+You can also watch the animation of trajectories, which are stored in the coordir folder inside `wrkdir`:
+```
 molden coordir/FA_dyn1.xyz
-
-We notice that the coordir folder is temporary. It is removed during the execution of a subsequent script.
+```
+Notice that the `coordir` folder is temporary. It is removed during the execution of a subsequent script.
 
 If you have access to several processors and want to run the dynamics in parallel, you can use the script
-amk_parallel.sh, which is executed interactively (a Zenity progress bar will appear on the screen). For
+`amk_parallel.sh`, which is executed interactively (a Zenity progress bar will appear on the screen). For
 instance, to submit 50 trajectories split in 5 different tasks (10 trajectories each) you should use:
-
+```
 amk_parallel.sh FA.dat 5
-
-This will create temporary directories batch1, batch2, batch3, batch4 and batch5 that will be
+```
+This will create temporary directories `batch1`, `batch2`, `batch3`, `batch4` and `batch5` that will be
 removed when the IRCs are calculated. Each of these folders includes a coordir directory, which contains
 the individual trajectories. The TSs found in each individual task will be copied in the same folder,
-tsdirLL_FA, and, as indicated above, using the tsll_view.sh script you can monitor the progress of the
-calculations. Notice that the total number of trajectories is given by value[ntraj] multiplied by the
-number of tasks. We recommend running the amk_parallel.sh script interactively only for checking
+`tsdirLL_FA`, and, as indicated above, using the tsll_view.sh script you can monitor the progress of the
+calculations. Notice that the total number of trajectories is given by `value[ntraj]` multiplied by the
+number of tasks. We recommend running the `amk_parallel.sh` script interactively only for checking
 purposes, and particularly to carry out the screening. To run many trajectories for production, we
-recommend using the llcalcs.sh script, which is described below.
+recommend using the `llcalcs.sh` script.
 
 If the Slurm Workload Manager is installed on your computer, you can submit the jobs to Slurm using:
-
-sbatch [ _options_ ] amk_parallel.sh FA.dat ntasks
-
-where ntasks is the number of tasks. If no options are specified, sbatch employs the following default
+```
+sbatch [ options ] amk_parallel.sh FA.dat ntasks
+```
+where `ntasks` is the number of tasks. If no options are specified, sbatch employs the following default
 values:
-
+```
 #SBATCH --output=amk_parallel-%j.log
 #SBATCH --time=04:00:
 #SBATCH -c 1 --mem-per-cpu=
 #SBATCH -n 8
-These values can be changed when you submit the job with _options_.
+```
+These values can be changed when you submit the job with `options`.
 
-**CAVEAT:** if you use Slurm Workload Manage for the amk_parallel.sh script, you will have to wait until
+{: .warning }   
+If you use Slurm Workload Manage for the `amk_parallel.sh` script, you will have to wait until
 all tasks are completed before going on.
 
-
-The amk package includes the irc.sh script, which performs intrinsic reaction coordinate calculations for
-all the located TSs. This script also allows one to perform an initial screening of the TS structures before
-running the IRC calculations:
-
+The amk package includes the `irc.sh` script, which performs intrinsic reaction coordinate calculations for
+all the located TSs. This script also allows one to perform an initial screening of the TS structures before running the IRC calculations:
+```
 irc.sh screening
-
+```
 This will do the screening and stop. The process involves the use of tools from Spectral Graph Theory and
-utilizes value[MAPEmax] _,_ value[BAPEmax] and value[eigLmax]. The redundant and fragmented
-structures are printed on screen as well as in the file screening.log which is located in tsdirLL_FA.
-MOPAC2016 ouput files are also gathered in tsdirLL_FA, and use filenames initiated by “REPEAT” and
+utilizes `value[MAPEmax]`, `value[BAPEmax]` and `value[eigLmax]`. The redundant and fragmented
+structures are printed on screen as well as in the file `screening.log` which is located in `tsdirLL_FA`.
+MOPAC2016 ouput files are also gathered in `tsdirLL_FA`, and use filenames initiated by “REPEAT” and
 “DISCNT”, which refer to repeated and disconnected (i.e., fragmented) structures, respectively. Please
 check these structures and, if needed, change the above parameters. Should you change some of the above
-parameters (value[MAPEmax] _,_ value[BAPEmax] _,_ value[eigLmax]), you need to redo the screening
+parameters (`value[MAPEmax]`,`value[BAPEmax]`,`value[eigLmax]`), you need to redo the screening
 with the new parameters:
-
+```
 redo_screening.sh
-
+```
 You can repeat the above process until you are happy with the screening.
 
 Once you are confident with the threshold values, you can submit many trajectories to carry out a thorough
 exploration of the potential energy surface. Subsequently, you can proceed with the IRC calculations.
 
-_Obtaining the IRCs_ :
-
-(sbatch [ _options_ ]) irc.sh
-
-_Optimizing the minima_ :
-
-(sbatch [ _options_ ]) min.sh
-
-_Building the reaction network_ :
-
+_Obtaining the IRCs_:
+```
+(sbatch [ options ]) irc.sh
+```
+_Optimizing the minima_:
+```
+(sbatch [ options ]) min.sh
+```
+_Building the reaction network_:
+```
 rxn_network.sh
-
+```
 Once you have created the reaction network, you can grow your TS list by running more trajectories (with
-amk_parallel.sh or amk.sh). Now the trajectories will start from the newly generated minima as well as
-from the main structure, specified in the name.xyz file. It is important to notice that, in general, trajectories
-run in separate batches (i.e., performed in several tasks) may be initialized from different minima and will
-have different energies. In this regard, the efficiency of the code may increase if the calculations are
-submitted using a large number for the ntasks parameter.
+`amk_parallel.sh` or `amk.sh`). Now the trajectories will start from the newly generated minima as well as
+from the main structure, specified in the name.xyz file. It is important to notice that, in general, trajectories run in separate batches (i.e., performed in several tasks) may be initialized from different minima and will have different energies. In this regard, the efficiency of the code may increase if the calculations are submitted using a large number for the ntasks parameter.
 
-Convergence in the total number of TSs can be checked doing:
-
-
+_Convergence in the total number of TSs can be checked doing_:
+```
 track_view.sh
-
+```
 When you are happy with the obtained TSs or you achieve convergence, you can proceed with the next
 steps.
 
