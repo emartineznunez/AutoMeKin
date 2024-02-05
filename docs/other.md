@@ -415,7 +415,7 @@ illustrates a way to search for H<sub>2</sub> elimination transition states from
 where `value`, or `nbr`, is the number of bonds we want to break. 
 
 The line containing this `keyword value` pair must be followed by `nbr` lines, each one with three values `(br_i(1,...,nbr) br_j(1,...,nbr) force(1,...,nbr)`   
-of which the first two are integers and the last a float. These three numbers indicate the indexes of the atoms that form each bond we want to break, and the magnitude of the applied external force (in kcal/mol/Å), respectively.
+of which the first two are integers and the last a float. These three numbers indicate the indexes of the atoms that form each bond we want to break, and the magnitude of the applied external force in kcal/mol/Å, respectively.
 
 For bond formation we use the analogous keyword `nbondsform` as in this example (taken from
 `FA_biasH2.dat`):
@@ -426,7 +426,7 @@ nbondsbreak 2
 3 5 80
 1 4 80
 ```
-A similar test can be performed on the same molecule to get the TS for H<sub>2</sub>O elimination. The corresponding input file, `FA_biasH2O.dat`, is also available in directory path_to_program/examples. Additionally, a retro Diels-Alder reaction has also been tested (cyclohexene → ethylene+1,3-butadiene), using the input files `rdiels_bias.dat` and `rdiels.xyz` provided in the amk distribution.
+A similar test can be performed on the same molecule to get the TS for H<sub>2</sub>O elimination. The corresponding input file, `FA_biasH2O.dat`, is also available in directory path_to_program/examples. Additionally, a retro Diels-Alder reaction has also been tested: cyclohexene → ethylene+1,3-butadiene, using the input files `rdiels_bias.dat` and `rdiels.xyz` provided in the amk distribution.
 
 The above examples can be tested using the `amk.sh` script:
 ```
