@@ -2,6 +2,7 @@
 title: General section
 layout: home
 parent: Input files
+grand_parent: Tutorial
 nav_order: 1
 ---
 
