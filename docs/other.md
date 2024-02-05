@@ -223,17 +223,19 @@ spaces). It is analogous to modes (explained below).
 
 This is an example where atoms 1 , 2 and 3 are initially excited:
 ```
-atoms 3 1,2, 3
+atoms 3 1,2,3
 ```
 
 {: .important }  
 `etraj value`   
 [`value` is an integer or string with no blank spaces; _only with MD-micro_ ; no default]  
-If an integer, `value` is the energy (in kcal/mol) of the MD-micro simulations. If value is a range as in the example below, the energy is randomly selected in the given energy range:
+If an integer, `value` is the energy (in kcal/mol) of the MD-micro simulations. 
+
+If value is a range as in the example below, the energy is randomly selected in the given energy range:
 ```
 etraj 200-300
 ```
-If `etraj` is not specified, the program automatically employs the following range of energies: 16.25×(𝑠−1)−46.25×(𝑠−1) kcal/mol, where _s_ is the number of vibrational degrees of freedom of the system. The values 16.25 and 46.25 have been determined from the formic acid results and making use of RRK theory.
+If `etraj` is not specified, the program automatically employs the following range of energies: 16.25(𝑠−1)−46.25(𝑠−1) kcal/mol, where _s_ is the number of vibrational degrees of freedom of the system. The values 16.25 and 46.25 have been determined from the formic acid results and making use of RRK theory.
 The program automatically adjusts the range to obtain at least 60% reactivity at the boundaries.
 
 **factorflipv** value
