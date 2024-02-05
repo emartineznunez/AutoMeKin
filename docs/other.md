@@ -283,52 +283,48 @@ The program automatically adjusts the range to obtain at least 60% reactivity at
 [`value` is a float; _only with MD and MD-micro_ ; no default]   
 Using the default options, trajectories are halted when the simulation time reaches the `value[fs]`, see below, or when there an interatomic distance, $\scriptstyle{r_{ij}}$, reaches 5 times its initial value $\scriptstyle{r_{ij}^0}$, which is regarded as a fragmentation. 
 
-Using `factorflipv`, fragmentation can be prevented because the atomic velocities change their sign: whenever the following relationship is fulfilled: $\scriptstyle{r_{ij}>=\mathrm{FP}\times r_{ij}^0}$
+Using `factorflipv`, fragmentation can be prevented because the atomic velocities change their sign: whenever the following relationship is fulfilled: $\scriptstyle{r_{ij}>=\mathrm{FP}\times r_{ij}^0}$, where $\scriptstyle{mathrm{FP}}$ is `value[factorflipv]`. We recommend this value to be in the range 3.0-5.0.
 
-where FP is `value[factorflipv]`. We recommend this value to be in the range 3.0-5.0.
-
-**fs** value
-[value is an integer; default value: 500 for MD and MD-micro and 5000 for BXDE]
-value is the simulation time (in fs) in MD, MD-micro and BXDE samplings. Notice that this is the maximum
+{: .important }   
+`fs value`  
+[`value` is an integer; default value: `500` for MD and MD-micro and `5000` for BXDE]  
+`value` is the simulation time (in fs) in MD, MD-micro and BXDE samplings. Notice that this is the maximum
 simulation time, because when any interatomic distance reaches 5 times its initial value, the simulation
-stops. To run 2 ps trajectories the following should be employed:
+stops. 
 
+To run 2 ps trajectories the following should be employed:
+```
 fs 2000
+```
 
-**modes** value(s)
-[one or two values: first is a string with no blank spaces or an integer and second (if present) is a string
-with no blank spaces; **only with MD-micro** ; default value: all]
-The first value can be all (in which case no other values are needed) or the number of modes initially
-excited followed by a second value (string), which is the list of modes separated by commas (without blank
-spaces). It is analogous to atoms (explained above).
+{: .important }   
+`modes value(s)`    
+[one or two `values`: first is a string with no blank spaces or an integer and second, if present, is a string with no blank spaces; _only with MD-micro_ ; default value: `all`]   
+The first `value` can be `all`, in which case no other values are needed, or the number of modes initially
+excited followed by a second value, string, which is the list of modes separated by commas and without blank spaces. It is analogous to `atoms`, explained above.
 
-**multiple_minima** value
+{: .important }   
+`multiple_minima value`   
+[`value` is one string: `yes` or `no`; default value: `yes`]   
+`value` can be `yes`, in which case the exploratory simulations start from multiple minima, or `no`, where the all the MD simulations start from the input initial structure.
 
+{: .important }   
+`post_proc value(s)`   
+[from one to three `values`: first `value` is a string: `bbfs`, `bots` or `no`; the second and third are integers or floats; default values: `bbfs 20 1` for all samplings except association where the default value is `no`]   
+The first `value` is the post-processing algorithm employed to detect reaction events and it can be bbfs, the default, `bots` or `no`, if no algorithm is applied; this makes only sense for the purpose of testing the MD module. For `bbfs` two more values can follow: the time window (in fs) employed by bbfs and the number of guess structures selected per candidate. Possible choices for this last number can be 1 or 3. 
 
-[value is one string: yes or no; default value: yes]
-value can be yes, in which case the exploratory simulations start from multiple minima, or no, where the
-all the MD simulations start from the input initial structure.
-
-**post_proc** value(s)
-
-[from one to three values: first value is a string (bbfs, bots or no), the second and third are integers or
-floats; default values: bbfs 20 1 for all samplings except association where the only default value
-is no]
-
-The first value is the post-processing algorithm employed to detect reaction events and it can be bbfs (the
-default), bots^9 or no (if no algorithm is applied; this makes only sense for the purpose of testing the MD
-module). For bbfs two more values can follow: the time window (in fs) employed by bbfs and the number
-of guess structures selected per candidate. Possible choices for this last number can be 1 or 3. Example:
-
+Example:
+```
 post_proc bbfs 20 1
-
-If bots (for bond order time series) is employed ( **only with BXDE, vdW and external** ), the algorithm
-developed by Hutchings et al. is employed,^9 which is based on peak finding on the first time derivative of the
-bond orders. In this case the two additional values are the cutoff frequency (in cm−^1 ) for the low-pass filter
+```
+If `bots`, for bond order time series, is employed, _only with BXDE, vdW and external_, the algorithm
+developed by [Hutchings et al.](https://pubs.acs.org/doi/abs/10.1021/acs.jctc.9b01039) is employed. In this case the two additional values are the cutoff frequency (in cm<sub>−1</sup>) for the low-pass filter
 used to smooth bond order time series, and the number of standard deviations considered to identify peaks
 associated with reactive events. The default values for this algorithm are:
-
+```
 post_proc bots 200 2.5
+```
+
 
 **temp** value
 
