@@ -7,84 +7,35 @@ nav_order: 3
 
 # Using the scripts
 
-```
-To modify your environment information so that you can use the program, load the amk/2021 module
-every time a new session is opened (only if you do not use the container option):
-```
-module load amk/
+## Production runs
 
-### a) Tests
+For production runs use the scripts [as indicated here](https://emartineznunez.github.io/AutoMeKin/docs/running.html).
 
-```
-You may want to run tests taken from the examples folder. The following command line script runs all
-tests:
-```
-run_test.sh
-
-**Note that each test takes from a few seconds to several minutes.** The results of each test will be gathered
-in a different directory. To run FA and FAthermo tests, use the following:
-
-run_test.sh --tests=FA, FAthermo
-
-Tests available in this version: assoc, assoc_qcore, rdiels_bias, diels_bias, FA_biasH2,
-FA_biasH2O, FA_bxde, FA_singletraj, FA, FAthermo, FA_programopt, vdW, FA_ck, FA_qcore,
-FA_bxde_qcore and ttors.
-
-### b) Low-level calculations
-
-All low-level calculations can be run using the command line script llcalcs.sh:
-
-nohup llcalcs.sh name.dat ntasks niter runningtasks >llcalcs.log 2>&1 &
-
-where ntasks is the number of parallel tasks, niter is the number of iterations, and runningtasks is the
-number of simultaneous tasks. The script can be run without the arguments (i.e., name.dat, ntasks, niter
-and runningtasks), and two pop-up windows will help you enter the arguments.
-
-If your computer system has the Slurm job scheduler, you can submit the calculations as follows:
-
-sbatch llcalcs.sh name.dat ntasks niter
-
-This is an example to run 10 iterations of our low-level workflow for FA. Every iteration includes 50 tasks
-(MD, BXDE, etc), 20 of them running simultaneously.
-
-nohup llcalcs.sh FA.dat 50 10 20 >llcalcs.log 2>&1 &
-
-
-### c) High-level calculations
-
-Having completed the low-level calculations, the user can perform the high-level computations, which use
-Gaussian (g09 or g16) or Entos Qcore. These calculations can be run employing the following script:
-
-nohup hlcalcs.sh name.dat runningtasks >hlcalcs.log 2>&1 &
-
-If your computer system has the Slurm job scheduler, the calculations can be submitted in the following way:
-
-sbatch hlcalcs.sh FA.dat
-
-### d) Step-by-step low-level calculations
+## Step-by-step low-level calculations
 
 This section explains how to run one iteration of our workflow. This might be useful for getting acquainted
 with the program and didactic purposes, but the recommended option for production runs is to use the
 iterative llcalcs.sh and hlcalcs.sh scripts explained above.
 
-To run AutoMeKin in a single processor use amk.sh script with the name of the input file as argument:
-
+To run AutoMeKin in a single processor use `amk.sh` script with the name of the input file as argument:
+```
 amk.sh FA.dat > amk.log &
-
-The ouput file amk.log provides information about the calculations. In addition, a directory called
-tsdirLL_FA is created, which contains information that may be useful for checking purposes. We notice
-that the program creates a symbolic link to the FA.dat file, named amk.dat, which is used internally by
+```
+The ouput file `amk.log` provides information about the calculations. In addition, a directory called
+`tsdirLL_FA` is created, which contains information that may be useful for checking purposes. We notice
+that the program creates a symbolic link to the `FA.dat` file, named amk.dat, which is used internally by
 several amk scripts. At any time, you can check the transition states that have been found using:
-
+```
 tsll_view.sh
-
+```
 The output of this script will be something like this:
-
+```
 ts # File name w_imag Energy w1 w2 w3 w4 traj # Folder
 ---- --------------- ------ ------ ---- ---- ---- ---- ------ ------
 2 ts2_batch4 1588i -35.7105 206 438 461 727 1 wrkdir
 3 ts3_batch2 458i -78.1007 573 846 1034 1195 3 wrkdir
 4 ts4_batch6 2010i -17.6124 327 473 523 1078 1 wrkdir
+```
 where the first column is the label of each TS, the second is the filename of the optimized TS structure
 (located in the tsdirLL_FA directory), the third is the imaginary frequency (in cm−^1 ), the fourth one is the
 absolute energy of the TS (in kcal/mol for MOPAC2016 and Hartrees for qcore and gaussian) and the next
