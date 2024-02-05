@@ -6,12 +6,17 @@ grand_parent: Tutorial
 nav_order: 2
 ---
 
-**Method.** Here the user provides details of the method employed for sampling the reaction space. In our FA
-example, we have the following:
+# Method section
 
+Here the user provides details of the method employed for sampling the reaction space. In our FA
+example, we have the following:
+```
 --Method--
 sampling MD
 ntraj 10
+```
+
+
 List of “ **Keyword** value(s)” for this section:
 
 **sampling** value
