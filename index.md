@@ -14,7 +14,7 @@ Currently, AutoMeKin can be installed in three different ways:
 2. [Singularity container](#singularity)
 3. [Build from source](#build)
 
-## Auto installer <a name="autoinstaller"></a>
+## 1. Auto installer <a name="autoinstaller"></a>
 An auto installer script is provided to install singularity and
 download the last release container image from [sylabs](https://cloud.sylabs.io/library/emartineznunez/default/automekin) as
 `$HOME/automekin_<tag>.sif`. Note that this is done only the first time
@@ -67,7 +67,7 @@ your own tools as well.
 {: .note }  
 To download the file directly from your terminal, curl must be installed. The autoinstaller also works on Ubuntu 20.04 LTS on Windows.  
 
-## Singularity container <a name="singularity"></a>
+## 2. Singularity container <a name="singularity"></a>
 If singularity is already installed in your
 computer, you can obtain the container from sylabs. First check the
 latest image (Tag) by typing: 
@@ -117,7 +117,7 @@ singularity instance list
 ```
 And stop them as indicated above.
 
-## Build from source <a name="build"></a>
+## 3. Build from source <a name="build"></a>
 
 The most recent and up to date version is avaialable at this repository.
 
