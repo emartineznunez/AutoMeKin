@@ -395,7 +395,7 @@ where `value`, or `nfr`, is the number of constrained bonds.
 
 The line containing the `bondsfrozen nfr` pair must be followed by `nfr` lines, each one with two values:  
 `fr_i(k) fr_j(k)`   
-which are integers indicating the indexes (labels) of the atoms that form each constrained bond, as in the following example:
+which are integers indicating the indexes of the atoms that form each constrained bond, as in the following example:
 ```
 nbondsfrozen 2
 1 13
