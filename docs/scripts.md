@@ -163,7 +163,7 @@ In this case, the default values for a job submitted to Slurm are:
 ```
 
 _Building the high-level reaction network, optimizing the minima and running the kinetics_ :
-```` 
+```
 (sbatch [ options ]) IRC.sh
 (sbatch [ options ]) MIN.sh
 RXN_NETWORK.sh
