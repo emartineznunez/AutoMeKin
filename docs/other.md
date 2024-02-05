@@ -15,76 +15,78 @@ optimizations for randomly rotated fragments, vdW is a more powerful option repr
 extension of our bbfs method to study vdW complexes.^8 The input files for these two options slightly differ
 from those explained previously, as detailed below.
 
-**association**. Here, a number of full optimizations are performed starting from random orientations of A
-and B. An example of such input file can be found in path_to_program/examples/assoc.dat. Two
-additional input files are also needed for this example, Bz.xyz and N2.xyz, which are also available in the
-same folder. The assoc.dat file contains the following data:
-
+### association 
+Here, a number of full optimizations are performed starting from random orientations of A and B. An example of such input file can be found in `path_to_program/examples/assoc.dat`. Two additional input files are also needed for this example, `Bz.xyz` and `N2.xyz`, which are also available in the same folder. The assoc.dat file contains the following data:
+```
 --General--
-molecule Bz-N2
+molecule  Bz-N2
 fragmentA Bz
 fragmentB N2
+
 --Method--
 sampling association
-rotate com com 4 .0 1. 5
-Nassoc 50
+rotate   com com 4 .0 1. 5
+Nassoc   50
 
 --Screening--
 MAPEmax 0.0001
-BAPEmax 0. 5
-eigLmax 0. 05
-This type of sampling only needs three sections: General, Method and Screening. Some further **keyword**
-value(s) pairs are needed for this sampling:
+BAPEmax 0.5
+eigLmax 0.05
+```
+This type of sampling only needs three sections: General, Method and Screening. Some further `keyword
+value(s)` pairs are needed for this sampling:
 
-**fragmentA** value
+## Directory tree structure of `wrkdir`
 
-[value is one string with no blank spaces; **mandatory keyword** ]
+The figure below shows the main folders that are generated in `wrkdir`. Folders `batchXX` (where XX = 1 -
+tasks) are generated with `amk_parallel.sh`. This script is also invoked by `llcalcs.sh`, and when that
+happens these folders are temporary (they are removed at the end of the tasks). Directory `coordir` is only
+generated in those directories where `amk.sh` is executed. The `amk_parallel-logs` directory contains a
+series of files that give information on CPU time consumption for the different calculation steps when they
+were executed with GNU Parallel. Directories `tsdirLL_name` and `tsdir_HL_name` are generated at
+runtime and are employed to generate the final files and directories. For that reason, they should not be
+removed. Finally, the most important files are gathered in a final directory (`FINALDIR`) which is named after the system’s name: `FINAL_level_name` (with level being LL for low-level or HL for high level; see figure below).
 
-value is the name of fragment A (Bz in our case). A file with the Cartesian coordinates Bz.xyz must be
-present in wrkdir.
+{: .important }  
+`fragmentA value`  
+[`value` is one string with no blank spaces; _mandatory keyword_ ]  
+`value` is the name of fragment A (`Bz` in our case). A file with the Cartesian coordinates `Bz.xyz` must be present in `wrkdir`.
 
-**fragmentB** value
+{: .important }  
+`fragmentB value`   
+[`value  is one string with no blank spaces; _mandatory keyword`_ ]   
+`value` is the name of fragment B (`N2` in our case). A file with the Cartesian coordinates `N2.xyz` must be present as well.
 
-[value is one string with no blank spaces; **mandatory keyword** ]
+{: .important }  
+`rotate values`   
+[four `values`: first two can be strings or integers and last two are floats; default values: `com com 4.0
+1.5`]  
+The first two values are the pivot positions of the random rotations: the center of mass (`com`) of fragment A and the center of mass of fragment B in our example (these pivots could be labels of atoms and therefore integers). The last two values are the distance (in Å) between both pivots and the minimum intermolecular distance between any two atoms of both fragments, respectively.
 
-value is the name of fragment B (N2 in our case). A file with the Cartesian coordinates N2.xyz must be
-present as well.
+{: .important }  
+`Nassoc value`  
+[`value` is an integer; default value: `100` ]  
+`value` is the total number of intermolecular structures considered in the sampling. With this sampling, you cannot perform kinetics. However, you still need to provide the parameters for the screening. 
 
-**rotate** values
-
-
-[four values: first two can be strings or integers and last two are floats; default values: com com 4.0
-1.5]
-
-The first two values are the pivot positions of the random rotations: the center of mass (com) of fragment
-A and the center of mass of fragment B in our example (these pivots could be labels of atoms and therefore
-integers). The last two values are the distance (in Å) between both pivots and the minimum intermolecular
-distance between any two atoms of both fragments, respectively.
-
-**Nassoc** value
-
-[value is an integer; default value: 100 ]
-
-value is the total number of intermolecular structures considered in the sampling. With this sampling, you
-cannot perform kinetics. However, you still need to provide the parameters for the screening. To run the
-calculations, just type:
-
+_To run the calculations, just type_:
+```
 amk.sh assoc.dat
+```
+This job will submit `value[Nassoc]` independent optimizations to find the structures. After the jobs finished, the script will automatically remove duplicates and select the best association “complex”.
 
-This job will submit Nassoc independent optimizations to find the structures. After the jobs finished, the
-script will automatically remove duplicates and select the best association “complex”.
+{: .note }   
+You cannot use `amk_parallel.sh` with this option, as this script is only employed to run MD
+simulations.
 
-**Note that you cannot use amk_parallel.sh with this option, as this script is only employed to run MD
-simulations**.
-
-You can check the optimized structures in folder assoc_Bz_N2. The program will also select the “best”
+You can check the optimized structures in folder `assoc_Bz_N2`. The program will also select the “best”
 structure according to the minimum number of structural changes between the complex and the individual
-fragments and its energy. The structure selected will be called Bz-N2.xyz. For fragments containing metals,
-the selection is also based on the valence of the metal center. The file assoclist_sorted (in the
-assoc_Bz_N2 folder) collects a summary of the structures and their energies, as well as the MOPAC2016
-output files of each of them, which are called _assocN.out_ , where N is a number from 1 to Nassoc.
+fragments and its energy. The structure selected will be called `Bz-N2.xyz`. For fragments containing metals, the selection is also based on the valence of the metal center. The file assoclist_sorted (in
+`assoc_Bz_N2` folder) collects a summary of the structures and their energies, as well as the MOPAC2016
+output files of each of them, which are called _assocN.out_ , where N is a number from 1 to `value[Nassoc]`.
 
-**vdW**. For this option, the first part is common to association, and the program runs Nassoc independent
+### vdW
+
+For this option, the first part is common to association, and the program runs Nassoc independent
 optimizations to get an initial structure of the complex. From that point onwards, the program performs
 BXDE simulations to find TSs and intermediates for the system. Here is the inputfile vdW.dat that you can
 find in the examples folder:
