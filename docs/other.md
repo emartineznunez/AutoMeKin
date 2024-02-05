@@ -215,7 +215,9 @@ Here is a list of additional keywords that can be employed in the Method section
 [one or two `values`: first is a string with no blank spaces or an integer and second (if present) is a string with no blank spaces; _only with MD_ ; default value: `all`]   
 The first `value` can be `all` (in which case no other values are needed) or the number of atoms initially
 excited followed by a second value (string), which is the list of atoms separated by commas (without blank
-spaces). It is analogous to modes (explained below). This is an example where atoms 1 , 2 and 3 are initially excited:
+spaces). It is analogous to modes (explained below). 
+
+This is an example where atoms 1 , 2 and 3 are initially excited:
 ```
 atoms 3 1,2, 3
 ```
