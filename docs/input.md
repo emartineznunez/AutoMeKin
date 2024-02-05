@@ -1,5 +1,5 @@
 ---
-title: Input file
+title: Input files
 layout: home
 parent: Tutorial
 nav_order: 2
