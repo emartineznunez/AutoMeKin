@@ -6,26 +6,25 @@ grand_parent: Tutorial
 nav_order: 3
 ---
 
-# Screening method
+# Screening section
 
 Some of the initially located structures might have very low imaginary frequencies, be repeated
 or correspond to transition states of van der Waals complexes formed upon fragmentation of the reactant
 molecule. To avoid or minimize low-(imaginary)frequency structures, redundancies and van der Waals
-complexes, amk includes a screening tool, which is based on the following descriptors: energy, SPRINT
-coordinates,^5 degrees of each vertex and eigenvalues of the Laplacian matrix.^1 While the lowest eigenvalues
-of the Laplacian (eigL) are employed to discriminate fragmented structures, comparing the descriptors for
-any pair of structures, a mean absolute percentage error (MAPE) and a biggest absolute percentage error
-(BAPE) are obtained.
+complexes, amk includes a screening tool, which is based on the following descriptors: energy, [SPRINT
+coordinates](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.085504), degrees of each vertex and eigenvalues of the Laplacian matrix. While the lowest eigenvalues of the Laplacian (eigL) are employed to discriminate fragmented structures, comparing the descriptors for any pair of structures, a mean absolute percentage error (MAPE) and a biggest absolute percentage error (BAPE) are obtained.
 
 In this section we set a minimum value for the imaginary frequency and maximum values for MAPE, BAPE
 and eigL, as explained below:
-
+```
 --Screening --
 imagmin 200
 MAPEmax 0.
 BAPEmax 2.
 eigLmax 0.
-List of “ **Keyword** value(s)” for this section:
+```
+
+List of `Keyword value(s)` for this section:
 
 **imagmin** value
 
