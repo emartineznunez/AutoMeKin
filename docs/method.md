@@ -61,11 +61,11 @@ neighbors H 0 1
 ```
 The default values are listed in this table:
 
-|   |   |   |   |   |
-|---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+|   |   |   |   |   |   |
+|---|---|---|---|---|---|
+|   |   |   |   |   |   |
+|   |   |   |   |   |   |
+|   |   |   |   |   |   |
 
 **Atom Min # of neighbors Max # of neighbors Atom Min # of neighbors Max # of neighbors**
 H 1 1 Mg 0 2
