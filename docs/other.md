@@ -124,38 +124,31 @@ The default value for `torsion` is `yes`.
 
 ## Fragmentation
 
-The fragmentation patterns and breakdown curves can be modelled using the script amk_frag.sh. This script provides a workflow to iteratively discover fragmentation pathways not only the parent molecule but also for the fragments resulting from the primary fragmentation. Usage:
-
+The fragmentation patterns and breakdown curves can be modelled using the script `amk_frag.sh`. This script provides a workflow to iteratively discover fragmentation pathways not only the parent molecule but also for the fragments resulting from the primary fragmentation. Usage:
+```
 nohup amk_frag.sh > amk_frag.log 2>&1 &
-
+```
 The inputfile must have an additional section called “Fragmentation”, as in this example:
-
+```
 --Fragmentation--
-
-
 minsize 4
 systems 1
-CH3O+ 3
+CH3O+   3
+```
 The new keywords are explained below.
 
-**minsize** value
-
-[value is an integer; default value: 4 ]
-
-value is the minimum number of atoms for a fragment to be considered in secondary fragmentations.
-
-**systems** ns
+{: .important }   
+`minsize value`   
+[`value` is an integer; default value: `4` ]  
+`value` is the minimum number of atoms for a fragment to be considered in secondary fragmentations.
+```
+systems ns
 sys(1) mult(1)
 sys(2) mult(2)
-
+...
 sys(ns) mult(ns)
-
-ns is the number of additional fragments (or systems) to be considered in secondary fragmentations (default
-value: 0), besides those obtained in the fragmentation of the parent molecule. These could be fragments
-with other spin state, or fragments that are obtained through a barrierless process. This line must be
-followed by ns lines with two columns each one: the formula of each system (sys) and its multiplicity
-(mult). Note that for the formula the chemical symbols of the atoms must sorted following AutoMeKin’s
-convention: alphabetic order.
+```
+`ns` is the number of additional fragments (or systems) to be considered in secondary fragmentations (default value: 0), besides those obtained in the fragmentation of the parent molecule. These could be fragments with other spin state, or fragments that are obtained through a barrierless process. This line must be followed by ns lines with two columns each one: the formula of each system (sys) and its multiplicity (mult). Note that for the formula the chemical symbols of the atoms must sorted following AutoMeKin’s convention: alphabetic order.
 
 In the example above, only fragments with number of atoms greater than or equal to 4 are further
 fragmented and an additional system has been added: CH 3 O+ in its triplet state.
