@@ -26,65 +26,33 @@ eigLmax 0.
 
 List of `Keyword value(s)` for this section:
 
-**imagmin** value
+{: .important }  
+`imagmin value`   
+[`value` is an integer; default value: `0` ]   
+`value` is the minimum value for the imaginary frequency (in absolute value and cm<sup>−1<sup>) of the selected TS structures. Discarded structures will be stored in tsdirLL_molecule/LOW_IMAG_TSs to allow the user inspection of the rejected TSs.
 
-[value is an integer; default value: 0 ]
+{: .important }  
+`MAPEmax value`  
+[`value` is a float; default value: `0` ]   
+`value` is the maximum value for MAPE.
 
-value is the minimum value for the imaginary frequency (in absolute value and cm−^1 ) of the selected TS
-structures. Discarded structures will be stored in tsdirLL_molecule/LOW_IMAG_TSs to allow the user
-inspection of the rejected TSs.
-
-**MAPEmax** value
-
-[value is a float; default value: 0 ]
-
-value is the maximum value for MAPE.
-
-
-**BAPEmax** value
-
-[value is a float; default value: 0 ]
-
-value is the maximum value for BAPE.
+{: .important }  
+`BAPEmax value`   
+[`value` is a float; default value: `0` ]   
+`value` is the maximum value for BAPE.
 
 If both, the MAPE and BAPE values calculated for two structures are below the values of MAPEmax and
 BAPEmax, respectively, the structures are considered equivalent, and therefore only one is kept.
 
-As a general advice, value[MAPEmax] and value[BAPEmax] should be small. A good starting point could
-be the values provided in the input files of the examples. Since the HL calculations (performed with G09/G16)
-have much more stringent tests for optimization than those of MOPAC, in the screening of the HL structures,
-value[MAPEmax] and value[BAPEmax] are set to MIN(MAPEmax, 0.001) and MIN(BAPEmax, 1 ),
+As a general advice, `value[MAPEmax]` and `value[BAPEmax]` should be small. A good starting point could
+be the values provided in the input files of the examples. Since the HL calculations (performed with G09/G16) have much more stringent tests for optimization than those of MOPAC, in the screening of the HL structures, `value[MAPEmax]` and `value[BAPEmax]` are set to MIN(MAPEmax, 0.001) and MIN(BAPEmax, 1 ),
 respectively.
 
-**eigLmax** value
-
-[value is a float; default value: 0 ]
-
-value is the maximum value for an eigL to be considered 0. In Spectral Graph Theory, the number of zero
+{: .important }  
+`eigLmax value`   
+[`value` is a float; default value: `0`]   
+`value` is the maximum value for an eigL to be considered 0. In Spectral Graph Theory, the number of zero
 eigLs provides the number of fragments in the system. This criterion is used to identify van der Waals
 complexes that are formed by unimolecular fragmentation.
 
-**Kinetics.** This part is employed to provide details for the kinetics calculations at the (experimental)
-conditions you want to simulate. **This section is compulsory except for association.**
 
-An example is given as follows.
-
---Kinetics--
-Energy 150
-The kinetics simulations will be carried out for a canonical (fixed temperature) or microcanonical (fixed
-energy) ensemble, which have their associated keywords:
-
-List of “ **Keyword** value(s)” for this section:
-
-**Energy** value
-
-[value is an integer; default value: 0 ]
-
-value is the energy (in kcal/mol) for which microcanonical rate coefficients will be calculated.
-
-**Temperature** value
-
-[value is an integer; default value: 298 ]
-
-value is the temperature (in K) for which thermal rate coefficients will be calculated. At present, only
-temperatures in the range 100 - 9999 K are allowed.
