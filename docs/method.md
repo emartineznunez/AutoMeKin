@@ -62,7 +62,7 @@ neighbors H 0 1
 You can add as many lines as needed (one per atom). The default values are listed in this table:
 
 |Atom|Min # of neighbors|Max # of neighbors|Atom|Min # of neighbors|Max # of neighbors|
-|---|:---:|:---:|---|:---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|:---:|
 |H|1|1|  Mg | 0  | 2  |
 |Li|0|1| Al  | 1  | 3  |
 |Be|0|2| Si  | 1  | 4  |
