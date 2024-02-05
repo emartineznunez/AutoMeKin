@@ -10,7 +10,6 @@ has_childre: true
 ## Content
 - [Introduction](#introduction)
 - [How to cite the program](#cite)
-- [Developers](#dev)
 - [Input files](#input)
 - [Running the code](#run)
 - [Results](#res)
@@ -81,33 +80,6 @@ Finally, if you use the bots reactive event search algorithm, the following refe
 ```
 Hutchings M. et al., J. Chem. Theory Comput. 2020 , 16, 1606- 1617
 ```
-## Developers<a name="dev"></a>
-
-[Emilio Martínez-Núñez (Universidade de Santiago de Compostela, Spain)](https://emartineznunez.github.io/)
-
-George L. Barnes (Siena College, USA)
-
-Carles Bo (ICIQ, Spain)
-
-Diego Garay-Ruiz (ICIQ, Spain)
-
-David R. Glowacki (University of Bristol, UK)
-
-Sabine Kopec (Université Paris-Saclay, Orsay, France)
-
-Daniel Pelaez-Ruiz (Université Paris-Saclay, Orsay, France)
-
-Aurelio Rodriguez (CESGA, Spain)
-
-Roberto Rodriguez-Fernandez (Universidade de Santiago de Compostela, Spain)
-
-Robin J. Shannon (University of Bristol, UK)
-
-James J. P. Stewart (Stewart Computational Chemistry, USA)
-
-Pablo G. Tahoces (Universidade de Santiago de Compostela, Spain)
-
-Saulo A. Vazquez (Universidade de Santiago de Compostela, Spain)
 
 ## Input files<a name="input"></a>
 
