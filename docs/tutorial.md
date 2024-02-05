@@ -7,10 +7,7 @@ has_children: true
 
 # Tutorial
 
-
-## Introduction <a name="introduction"></a>
-
-AutoMeKin (amk for short), which stands for Automated Mechanisms and Kinetics, is an automated protocol to
+AutoMeKin (_amk_ for short), which stands for Automated Mechanisms and Kinetics, is an automated protocol to
 discover chemical reaction mechanisms and simulate the kinetics at the conditions of interest. Although the
 method was originally designed to find transition states (TSs) from reactive molecular dynamics (MD)
 simulations, several new tools have been incorporated throughout the past few years. The current pipeline
