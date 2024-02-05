@@ -149,11 +149,11 @@ Dihedral angles can be scanned using script tors.sh. You will need the inputfile
 ```
 tors.sh inputfile file
 ```
-The first argument is the name of the inputfile and the second one can be: `all` (default) or `file`. Using `all`, all the rotatable angles are scanned, while if you use `file`, the four indices that specify the dihedrals you want to scan must be present in file `dihedrals`.
+The first argument is the name of the inputfile and the second one can be: `all`, the default, or `file`. Using `all`, all the rotatable angles are scanned, while if you use `file`, the four indices that specify the dihedrals you want to scan must be present in file `dihedrals`.
 
 The dihedrals will be scanned and the highest point(s) along the scan(s) will be subjected to TS optimizations.
 
-In general, dihedral scans are automatically performed in all parallel calculations (except with vdW and assoc samplings). For big and/or highly flexible molecules these automated scans can be very CPU intensive, and they can be avoided adding the keyword `torsion` with the value no to your Method section like in the next example:
+In general, dihedral scans are automatically performed in all parallel calculations, except with vdW and assoc samplings. For big and/or highly flexible molecules these automated scans can be very CPU intensive, and they can be avoided adding the keyword `torsion` with the value no to your Method section like in the next example:
 ```
 --Method--
 sampling MD
@@ -185,9 +185,9 @@ The new keywords are explained below.
 {: .important }   
 `systems value`   
 [`value` is an integer; default value: `0`]  
-`value` (or `ns`) is the number of additional fragments (or systems) to be considered in secondary fragmentations, besides those obtained in the fragmentation of the parent molecule. These could be fragments with other spin state, or fragments that are obtained through a barrierless process. 
+`value` (or `ns`) is the number of additional fragments, or systems, to be considered in secondary fragmentations, besides those obtained in the fragmentation of the parent molecule. These could be fragments with other spin state, or fragments that are obtained through a barrierless process. 
 
-This line must be followed by `ns` lines with two columns each one: the formula of each system (sys) and its multiplicity (mult). Note that for the formula the chemical symbols of the atoms must sorted following AutoMeKin’s convention: alphabetic order:
+This line must be followed by `ns` lines with two columns each one: the formula of each system, sys, and its multiplicity, mult. Note that for the formula the chemical symbols of the atoms must sorted following AutoMeKin’s convention: alphabetic order:
 ```
 systems ns
 sys(1) mult(1)
@@ -221,7 +221,7 @@ iop iop(3/76=0560004400)
 ```
 
 {: .warning }   
-Care must be taken when `LowLevel_TSopt` (see below) is employed with `iop`, as this keyword
+Care must be taken when `LowLevel_TSopt`, see below, is employed with `iop`, as this keyword
 will also be activated in `LowLevel_TSopt` calculations. If the iop is only desired for high-level gaussian
 calculations, then, the keyword should be removed while running the low-level computations.
 
@@ -257,9 +257,9 @@ Here is a list of additional keywords that can be employed in the Method section
 {: .important }  
 `atoms value(s)`    
 [one or two `values`: first is a string with no blank spaces or an integer and second (if present) is a string with no blank spaces; _only with MD_ ; default value: `all`]   
-The first `value` can be `all` (in which case no other values are needed) or the number of atoms initially
-excited followed by a second value (string), which is the list of atoms separated by commas (without blank
-spaces). It is analogous to modes (explained below). 
+The first `value` can be `all`, in which case no other values are needed, or the number of atoms initially
+excited followed by a second value, a string, which is the list of atoms separated by commas, without blank
+spaces. It is analogous to modes, explained below. 
 
 This is an example where atoms 1 , 2 and 3 are initially excited:
 ```
@@ -269,7 +269,7 @@ atoms 3 1,2,3
 {: .important }  
 `etraj value`   
 [`value` is an integer or string with no blank spaces; _only with MD-micro_ ; no default]  
-If an integer, `value` is the energy (in kcal/mol) of the MD-micro simulations. 
+If an integer, `value` is the energy, in kcal/mol, of the MD-micro simulations. 
 
 If value is a range as in the example below, the energy is randomly selected in the given energy range:
 ```
@@ -277,6 +277,7 @@ etraj 200-300
 ```
 If `etraj` is not specified, the program automatically employs the following range of energies: $\scriptstyle{16.25(s−1)−46.25(s−1)}$ kcal/mol, where $\scriptstyle{s}$ is the number of vibrational degrees of freedom of the system. The values $\scriptstyle{16.25}$ and $\scriptstyle{46.25}$ have been determined from the formic acid results and making use of RRK theory.
 The program automatically adjusts the range to obtain at least 60% reactivity at the boundaries.
+
 
 **factorflipv** value
 
