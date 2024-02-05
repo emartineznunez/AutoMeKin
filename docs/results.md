@@ -112,33 +112,26 @@ TS # DE(kcal/mol)    Reaction path information
 14       188.8         MIN 2 <---> MIN 8
 15       191.7         MIN 7 <---> MIN 8
 ```
-As can be seen, for each transition state, this file specifies the associated minima and/or product fragments
-and their corresponding identification numbers. Notice that TS, MIN and PR have independent identification
-numbers. If you use the option complete for the keyword HL_rxn_network (in the General section of
-the input data), all the TSs will be reoptimized in the high-level calculations. You may reduce significantly the
-number of TSs to be reoptimized in the HL calculations, and therefore the reaction network, if you use the
-option reduced. If it is employed without an argument, TSs associated to PR <--> PR steps (i.e.,
-bimolecular reactions) and to interconversion between optical isomers will not be reoptimized in the HL
-calculations. You may include a number as an argument of this option:
-
+As can be seen, for each transition state, this file specifies the associated minima and/or product fragments and their corresponding identification numbers. Notice that TS, MIN and PR have independent identification numbers. If you use the option complete for the keyword `HL_rxn_network` (in the General section of the input data), all the TSs will be reoptimized in the high-level calculations. You may reduce significantly the number of TSs to be reoptimized in the HL calculations, and therefore the reaction network, if you use the option reduced. If it is employed without an argument, TSs associated to PR <--> PR steps (_i.e._, bimolecular reactions) and to interconversion between optical isomers will not be reoptimized in the HL calculations. You may include a number as an argument of this option:
+```
 HL_rxn_network reduced 55
-
+```
 In this case, besides the above TSs, all TSs having relative energies larger than 55 kcal/mol will not be
-considered for HL optimizations, that is, they will not be included in the HL reaction network. We notice that
-the last argument must be an integer.
+considered for HL optimizations, that is, they will not be included in the HL reaction network. We notice that the last argument must be an integer.
 
-**RXNet.barrless**. Barrierless reactions are included in this file (only when MOPAC and g09/g16 are
-employed). The user must be aware that the channels are those consistent with the values of the keyword
-neighbors explained above. These channels are not considered in the kinetics, but they are plotted in the
-complete graph indicated below.
+### RXNet.barrless 
 
+Barrierless reactions are included in this file (only when MOPAC and g09/g16 are employed). The user must be aware that the channels are those consistent with the values of the keyword neighbors explained above. These channels are not considered in the kinetics, but they are plotted in the complete graph indicated below.
+```
+TS #   DE(kcal/mol)      Reaction path information
+====   ============      =========================
+1          152.8         MIN 1 ----> PR6: HO + CHO
+2          170.4         MIN 3 ----> PR7: HO + CHO
+3          150.6         MIN 6 ----> PR8: HO + CHO
+```
 
-TS # DE(kcal/mol) Reaction path information
-==== ============ =========================
-1 152.8 MIN 1 ----> PR6: HO + CHO
-2 170.4 MIN 3 ----> PR7: HO + CHO
-3 150.6 MIN 6 ----> PR8: HO + CHO
-Note that here TS refers to a dynamical TS and no saddle point exists in these paths.
+{: .note }   
+Here TS refers to a dynamical TS and no saddle point exists in these paths.
 
 **RXNet.cg**. By default (see below) the KMC calculations are “coarse-grained”, that is, conformational
 isomers form a single state, which is taken as the lowest energy isomer. Such reaction network, which also
