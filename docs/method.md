@@ -147,7 +147,7 @@ CK_minima all
 <code>value</code> is the maximum distance between active atoms to be considered in a bond formation.
 
 {: .important }   
-<code>MaxBoF/MaxBoB value<code>   
+<code>MaxBoF/MaxBoB value</code>   
 [<code>value</code> is an integer; default value: <code>2</code>]   
 <code>value</code> is the maximum number of bonds formed (n<sub>F</sub>)/broken (<sub>nB</sub>) to make all possible (n<sub>F</sub>,n<sub>B</sub>) combinations for Graph transformations.
 
