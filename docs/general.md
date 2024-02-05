@@ -12,13 +12,13 @@ In this section the electronic structure details are provided. The following is 
 keywords employed in this section for the FA molecule.
 ```
 --General--  
-molecule FA  
-LowLevel mopac pm7 t=3m  
-HighLevel g16 b3lyp/6-31G(d,p)  
+molecule       FA  
+LowLevel       mopac pm7 t=3m  
+HighLevel      g16 b3lyp/6-31G(d,p)  
 HL_rxn_network complete  
-IRCpoints 30  
-charge 0  
-mult 1  
+IRCpoints      30  
+charge         0  
+mult           1  
 ```
 List of <code>Keyword value(s)</code> for this section:
 
