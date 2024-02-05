@@ -217,7 +217,7 @@ While this one creates the corresponding plots for the paths that connect MIN1 w
 ```
 amk_gen.py FINAL_LL_FA RXNet.cg --paths MIN1 H2+CO2
 ```
-More details can be found here: https://github.com/dgarayr/amk_tools/blob/master/UserGuide.md
+More details can be found in the [user guide](https://github.com/dgarayr/amk_tools/blob/master/UserGuide.md)
 
 Example of an interactive dashboard (for FA), with the reaction network on the left and a selected edge (TS) on the right. Clicking on “Show profile” enables visualization of the energy profile as well.
 <p align="center">
