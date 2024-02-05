@@ -200,7 +200,9 @@ LowLevel_TSopt g09 hf/3-21g
 {: .important }   
 `recalc value`   
 [one `value`: one integer; by default this keyword is not employed; _only with mopac_ ]  
-If the last point of the IRC is an intermediate, MOPAC will try to optimize it. For difficult cases, the user can employ this keyword like in this example:
+If the last point of the IRC is an intermediate, MOPAC will try to optimize it. 
+
+For difficult cases, the user can employ this keyword like in this example:
 
 ```
 recalc 10
