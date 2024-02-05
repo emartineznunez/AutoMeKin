@@ -59,7 +59,7 @@ For instance, if you want to consider dissociations leading to atomic hydrogen, 
 ```
 neighbors H 0 1
 ```
-The default values are listed in this table:
+You can add as many lines as needed (one per atom). The default values are listed in this table:
 
 |Atom|Min # of neighbors|Max # of neighbors|Atom|Min # of neighbors|Max # of neighbors|
 |---|:---:|:---:|---|:---:|:---:|
@@ -73,33 +73,16 @@ The default values are listed in this table:
 |F|0|1| I  | 0  |  1 |
 |Na|0|1|   |   |   |
 
+{: .important }  
+<code>ntraj value</code>   
+[<code>value</code> is an integer; default value: <code>1</code> ]  
+<code>value</code> is the number of trajectories. We strongly recommend here to avoid using big numbers of
+trajectories. Instead, the user should try to run different batches of trajectories as indicated below with a small number of trajectories each one. One trajectory is recommended for BXDE and about 10 for MD-based sampling.
 
-**Atom Min # of neighbors Max # of neighbors Atom Min # of neighbors Max # of neighbors**
-H 1 1 Mg 0 2
-Li 0 1 Al 1 3
-Be 0 2 Si 1 4
-B 1 3 P 1 5
-C 1 4 S 1 6
-N 1 3 Cl 0 1
-O 1 2 Br 0 1
-F 0 1 I 0 1
-Na 0 1
-**ntraj** value
-
-[value is an integer; default value: 1 ]
-
-value is the number of trajectories. We strongly recommend here to avoid using big numbers of
-trajectories. Instead, the user should try to run different batches of trajectories as indicated below with a
-small number of trajectories each one. One trajectory is recommended for BXDE and about 10 for MD-based
-sampling.
-
-**seed** value
-
-
-[value is an integer; **only valid for MD and MD-micro** ; default value: 0 ]
-
-value is the seed of the random number generator. It can be employed to run a test trajectory. See the
-FA_singletraj.dat file in the examples. **Only use this keyword for testing.**
+{: .important }  
+<code>seed value</code>  
+[<code>value</code> is an integer; _only valid for <code>MD</code> and <code>MD-micro</code>_ ; default value: <code>0</code> ]   
+<code>value</code> is the seed of the random number generator. It can be employed to run a test trajectory. See the <code>FA_singletraj.dat</code> file in the examples. _Only use this keyword for testing_.
 
 **BXDE specific keywords.** This sampling (and the other BXDE-based sampling based: vdW) has a number
 of specific keywords as shown in this example:
