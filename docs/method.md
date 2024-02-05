@@ -50,7 +50,7 @@ To use <code>MD-micro</code> the initial structure needs to be fully optimized a
 {: .important }   
 <code>neighbors values</code>   
 [three <code>values</code>: first is a string and last two are floats; default values (see table below)]   
-The first <code>value<code> is an atomic symbol and the two numbers are the minimum and maximum number of
+The first <code>value</code> is an atomic symbol and the two numbers are the minimum and maximum number of
 neighbors of the corresponding atoms. This keyword is needed if atoms other than those in the table below
 are present in your system and/or if you want to change the default values. The number of neighbors is
 employed to locate _barrierless processes_ and are also employed by <code>ChemKnow</code>. For instance, if you want to consider dissociations leading to atomic hydrogen, you must add the following line:
