@@ -285,9 +285,17 @@ Using the default options, trajectories are halted when the simulation time reac
 
 Using `factorflipv`, fragmentation can be prevented because the atomic velocities change their sign:
 
+
 $
 \vec{v}_k=
-$
+\left\{ 
+  \begin{array}{ c l }
+    \frac{x^2 - x}{2} & \quad \textrm{if } x \geq 1 \\
+    0                 & \quad \textrm{otherwise}
+  \end{array}
+\right.$
+
+
 
 whenever the following relationship is fulfilled:
 
