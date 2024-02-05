@@ -328,7 +328,7 @@ post_proc bots 200 2.5
 {: .important }  
 `temp value`  
 [`value` is an integer or string with no blank spaces; _only with MD and BXDE_ ; no default]  
-If an integer, `value` is the temperature (in K) of the MD or BXDE simulations. If a range, _only valid for MD_, the temperature is randomly selected in the given range. In the absence of the temp keyword, the program automatically defines the following range of temperatures: $\scriptstyle{5452.04(s−1)/natom−15517.34(s−1)/natom}$ K, which has been optimized for formic acid. However, as for `etraj`, the boundaries are adjusted _on the fly_ to obtain a minimum reactivity of 60%. _For BXDE, temp has only one value and 1000 K is the default)._
+If an integer, `value` is the temperature (in K) of the MD or BXDE simulations. If a range, _only valid for MD_, the temperature is randomly selected in the given range. In the absence of the temp keyword, the program automatically defines the following range of temperatures: $\scriptstyle{5452(s−1)/n−15517(s−1)/n}$ K, which has been optimized for formic acid and $\scriptstyle{n}$ being the number of atoms. However, as for `etraj`, the boundaries are adjusted _on the fly_ to obtain a minimum reactivity of 60%. _For BXDE, temp has only one value and 1000 K is the default)._
 
 {: .important }  
 `thmass value`   
@@ -342,65 +342,54 @@ If `value` is `yes`, then mopac TS optimizations that fail throwing the error: �
 BRACKETING LAMDA” are rerun using LET keyword, which allows [more of the potential energy surface to be
 sampled:](http://openmopac.net/manual/error_messages.html). To help the user judge whether to use this
 keyword, the results of the optimizations using LET are collected in the file `stats_let` located in
-`tsdirLL_molecule`. This file contains several lines (one per iteration) with two numbers: the first is the
+`tsdirLL_molecule`. This file contains several lines, one per iteration, with two numbers: the first is the
 number of optimized TSs, and the second is the number of total attempts using LET.
 
 ### Screening
 
-**tight_ts** value
-
-[value is one string: yes or no; default value: yes]
-value can be yes, in which case only first order saddles are considered, or no if we want to keep also higher
-order saddles.
+{: .important }  
+`tight_ts value`   
+[`value` is one string: `yes` or `no`; default value: `yes`]   
+`value` can be `yes`, in which case only first order saddles are considered, or `no` if we want to keep also higher order saddles.
 
 ### Kinetics
 
-**imin** value
+{: .important }  
+`imin value`  
+[`value` is an integer or the string `min0`; default value: `min0`]   
+`value` is the starting minimum for the KMC simulations. value can be an integer, which identifies the
+desired structure or `min0`, which refers to the input structure. All the minima are listed in `MINinfo` file and the user must examine `RXNet.cg` file to check that the minimum is indeed connected with the other ones (last column of each pathway indicates this fact).
 
-[value is an integer or one string: min0; default value: min0]
+{: .important }  
+`nmol value`   
+[`value` is an integer; default value: `1000` ]    
+`value` is the number of molecules for the KMC simulations. 
 
-value is the starting minimum for the KMC simulations. value can be an integer, which identifies the
-desired structure or min0, which refers to the input structure. All the minima are listed in MINinfo file and
-the user must examine RXNet.cg file to check that the minimum is indeed connected with the other ones
-(last column of each pathway indicates this fact).
+{: .important }  
+`Stepsize value`   
+[`value` is an integer; default value: `10` ]   
+`value` is the number of reactions that have to take place before printing the population in the KMC runs.
 
-**nmol** value
+{: .important }  
+`MaxEn** value`   
+[`value` is an integer; default value: `100` for thermal kinetics or 3/2 the value of Energy for
+microcanonical kinetics]  
+`value` is the maximum allowed energy, in kcal/mol and relative to the input structure, for a TS to be included in the reaction network.
 
-[value is an integer; default value: 1000 ]
-
-value is the number of molecules for the KMC simulations.
-
-**Stepsize** value
-
-[value is an integer; default value: 10 ]
-
-value is the number of reactions that have to take place before printing the population in the KMC runs.
-
-**MaxEn** value
-
-[value is an integer; default value: 100 for thermal kinetics or 3/2 the value of Energy for
-microcanonical kinetics]
-
-value is the maximum allowed energy (in kcal/mol and relative to the input structure) for a TS to be included
-in the reaction network.
-
-
-**ImpPaths** value
-
-[value is a float; default value: 0 ]
-
-value is the minimum percentage of processes occurring through a particular pathway (in the KMC
+{: .important }  
+`ImpPaths value`   
+[`value` is a float; default value: `0` ]   
+`value` is the minimum percentage of processes occurring through a particular pathway (in the KMC
 simulation) that has to be achieved in order to be considered relevant and finally included in
-Energy_profile.pdf and in RXNet.rel. The default value of 0 means that pathways which are overcome
+`Energy_profile.pdf` and in `RXNet.rel`. The default value means that pathways which are overcome
 at least once by the KMC simulations are included in these files. To reduce to number of channels drawn in
-Energy_profile.pdf and printed in RXNet.rel you can increase the default value. Notice that these
+`Energy_profile.pdf` and printed in `RXNet.rel` you can increase the default value. Notice that these
 pathways may refer to the “coarse-grained” mechanism (default option) or to the complete mechanism that
 includes conformational isomers (obtained by using the allstates option as described above). For
-practical reasons, **a maximum of 100 TSs** will be drawn in Energy_profile.pdf and printed in RXNet.rel.
-If this maximum value is reached (which can be checked in RXNet.rel), it means that part of the channels are
-missing in these files.
+practical reasons, _a maximum of 100 TSs_ will be drawn in `Energy_profile.pdf` and printed in `RXNet.rel`.
+If this maximum value is reached (which can be checked in `RXNet.rel`), it means that part of the channels are missing in these files.
 
-### e) Biased dynamics
+## e) Biased dynamics
 
 AutoMeKin includes several methods to bias the dynamics towards specific reaction pathways. So far, these
 are the available options ( **only for MD and MD-micro** ):
