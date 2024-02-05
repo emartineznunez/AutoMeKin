@@ -183,21 +183,16 @@ every species as a function of time. In the name of the file, `F` is either `T` 
    <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/kin.jpg" alt="alt text" width="800" height="500">
 </p>
 
-### b) Visualization tools
+## Visualization tools
 
-The Python library amk-tools developed by Diego Garay (Institute of Chemical Research of Catalonia Prof.
-Carles Bo Research group) is a useful package to parse, process and transform the reaction networks created
-by AutoMeKin (https://github.com/dgarayr/amk_tools ). All the data contained in FINALDIR can be easily
-accessed using these tools.
+The Python library [amk-tools](https://github.com/dgarayr/amk_tools) developed by Diego Garay (Institute of Chemical Research of Catalonia, Prof. Carles Bo Research group) is a useful package to parse, process and transform the reaction networks created by AutoMeKin. All the data contained in `FINALDIR` can be easily accessed using these tools.
 
-The commandline script amk_gen_view.py allows to generate visualizations directly taking arguments
+The commandline script `amk_gen_view.py` allows to generate visualizations directly taking arguments
 from STDIN:
-
+```
 amk_gen.py FINALDIR RXNFILE
-
-
-where RXNFILE is the name of the RXNet files explained above (RXNet, RXNet.cg or RXNet.rel). Additional
-arguments that may be passed are:
+```` 
+where `RXNFILE` is the name of the `RXNet` files explained above (`RXNet`, `RXNet.cg` or `RXNet.rel`). Additional arguments that may be passed are:
 
 ```
 --barrierless. Include the barrierless routes stored in RXNet.barrless.
@@ -214,19 +209,17 @@ between SOURCE and TARGET), default is 4.
 --outfile FILENAME. Name of the output HTML file containing the dashboard.
 --title TITLE. Title shown in the dashboard.
 ```
-The following example shows how to create interactive plots from RXNet.cg file including all paths found at
-low level for Formic Acid (FA):
-
+The following example shows how to create interactive plots from `RXNet.cg` file including all paths found at low level for Formic Acid (FA):
+```
 amk_gen.py FINAL_LL_FA RXNet.cg --b --paths
-
-While this one creates the corresponding plots for the paths that connect MIN1 with the H 2 + CO 2 products:
-
+```
+While this one creates the corresponding plots for the paths that connect MIN1 with the H<sub>2</sub>+CO<sub>2</sub> products:
+```
 amk_gen.py FINAL_LL_FA RXNet.cg --paths MIN1 H2+CO2
-
+```
 More details can be found here: https://github.com/dgarayr/amk_tools/blob/master/UserGuide.md
 
-Example of an interactive dashboard (for FA), with the reaction network on the left and a selected edge (TS)
-on the right. Clicking on “Show profile” enables visualization of the energy profile as well.
+Example of an interactive dashboard (for FA), with the reaction network on the left and a selected edge (TS) on the right. Clicking on “Show profile” enables visualization of the energy profile as well.
 
 
 ### c) Kinetics simulations at different temperatures
