@@ -1,4 +1,9 @@
-
+---
+title: Input file
+layout: home
+parent: Tutorial
+nav_order: 2
+---
 
 ## Input files<a name="input"></a>
 
