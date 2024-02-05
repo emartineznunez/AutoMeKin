@@ -140,7 +140,12 @@ The new keywords are explained below.
 {: .important }   
 `minsize value`   
 [`value` is an integer; default value: `4` ]  
-`value` is the minimum number of atoms for a fragment to be considered in secondary fragmentations.
+`value` is the minimum number of atoms for a fragment to be considered in secondary fragmentations. 
+
+{: .important }   
+`systems value`   
+[`value` is an integer; default value: `0`]  
+`value` (or `ns`) is the number of additional fragments (or systems) to be considered in secondary fragmentations, besides those obtained in the fragmentation of the parent molecule.These could be fragments with other spin state, or fragments that are obtained through a barrierless process. This line must be followed by `ns` lines with two columns each one: the formula of each system (sys) and its multiplicity (mult). Note that for the formula the chemical symbols of the atoms must sorted following AutoMeKin’s convention: alphabetic order:
 ```
 systems ns
 sys(1) mult(1)
@@ -148,12 +153,10 @@ sys(2) mult(2)
 ...
 sys(ns) mult(ns)
 ```
-`ns` is the number of additional fragments (or systems) to be considered in secondary fragmentations (default value: 0), besides those obtained in the fragmentation of the parent molecule. These could be fragments with other spin state, or fragments that are obtained through a barrierless process. This line must be followed by ns lines with two columns each one: the formula of each system (sys) and its multiplicity (mult). Note that for the formula the chemical symbols of the atoms must sorted following AutoMeKin’s convention: alphabetic order.
-
 In the example above, only fragments with number of atoms greater than or equal to 4 are further
-fragmented and an additional system has been added: CH 3 O+ in its triplet state.
+fragmented and an additional system has been added: CH<sub>3</sub>O<sup>+</sup> in its triplet state.
 
-This workflow creates a new folder: M3Cinp containing files that can be read by program M3C to simulate
+This workflow creates a new folder: `M3Cinp` containing files that can be read by program M3C to simulate
 the breakdown curves of the studied system.
 
 ## Advanced options
