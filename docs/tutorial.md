@@ -25,7 +25,7 @@ presentation, we consider, as an example, the decomposition of formic acid (FA).
 read references [JCC-2015](https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.23790) [PCCP-2015](https://pubs.rsc.org/en/content/articlelanding/2015/cp/c5cp02175h) [JCC-2021](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26734) before using AutoMeKin package.
 
 The present version has been tested on CentOS 7, Red Hat Enterprise Linux and Ubuntu 16.04.3 LTS. If you
-find a bug, please report it to the main developer (<emilio.nunez@usc.es>). Comments and suggestions are
+find a bug, please report it to the main developer (<emilio.nunez@usc.gal>). Comments and suggestions are
 also welcome.
 
 
