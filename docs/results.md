@@ -32,14 +32,14 @@ are successful, the file is absent. The file is located in `FINAL_HL_FA` folder.
 This file contains information of the minima:
 ```
 MIN # DE(kcal/mol)
-1        -8.341
-2         0.000
-3         5.288
-4         6.732
-5        15.441
-6        82.122
-7       110.400
-8       188.254
+    1    -8.341
+    2     0.000
+    3     5.288
+    4     6.732
+    5    15.441
+    6    82.122
+    7   110.400
+    8   188.254
 Conformational isomers are listed in the same line:
 1 2
 3 4 5
@@ -50,21 +50,21 @@ Conformational isomers are listed in the same line:
 Likewise, this file contains information of the TSs:
 ```
 TS # DE(kcal/mol)
-1       -1.624
-2        1.868
-3        9.644
-4       25.135
-5       32.821
-6       37.608
-7       40.956
-8       44.037
-9       53.173
-10      58.156
-11      60.015
-12      85.659
-13     142.228
-14     188.765
-15     191.650
+   1    -1.624
+   2     1.868
+   3     9.644
+   4    25.135
+   5    32.821
+   6    37.608
+   7    40.956
+   8    44.037
+   9    53.173
+  10    58.156
+  11    60.015
+  12    85.659
+  13   142.228
+  14   188.765
+  15   191.650
 Conformational isomers are listed in the same line:
 9 11
 ```
