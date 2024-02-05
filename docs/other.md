@@ -90,7 +90,7 @@ value(s)` pairs are needed for this sampling:
 `rotate values`   
 [four `values`: first two can be strings or integers and last two are floats; default values: `com com 4.0
 1.5`]  
-The first two values are the pivot positions of the random rotations: the center of mass (`com`) of fragment A and the center of mass of fragment B in our example (these pivots could be labels of atoms and therefore integers). The last two values are the distance (in Å) between both pivots and the minimum intermolecular distance between any two atoms of both fragments, respectively.
+The first two values are the pivot positions of the random rotations: the center of mass (`com`) of fragment A and the center of mass of fragment B in our example \(these pivots could be labels of atoms and therefore integers\). The last two values are the distance \(in Å\) between both pivots and the minimum intermolecular distance between any two atoms of both fragments, respectively.
 
 {: .important }  
 `Nassoc value`  
