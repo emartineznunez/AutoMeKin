@@ -9,7 +9,7 @@ nav_order: 3
 
 ## Production runs
 
-For production runs use the scripts [as indicated here](https://emartineznunez.github.io/AutoMeKin/docs/running.html).
+For production runs, use the scripts [as indicated here](https://emartineznunez.github.io/AutoMeKin/docs/running.html).
 
 ## Step-by-step low-level calculations
 
