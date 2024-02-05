@@ -8,7 +8,6 @@ nav_order: 1
 # Installation of AutoMeKin
 
 Currently, AutoMeKin can be installed in three different ways:
-
 ## Content
 1. [Auto installer](#autoinstaller)
 2. [Singularity container](#singularity)
@@ -23,7 +22,7 @@ singularity and the image (that must be located in your `$HOME`) and will
 only start an instance of the container. The container includes
 [amk-tools](https://github.com/dgarayr/amk_tools). 
 
-**To start/stop the container follow these steps:**
+_To start/stop the container follow these steps_:
 
 - Download script: 
    ```
