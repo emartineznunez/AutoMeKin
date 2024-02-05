@@ -9,7 +9,7 @@ nav_order: 4
 # Kinetics 
 
 This part is employed to provide details for the kinetics calculations at the (experimental)
-conditions you want to simulate. **This section is compulsory except for association.**
+conditions you want to simulate. _This section is compulsory except for association_.
 
 An example is given as follows.
 ```
