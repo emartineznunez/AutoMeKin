@@ -1,6 +1,11 @@
+---
+title: Results
+layout: home
+parent: Tutorial
+nav_order: 4
+---
 
-
-## Results<a name="res"></a>
+# Results
 
 ### a) Relevant information
 
