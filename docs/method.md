@@ -84,42 +84,36 @@ trajectories. Instead, the user should try to run different batches of trajector
 [<code>value</code> is an integer; _only valid for <code>MD</code> and <code>MD-micro</code>_ ; default value: <code>0</code> ]   
 <code>value</code> is the seed of the random number generator. It can be employed to run a test trajectory. See the <code>FA_singletraj.dat</code> file in the examples. _Only use this keyword for testing_.
 
-**BXDE specific keywords.** This sampling (and the other BXDE-based sampling based: vdW) has a number
-of specific keywords as shown in this example:
+## BXDE specific keywords. 
 
+This sampling (and the other BXDE-based sampling based: <code>vdW</code>) has a number of specific keywords as shown in this example:
+```
 sampling BXDE
 Friction 0.
 AdaptiveLimit 100
 Window 500
 Hookean 1 2 2.5 10.
-**Friction** value
+```
 
-[value is a float; default value: 0.5]
+{: .important }  
+<code>Friction value</code>  
+[<code>value</code> is a float; default value: <code>0.5</code>]   
+<code>value</code> is the friction coefficient (in a.u.) employed in the Langevin dynamics of a BXDE simulation.
 
-value is the friction coefficient (in a.u.) employed in the Langevin dynamics of a BXDE simulation.
+{: .important }  
+<code>AdaptiveLimit value<code>  
+[<code>value</code> is an integer; default value: <code>100</code> ]   
+<code>value</code> determines how many MD steps are performed in a new box before the BXDE algorithm adaptively places a new box based upon the sampled energies.
 
-**AdaptiveLimit** value
+{: .important }  
+<code>Window value</code>   
+[<code>value</code> is an integer; default value: <code>500</code> ]   
+<code>value</code> determines the number of consecutive MD steps before considering a reaction to have occurred.
 
-[value is an integer; default value: 100 ]
-
-value determines how many MD steps are performed in a new box before the BXDE algorithm adaptively
-places a new box based upon the sampled energies.
-
-**Window** value
-
-[value is an integer; default value: 500 ]
-
-value determines the number of consecutive MD steps before considering a reaction to have occurred.
-
-**Hookean** values
-
-[four values: first (i) and second (j) are integers, third (rt) and fourth (k) are floats]
-
-Hookean keyword can be employed with any BXDE-based dynamics sampling. It employs ASE’s Hookean
-class to conserve molecular identity (https://wiki.fysik.dtu.dk/ase/ase/constraints.html#the-hookean-class).
-A Hookean restorative force with spring constant given by the fourth value (in eV/Å^2 ) is applied between two
-atoms of indices given by the first and second values if the distance between them exceeds a threshold (third
-value). For instance, the following example tethers atoms at indices 1 and 2 together:
+{: .important }   
+<code>Hookean values</code>   
+[four <code>values</code>: first (i) and second (j) are integers, third (rt) and fourth (k) are floats]   
+<code>Hookean</code> keyword can be employed with any BXDE-based dynamics sampling. It employs ASE’s [Hookean class](https://wiki.fysik.dtu.dk/ase/ase/constraints.html#the-hookean-class) to conserve molecular identity. A Hookean restorative force with spring constant given by the fourth value (in eV/Å<sup>2</sup>) is applied between two atoms of indices given by the first and second values if the distance between them exceeds a threshold (third value). For instance, the following example tethers atoms at indices 1 and 2 together:
 
 **ChemKnow specific keywords.** This sampling has a number of specific keywords as shown in this
 example:
