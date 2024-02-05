@@ -62,10 +62,17 @@ neighbors H 0 1
 The default values are listed in this table:
 
 |Atom|Min # of neighbors|Max # of neighbors|Atom|Min # of neighbors|Max # of neighbors|
-|---|---|---|---|---|---|
+|---|:---:|:---:|---|:---:|:---:|
 |H|1|1|   |   |   |
 |Li|0|1|   |   |   |
 |Be|0|2|   |   |   |
+|B|1|3|   |   |   |
+|C|1|4|   |   |   |
+|N|1|3|   |   |   |
+|O|1|2|   |   |   |
+|F|0|1|   |   |   |
+|Na|0|1|   |   |   |
+
 
 **Atom Min # of neighbors Max # of neighbors Atom Min # of neighbors Max # of neighbors**
 H 1 1 Mg 0 2
