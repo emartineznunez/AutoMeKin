@@ -165,8 +165,7 @@ of a molecule). By default, this check is not done.
 
 {: .important }   
 <code>BreakRing value</code>   
-[<code>value</code> is a string: <code>yes</code> or <code>no</code>; default value: <code>no</code>]
-
+[<code>value</code> is a string: <code>yes</code> or <code>no</code>; default value: <code>no</code>]  
 By default, a bond that belongs to a ring is not broken in (0,1) transformations. However, there might be ring opening reactions of our interest.
 
 {: .important }  
