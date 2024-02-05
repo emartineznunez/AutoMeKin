@@ -16,14 +16,12 @@ sampling MD
 ntraj 10
 ```
 
+List of <code>Keyword value(s)</code> for this section:
 
-List of “ **Keyword** value(s)” for this section:
-
-**sampling** value
-
-[value is one string with no blank spaces; default value: MD]
-
-value can be: **MD** , **MD-micro** , **BXDE** _,_ **external** , **ChemKnow** , **association** and **vdW**
+{: .important }  
+<code>sampling value</code>    
+[<code>value</code> is one string with no blank spaces; default value: <code>MD</code>]  
+<code>value</code> can be: <code>MD<code>, <code>MD-micro</code>, <code>BXDE</code>, <code>external</code>, <code>ChemKnow</code>, <code>association</code> and <code>vdW</code>
 
 **MD** and **MD-micro** refer to the type of initial conditions used to run the MD simulations. **MD-micro has not
 been implemented yet for qcore** With **BXDE** the rare-event acceleration method named BXDE is invoked.^3
