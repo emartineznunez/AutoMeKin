@@ -358,7 +358,7 @@ number of optimized TSs, and the second is the number of total attempts using LE
 `imin value`  
 [`value` is an integer or the string `min0`; default value: `min0`]   
 `value` is the starting minimum for the KMC simulations. value can be an integer, which identifies the
-desired structure or `min0`, which refers to the input structure. All the minima are listed in `MINinfo` file and the user must examine `RXNet.cg` file to check that the minimum is indeed connected with the other ones (last column of each pathway indicates this fact).
+desired structure or `min0`, which refers to the input structure. All the minima are listed in `MINinfo` file and the user must examine `RXNet.cg` file to check that the minimum is indeed connected with the other ones.
 
 {: .important }  
 `nmol value`   
@@ -371,7 +371,7 @@ desired structure or `min0`, which refers to the input structure. All the minima
 `value` is the number of reactions that have to take place before printing the population in the KMC runs.
 
 {: .important }  
-`MaxEn** value`   
+`MaxEn value`   
 [`value` is an integer; default value: `100` for thermal kinetics or 3/2 the value of Energy for
 microcanonical kinetics]  
 `value` is the maximum allowed energy, in kcal/mol and relative to the input structure, for a TS to be included in the reaction network.
@@ -379,20 +379,12 @@ microcanonical kinetics]
 {: .important }  
 `ImpPaths value`   
 [`value` is a float; default value: `0` ]   
-`value` is the minimum percentage of processes occurring through a particular pathway (in the KMC
-simulation) that has to be achieved in order to be considered relevant and finally included in
-`Energy_profile.pdf` and in `RXNet.rel`. The default value means that pathways which are overcome
-at least once by the KMC simulations are included in these files. To reduce to number of channels drawn in
-`Energy_profile.pdf` and printed in `RXNet.rel` you can increase the default value. Notice that these
-pathways may refer to the “coarse-grained” mechanism (default option) or to the complete mechanism that
-includes conformational isomers (obtained by using the allstates option as described above). For
-practical reasons, _a maximum of 100 TSs_ will be drawn in `Energy_profile.pdf` and printed in `RXNet.rel`.
-If this maximum value is reached (which can be checked in `RXNet.rel`), it means that part of the channels are missing in these files.
+`value` is the minimum percentage of processes occurring through a particular pathway that has to be achieved in order to be considered relevant and finally included in `Energy_profile.pdf` and in `RXNet.rel`. The default value means that pathways which are overcome at least once by the KMC simulations are included in these files. To reduce to number of channels drawn in `Energy_profile.pdf` and printed in `RXNet.rel` you can increase the default value. Notice that these pathways may refer to the “coarse-grained” mechanism or to the complete mechanism that includes conformational isomers, obtained by using the `allstates` option as described above. For practical reasons, _a maximum of 100 TSs_ will be drawn in `Energy_profile.pdf` and printed in `RXNet.rel`. If this maximum value is reached (which can be checked in `RXNet.rel`), it means that part of the channels are missing in these files.
 
-## e) Biased dynamics
+## Biased dynamics
 
 AutoMeKin includes several methods to bias the dynamics towards specific reaction pathways. So far, these
-are the available options ( **only for MD and MD-micro** ):
+are the available options, _only for MD and MD-micro_:
 
 1) The first option uses the AXD algorithm described in Ref 10 , with which selected bond lengths are not
 allowed to stretch more than 5 0% with respect to their initial values. This can be useful to prevent the
