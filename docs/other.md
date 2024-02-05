@@ -1,6 +1,11 @@
+---
+title: Other capabilities
+layout: home
+parent: Tutorial
+nav_order: 5
+---
 
-
-## Other capabilities<a name="oc"></a>
+# Other capabilities
 
 ### a) van der Waals complexes
 
