@@ -1,4 +1,9 @@
-
+---
+title: cite
+layout: home
+parent: Tutorial
+nav_order: 1
+---
 
 # How to cite the program
 
