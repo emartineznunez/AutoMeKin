@@ -1,4 +1,10 @@
-
+---
+title: Method section
+layout: home
+parent: Input files
+grand_parent: Tutorial
+nav_order: 2
+---
 
 **Method.** Here the user provides details of the method employed for sampling the reaction space. In our FA
 example, we have the following:
