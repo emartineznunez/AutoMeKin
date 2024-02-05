@@ -75,54 +75,52 @@ output files of each of them, which are called _assocN.out_ , where N is a numbe
 
 ### vdW
 
-For this option, the first part is common to association, and the program runs Nassoc independent
+For this option, the first part is common to association, and the program runs `value[Nassoc]` independent
 optimizations to get an initial structure of the complex. From that point onwards, the program performs
 BXDE simulations to find TSs and intermediates for the system. Here is the inputfile vdW.dat that you can
 find in the examples folder:
-
+```
 --General--
-molecule Bz-N2
+molecule  Bz-N2
 fragmentA Bz
 fragmentB N2
+
 --Method--
 sampling vdW
-rotate com com 4.0 1.5
-Nassoc 10
+rotate   com com 4.0 1.5
+Nassoc   10
+ntraj    1
+fs       500
 
-
-ntraj 1
-fs 500
 --Screening--
 MAPEmax 0.0001
-BAPEmax 0. 5
+BAPEmax 0.5
 eigLmax 0.01
+
 --Kinetics--
 Energy 150
-As with other MD-based sampling methods, amk_parallel.sh can be employed here as well.
+```
+As with other MD-based sampling methods, `amk_parallel.sh` can be employed here as well.
 
 ## Scanning dihedral angles
 
 Dihedral angles can be scanned using script tors.sh. You will need the inputfile and the XYZ file in your
-wrkdir and just type:
-
+`wrkdir` and just type:
+```
 tors.sh inputfile file
-
-The first argument is the name of the inputfile and the second one can be: **all** (default) or **file**. Using all,
-all the rotatable angles are scanned, while if you use file, the four indices that specify the dihedrals you
-want to scan must be present in file “dihedrals”.
+```
+The first argument is the name of the inputfile and the second one can be: `all` (default) or `file`. Using `all`, all the rotatable angles are scanned, while if you use `file`, the four indices that specify the dihedrals you want to scan must be present in file `dihedrals`.
 
 The dihedrals will be scanned and the highest point(s) along the scan(s) will be subjected to TS optimizations.
 
-In general, dihedral scans are automatically performed in all parallel calculations (except with vdW and assoc
-samplings). For big and/or highly flexible molecules these automated scans can be very CPU intensive, and
-they can be avoided adding the keyword torsion with the value no to your Method section like in the next
-example:
-
+In general, dihedral scans are automatically performed in all parallel calculations (except with vdW and assoc samplings). For big and/or highly flexible molecules these automated scans can be very CPU intensive, and they can be avoided adding the keyword `torsion` with the value no to your Method section like in the next example:
+```
 --Method--
 sampling MD
-ntraj 10
-torsion no
-The default value is yes.
+ntraj    10
+torsion  no
+```
+The default value for `torsion` is `yes`.
 
 ## Fragmentation
 
