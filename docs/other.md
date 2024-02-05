@@ -7,7 +7,7 @@ nav_order: 5
 
 # Other capabilities
 
-### a) van der Waals complexes
+## van der Waals complexes
 
 AutoMeKin includes an option to find van der Waals (vdW) complexes. In principle two related sampling
 options are available: association and vdW. While association runs a number of structure
@@ -109,7 +109,7 @@ eigLmax 0.01
 Energy 150
 As with other MD-based sampling methods, amk_parallel.sh can be employed here as well.
 
-### b) Scanning dihedral angles
+## Scanning dihedral angles
 
 Dihedral angles can be scanned using script tors.sh. You will need the inputfile and the XYZ file in your
 wrkdir and just type:
@@ -133,12 +133,9 @@ ntraj 10
 torsion no
 The default value is yes.
 
-### c) Fragmentation
+## Fragmentation
 
-### The fragmentation patterns and breakdown curves can be modelled using the script amk_frag.sh. This
-
-script provides a workflow to iteratively discover fragmentation pathways not only the parent molecule but
-also for the fragments resulting from the primary fragmentation. Usage:
+The fragmentation patterns and breakdown curves can be modelled using the script amk_frag.sh. This script provides a workflow to iteratively discover fragmentation pathways not only the parent molecule but also for the fragments resulting from the primary fragmentation. Usage:
 
 nohup amk_frag.sh > amk_frag.log 2>&1 &
 
@@ -177,7 +174,7 @@ fragmented and an additional system has been added: CH 3 O+ in its triplet state
 This workflow creates a new folder: M3Cinp containing files that can be read by program M3C to simulate
 the breakdown curves of the studied system.
 
-### d) Advanced options
+## Advanced options
 
 The following are keywords that can be useful for experienced users.
 
