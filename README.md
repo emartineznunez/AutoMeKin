@@ -57,7 +57,7 @@ You can have a look at this [Notebook](https://colab.research.google.com/github/
 You can also test our [web site](https://rxnkin.usc.es/amk/), where you can submit a simple example.
 
 ## Documentation<a name="doc"></a>
-The [documentation page](https://emartineznunez.github.io/AutoMeKin/) is under construction. In the mean time, the [wiki](https://github.com/emartineznunez/AutoMeKin/wiki) can be consulted. 
+Follow this link for the [documentation page](https://emartineznunez.github.io/AutoMeKin/).
 
 
 [^1]: For enquiries please contact: emilio.nunez@usc.es
