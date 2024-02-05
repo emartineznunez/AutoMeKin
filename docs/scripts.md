@@ -169,6 +169,7 @@ _Building the high-level reaction network, optimizing the minima and running the
 RXN_NETWORK.sh
 KMC.sh
 ```
+
 Remember that the use of Slurm involves checking that every script has finished before proceeding with the
 next one.
 
