@@ -165,46 +165,44 @@ the breakdown curves of the studied system.
 
 The following are keywords that can be useful for experienced users.
 
-**General**
+### General
 
-**iop** value
-
-[value is one string with no blank spaces; no default value]
-
-value is a gaussian IOp string or any other additional keyword you want to add. Example:
-
+{: .important }  
+`iop value`  
+[`value` is one string with no blank spaces; no default value]   
+`value` is a gaussian IOp string or any other additional keyword you want to add. Example:
+```
 HighLevel g 16 mpwb95/6-31+G(d,p)
 iop iop(3/76=0560004400)
+```
 
-
-**CAVEAT:** care must be taken when LowLevel_TSopt (see below) is employed with iop, as this keyword
-will also be activated in LowLevel_TSopt calculations. If the iop is only desired for high-level gaussian
+{: .warning }   
+Care must be taken when `LowLevel_TSopt` (see below) is employed with `iop`, as this keyword
+will also be activated in `LowLevel_TSopt` calculations. If the iop is only desired for high-level gaussian
 calculations, then, the keyword should be removed while running the low-level computations.
 
-**LowLevel_TSopt** values
-
-[two values: two strings; no blank spaces in each string; default values: mopac value[LowLevel]]
-
-First value is the program and second value is the electronic structure level employed to optimize the TSs
-at the low-level stage. **This keyword is employed if you want to use g09/g16 for the low-level TS
-optimizations, as shown in the example below but take into account that it is very CPU-time consuming**.
-Besides the TSs, the starting minimum in name.xyz is also optimized at this level of theory.
-
+{: .important }  
+`LowLevel_TSopt values`  
+[two `values`: two strings; no blank spaces in each string; default values: `mopac value[LowLevel]`]   
+First `value` is the program and second value is the electronic structure level employed to optimize the TSs at the low-level stage. _This keyword is employed if you want to use g09/g16 for the low-level TS
+optimizations, as shown in the example below but take into account that it is very CPU-time consuming_.
+Besides the TSs, the starting minimum in `name.xyz` is also optimized at this level of theory. Example:
+```
 LowLevel_TSopt g09 hf/3-21g
+```
 
-**recalc** value
+{: .important }   
+`recalc value`   
+[one `value`: one integer; by default this keyword is not employed; _only with mopac_ ]  
+If the last point of the IRC is an intermediate, MOPAC will try to optimize it. For difficult cases, the user can employ this keyword like in this example:
 
-[one value: one integer; by default this keyword is not employed; **only with mopac** ]
-
-If the last point of the IRC is an intermediate, MOPAC will try to optimize it. For difficult cases, the user can
-employ this keyword like in this example:
-
+```
 recalc 10
-
+```
 which tells MOPAC to recalculate the Hessian every 10 steps in the EF optimization. For small values, the
 calculation is costly but is also very effective in terms of convergence.
 
-**Method**
+### Method
 
 **atoms** value(s)
 
