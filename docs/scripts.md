@@ -209,7 +209,7 @@ runtime and are employed to generate the final files and directories. For that r
 removed. Finally, the most important files are gathered in a final directory (`FINALDIR`) which is named after the system’s name: `FINAL_level_name` (with level being LL for low-level or HL for high level; see figure below).
 
 
-<p align="left">
-   <img src="/assets/images/folders.jpg" alt="alt text" width="200" height="100">
+<p align="center">
+   <img src="/assets/images/folders.jpg" alt="alt text" width="400" height="150">
 </p>
 
