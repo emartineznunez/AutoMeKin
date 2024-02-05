@@ -154,11 +154,9 @@ needed:
 [ASE>= 3.21.1](https://wiki.fysik.dtu.dk/ase/install.html), [Matplotlib>= 3.3.4](https://matplotlib.org/stable/users/installing/index.html), [NetworkX>= 2.5](https://networkx.org/documentation/stable/install.html), [NumPy>= 1.19.5](https://numpy.org/install/), [SciPy>= 1.5.4](https://scipy.org/install/)  
 The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is highly recommended to analyze the results.
 
-Finally, Entos Qcore can be installed for xtb and DFT calculations.
+Finally, Entos Qcore can be installed for xtb and DFT calculations. To install Entos Qcore, we recommend following these steps:
 
-To install Entos Qcore, we recommend following these steps:
-
-1. Install miniconda3
+1. Install [miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
 2. Add the following line to `$HOME/.condarc` (create the file if not present):
 ```
 auto_activate_base: false
