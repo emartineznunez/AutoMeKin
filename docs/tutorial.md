@@ -2,6 +2,7 @@
 title: Tutorial
 layout: home
 nav_order: 4
+has_childre: true
 ---
 
 # Tutorial
