@@ -25,7 +25,6 @@ distribution_. Make a working directory (<code>wrkdir</code>) and copy files <co
 {: .warning }
 Use short names for the <code>wrkdir</code> and the input files. Good choices are short acronyms (using capital letters) like FA for formic acid. 
 
-
 The following are files read by amk, and therefore, they must be present in <code>wrkdir</code>.
 
 ## name.xyz
