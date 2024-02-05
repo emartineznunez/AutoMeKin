@@ -1,6 +1,14 @@
+---
+title: Screening section
+layout: home
+parent: Input files
+grand_parent: Tutorial
+nav_order: 3
+---
 
+# Screening method
 
-**Screening**. Some of the initially located structures might have very low imaginary frequencies, be repeated
+Some of the initially located structures might have very low imaginary frequencies, be repeated
 or correspond to transition states of van der Waals complexes formed upon fragmentation of the reactant
 molecule. To avoid or minimize low-(imaginary)frequency structures, redundancies and van der Waals
 complexes, amk includes a screening tool, which is based on the following descriptors: energy, SPRINT
