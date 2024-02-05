@@ -145,7 +145,9 @@ The new keywords are explained below.
 {: .important }   
 `systems value`   
 [`value` is an integer; default value: `0`]  
-`value` (or `ns`) is the number of additional fragments (or systems) to be considered in secondary fragmentations, besides those obtained in the fragmentation of the parent molecule.These could be fragments with other spin state, or fragments that are obtained through a barrierless process. This line must be followed by `ns` lines with two columns each one: the formula of each system (sys) and its multiplicity (mult). Note that for the formula the chemical symbols of the atoms must sorted following AutoMeKin’s convention: alphabetic order:
+`value` (or `ns`) is the number of additional fragments (or systems) to be considered in secondary fragmentations, besides those obtained in the fragmentation of the parent molecule. These could be fragments with other spin state, or fragments that are obtained through a barrierless process. 
+
+This line must be followed by `ns` lines with two columns each one: the formula of each system (sys) and its multiplicity (mult). Note that for the formula the chemical symbols of the atoms must sorted following AutoMeKin’s convention: alphabetic order:
 ```
 systems ns
 sys(1) mult(1)
