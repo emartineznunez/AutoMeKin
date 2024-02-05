@@ -172,7 +172,9 @@ Here is a list of additional keywords that can be employed in the General sectio
 {: .important }  
 `iop value`  
 [`value` is one string with no blank spaces; no default value]   
-`value` is a gaussian IOp string or any other additional keyword you want to add. Example:
+`value` is a gaussian IOp string or any other additional keyword you want to add. 
+
+Example:
 ```
 HighLevel g 16 mpwb95/6-31+G(d,p)
 iop iop(3/76=0560004400)
