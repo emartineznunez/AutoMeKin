@@ -15,12 +15,12 @@ AutoMeKin (formerly tsscds) has been designed to discover reaction mechanisms in
 
 - The documentation page is under construction: https://emartineznunez.github.io/AutoMeKin/
 - In the mean time, the old wiki can be consulted: https://github.com/emartineznunez/AutoMeKin/wiki
-- Simple problems _via_ the following web site:  https://rxnkin.usc.es/amk/
 
 ## Content
 - [Installation](#inst)
 - [Developers](#dev)
 - [Simple example in Colab](#colab)
+- [Web for submitting simple examples](#web)
 
 ## Installation<a name="inst"></a>
 The installation instructions are [detailed here](https://emartineznunez.github.io/AutoMeKin/)
@@ -55,5 +55,9 @@ Saulo A. Vazquez (Universidade de Santiago de Compostela, Spain)
 
 ## Simple example in Colab<a name="colab"></a>
 You can have a look at this [Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb) to install it, test a simple example and more...
+
+## Web site for submitting simple examples<a name="web"></a>
+You can also test our [web site](https://rxnkin.usc.es/amk/), where you can submit a simple example.
+
 
 [^1]: For enquiries please contact: emilio.nunez@usc.es
