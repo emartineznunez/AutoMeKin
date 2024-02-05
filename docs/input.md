@@ -5,7 +5,7 @@ parent: Tutorial
 nav_order: 2
 ---
 
-## Input files<a name="input"></a>
+# Input files
 
 The first step in our strategy for finding reaction mechanisms involves Heuristics- or MD-based methods, for which MOPAC 2016 or Entos Qcore are used. The algorithm samples the potential energy surface to locate
 transition states by using the original [BBFS algorithm](https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.23790), or a [bond-order-based search algorithm](https://pubs.acs.org/doi/abs/10.1021/acs.jctc.9b01039). Then, reactants and products are obtained by intrinsic reaction coordinate (IRC) calculations. Finally, a reaction network is
