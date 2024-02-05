@@ -163,7 +163,7 @@ To install Entos Qcore, we recommend following these steps:
 ```
 auto_activate_base: false
 ```
-which avoids activation of base environment.
+which avoids activation of base environment.   
 3. Install qcore version 0.8.14 in a conda environment (qcore-0.8.14-env):
 ```
 conda create -n qcore-0.8.14-env -c entos -c conda-forge qcore==0.8.14 'tbb<2021'
