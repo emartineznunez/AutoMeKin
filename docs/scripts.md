@@ -30,11 +30,11 @@ tsll_view.sh
 ```
 The output of this script will be something like this:
 ```
-ts # File name w_imag Energy w1 w2 w3 w4 traj # Folder
----- --------------- ------ ------ ---- ---- ---- ---- ------ ------
-2 ts2_batch4 1588i -35.7105 206 438 461 727 1 wrkdir
-3 ts3_batch2 458i -78.1007 573 846 1034 1195 3 wrkdir
-4 ts4_batch6 2010i -17.6124 327 473 523 1078 1 wrkdir
+ts # File name w_imag  Energy  w1  w2   w3   w4 traj #  Folder
+--------------------------------------------------------------
+2    ts2_batch4 1588i -35.7105 206 438  461  727     1  wrkdir
+3    ts3_batch2  458i -78.1007 573 846 1034 1195     3  wrkdir
+4    ts4_batch6 2010i -17.6124 327 473  523 1078     1  wrkdir
 ```
 where the first column is the label of each TS, the second is the filename of the optimized TS structure
 (located in the tsdirLL_FA directory), the third is the imaginary frequency (in cm−^1 ), the fourth one is the
