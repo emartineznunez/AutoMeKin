@@ -96,21 +96,21 @@ This file contains information of the complete reaction network, that is all the
 ```
 TS # DE(kcal/mol)    Reaction path information
 ==== ============    =========================
-1         -1.6 PR2: CO + H2O <---> PR2: CO + H2O
-2          1.9         MIN 1 <---> MIN 2
-3          9.6         MIN 3 <---> MIN 4
-4         25.1         MIN 1 <---> MIN 1
-5         32.8 PR2: CO + H2O <---> PR1: H2 + CO2
-6         37.6         MIN 4 ----> PR2: CO + H2O
-7         41.0         MIN 1 ----> PR2: CO + H2O
-8         44.0 PR1: H2 + CO2 <---> PR1: H2 + CO2
-9         53.2         MIN 1 <---> MIN 4
-10        58.2         MIN 2 ----> PR1: H2 + CO2
-11        60.0         MIN 2 <---> MIN 5
-12        85.7         MIN 2 <---> MIN 6
-13       142.2         MIN 3 <---> MIN 6
-14       188.8         MIN 2 <---> MIN 8
-15       191.7         MIN 7 <---> MIN 8
+   1      -1.6 PR2: CO + H2O <---> PR2: CO + H2O
+   2       1.9         MIN 1 <---> MIN 2
+   3       9.6         MIN 3 <---> MIN 4
+   4      25.1         MIN 1 <---> MIN 1
+   5      32.8 PR2: CO + H2O <---> PR1: H2 + CO2
+   6      37.6         MIN 4 ----> PR2: CO + H2O
+   7      41.0         MIN 1 ----> PR2: CO + H2O
+   8      44.0 PR1: H2 + CO2 <---> PR1: H2 + CO2
+   9      53.2         MIN 1 <---> MIN 4
+  10      58.2         MIN 2 ----> PR1: H2 + CO2
+  11      60.0         MIN 2 <---> MIN 5
+  12      85.7         MIN 2 <---> MIN 6
+  13     142.2         MIN 3 <---> MIN 6
+  14     188.8         MIN 2 <---> MIN 8
+  15     191.7         MIN 7 <---> MIN 8
 ```
 As can be seen, for each transition state, this file specifies the associated minima and/or product fragments and their corresponding identification numbers. Notice that TS, MIN and PR have independent identification numbers. If you use the option complete for the keyword `HL_rxn_network` (in the General section of the input data), all the TSs will be reoptimized in the high-level calculations. You may reduce significantly the number of TSs to be reoptimized in the HL calculations, and therefore the reaction network, if you use the option reduced. If it is employed without an argument, TSs associated to PR <--> PR steps (_i.e._, bimolecular reactions) and to interconversion between optical isomers will not be reoptimized in the HL calculations. You may include a number as an argument of this option:
 ```
@@ -133,44 +133,45 @@ TS #   DE(kcal/mol)      Reaction path information
 {: .note }   
 Here TS refers to a dynamical TS and no saddle point exists in these paths.
 
-**RXNet.cg**. By default (see below) the KMC calculations are “coarse-grained”, that is, conformational
-isomers form a single state, which is taken as the lowest energy isomer. Such reaction network, which also
-removes bimolecular channels, is the following:
+### RXNet.cg 
 
-TS # DE(kcal/mol) Reaction path information
-==== ============ =========================
-6 37.6 MIN 3 ----> PR2: CO + H2O CONN
-7 41.0 MIN 1 ----> PR2: CO + H2O CONN
-9 53.2 MIN 1 <---> MIN 3 CONN
-10 58.2 MIN 1 ----> PR1: H2 + CO2 CONN
-11 60.0 MIN 1 <---> MIN 3 CONN
-12 85.7 MIN 1 <---> MIN 6 CONN
-13 142.2 MIN 3 <---> MIN 6 CONN
-14 188.8 MIN 1 <---> MIN 8 DISCONN
-15 191.7 MIN 7 <---> MIN 8 DISCONN
+By default (see below) the KMC calculations are “coarse-grained”, that is, conformational isomers form a single state, which is taken as the lowest energy isomer. Such reaction network, which also removes bimolecular channels, is the following:
+```
+TS # DE(kcal/mol)    Reaction path information
+==== ============    =========================
+   6      37.6      MIN 3 ----> PR2: CO + H2O     CONN
+   7      41.0      MIN 1 ----> PR2: CO + H2O     CONN
+   9      53.2      MIN 1 <---> MIN 3             CONN
+  10      58.2      MIN 1 ----> PR1: H2 + CO2     CONN
+  11      60.0      MIN 1 <---> MIN 3             CONN
+  12      85.7      MIN 1 <---> MIN 6             CONN
+  13     142.2      MIN 3 <---> MIN 6             CONN
+  14     188.8      MIN 1 <---> MIN 8          DISCONN
+  15     191.7      MIN 7 <---> MIN 8          DISCONN
+```
 The last column with the flag “CONN” or “DISCONN” indicates whether the given process is connected with
 the others (CONN) or whether it is isolated (DISCONN). This flag is useful when you choose a starting
 intermediate for the KMC simulations, because that intermediate should be connected. If you want to
 include all conformational isomers explicitly in the KMC simulations, you need to construct the reaction
-network by using the allstates option, as described in the next section.
+network by using the `allstates` option, as described in the next section.
 
-**RXNet.rel** is similar to RXNet.cg, but only collects the relevant paths, that is, those included in the
-Energy_profile.pdf file. A maximum of 100 TSs are printed in this file. If this number is reached, both
-Energy_profile.pdf and RXNet.rel would be incomplete, and the pathways drawn in
-Energy_profile.pdf could be less than those that appear in RXNet.rel.
+### RXNet.rel 
 
-**rxn_x.txt (x = all, kin, stats)** are files with information relevant for the reaction network analysis
-made with NetworkX python library.^6 Each line of rxn_all.txt lists the nodes (first two columns) and the
-weight (last column), which is the number of paths connecting the two nodes. For rxn_kin.txt the weight
-is the total flux in the kinetics simulations. These two files are employed to construct graph_all.pdf and
+This ifle is similar to `RXNet.cg`, but only collects the relevant paths, that is, those included in the
+`Energy_profile.pdf` file. A maximum of 100 TSs are printed in this file. If this number is reached, both
+`Energy_profile.pdf` and `RXNet.rel` would be incomplete, and the pathways drawn in `Energy_profile.pdf` could be less than those that appear in `RXNet.rel`.
+
+### rxn_x.txt (x = all, kin, stats) 
+
+These are files with information relevant for the reaction network analysis made with NetworkX python library. Each line of rxn_all.txt lists the nodes (first two columns) and the weight (last column), which is the number of paths connecting the two nodes. For rxn_kin.txt the weight is the total flux in the kinetics simulations. These two files are employed to construct graph_all.pdf and
 graph_kin.pdf, respectively. In rxn_stats.txt, some properties of the reaction network are listed, like
-the average shortest path length, the average clustering coefficient, the transitivity, etc. The user is
-encouraged to read the NetworkX documentation and ref 7.
+the average shortest path length, the average clustering coefficient, the transitivity, etc.
 
-**To generate a meaningful rxn_stats.txt file use the following script from the amk_tools repository:**
-
+{: .note }  
+To generate a meaningful rxn_stats.txt file use the following script from the amk_tools repository:
+```
 amk_rxn_stats.py FINALDIR
-
+```
 
 **The file rxn_stats.txt will be created in the working directory (not inside FINALDIR).**
 
