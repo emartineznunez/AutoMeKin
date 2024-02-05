@@ -288,7 +288,7 @@ Using `factorflipv`, fragmentation can be prevented because the atomic velocitie
 {: .important }   
 `fs value`  
 [`value` is an integer; default value: `500` for MD and MD-micro and `5000` for BXDE]  
-`value` is the simulation time (in fs) in MD, MD-micro and BXDE samplings. Notice that this is the maximum
+`value` is the simulation time in fs in MD, MD-micro and BXDE samplings. Notice that this is the maximum
 simulation time, because when any interatomic distance reaches 5 times its initial value, the simulation
 stops. 
 
@@ -311,31 +311,25 @@ excited followed by a second value, string, which is the list of modes separated
 {: .important }   
 `post_proc value(s)`   
 [from one to three `values`: first `value` is a string: `bbfs`, `bots` or `no`; the second and third are integers or floats; default values: `bbfs 20 1` for all samplings except association where the default value is `no`]   
-The first `value` is the post-processing algorithm employed to detect reaction events and it can be bbfs, the default, `bots` or `no`, if no algorithm is applied; this makes only sense for the purpose of testing the MD module. For `bbfs` two more values can follow: the time window (in fs) employed by bbfs and the number of guess structures selected per candidate. Possible choices for this last number can be 1 or 3. 
+The first `value` is the post-processing algorithm employed to detect reaction events and it can be bbfs, the default, `bots` or `no`, if no algorithm is applied; this makes only sense for the purpose of testing the MD module. For `bbfs` two more values can follow: the time window in fs employed by `bbfs` and the number of guess structures selected per candidate. Possible choices for this last number can be 1 or 3. 
 
 Example:
 ```
 post_proc bbfs 20 1
 ```
 If `bots`, for bond order time series, is employed, _only with BXDE, vdW and external_, the algorithm
-developed by [Hutchings et al.](https://pubs.acs.org/doi/abs/10.1021/acs.jctc.9b01039) is employed. In this case the two additional values are the cutoff frequency (in cm<sub>−1</sup>) for the low-pass filter
+developed by [Hutchings et al.](https://pubs.acs.org/doi/abs/10.1021/acs.jctc.9b01039) is employed. In this case the two additional values are the cutoff frequency (in cm<sup>−1</sup>) for the low-pass filter
 used to smooth bond order time series, and the number of standard deviations considered to identify peaks
 associated with reactive events. The default values for this algorithm are:
 ```
 post_proc bots 200 2.5
 ```
 
+{: .important }  
+`temp value`  
+[`value` is an integer or string with no blank spaces; _only with MD and BXDE_ ; no default]  
+If an integer, `value` is the temperature (in K) of the MD or BXDE simulations. If a range, _only valid for MD_, the temperature is randomly selected in the given range. In the absence of the temp keyword, the program automatically defines the following range of temperatures: $\scriptstyle{5452.04(s−1)/natom−15517.34(s−1)/natom}$ K, which has been optimized for formic acid. However, as for `etraj`, the boundaries are adjusted _on the fly_ to obtain a minimum reactivity of 60%. _For BXDE, temp has only one value (with 1000 being the default)._
 
-**temp** value
-
-[value is an integer or string with no blank spaces; **only with MD and BXDE** ; no default]
-
-If an integer, value is the temperature (in K) of the MD or BXDE simulations. If a range ( **only valid for MD** ),
-the temperature is randomly selected in the given range. In the absence of the temp keyword, the program
-automatically defines the following range of temperatures: [ 5452. 04 ×(𝑠− 1 )/𝑛𝑎𝑡𝑜𝑚− 15517. 34 ×(𝑠−
-1 )/𝑛𝑎𝑡𝑜𝑚] K, which has been optimized for formic acid. However, as for etraj, the boundaries are adjusted
-“on the fly” to obtain a minimum reactivity of 60%. **For BXDE, temp has only one value (with 1000 being
-the default).**
 
 **thmass** value
 
