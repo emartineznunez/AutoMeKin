@@ -167,6 +167,8 @@ The following are keywords that can be useful for experienced users.
 
 ### General
 
+Here is a list of additional keywords that can be employed in the General section:
+
 {: .important }  
 `iop value`  
 [`value` is one string with no blank spaces; no default value]   
@@ -204,31 +206,26 @@ calculation is costly but is also very effective in terms of convergence.
 
 ### Method
 
-**atoms** value(s)
+Here is a list of additional keywords that can be employed in the Method section:
 
-[one or two values: first is a string with no blank spaces or an integer and second (if present) is a string
-with no blank spaces; **only with MD** ; default value: all]
-
-The first value can be all (in which case no other values are needed) or the number of atoms initially
+{: .important }  
+`atoms value(s)`    
+[one or two `values`: first is a string with no blank spaces or an integer and second (if present) is a string with no blank spaces; _only with MD_ ; default value: `all`]   
+The first `value` can be `all` (in which case no other values are needed) or the number of atoms initially
 excited followed by a second value (string), which is the list of atoms separated by commas (without blank
-spaces). It is analogous to modes (explained below). This is an example where atoms 1 , 2 and 3 are initially
-excited.
-
+spaces). It is analogous to modes (explained below). This is an example where atoms 1 , 2 and 3 are initially excited:
+```
 atoms 3 1,2, 3
+```
 
-**etraj** value
-
-[value is an integer or string with no blank spaces; **only with MD-micro** ; no default]
-
-
-If an integer, value is the energy (in kcal/mol) of the MD-micro simulations. If value is a range as in the
-example below, the energy is randomly selected in the given energy range.
-
-etraj 200- 300
-
-If etraj is not specified, the program automatically employs the following range of energies: [ 16. 25 ×(𝑠−
-1 )− 46. 25 ×(𝑠− 1 )] kcal/mol, where _s_ is the number of vibrational degrees of freedom of the system. The
-values 16.25 and 46.25 have been determined from the formic acid results and making use of RRK theory.
+{: .important }  
+`etraj value`   
+[`value` is an integer or string with no blank spaces; _only with MD-micro_ ; no default]  
+If an integer, `value` is the energy (in kcal/mol) of the MD-micro simulations. If value is a range as in the example below, the energy is randomly selected in the given energy range:
+```
+etraj 200-300
+```
+If `etraj` is not specified, the program automatically employs the following range of energies: 16.25×(𝑠−1)−46.25×(𝑠−1) kcal/mol, where _s_ is the number of vibrational degrees of freedom of the system. The values 16.25 and 46.25 have been determined from the formic acid results and making use of RRK theory.
 The program automatically adjusts the range to obtain at least 60% reactivity at the boundaries.
 
 **factorflipv** value
