@@ -6,10 +6,13 @@ nav_order: 1
 
 
 # Installation of AutoMeKin
+
+Currently, AutoMeKin can be installed in three different ways:
+
 ## Content
-- [Auto installer](#autoinstaller)
-- [Singularity container](#singularity)
-- [Build from source](#build)
+1. [Auto installer](#autoinstaller)
+2. [Singularity container](#singularity)
+3. [Build from source](#build)
 
 ## Auto installer <a name="autoinstaller"></a>
 An auto installer script is provided to install singularity and
