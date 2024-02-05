@@ -179,7 +179,9 @@ In this case, the file `rxn_stats.txt` is created in the working directory (not 
 This file contains the kinetics results, namely, the final branching ratios and the population of
 every species as a function of time. In the name of the file, `F` is either `T` or `E` for temperature or energy, and `value` is the corresponding value. For instance, the kinetics results for a canonical calculation at 298 K would be printed in a file called `kineticsT298`. A file called `populationFvalue.pdf` is also available. This displays a plot with the population of each species as a function of time. A maximum of 20 species (the most populated ones) are plotted. The following figure shows an example of such a plot obtained for the decomposition of FA using the PM7 stationary points.
 
-
+<p align="center">
+   <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/kin.jpg" alt="alt text" width="800" height="200">
+</p>
 
 ### b) Visualization tools
 
