@@ -176,7 +176,7 @@ Here is a list of additional keywords that can be employed in the General sectio
 
 Example:
 ```
-HighLevel g 16 mpwb95/6-31+G(d,p)
+HighLevel g16 mpwb95/6-31+G(d,p)
 iop iop(3/76=0560004400)
 ```
 
@@ -190,7 +190,9 @@ calculations, then, the keyword should be removed while running the low-level co
 [two `values`: two strings; no blank spaces in each string; default values: `mopac value[LowLevel]`]   
 First `value` is the program and second value is the electronic structure level employed to optimize the TSs at the low-level stage. _This keyword is employed if you want to use g09/g16 for the low-level TS
 optimizations, as shown in the example below but take into account that it is very CPU-time consuming_.
-Besides the TSs, the starting minimum in `name.xyz` is also optimized at this level of theory. Example:
+Besides the TSs, the starting minimum in `name.xyz` is also optimized at this level of theory. 
+
+Example:
 ```
 LowLevel_TSopt g09 hf/3-21g
 ```
