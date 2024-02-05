@@ -1,6 +1,11 @@
+---
+title: Summary of keywords and options
+layout: home
+parent: Tutorial
+nav_order: 6
+---
 
-
-## Summary of keywords and options<a name="sko"></a>
+# Summary of keywords and options
 
 
 ```
