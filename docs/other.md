@@ -12,7 +12,7 @@ nav_order: 5
 AutoMeKin includes an option to find van der Waals (vdW) complexes. In principle two related sampling
 options are available: association and vdW. While association runs a number of structure
 optimizations for randomly rotated fragments, vdW is a more powerful option representing a natural
-extension of our bbfs method to study vdW complexes.^8 The input files for these two options slightly differ
+[extension of our bbfs method to study vdW complexes](https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.26008). The input files for these two options slightly differ
 from those explained previously, as detailed below.
 
 ### association 
