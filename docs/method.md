@@ -84,7 +84,7 @@ trajectories. Instead, the user should try to run different batches of trajector
 [<code>value</code> is an integer; _only valid for <code>MD</code> and <code>MD-micro</code>_ ; default value: <code>0</code> ]   
 <code>value</code> is the seed of the random number generator. It can be employed to run a test trajectory. See the <code>FA_singletraj.dat</code> file in the examples. _Only use this keyword for testing_.
 
-## BXDE specific keywords. 
+## BXDE specific keywords 
 
 This sampling (and the other BXDE-based sampling based: <code>vdW</code>) has a number of specific keywords as shown in this example:
 ```
@@ -113,15 +113,14 @@ Hookean 1 2 2.5 10.
 {: .important }   
 <code>Hookean values</code>   
 [four <code>values</code>: first (i) and second (j) are integers, third (rt) and fourth (k) are floats]   
-<code>Hookean</code> keyword can be employed with any BXDE-based dynamics sampling. It employs ASE’s [Hookean class](https://wiki.fysik.dtu.dk/ase/ase/constraints.html#the-hookean-class) to conserve molecular identity. A Hookean restorative force with spring constant given by the fourth value (in eV/Å<sup>2</sup>) is applied between two atoms of indices given by the first and second values if the distance between them exceeds a threshold (third value). For instance, the following example tethers atoms at indices 1 and 2 together:
+<code>Hookean</code> keyword can be employed with any BXDE-based dynamics sampling. It employs ASE’s [Hookean class](https://wiki.fysik.dtu.dk/ase/ase/constraints.html#the-hookean-class) to conserve molecular identity. A Hookean restorative force with spring constant given by the fourth value (in eV/Å<sup>2</sup>) is applied between two atoms of indices given by the first and second values if the distance between them exceeds a threshold (third value). 
 
-**ChemKnow specific keywords.** This sampling has a number of specific keywords as shown in this
-example:
+## ChemKnow specific keywords 
 
+This sampling has a number of specific keywords as shown in this example:
+```
 sampling ChemKnow
 Graphto3D POpt
-
-
 active 1 2 3 4
 startd 2.
 MaxBoF 2
@@ -130,62 +129,50 @@ comb22 no
 crossb no
 BreakRing no
 CK_minima all
-**Graphto3D** value
+```
 
-[value is a string: POpt or Traj; default value: POpt]
+{: .important}  
+<code>Graphto3D value</code>   
+[<code>value</code> is a string: <code>POpt</code> or <code>Traj</code>; default value: <code>POpt</code>]   
+<code>value</code> is the method employed to transform the product Graph into a 3D geometry. <code>POpt</code> performs a series of partial optimizations (with the bonds involved in the reaction coordinate frozen) where the geometry is smootly changed from reactant to product. In <code>Traj</code>, an external force is applied for the same purpose.
 
-value is the method employed to transform the product Graph into a 3D geometry. POpt performs a series
-of partial optimizations (with the bonds involved in the reaction coordinate frozen) where the geometry is
-smootly changed from reactant to product. In Traj, an external force is applied for the same purpose.
+{: .important }  
+<code>active values</code>   
+[<code>values</code> are integers]   
+<code>values</code> are the labels of the atoms that participate in the reactions we are interested in. By default, all atoms in the system are active.
 
-**active** values
+{: .important }   
+<code>startd value<code>  
+[<code>value</code> is a float; default value: <code>2.75</code>]   
+<code>value</code> is the maximum distance between active atoms to be considered in a bond formation.
 
-[values are integers]
+{: .important }   
+<code>MaxBoF/MaxBoB value<code>   
+[<code>value</code> is an integer; default value: <code>2</code>]   
+<code>value</code> is the maximum number of bonds formed (n<sub>F</sub>)/broken (<sub>nB</sub>) to make all possible (n<sub>F</sub>,n<sub>B</sub>) combinations for Graph transformations.
 
-values are the labels of the atoms that participate in the reactions we are interested in. By default, all
-atoms in the system are active.
-
-**startd** value
-
-[value is a float; default value: 2.75]
-
-value is the maximum distance between active atoms to be considered in a bond formation.
-
-**MaxBoF/MaxBoB** value
-
-[value is an integer; default value: 2]
-
-value is the maximum number of bonds formed ( _nF_ )/broken ( _nB_ ) to make all possible ( _nF_ , _nB_ ) combinations
-for Graph transformations.
-
-**comb22** value
-
-[value is a string: yes or no; default value: no]
-
+{: .important }   
+<code>comb22 value</code>   
+[<code>value</code> is a string: <code>yes</code> or <code>no</code>; default value: <code>no</code>]   
 By default, the (2,2) combination is not considered.
 
-**crossb** value
-
-[value is a string: yes or no; default value: no]
-
+{: .important }   
+<code>crossb value</code>
+[<code>value</code> is a string: <code>yes</code> or <code>no</code>; default value: <code>no</code>]   
 A check can be done to see if the closest distance between the paths followed by the atoms in their
 rearrangements is lower that a threshold value (a potential problem in planar molecules or planar regions
 of a molecule). By default, this check is not done.
 
+{: .important }   
+<code>BreakRing value</code>   
+[<code>value</code> is a string: <code>yes</code> or <code>no</code>; default value: <code>no</code>]
 
-**BreakRing** value
+By default, a bond that belongs to a ring is not broken in (0,1) transformations. However, there might be ring opening reactions of our interest.
 
-[value is a string: yes or no; default value: no]
-
-By default, a bond that belongs to a ring is not broken in (0,1) transformations. However, there might be ring
-opening reactions of our interest.
-
-**CK_minima** value
-
-[value is a string: all or cg; default value: all]
-
-By default, all minima are used for graph transformations (including conformers). With the value cg, only
-the lowest energy member of each family of conformers is utilized.
+{: .important }  
+<code>CK_minima value</code>   
+[<code>value</code> is a string: <code>all</code> or <code>cg</code>; default value: <code>all</code>]   
+By default, all minima are used for graph transformations (including conformers). With the value <code>cg</code>, only the lowest energy member of each family of conformers is utilized.
 
 **Screening**. Some of the initially located structures might have very low imaginary frequencies, be repeated
 or correspond to transition states of van der Waals complexes formed upon fragmentation of the reactant
