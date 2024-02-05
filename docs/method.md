@@ -63,14 +63,14 @@ The default values are listed in this table:
 
 |Atom|Min # of neighbors|Max # of neighbors|Atom|Min # of neighbors|Max # of neighbors|
 |---|:---:|:---:|---|:---:|:---:|
-|H|1|1|   |   |   |
-|Li|0|1|   |   |   |
-|Be|0|2|   |   |   |
-|B|1|3|   |   |   |
-|C|1|4|   |   |   |
-|N|1|3|   |   |   |
-|O|1|2|   |   |   |
-|F|0|1|   |   |   |
+|H|1|1|  Mg | 0  | 2  |
+|Li|0|1| Al  | 1  | 3  |
+|Be|0|2| Si  | 1  | 4  |
+|B|1|3| P  | 1  | 5  |
+|C|1|4| S  | 1  | 6  |
+|N|1|3| Cl  | 0  | 1  |
+|O|1|2| Br  | 0  | 1  |
+|F|0|1| I  | 0  |  1 |
 |Na|0|1|   |   |   |
 
 
