@@ -17,14 +17,14 @@ This section explains how to run one iteration of our workflow. This might be us
 with the program and didactic purposes, but the recommended option for production runs is to use the
 iterative llcalcs.sh and hlcalcs.sh scripts explained above.
 
-To run AutoMeKin in a single processor use `amk.sh` script with the name of the input file as argument:
+To run AutoMeKin in a _single processor_ use `amk.sh` script with the name of the input file as argument:
 ```
 amk.sh FA.dat > amk.log &
 ```
 The ouput file `amk.log` provides information about the calculations. In addition, a directory called
 `tsdirLL_FA` is created, which contains information that may be useful for checking purposes. We notice
 that the program creates a symbolic link to the `FA.dat` file, named amk.dat, which is used internally by
-several amk scripts. At any time, you can check the transition states that have been found using:
+several amk scripts. At any time, you can _check the transition states that have been found_ using:
 ```
 tsll_view.sh
 ```
@@ -45,17 +45,17 @@ calculations although using a sufficiently large number of trajectories (see bel
 
 
 As already mentioned, the output files of the optimized TSs are stored in `tsdirLL_FA`. You can use a
-visualization program (e.g., molden) to analyze your results. Try, for instance:
+_visualization program (e.g., molden) to analyze your results_:
 ```
 molden tsdirLL_FA/ts1_FA.molden
 ```` 
-You can also watch the animation of trajectories, which are stored in the coordir folder inside `wrkdir`:
+You can also watch the _animation of trajectories_, which are stored in the coordir folder inside `wrkdir`:
 ```
 molden coordir/FA_dyn1.xyz
 ```
 Notice that the `coordir` folder is temporary. It is removed during the execution of a subsequent script.
 
-If you have access to several processors and want to run the dynamics in parallel, you can use the script
+If you have access to several processors and want to _run the dynamics in parallel_, you can use the script
 `amk_parallel.sh`, which is executed interactively (a Zenity progress bar will appear on the screen). For
 instance, to submit 50 trajectories split in 5 different tasks (10 trajectories each) you should use:
 ```
@@ -132,69 +132,70 @@ track_view.sh
 When you are happy with the obtained TSs or you achieve convergence, you can proceed with the next
 steps.
 
-_Rnning the kinetics at the conditions of interest_ :
-
+_Running the kinetics at the conditions of interest:_
+```
 kmc.sh
-
-_Gathering all relevant information in folder_ FINAL_LL_FA:
-
+```
+_Gathering all relevant information in folder_ `FINAL_LL_FA`:
+```
 final.sh
-
+```
 This folder will gather all the relevant information data, which are described below.
 
-### e) Step-by-step high-level calculations
+## Step-by-step high-level calculations
 
-Although the recommended option for running the high-level calculations is to use hlcalcs.sh, it is
+Although the recommended option for running the high-level calculations is to use `hlcalcs.sh`, it is
 possible to perform the calculations step by step, as described next:
 
-From your wrkdir (FA in the example), run the following scripts:
+From your `wrkdir` (`FA` in the example), run the following scripts:
 
-_Optimizing the TSs_
-
-(sbatch [ _options_ ]) TS.sh FA.dat
-
+_Optimizing the TSs_:
+```
+(sbatch [ options ]) TS.sh FA.dat
+```
 In this case, the default values for a job submitted to Slurm are:
-
+```
 #SBATCH --time=04:00:
 #SBATCH -n 4
 #SBATCH --output=TS-%j.log
 #SBATCH --ntasks-per-node=
 #SBATCH -c 12
+``
 _Building the high-level reaction network, optimizing the minima and running the kinetics_ :
-
-(sbatch [ _options_ ]) IRC.sh
-(sbatch [ _options_ ]) MIN.sh
+```` 
+(sbatch [ options ]) IRC.sh
+(sbatch [ options ]) MIN.sh
 RXN_NETWORK.sh
 KMC.sh
+```
 Remember that the use of Slurm involves checking that every script has finished before proceeding with the
 next one.
 
 _Optimizing the product fragments_ :
-
+```
 (sbatch [ _options_ ]) PRODs.sh
+```
 
-**CAVEAT** : The previous step is mandatory before proceeding gather all information in the final folder.
+{: .warning }  
+The previous step is mandatory before proceeding gather all information in the final folder.
 
-
-_Gathering all relevant information in folder_ FINAL_HL_FA:
-
+_Gathering all relevant information in folder_ `FINAL_HL_FA`:
+```
 FINAL.sh
+```
+Notice that the high-level calculations also generate the directory `tsdirHL_FA`, whose structure is similar to `tsdirLL_FA`. Finally, remember that you can use the `kinetics.sh` to calculate rate coefficients and product branching rations for an energy or temperature different from that specified in the kinetics section.
 
-Notice that the high-level calculations also generate the directory tsdirHL_FA, whose structure is similar
-to tsdirLL_FA. Finally, remember that you can use the kinetics.sh to calculate rate coefficients and
-product branching rations for an energy or temperature different from that specified in the kinetics section.
+## Aborting the calculations
 
-### f) Aborting the calculations
-
-If, for any reason, you want to kill the iterative calculations, execute the following script from the wrkdir:
-
+If, for any reason, you want to kill the iterative calculations, execute the following script from the  `wrkdir`:
+```
 abort.sh
-
-This script kills the processes whose PID are specified in these hidden files: .parallel.pid and
-.script.pid. We notice that, if G09/G16 jobs are killed, the read-write files (Gau-#####) generated in
+```
+This script kills the processes whose PID are specified in these hidden files: `.parallel.pid` and
+`.script.pid`. We notice that, if G09/G16 jobs are killed, the read-write files (`Gau-#####`) generated in
 the Gaussian scratch directory are not removed. The user should do it manually.
 
-### g) Directory tree structure of wrkdir
+## Directory tree structure of `wrkdir`
 
 The figure below shows the main folders that are generated in wrkdir. Folders batchXX (where XX = 1 -
 tasks) are generated with amk_parallel.sh. This script is also invoked by llcalcs.sh, and when that
@@ -203,9 +204,7 @@ generated in those directories where amk.sh is executed. The amk_parallel-logs d
 series of files that give information on CPU time consumption for the different calculation steps when they
 were executed with GNU Parallel. Directories tsdirLL_name and tsdir_HL_name are generated at
 runtime and are employed to generate the final files and directories. For that reason, they should not be
-removed. Finally, the most important files are gathered in a final directory (FINALDIR) which is named after
-the system’s name: FINAL_level_name (with level being LL for low-level or HL for high level; see figure
-below).
+removed. Finally, the most important files are gathered in a final directory (FINALDIR) which is named after the system’s name: FINAL_level_name (with level being LL for low-level or HL for high level; see figure below).
 
 ### wrkdir
 
