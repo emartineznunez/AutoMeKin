@@ -197,19 +197,5 @@ This script kills the processes whose PID are specified in these hidden files: `
 `.script.pid`. We notice that, if G09/G16 jobs are killed, the read-write files (`Gau-#####`) generated in
 the Gaussian scratch directory are not removed. The user should do it manually.
 
-## Directory tree structure of `wrkdir`
 
-The figure below shows the main folders that are generated in `wrkdir`. Folders `batchXX` (where XX = 1 -
-tasks) are generated with `amk_parallel.sh`. This script is also invoked by `llcalcs.sh`, and when that
-happens these folders are temporary (they are removed at the end of the tasks). Directory `coordir` is only
-generated in those directories where `amk.sh` is executed. The `amk_parallel-logs` directory contains a
-series of files that give information on CPU time consumption for the different calculation steps when they
-were executed with GNU Parallel. Directories `tsdirLL_name` and `tsdir_HL_name` are generated at
-runtime and are employed to generate the final files and directories. For that reason, they should not be
-removed. Finally, the most important files are gathered in a final directory (`FINALDIR`) which is named after the system’s name: `FINAL_level_name` (with level being LL for low-level or HL for high level; see figure below).
-
-
-<p align="center">
-   <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/folders.jpg" alt="alt text" width="800" height="200">
-</p>
 
