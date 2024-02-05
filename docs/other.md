@@ -281,11 +281,14 @@ The program automatically adjusts the range to obtain at least 60% reactivity at
 {: .important }   
 `factorflipv value`  
 [`value` is a float; _only with MD and MD-micro_ ; no default]   
-Using the default options, trajectories are halted when the simulation time reaches the `value[fs]`
-(see below), or when there an interatomic distance, $\scriptstyle{r_{ij}}$, reaches 5 times its initial value $\scriptstyle{r_{ij}^0}$, which is regarded as a fragmentation. Using `factorflipv`, fragmentation can be prevented because the atomic velocities change their sign:
+Using the default options, trajectories are halted when the simulation time reaches the `value[fs]`, see below, or when there an interatomic distance, $\scriptstyle{r_{ij}}$, reaches 5 times its initial value $\scriptstyle{r_{ij}^0}$, which is regarded as a fragmentation. 
+
+Using `factorflipv`, fragmentation can be prevented because the atomic velocities change their sign:
 
 ```
-𝑣⃗𝑘={−− 0 𝑣⃗.𝑘 9 ×^ 𝑣^ ⃗^ 𝑘^ ifif^ 𝑘𝑘=≠𝑖𝑖^ oror^ 𝑗𝑗
+$$
+\vec{v}_k=
+$$
 ```
 whenever the following relationship is fulfilled:
 
