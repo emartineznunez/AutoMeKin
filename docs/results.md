@@ -192,23 +192,8 @@ from STDIN:
 ```
 amk_gen.py FINALDIR RXNFILE
 ```` 
-where `RXNFILE` is the name of the `RXNet` files explained above (`RXNet`, `RXNet.cg` or `RXNet.rel`). Additional arguments that may be passed are:
+where `RXNFILE` is the name of the `RXNet` files explained above (`RXNet`, `RXNet.cg` or `RXNet.rel`). Additional arguments that may be passed are [detailed here](https://github.com/dgarayr/amk_tools/blob/master/UserGuide.md).
 
-```
-**--barrierless**. Include the barrierless routes stored in RXNet.barrless.
-**--vibrations NVIBR**. Add only NVIBR normal modes to the visualization. Default is -1, meaning that ALL
-modes are included.
-**--paths [SOURCE] [TARGET]** Locate paths in the network connecting SOURCE to TARGET, to include
-energy profile visualizations in the dashboards. When both SOURCE and TARGET are specified, a simple
-search is performed including only the routes that connect both nodes. If --paths is passed without
-further specification, all possible cyclic paths along the network are searched (much slower). If only
-SOURCE is specified, all cyclic paths are also searched, and then filtered to only keep these with
-connections to SOURCE.
-**--cutoff_path CUTOFF**. Maximum depth for two-ended path search (number of intermediate nodes
-between SOURCE and TARGET), default is 4.
-**--outfile FILENAME**. Name of the output HTML file containing the dashboard.
-**--title TITLE**. Title shown in the dashboard.
-```
 The following example shows how to create interactive plots from `RXNet.cg` file including all paths found at low level for Formic Acid (FA):
 ```
 amk_gen.py FINAL_LL_FA RXNet.cg --b --paths
