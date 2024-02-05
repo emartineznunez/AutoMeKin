@@ -44,3 +44,4 @@ Finally, if you use the bots reactive event search algorithm, the following refe
 
 ```
 Hutchings M. et al., J. Chem. Theory Comput. 2020 , 16, 1606- 1617
+```
