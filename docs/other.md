@@ -217,7 +217,7 @@ Here is a list of additional keywords that can be employed in the General sectio
 Example:
 ```
 HighLevel g16 mpwb95/6-31+G(d,p)
-iop iop(3/76=0560004400)
+iop       iop(3/76=0560004400)
 ```
 
 {: .warning }   
@@ -261,7 +261,7 @@ The first `value` can be `all`, in which case no other values are needed, or the
 excited followed by a second value, a string, which is the list of atoms separated by commas, without blank
 spaces. It is analogous to modes, explained below. 
 
-This is an example where atoms 1 , 2 and 3 are initially excited:
+This is an example where atoms 1, 2 and 3 are initially excited:
 ```
 atoms 3 1,2,3
 ```
@@ -278,15 +278,11 @@ etraj 200-300
 If `etraj` is not specified, the program automatically employs the following range of energies: $\scriptstyle{16.25(s−1)−46.25(s−1)}$ kcal/mol, where $\scriptstyle{s}$ is the number of vibrational degrees of freedom of the system. The values $\scriptstyle{16.25}$ and $\scriptstyle{46.25}$ have been determined from the formic acid results and making use of RRK theory.
 The program automatically adjusts the range to obtain at least 60% reactivity at the boundaries.
 
-
-**factorflipv** value
-
-[value is a float; **only with MD and MD-micro** ; no default]
-
-Using the default options, trajectories are halted when the simulation time reaches the value[fs] keyword
-(see below) or when there an interatomic distance, 𝑟𝑖𝑗, reaches 5 times its initial value 𝑟𝑖𝑗^0 , which is regarded
-as a fragmentation. Using **factorflipv** fragmentation can be prevented because the atomic velocities
-change their sign:
+{: .important }   
+`factorflipv value`  
+[`value` is a float; _only with MD and MD-micro_ ; no default]   
+Using the default options, trajectories are halted when the simulation time reaches the `value[fs]`
+(see below), or when there an interatomic distance, $\scriptstyle{r_{ij}}$, reaches 5 times its initial value $\scriptstyle{r_{ij}^0}$, which is regarded as a fragmentation. Using `factorflipv`, fragmentation can be prevented because the atomic velocities change their sign:
 
 ```
 𝑣⃗𝑘={−− 0 𝑣⃗.𝑘 9 ×^ 𝑣^ ⃗^ 𝑘^ ifif^ 𝑘𝑘=≠𝑖𝑖^ oror^ 𝑗𝑗
