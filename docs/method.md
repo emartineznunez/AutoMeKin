@@ -33,37 +33,30 @@ List of <code>Keyword value(s)</code> for this section:
 valencies of the atoms and with products lying below the maximum energy of the system. Once the
 combinations are known, the starting and ending points are obtained after a constrained MD simulation with
 external forces applied to break/form the selected bonds. Then, a NEB calculation tries to obtain a path
-connecting both states, and the highest point of the NEB is subjected to TS optimization. This sampling does
-not need to include the number of trajectories and **has not been implemented yet for qcore**.
+connecting both states, and the highest point of the NEB is subjected to TS optimization. This sampling does not need to include the number of trajectories and _has not been implemented yet for qcore_.
 
-**CAVEAT:** To use **MD-micro** the initial structure needs to be fully optimized and a frequency calculation can
-not afford imaginary frequencies. Otherwise choose **MD**
+{: .warning }  
+To use <code>MD-micro<code> the initial structure needs to be fully optimized and a frequency calculation can not afford imaginary frequencies. Otherwise choose <code>MD</code>
 
+<code>association<code> and <code>vdW</code> are employed to sample van der Waals structures, present some peculiarities and therefore are explained in detail in van der Waals complexes.
 
-**association** and **vdW** are employed to sample van der Waals structures, present some peculiarities and
-therefore are explained in detail in van der Waals complexes.
+<code>MD</code>, <code>MD-micro</code>, <code>external</code> and <code>BXDE</code> samplings accept the following keywords (<code>BXDE</code> and <code>ChemKnow</code> also accept additional keywords as seen below):
 
-MD _,_ MD-micro, external and BXDE samplings accept the following keywords (BXDE and ChemKnow also
-accept other keywords as seen below):
+{: .important }  
+<code>barrierless value</code>   
+[<code>value</code> is one string: <code>yes</code> or <code>no</code>; default value: <code>no</code>]   
+<code>value</code> can be <code>yes</code>, in which case barrierless processes are searched. The keyword neighbors explained below is related to this one.
 
-**barrierless** value
-
-[value is one string: yes or no; default value: no]
-value can be yes, in which case barrierless processes are searched. The keyword neighbors explained
-below is related to this one.
-
-**neighbors** values
-
-[three values: first is a string and last two are floats; default values (see table below)]
-
-The first value is an atomic symbol and the two numbers are the minimum and maximum number of
+{: .important }   
+<code>neighbors values</code>   
+[three <code>values</code>: first is a string and last two are floats; default values (see table below)]   
+The first <code>value<code> is an atomic symbol and the two numbers are the minimum and maximum number of
 neighbors of the corresponding atoms. This keyword is needed if atoms other than those in the table below
 are present in your system and/or if you want to change the default values. The number of neighbors is
-employed to locate **barrierless processes** and are also employed by **ChemKnow**. For instance, if you want to
-consider dissociations leading to atomic hydrogen, you must add the following line:
-
+employed to locate _barrierless processes_ and are also employed by <code>ChemKnow</code>. For instance, if you want to consider dissociations leading to atomic hydrogen, you must add the following line:
+```
 neighbors H 0 1
-
+```
 The default values are listed in this table:
 
 **Atom Min # of neighbors Max # of neighbors Atom Min # of neighbors Max # of neighbors**
