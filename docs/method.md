@@ -36,7 +36,7 @@ external forces applied to break/form the selected bonds. Then, a NEB calculatio
 connecting both states, and the highest point of the NEB is subjected to TS optimization. This sampling does not need to include the number of trajectories and _has not been implemented yet for qcore_.
 
 {: .warning }  
-To use <code>MD-micro<code> the initial structure needs to be fully optimized and a frequency calculation can not afford imaginary frequencies. Otherwise choose <code>MD</code>
+To use <code>MD-micro</code> the initial structure needs to be fully optimized and a frequency calculation can not afford imaginary frequencies. Otherwise choose <code>MD</code>
 
 <code>association<code> and <code>vdW</code> are employed to sample van der Waals structures, present some peculiarities and therefore are explained in detail in van der Waals complexes.
 
