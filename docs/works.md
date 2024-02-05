@@ -1,3 +1,11 @@
+---
+title: Works
+layout: home
+nav_order: 5
+---
+
+# Works
+
 The following works employ AutoMeKin or its algorithms:
 
 [TCA 2023](https://link.springer.com/article/10.1007/s00214-023-03062-0)
