@@ -19,9 +19,9 @@ and eigL, as explained below:
 ```
 --Screening --
 imagmin 200
-MAPEmax 0.
-BAPEmax 2.
-eigLmax 0.
+MAPEmax 0.008
+BAPEmax 2.5
+eigLmax 0.1
 ```
 
 List of `Keyword value(s)` for this section:
@@ -29,7 +29,7 @@ List of `Keyword value(s)` for this section:
 {: .important }  
 `imagmin value`   
 [`value` is an integer; default value: `0` ]   
-`value` is the minimum value for the imaginary frequency (in absolute value and cm<sup>−1<sup>) of the selected TS structures. Discarded structures will be stored in tsdirLL_molecule/LOW_IMAG_TSs to allow the user inspection of the rejected TSs.
+`value` is the minimum value for the imaginary frequency (in absolute value and cm<sup>−1</sup>) of the selected TS structures. Discarded structures will be stored in `tsdirLL_molecule/LOW_IMAG_TSs` to allow the user inspection of the rejected TSs.
 
 {: .important }  
 `MAPEmax value`  
