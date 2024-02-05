@@ -328,25 +328,23 @@ post_proc bots 200 2.5
 {: .important }  
 `temp value`  
 [`value` is an integer or string with no blank spaces; _only with MD and BXDE_ ; no default]  
-If an integer, `value` is the temperature (in K) of the MD or BXDE simulations. If a range, _only valid for MD_, the temperature is randomly selected in the given range. In the absence of the temp keyword, the program automatically defines the following range of temperatures: $\scriptstyle{5452.04(s−1)/natom−15517.34(s−1)/natom}$ K, which has been optimized for formic acid. However, as for `etraj`, the boundaries are adjusted _on the fly_ to obtain a minimum reactivity of 60%. _For BXDE, temp has only one value (with 1000 being the default)._
+If an integer, `value` is the temperature (in K) of the MD or BXDE simulations. If a range, _only valid for MD_, the temperature is randomly selected in the given range. In the absence of the temp keyword, the program automatically defines the following range of temperatures: $\scriptstyle{5452.04(s−1)/natom−15517.34(s−1)/natom}$ K, which has been optimized for formic acid. However, as for `etraj`, the boundaries are adjusted _on the fly_ to obtain a minimum reactivity of 60%. _For BXDE, temp has only one value and 1000 K is the default)._
 
+{: .important }  
+`thmass value`   
+[`value` is an integer; _only with MD_ ; default value: `0`]   
+`value` is the required minimum mass in a.u. of an atom to be initially excited.
 
-**thmass** value
-
-[value is an integer; **only with MD** ; default value: 0 ]
-
-value is the required minimum mass (in a.u.) of an atom to be initially excited.
-
-**Use_LET** value
-
-
-[value is one string: yes or no; **only with mopac** ; default value: no for all samplings except ChemKnow]
-If value is yes, then mopac TS optimizations that fail throwing the error: “NUMERICAL PROBLEMS
-BRACKETING LAMDA” are rerun using LET keyword (this allows more of the potential energy surface to be
-sampled: [http://openmopac.net/manual/error_messages.html).](http://openmopac.net/manual/error_messages.html).) To help the user judge whether to use this
-keyword, the results of the optimizations using LET are collected in the file _stats_let_ located in
-tsdirLL_molecule. This file contains several lines (one per iteration) with two numbers: the first is the
+{: .important }  
+`Use_LET value`  
+[`value` is one string: `yes` or `no`; _only with mopac_ ; default value: `no` for all samplings except `ChemKnow`]   
+If `value` is `yes`, then mopac TS optimizations that fail throwing the error: “NUMERICAL PROBLEMS
+BRACKETING LAMDA” are rerun using LET keyword, which allows [more of the potential energy surface to be
+sampled:](http://openmopac.net/manual/error_messages.html). To help the user judge whether to use this
+keyword, the results of the optimizations using LET are collected in the file `stats_let` located in
+`tsdirLL_molecule`. This file contains several lines (one per iteration) with two numbers: the first is the
 number of optimized TSs, and the second is the number of total attempts using LET.
+
 **Screening**
 
 **tight_ts** value
