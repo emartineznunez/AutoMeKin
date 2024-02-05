@@ -275,7 +275,7 @@ If value is a range as in the example below, the energy is randomly selected in 
 ```
 etraj 200-300
 ```
-If `etraj` is not specified, the program automatically employs the following range of energies: $16.25(s−1)−46.25(s−1)$ kcal/mol, where $s$ is the number of vibrational degrees of freedom of the system. The values 16.25 and 46.25 have been determined from the formic acid results and making use of RRK theory.
+If `etraj` is not specified, the program automatically employs the following range of energies: $\scriptstyle{16.25(s−1)−46.25(s−1)}$ kcal/mol, where $\scriptstyle{s}$ is the number of vibrational degrees of freedom of the system. The values $\scriptstyle{16.25}$ and $\scriptstyle{46.25}$ have been determined from the formic acid results and making use of RRK theory.
 The program automatically adjusts the range to obtain at least 60% reactivity at the boundaries.
 
 **factorflipv** value
