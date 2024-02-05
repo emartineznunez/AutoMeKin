@@ -221,7 +221,7 @@ More details can be found here: https://github.com/dgarayr/amk_tools/blob/master
 
 Example of an interactive dashboard (for FA), with the reaction network on the left and a selected edge (TS) on the right. Clicking on “Show profile” enables visualization of the energy profile as well.
 <p align="center">
-   <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/amk.jpg" alt="alt text" width="800" height="500">
+   <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/amk.jpg" alt="alt text" width="800" height="400">
 </p>
 
 ### c) Kinetics simulations at different temperatures
