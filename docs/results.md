@@ -7,108 +7,111 @@ nav_order: 4
 
 # Results
 
-### a) Relevant information
+## Relevant information
 
-Scripts final.sh and FINAL.sh are employed to collect all relevant information in FINALDIR
-(FINAL_LL_FA and FINAL_HL_FA in our example, respectively). These folders contain files as well as a
-subdirectory called normal_modes, which includes, for each structure, a file (in MOLDEN format) with
-which you can visualize the corresponding normal modes. The files included in these folders are the
-following.
+Scripts `final.sh` and `FINAL.sh` are employed to collect all relevant information in `FINALDIR`. These folders contain files as well as a subdirectory called `normal_modes`, which includes, for each structure, a file (in MOLDEN format) with which you can visualize the corresponding normal modes. The files included in these folders are the following.
 
-**convergence.txt** lists the number of located transition states as a function of the number of trajectories
-and iteration (Only in FINAL_LL_FA).
+### convergence.txt 
 
-**Energy_profile.pdf** is an energy diagram with the _relevant paths_ , which are those that participate in
-the dynamics at the conditions of interest. If you change the value[ImpPaths] in the kinetics section of
-the input data (see below), you can incorporate/remove some pathways (the maximum number of TSs in
-the profile is 100). In our example, the energy diagram is the following:
+This file lists the number of located transition states as a function of the number of trajectories
+and iteration (Only in `FINAL_LL_FA`).
 
-**frag_warnings.** contains information on failed ab initio calculations of the fragments. If all calculations
-are successful, the file is absent. The file is located **in** FINAL_HL_FA **folder**.
+### Energy_profile.pdf 
 
-**MINinfo** contains information of the minima:
+This is an energy diagram with the _relevant paths_ , which are those that participate in
+the dynamics at the conditions of interest. If you change the `value[ImpPaths]` in the kinetics section of
+the input data, you can incorporate/remove some pathways (the maximum number of TSs in the profile is 100). This file is deprecated.
 
+### frag_warnings 
+
+This ifle contains information on failed ab initio calculations of the fragments. If all calculations
+are successful, the file is absent. The file is located in `FINAL_HL_FA` folder.
+
+### MINinfo 
+
+This file contains information of the minima:
+```
 MIN # DE(kcal/mol)
-1 - 8.341
-
-
-2 0.000
-3 5.288
-4 6.732
-5 15.441
-6 82.122
-7 110.400
-8 188.254
+1        -8.341
+2         0.000
+3         5.288
+4         6.732
+5        15.441
+6        82.122
+7       110.400
+8       188.254
 Conformational isomers are listed in the same line:
 1 2
 3 4 5
-**TSinfo** contains information of the TSs:
+```
 
+### TSinfo 
+
+Likewise, this file contains information of the TSs:
+```
 TS # DE(kcal/mol)
-1 - 1.624
-2 1.868
-3 9.644
-4 25.135
-5 32.821
-6 37.608
-7 40.956
-8 44.037
-9 53.173
-10 58.156
-11 60.015
-12 85.659
-13 142.228
-14 188.765
-15 191.650
+1       -1.624
+2        1.868
+3        9.644
+4       25.135
+5       32.821
+6       37.608
+7       40.956
+8       44.037
+9       53.173
+10      58.156
+11      60.015
+12      85.659
+13     142.228
+14     188.765
+15     191.650
 Conformational isomers are listed in the same line:
 9 11
-In the above files, DE is the energy relative to that of the main structure specified in the FA.dat file
+```
+In the above files, DE is the energy relative to that of the main structure specified in the `FA.dat` file
 (optimized with the semiempirical Hamiltonian). The integers are used to identify, independently, minima
-and transition states. Notice that, in this example, MIN 2 corresponds to the structure specified in FA.xyz.
+and transition states. Notice that, in this example, MIN 2 corresponds to the structure specified in `FA.xyz`.
 
-**table.db** with table being min, prod and ts, which refer to the minima (intermediates), product
-fragments and transition states, respectively. These are SQLite3 tables containing the geometries, energies
-and frequencies of minima, products and TSs, respectively. The different properties can be obtained using
-select.sh:
+### table.db 
 
+These are SQLite3 tables containing the geometries, energies
+and frequencies of minima, products and TSs, respectively: `table` can be `min`, `prod` and `ts`, which refer to the minima (intermediates), product fragments and transition states, respectively.The different properties can be obtained using `select.sh`:
+```
 select.sh FINALDIR property table label
-
-where property can be: natom, name, energy, zpe, g, geom, freq, formula (only for prod) or all, and
-label is one of the numbers shown in RXNet (see below), which are employed to label each structure. At the
-semiempirical level, the energy values correspond to heats of formation. For high-level calculations, the
-tables collect the electronic energies. Please note that for the hybrid calculations involved through the use
-of keyword LowLevel_TSopt, energies, zpe and frequencies in the tables are those obtained with MOPAC,
-while the geometry in ts.db is the one obtained at the g09/g16 level of theory.
+```
+where `property` can be: `natom`, `name`, `energy`, `zpe`, `g`, `geom`, `freq`, `formula` (only for `prod`) or `all`, and `label` is one of the numbers shown in RXNet (see below), which are employed to label each structure. At the semiempirical level, the energy values correspond to heats of formation. For high-level calculations, the tables collect the electronic energies. Please note that for the hybrid calculations involved through the use of keyword `LowLevel_TSopt`, energies, zpe and frequencies in the tables are those obtained with MOPAC, while the geometry in ts.db is the one obtained at the g09/g16 level of theory.
 
 As an example, to obtain the geometry of the first low-level transition state of FA, you should use:
-
-
+```
 select.sh FINAL_LL_FA geom ts 1
+```
+{: .warning }   
+MOPAC optimizations of minimum-energy structures might not be fully optimized and,
+consequently, imaginary frequencies might arise for minima. Additionally, the frequencies obtained for
+fragments prod are meaningless as these structures are not optimized.
 
-**CAVEAT: MOPAC** optimizations of minimum-energy structures ( **min** ) might not be fully optimized and,
-consequently, imaginary **frequencies** might arise for minima. Additionally, the frequencies obtained for
-fragments ( **prod** ) are meaningless as these structures are not optimized.
+### RXNet 
 
-**RXNet** contains information of the complete reaction network, that is all the elementary reactions found by
-the amk program (the file shown below, and the following ones, were cut and show only up to TS 15 ).
-
-TS # DE(kcal/mol) Reaction path information
-==== ============ =========================
-1 - 1.6 PR2: CO + H2O <---> PR2: CO + H2O
-2 1.9 MIN 1 <---> MIN 2
-3 9.6 MIN 3 <---> MIN 4
-4 25.1 MIN 1 <---> MIN 1
-5 32.8 PR2: CO + H2O <---> PR1: H2 + CO2
-6 37.6 MIN 4 ----> PR2: CO + H2O
-7 41.0 MIN 1 ----> PR2: CO + H2O
-8 44.0 PR1: H2 + CO2 <---> PR1: H2 + CO2
-9 53.2 MIN 1 <---> MIN 4
-10 58.2 MIN 2 ----> PR1: H2 + CO2
-11 60.0 MIN 2 <---> MIN 5
-12 85.7 MIN 2 <---> MIN 6
-13 142.2 MIN 3 <---> MIN 6
-14 188.8 MIN 2 <---> MIN 8
-15 191.7 MIN 7 <---> MIN 8
+This file contains information of the complete reaction network, that is all the elementary reactions found by the amk program (the file shown below, and the following ones, were cut and show only up to TS 15 ).
+```
+TS # DE(kcal/mol)    Reaction path information
+==== ============    =========================
+1         -1.6 PR2: CO + H2O <---> PR2: CO + H2O
+2          1.9         MIN 1 <---> MIN 2
+3          9.6         MIN 3 <---> MIN 4
+4         25.1         MIN 1 <---> MIN 1
+5         32.8 PR2: CO + H2O <---> PR1: H2 + CO2
+6         37.6         MIN 4 ----> PR2: CO + H2O
+7         41.0         MIN 1 ----> PR2: CO + H2O
+8         44.0 PR1: H2 + CO2 <---> PR1: H2 + CO2
+9         53.2         MIN 1 <---> MIN 4
+10        58.2         MIN 2 ----> PR1: H2 + CO2
+11        60.0         MIN 2 <---> MIN 5
+12        85.7         MIN 2 <---> MIN 6
+13       142.2         MIN 3 <---> MIN 6
+14       188.8         MIN 2 <---> MIN 8
+15       191.7         MIN 7 <---> MIN 8
+```
 As can be seen, for each transition state, this file specifies the associated minima and/or product fragments
 and their corresponding identification numbers. Notice that TS, MIN and PR have independent identification
 numbers. If you use the option complete for the keyword HL_rxn_network (in the General section of
