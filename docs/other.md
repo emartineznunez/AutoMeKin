@@ -151,7 +151,7 @@ tors.sh inputfile file
 ```
 The first argument is the name of the inputfile and the second one can be: `all`, the default, or `file`. Using `all`, all the rotatable angles are scanned, while if you use `file`, the four indices that specify the dihedrals you want to scan must be present in file `dihedrals`.
 
-The dihedrals will be scanned and the highest point(s) along the scan(s) will be subjected to TS optimizations.
+The dihedrals will be scanned and the highest point, or points, along the scan, or scans, will be subjected to TS optimizations.
 
 In general, dihedral scans are automatically performed in all parallel calculations, except with vdW and assoc samplings. For big and/or highly flexible molecules these automated scans can be very CPU intensive, and they can be avoided adding the keyword `torsion` with the value no to your Method section like in the next example:
 ```
