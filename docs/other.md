@@ -394,7 +394,7 @@ are the available options, _only for MD and MD-micro_:
 where `value`, or `nfr`, is the number of constrained bonds. 
 
 The line containing the `bondsfrozen nfr` pair must be followed by `nfr` lines, each one with two values:  
-`fr_i(k) fr_j(k)`
+`fr_i(k) fr_j(k)`   
 which are integers indicating the indexes (labels) of the atoms that form each constrained bond, as in the following example:
 ```
 nbondsfrozen 2
@@ -402,44 +402,33 @@ nbondsfrozen 2
 2 8
 ```
 This would “freeze” two bond distances connecting atoms 1 and 13 and 2 and 8 , respectively. This keyword
-has not been tested thoroughly and the more robust Hookean keyword (see above) is suggested.
+has not been tested thoroughly and the more robust Hookean keyword, see above, is suggested.
 
 
-2) The second algorithm bias the dynamics towards a particular reaction channel. An example of this
-option is provided in file path_to_program/examples/FA_biasH2.dat (you also need FA.xyz), which
-illustrates a way to search for H 2 elimination transition states from formic acid. For this we use two sets of
-keywords to apply constant external forces to break or form bonds. For bond breakage we use the following:
+- The second algorithm biases the dynamics towards a particular reaction channel. An example of this
+option is provided in file `path_to_program/examples/FA_biasH2.dat`; you also need `FA.xyz`, which
+illustrates a way to search for H<sub>2</sub> elimination transition states from formic acid. For this we use two sets of keywords to apply constant external forces to break or form bonds. For bond breakage we use the following:
 
-**nbondsbreak** nbr
+{: .important }    
+`nbondsbreak value`   
+[`value` is an integer; default value: `0` ]   
+where `value`, or `nbr`, is the number of bonds we want to break. 
 
-br_i(1) br_j(1) force(1)
+The line containing this `keyword value` pair must be followed by `nbr` lines, each one with three values `(br_i(1,...,nbr) br_j(1,...,nbr) force(1,...,nbr)`   
+of which the first two are integers and the last a float. These three numbers indicate the indexes of the atoms that form each bond we want to break, and the magnitude of the applied external force (in kcal/mol/Å), respectively.
 
-br_i(2) br_j(2) force(2)
-
-br_i(nbr) br_j(nbr) force(nbr)
-
-[nbr, br_i(1,...,nbr) and br_j(1,...,nbr) are integers and force(1,...,nbr) are floats; default nbr:
-0 ]
-
-where nbr is the number of bonds we want to break. The line containing this **keyword** nbr pair must be
-followed by nbr lines, each one with three values (br_i(1,...,nbr), br_j(1,...,nbr) and
-force(1,...,nbr), of which the first two are integers and the last a float). These three numbers indicate
-the indexes (labels) of the atoms that form each bond we want to break, and the magnitude of the applied
-external force (in kcal/mol/Å), respectively.
-
-For bond formation we use the analogous keyword **nbondsform** as in this example (taken from
-FA_biasH2.dat):
-
+For bond formation we use the analogous keyword `nbondsform` as in this example (taken from
+`FA_biasH2.dat`):
+```
 nbondsform 1
 4 5 30
 nbondsbreak 2
 3 5 80
 1 4 80
-A similar test can be performed on the same molecule to get the TS for H 2 O elimination. The corresponding
-input file, FA_biasH2O.dat, is also available in directory path_to_program/examples. Additionally, a
-retro Diels-Alder reaction has also been tested (cyclohexene → ethylene+1,3-butadiene), using the input
-files rdiels_bias.dat and rdiels.xyz provided in the amk distribution.
+```
+A similar test can be performed on the same molecule to get the TS for H<sub>2</sub>O elimination. The corresponding input file, `FA_biasH2O.dat`, is also available in directory path_to_program/examples. Additionally, a retro Diels-Alder reaction has also been tested (cyclohexene → ethylene+1,3-butadiene), using the input files `rdiels_bias.dat` and `rdiels.xyz` provided in the amk distribution.
 
-The above examples can be tested using the amk.sh script:
-
+The above examples can be tested using the `amk.sh` script:
+```
 amk.sh inputfile
+```
