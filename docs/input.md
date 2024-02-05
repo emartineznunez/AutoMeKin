@@ -19,8 +19,8 @@ TS, IRC calculations are performed to obtain the associated minima (reactant and
 network is then constructed for the high level of theory. As for the low-level computations, the last step
 involves the calculation of rate constants and product ratios. At present, the high-level electronic structure calculations can be performed with G 09 /G16 or with Entos Qcore.
 
-**To follow the guidelines of this tutorial, you can try the formic acid (FA) test case that comes with the
-distribution**. Make a working directory (<code>wrkdir</code>) and copy files <code>FA.dat</code> and <code>FA.xyz</code> from <code>path_to_program/examples</code> to your <code>wrkdir</code>. All scripts (described below) must be run from your <code>wrkdir</code>.
+_To follow the guidelines of this tutorial, you can try the formic acid (FA) test case that comes with the
+distribution_. Make a working directory (<code>wrkdir</code>) and copy files <code>FA.dat</code> and <code>FA.xyz</code> from <code>path_to_program/examples</code> to your <code>wrkdir</code>. All scripts (described below) must be run from your <code>wrkdir</code>.
 
 {: .warning }
 Use short names for the <code>wrkdir</code> and the input files. Good choices are short acronyms (using capital letters) like FA for formic acid. 
@@ -28,9 +28,10 @@ Use short names for the <code>wrkdir</code> and the input files. Good choices ar
 
 The following are files read by amk, and therefore, they must be present in <code>wrkdir</code>.
 
-**name.xyz** (<code>FA.xyz</code> in our example), where name refers to the name for our system; the recommendation
-is to use acronyms like FA for Formic Acid or short names. This file contains an initial input structure of our
-system in XYZ format:
+## name.xyz
+
+Where name refers to the name for our system (<code>FA.xyz</code> in our example). The recommendation
+is to use acronyms like FA for Formic Acid or short names. This file contains an initial input structure of our system in XYZ format:
 ```
 5  
   
@@ -53,8 +54,10 @@ _This file is mandatory except for association and vdW samplings_ where two XYZ 
 Avoid using integers for any of the XYZ coordinates, as this will cause problems with the high-level
 calculations.
 
-**name.dat** (where name can be anything, from just the name of the system to something that identifies the
-type of calculation you are carrying out; in our case FA.dat). This file contains all parameters of the
+## name.dat
+
+Where name can be any name, from just the name of the system to something that identifies the
+type of calculation you are carrying out; in our case FA.dat. This file contains all parameters of the
 calculation and has different sections, which are explained as follows. _This file is mandatory in all cases._
 
 The file name.dat is organized in four sections: General, Method, Screening and Kinetics, which are
