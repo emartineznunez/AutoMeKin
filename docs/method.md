@@ -88,11 +88,11 @@ trajectories. Instead, the user should try to run different batches of trajector
 
 This sampling (and the other BXDE-based sampling based: <code>vdW</code>) has a number of specific keywords as shown in this example:
 ```
-sampling BXDE
-Friction 0.
+sampling      BXDE
+Friction      0.5
 AdaptiveLimit 100
-Window 500
-Hookean 1 2 2.5 10.
+Window        500
+Hookean       1 2 2.5 10.
 ```
 
 {: .important }  
@@ -119,14 +119,14 @@ Hookean 1 2 2.5 10.
 
 This sampling has a number of specific keywords as shown in this example:
 ```
-sampling ChemKnow
+sampling  ChemKnow
 Graphto3D POpt
-active 1 2 3 4
-startd 2.
-MaxBoF 2
-MaxBoB 2
-comb22 no
-crossb no
+active    1 2 3 4
+startd    2.75
+MaxBoF    2
+MaxBoB    2
+comb22    no
+crossb    no
 BreakRing no
 CK_minima all
 ```
