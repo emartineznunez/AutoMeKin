@@ -12,12 +12,9 @@
 
 AutoMeKin (formerly tsscds) has been designed to discover reaction mechanisms in an automated fashion. Transition states are located using MD simulations and Graph Theory algorithms. Monte Carlo simulations afford kinetic results. The only input is a starting structure in XYZ format. The method is described in these two publications: [1](https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.23790) [2](https://pubs.rsc.org/en/content/articlelanding/2015/cp/c5cp02175h#!divAbstract). At present [MOPAC2016](https://github.com/openmopac/mopac), [Entos Qcore](https://software.entos.ai/qcore/documentation/) and [Gaussian (G09/G16)](https://gaussian.com/) are interfaced with AutoMeKin. The program has been tested on the following Linux distros: CentOS 7, Red Hat Enterprise Linux and Ubuntu 20.04 LTS.
 
-
-- The documentation page is under construction: https://emartineznunez.github.io/AutoMeKin/
-- In the mean time, the old wiki can be consulted: https://github.com/emartineznunez/AutoMeKin/wiki
-
 ## Content
 - [Installation](#inst)
+- [Documentation](#doc)
 - [Developers](#dev)
 - [Simple example in Colab](#colab)
 - [Web for submitting simple examples](#web)
@@ -58,6 +55,9 @@ You can have a look at this [Notebook](https://colab.research.google.com/github/
 
 ## Web site for submitting simple examples<a name="web"></a>
 You can also test our [web site](https://rxnkin.usc.es/amk/), where you can submit a simple example.
+
+## Documentation<a name="doc"></a>
+The [documentation page](https://emartineznunez.github.io/AutoMeKin/) is under construction. In the mean time, the [wiki](https://github.com/emartineznunez/AutoMeKin/wiki) can be consulted. 
 
 
 [^1]: For enquiries please contact: emilio.nunez@usc.es
