@@ -210,6 +210,6 @@ removed. Finally, the most important files are gathered in a final directory (`F
 
 
 <p align="center">
-   <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/folders.jpg" alt="alt text" width="400" height="150">
+   <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/folders.jpg" alt="alt text" width="800" height="300">
 </p>
 
