@@ -160,7 +160,7 @@ In this case, the default values for a job submitted to Slurm are:
 #SBATCH --output=TS-%j.log
 #SBATCH --ntasks-per-node=
 #SBATCH -c 12
-``
+```
 _Building the high-level reaction network, optimizing the minima and running the kinetics_ :
 ```` 
 (sbatch [ options ]) IRC.sh
