@@ -386,24 +386,21 @@ microcanonical kinetics]
 AutoMeKin includes several methods to bias the dynamics towards specific reaction pathways. So far, these
 are the available options, _only for MD and MD-micro_:
 
-1) The first option uses the AXD algorithm described in Ref 10 , with which selected bond lengths are not
-allowed to stretch more than 5 0% with respect to their initial values. This can be useful to prevent the
-breakage of certain bonds. This option can be invoked using the following “ **keyword** value” pair:
+- The first option uses the [AXD algorithm](https://pubs.acs.org/doi/10.1021/ct060042z), with which selected bond lengths are not allowed to stretch more than 5 0% with respect to their initial values. This can be useful to prevent the breakage of certain bonds. This option can be invoked using the following “ `keyword value` pair:
 
-**nbondsfrozen** nfr
-fr_i(1) fr_j(1)
-fr_i(2) fr_j(2)
-...
-fr_i(nfr) fr_j(nfr)
-[nfr, fr_i(1,...,nfr) and fr_j(1,...,nfr) are integers; default nfr: 0 ]
-where nfr is the number of constrained bonds. The line containing the “ **nbondsfrozen** nfr“ pair must be
-followed by nfr lines, each one with two values (fr_i(1,...,nfr) and fr_j(1,...,nfr), which are
-integers) indicating the indexes (labels) of the atoms that form each constrained bond, as in the following
-example
+{: .important }    
+`nbondsfrozen value`    
+[`value` is an integer; default value: `0` ]  
+where `value`, or `nfr`, is the number of constrained bonds. 
 
+The line containing the `bondsfrozen nfr` pair must be followed by `nfr` lines, each one with two values:  
+`fr_i(k) fr_j(k)`
+which are integers indicating the indexes (labels) of the atoms that form each constrained bond, as in the following example:
+```
 nbondsfrozen 2
 1 13
 2 8
+```
 This would “freeze” two bond distances connecting atoms 1 and 13 and 2 and 8 , respectively. This keyword
 has not been tested thoroughly and the more robust Hookean keyword (see above) is suggested.
 
