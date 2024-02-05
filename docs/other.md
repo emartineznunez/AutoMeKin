@@ -283,25 +283,8 @@ The program automatically adjusts the range to obtain at least 60% reactivity at
 [`value` is a float; _only with MD and MD-micro_ ; no default]   
 Using the default options, trajectories are halted when the simulation time reaches the `value[fs]`, see below, or when there an interatomic distance, $\scriptstyle{r_{ij}}$, reaches 5 times its initial value $\scriptstyle{r_{ij}^0}$, which is regarded as a fragmentation. 
 
-Using `factorflipv`, fragmentation can be prevented because the atomic velocities change their sign:
+Using `factorflipv`, fragmentation can be prevented because the atomic velocities change their sign: whenever the following relationship is fulfilled: $\scriptstyle{r_{ij}>=FP\timesr_{ij}^0}$
 
-
-\begin{equation}
-  D_{it} =
-    \begin{cases}
-      1 & \text{if bank $i$ issues ABs at time $t$}\\
-      2 & \text{if bank $i$ issues CBs at time $t$}\\
-      0 & \text{otherwise}
-    \end{cases}       
-\end{equation}
-
-
-
-whenever the following relationship is fulfilled:
-
-```
-𝑟𝑖𝑗≥FP×𝑟𝑖𝑗^0
-```
 where FP is value[factorflipv]. We recommend this value to be in the range 3.0-5.0.
 
 **fs** value
