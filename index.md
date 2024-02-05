@@ -152,7 +152,30 @@ installs parallel from it.
 The following python3 libraries (easily installed with pip) are
 needed:  
 [ASE>= 3.21.1](https://wiki.fysik.dtu.dk/ase/install.html), [Matplotlib>= 3.3.4](https://matplotlib.org/stable/users/installing/index.html), [NetworkX>= 2.5](https://networkx.org/documentation/stable/install.html), [NumPy>= 1.19.5](https://numpy.org/install/), [SciPy>= 1.5.4](https://scipy.org/install/)  
-The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is highly recommended to analyze the results:
+The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is highly recommended to analyze the results.
+
+Finally, if xtb method wants to be employed, Entos Qcore must be installed. Additionally, for the HL calculations you may want to use G09/G16, or Entos Qcore.
+
+To install Entos Qcore, we recommend following these steps:
+
+1. Install miniconda3
+2. Add the following line to `$HOME/.condarc` (create the file if not present):
+```
+auto_activate_base: false
+```
+which avoids activation of base environment.
+3. Install qcore version 0.8.14 in a conda environment (qcore-0.8.14-env):
+```
+conda create -n qcore-0.8.14-env -c entos -c conda-forge qcore==0.8.14 'tbb<2021'
+```
+4. Activate the newly created environment:
+```
+conda activate qcore-0.8.14-env
+```
+5. After installation, each user will be asked to read the Software License Agreement to generate a unique token:
+```
+qcore --academic-license
+```
 
 ### Installing AutoMeKin
 
