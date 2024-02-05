@@ -142,7 +142,7 @@ CK_minima all
 <code>values</code> are the labels of the atoms that participate in the reactions we are interested in. By default, all atoms in the system are active.
 
 {: .important }   
-<code>startd value<code>  
+<code>startd value</code>  
 [<code>value</code> is a float; default value: <code>2.75</code>]   
 <code>value</code> is the maximum distance between active atoms to be considered in a bond formation.
 
