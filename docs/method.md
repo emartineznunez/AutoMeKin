@@ -101,7 +101,7 @@ Hookean 1 2 2.5 10.
 <code>value</code> is the friction coefficient (in a.u.) employed in the Langevin dynamics of a BXDE simulation.
 
 {: .important }  
-<code>AdaptiveLimit value<code>  
+<code>AdaptiveLimit value</code>  
 [<code>value</code> is an integer; default value: <code>100</code> ]   
 <code>value</code> determines how many MD steps are performed in a new box before the BXDE algorithm adaptively places a new box based upon the sampled energies.
 
