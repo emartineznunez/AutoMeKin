@@ -256,7 +256,7 @@ Here is a list of additional keywords that can be employed in the Method section
 
 {: .important }  
 `atoms value(s)`    
-[one or two `values`: first is a string with no blank spaces or an integer and second (if present) is a string with no blank spaces; _only with MD_ ; default value: `all`]   
+[one or two `values`: first is a string with no blank spaces or an integer and second, if present, is a string with no blank spaces; _only with MD_ ; default value: `all`]   
 The first `value` can be `all`, in which case no other values are needed, or the number of atoms initially
 excited followed by a second value, a string, which is the list of atoms separated by commas, without blank
 spaces. It is analogous to modes, explained below. 
