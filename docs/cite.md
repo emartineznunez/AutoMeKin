@@ -9,9 +9,9 @@ nav_order: 1
 
 If you use AutoMeKin2021, please cite the following publications:
 
-- [E. Martínez-Núñez, G. L. Barnes, D. R. Glowacki, S. Kopec, D. Peláez, A. Rodríguez, R. Rodríguez-Fernández, R. J. Shannon, J. J. P. Stewart, P. G. Tahoces, S. A. Vazquez, J. Comput. Chem. 2021, 42, 2036. https://doi.org/10.1002/jcc.26734](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26734)
-- [E. Martínez-Núñez. J. Comput. Chem. 2015, 36, 222–234. DOI: 10.1002/jcc.23790](https://onlinelibrary.wiley.com/doi/10.1002/jcc.23790)
-- [E. Martinez-Nunez, Phys. Chem. Chem. Phys. 2015 , 17 , 14912– 14921. DOI: 10.1039/C5CP02175H](https://pubs.rsc.org/en/content/articlelanding/2015/cp/c5cp02175h)
+- [E. Martínez-Núñez, G. L. Barnes, D. R. Glowacki, S. Kopec, D. Peláez, A. Rodríguez, R. Rodríguez-Fernández, R. J. Shannon, J. J. P. Stewart, P. G. Tahoces, S. A. Vazquez, J. Comput. Chem. **2021**, 42, 2036. https://doi.org/10.1002/jcc.26734](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26734)
+- [E. Martínez-Núñez. J. Comput. Chem. **2015**, 36, 222–234. DOI: 10.1002/jcc.23790](https://onlinelibrary.wiley.com/doi/10.1002/jcc.23790)
+- [E. Martinez-Nunez, Phys. Chem. Chem. Phys. **2015** , 17 , 14912– 14921. DOI: 10.1039/C5CP02175H](https://pubs.rsc.org/en/content/articlelanding/2015/cp/c5cp02175h)
 - MOPAC2016, Version: 21. 129 , James J. P. Stewart, Stewart Computational Chemistry, web-site:
 HTTP://OpenMOPAC.net.
 
