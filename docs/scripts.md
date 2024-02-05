@@ -175,7 +175,7 @@ next one.
 
 _Optimizing the product fragments_ :
 ```
-(sbatch [ _options_ ]) PRODs.sh
+(sbatch [ options ]) PRODs.sh
 ```
 
 {: .warning }  
