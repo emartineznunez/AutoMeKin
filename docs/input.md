@@ -136,26 +136,20 @@ Alternatively, you may use <code>reduced</code> as the first value (the default)
 
 <code>value</code> is the maximum number of IRC points (in each direction) computed at the high-level. Note that g09/g16 calculations need much fewer points than Entos Qcore.
 
-**charge** value
+{: .important }  
+<code>charge value</code>  
+[<code>value</code> is an integer; default value: <code>0</code> ]  
+<code>value</code> is the charge of the system.
 
-[value is an integer; default value: 0 ]
+{: .important }  
+<code>Memory value</code>  
+[<code>value</code> is an integer; default value: <code>1</code> ]  
+<code>value</code> is the number of GB of memory employed in the gaussian high-level calculations.
 
-value is the charge of the system.
-
-**Memory** value
-
-[value is an integer; default value: 1 ]
-
-value is the number of GB of memory employed in the gaussian high-level calculations.
-
-**mult** value
-
-
-[value is an integer; default value: 1 ]
-
-value is the multiplicity of the system. Note that this keyword is only employed in the HL calculations. If
-you want to run the LL calculations with a specific multiplicity, this should be specified in the **LowLevel**
-keyword using any of the possibilities that MOPAC offers.
+{: .important }  
+<code>mult value</code>  
+[<code>value</code> is an integer; default value: <code>1</code> ]   
+<code>value</code> is the multiplicity of the system. Note that this keyword is only employed in the HL calculations. If you want to run the LL calculations with a specific multiplicity, this should be specified in the <code>LowLevel</code> keyword using any of the possibilities that MOPAC offers.
 
 **Method.** Here the user provides details of the method employed for sampling the reaction space. In our FA
 example, we have the following:
