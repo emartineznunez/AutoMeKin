@@ -345,14 +345,15 @@ keyword, the results of the optimizations using LET are collected in the file `s
 `tsdirLL_molecule`. This file contains several lines (one per iteration) with two numbers: the first is the
 number of optimized TSs, and the second is the number of total attempts using LET.
 
-**Screening**
+### Screening
 
 **tight_ts** value
 
 [value is one string: yes or no; default value: yes]
 value can be yes, in which case only first order saddles are considered, or no if we want to keep also higher
 order saddles.
-**Kinetics**
+
+### Kinetics
 
 **imin** value
 
