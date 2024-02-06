@@ -7,7 +7,7 @@ nav_order: 1
 
 # Installation of AutoMeKin
 
-Currently, AutoMeKin can be installed in three different ways: $x+y$
+Currently, AutoMeKin can be installed in three different ways:
 ## Content
 1. [Auto installer](#autoinstaller)
 2. [Singularity container](#singularity)
