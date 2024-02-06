@@ -37,6 +37,8 @@ callouts:
 
 logo: "/assets/images/Imagen1.png"
 
+use_math: true
+
 # For copy button on code
 enable_copy_code_button: true
 
