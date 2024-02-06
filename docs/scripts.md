@@ -7,11 +7,18 @@ nav_order: 3
 
 # Using the scripts
 
-## Production runs
+AutoMeKin provides several Bash and Python scripts to help you automate all the tasks involved in reaction discovery. This section shows how to use these scripts. 
+
+## Contents
+- [Production runs](#prodrun)
+- [Step-by-step low-level calculations](#sbsll)
+
+
+## Production runs<a name="prodrun"></a>
 
 For production runs, use the scripts [as indicated here](https://emartineznunez.github.io/AutoMeKin/docs/running.html).
 
-## Step-by-step low-level calculations
+## Step-by-step low-level calculations<a name="sbsll"></a>
 
 This section explains how to run one iteration of our workflow. This might be useful for getting acquainted
 with the program and didactic purposes, but the recommended option for production runs is to use the
