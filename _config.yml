@@ -36,13 +36,3 @@ logo: "/assets/images/Imagen1.png"
 kramdown:
   input: GFM
   math_engine: mathjax # you can also set this field to 'katex'
-
-
-# For copy button on code
-enable_copy_code_button: true
-
-# Back to top link
-back_to_top: true
-back_to_top_text: "Back to top"
-
-
