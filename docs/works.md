@@ -1,5 +1,5 @@
 ---
-title: Works
+title: Works published using AutoMeKin
 layout: home
 nav_order: 5
 ---
