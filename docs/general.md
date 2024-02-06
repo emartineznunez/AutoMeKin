@@ -26,8 +26,7 @@ List of <code>Keyword value(s)</code> for this section:
 <code>molecule value</code>   
 [<code>value</code> is one string with no blank spaces; _mandatory keyword_]  
 
-<code>value</code> is the name of the system and _it must match the name of the XYZ file without the extension (FA in
-our example). For association and vdW sampling there is no XYZ file at the beginning and
+<code>value</code> is the name of the system and _it must match the name of the XYZ file without the extension, FA in our example. For association and vdW sampling there is no XYZ file at the beginning and
 <code>value</code> is just the name of the system._
 
 
@@ -35,12 +34,12 @@ our example). For association and vdW sampling there is no XYZ file at the begin
 <code>LowLevel values</code>   
 [two <code>values</code>: two strings; the second string accepts blank spaces; default: <code>mopac pm7</code>]  
 
-The first <code>value</code> is the program and the second the semiempirical method. So far, <code>qcore</code> and <code>mopac</code> are valid programs. For <code>qcore</code> only <code>xtb</code> method is implemented, and for <code>mopac</code>, any of the semiempirical methods of MOPAC2016 can be employed to run the MD simulations. You can use a combination of MOPAC keywords. In the example above, for instance, the pm7 semiempirical level together with a maximum CPU time (for any type of mopac calculation) of 3 minutes is requested. _The use of the MOPAC keyword t= (followed by an amount of time) is highly recommended to enhance the efficiency of the calculations._
+The first <code>value</code> is the program and the second the semiempirical method. So far, <code>qcore</code> and <code>mopac</code> are valid programs. For <code>qcore</code> only <code>xtb</code> method is implemented, and for <code>mopac</code>, any of the semiempirical methods of MOPAC2016 can be employed to run the MD simulations. You can use a combination of MOPAC keywords. In the example above, for instance, the pm7 semiempirical level together with a maximum CPU time, for any type of mopac calculation, of 3 minutes is requested. _The use of the MOPAC keyword t=, followed by an amount of time, is highly recommended to enhance the efficiency of the calculations._
 
 If you do not employ the keyword <code>LowLevel_TSopt</code>, explained below in advanced options, both the low-level TS optimizations and MD simulations are carried out using the semiempirical method specified by the second value. This is in general a good choice both in terms of efficacy and efficiency, and also because all structures will be re-optimized later using ab initio/DFT methods as specified with the keyword HighLevel.
 
 However, if you know that semiempirical methods do not work well for your system, and although they are
-going to be employed for the MD sampling (there is no other choice at the moment), you can still pick one
+going to be employed for the MD sampling, you can still pick one
 of the _ab initio_/DFT methods already at this stage for the TS optimizations using the keyword
 <code>LowLevel_TSopt</code> explained below in advanced options. However, note that this will be much more demanding.
 
@@ -53,7 +52,7 @@ The first <code>value</code> is the program (<code>g09</code>, <code>g16</code> 
 ```
 HighLevel g16 ccsd(t)/6-311+G(2d,2p)//b3lyp/6-31G(d,p)
 ```
-For <code>g09/g16</code>, supported methods are HF, MP2 and DFT for geometry optimizations and HF, MP2, DFT and CCSD(T) for single point energy calculations.
+For <code>g09/g16</code>, supported methods are HF, MP2 and DFT for geometry optimizations and HF, MP2, DFT and CCSD$($T$)$ for single point energy calculations.
 
 For <code>qcore</code>, the method is specified in an additional file named qcore_template. An example of such file is given in the FA_qcore example. This option also allows an extra keyword: <code>hessianmethod</code>, which could accept the values <code>analytic</code> or <code>semianalytic</code>.
 
