@@ -9,14 +9,14 @@ nav_order: 4
 
 ## Directory tree structure of `wrkdir`
 
-The figure below shows the main folders that are generated in `wrkdir`. Folders `batchXX` (where XX = 1 -
-tasks) are generated with `amk_parallel.sh`. This script is also invoked by `llcalcs.sh`, and when that
-happens these folders are temporary (they are removed at the end of the tasks). Directory `coordir` is only
+The figure below shows the main folders that are generated in `wrkdir`. Folders `batchXX`, where XX = 1 -
+tasks, are generated with `amk_parallel.sh`. This script is also invoked by `llcalcs.sh`, and when that
+happens these folders are temporary,_i.e._, they are removed at the end of the tasks. Directory `coordir` is only
 generated in those directories where `amk.sh` is executed. The `amk_parallel-logs` directory contains a
 series of files that give information on CPU time consumption for the different calculation steps when they
 were executed with GNU Parallel. Directories `tsdirLL_name` and `tsdir_HL_name` are generated at
 runtime and are employed to generate the final files and directories. For that reason, they should not be
-removed. Finally, the most important files are gathered in a final directory (`FINALDIR`) which is named after the system’s name: `FINAL_level_name` (with level being LL for low-level or HL for high level; see figure below).
+removed. Finally, the most important files are gathered in a final directory (`FINALDIR`) which is named after the system’s name: `FINAL_level_name`, with level being LL for low-level or HL for high level; see figure below.
 
 <p align="center">
    <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/folders.jpg" alt="alt text" width="800" height="200">
@@ -24,7 +24,7 @@ removed. Finally, the most important files are gathered in a final directory (`F
 
 ## Relevant information
 
-Scripts `final.sh` and `FINAL.sh` are employed to collect all relevant information in `FINALDIR`. These folders contain files as well as a subdirectory called `normal_modes`, which includes, for each structure, a file (in MOLDEN format) with which you can visualize the corresponding normal modes. The files included in these folders are the following.
+Scripts `final.sh` and `FINAL.sh` are employed to collect all relevant information in `FINALDIR`. These folders contain files as well as a subdirectory called `normal_modes`, which includes, for each structure, a file in MOLDEN format with which you can visualize the corresponding normal modes. The files included in these folders are the following.
 
 ### convergence.txt 
 
@@ -35,7 +35,7 @@ and iteration (Only in `FINAL_LL_FA`).
 
 This is an energy diagram with the _relevant paths_ , which are those that participate in
 the dynamics at the conditions of interest. If you change the `value[ImpPaths]` in the kinetics section of
-the input data, you can incorporate/remove some pathways (the maximum number of TSs in the profile is 100). This file is deprecated.
+the input data, you can incorporate/remove some pathways; the maximum number of TSs in the profile is 100. This file is deprecated.
 
 ### frag_warnings 
 
@@ -84,17 +84,17 @@ Conformational isomers are listed in the same line:
 9 11
 ```
 In the above files, DE is the energy relative to that of the main structure specified in the `FA.dat` file
-(optimized with the semiempirical Hamiltonian). The integers are used to identify, independently, minima
+optimized with the semiempirical Hamiltonian. The integers are used to identify, independently, minima
 and transition states. Notice that, in this example, MIN 2 corresponds to the structure specified in `FA.xyz`.
 
 ### table.db 
 
 These are SQLite3 tables containing the geometries, energies
-and frequencies of minima, products and TSs, respectively: `table` can be `min`, `prod` and `ts`, which refer to the minima (intermediates), product fragments and transition states, respectively.The different properties can be obtained using `select.sh`:
+and frequencies of minima, products and TSs, respectively: `table` can be `min`, `prod` and `ts`, which refer to the minima, product fragments and transition states, respectively.The different properties can be obtained using `select.sh`:
 ```
 select.sh FINALDIR property table label
 ```
-where `property` can be: `natom`, `name`, `energy`, `zpe`, `g`, `geom`, `freq`, `formula` (only for `prod`) or `all`, and `label` is one of the numbers shown in RXNet (see below), which are employed to label each structure. At the semiempirical level, the energy values correspond to heats of formation. For high-level calculations, the tables collect the electronic energies. Please note that for the hybrid calculations involved through the use of keyword `LowLevel_TSopt`, energies, zpe and frequencies in the tables are those obtained with MOPAC, while the geometry in ts.db is the one obtained at the g09/g16 level of theory.
+where `property` can be: `natom`, `name`, `energy`, `zpe`, `g`, `geom`, `freq`, `formula` (only for `prod`) or `all`, and `label` is one of the numbers shown in `RXNet` below, which are employed to label each structure. At the semiempirical level, the energy values correspond to heats of formation. For high-level calculations, the tables collect the electronic energies. Please note that for the hybrid calculations involved through the use of keyword `LowLevel_TSopt`, energies, zpe and frequencies in the tables are those obtained with MOPAC, while the geometry in ts.db is the one obtained at the g09/g16 level of theory.
 
 As an example, to obtain the geometry of the first low-level transition state of FA, you should use:
 ```
@@ -107,7 +107,7 @@ fragments prod are meaningless as these structures are not optimized.
 
 ### RXNet 
 
-This file contains information of the complete reaction network, that is all the elementary reactions found by the amk program (the file shown below, and the following ones, were cut and show only up to TS 15 ).
+This file contains information of the complete reaction network, that is all the elementary reactions found by the amk program; the file shown below, and the following ones, were cut and show only up to TS 15.
 ```
 TS # DE(kcal/mol)    Reaction path information
 ==== ============    =========================
@@ -127,7 +127,7 @@ TS # DE(kcal/mol)    Reaction path information
   14     188.8         MIN 2 <---> MIN 8
   15     191.7         MIN 7 <---> MIN 8
 ```
-As can be seen, for each transition state, this file specifies the associated minima and/or product fragments and their corresponding identification numbers. Notice that TS, MIN and PR have independent identification numbers. If you use the option complete for the keyword `HL_rxn_network` (in the General section of the input data), all the TSs will be reoptimized in the high-level calculations. You may reduce significantly the number of TSs to be reoptimized in the HL calculations, and therefore the reaction network, if you use the option reduced. If it is employed without an argument, TSs associated to PR <--> PR steps (_i.e._, bimolecular reactions) and to interconversion between optical isomers will not be reoptimized in the HL calculations. You may include a number as an argument of this option:
+As can be seen, for each transition state, this file specifies the associated minima and/or product fragments and their corresponding identification numbers. Notice that TS, MIN and PR have independent identification numbers. If you use the option complete for the keyword `HL_rxn_network`, in the General section of the input data, all the TSs will be reoptimized in the high-level calculations. You may reduce significantly the number of TSs to be reoptimized in the HL calculations, and therefore the reaction network, if you use the option reduced. If it is employed without an argument, TSs associated to PR <--> PR steps (_i.e._, bimolecular reactions) and to interconversion between optical isomers will not be reoptimized in the HL calculations. You may include a number as an argument of this option:
 ```
 HL_rxn_network reduced 55
 ```
@@ -136,7 +136,7 @@ considered for HL optimizations, that is, they will not be included in the HL re
 
 ### RXNet.barrless 
 
-Barrierless reactions are included in this file (only when MOPAC and g09/g16 are employed). The user must be aware that the channels are those consistent with the values of the keyword neighbors explained above. These channels are not considered in the kinetics, but they are plotted in the complete graph indicated below.
+Barrierless reactions are included in this file; only when MOPAC and g09/g16 are employed. The user must be aware that the channels are those consistent with the values of the keyword neighbors explained above. These channels are not considered in the kinetics, but they are plotted in the complete graph indicated below.
 ```
 TS #   DE(kcal/mol)      Reaction path information
 ====   ============      =========================
@@ -150,7 +150,7 @@ Here TS refers to a dynamical TS and no saddle point exists in these paths.
 
 ### RXNet.cg 
 
-By default (see below) the KMC calculations are “coarse-grained”, that is, conformational isomers form a single state, which is taken as the lowest energy isomer. Such reaction network, which also removes bimolecular channels, is the following:
+By default, see below, the KMC calculations are “coarse-grained”, that is, conformational isomers form a single state, which is taken as the lowest energy isomer. Such reaction network, which also removes bimolecular channels, is the following:
 ```
 TS # DE(kcal/mol)    Reaction path information
 ==== ============    =========================
@@ -165,7 +165,7 @@ TS # DE(kcal/mol)    Reaction path information
   15     191.7      MIN 7 <---> MIN 8          DISCONN
 ```
 The last column with the flag “CONN” or “DISCONN” indicates whether the given process is connected with
-the others (CONN) or whether it is isolated (DISCONN). This flag is useful when you choose a starting
+the others, CONN, or whether it is isolated, DISCONN. This flag is useful when you choose a starting
 intermediate for the KMC simulations, because that intermediate should be connected. If you want to
 include all conformational isomers explicitly in the KMC simulations, you need to construct the reaction
 network by using the `allstates` option, as described in the next section.
@@ -176,9 +176,9 @@ This ifle is similar to `RXNet.cg`, but only collects the relevant paths, that i
 `Energy_profile.pdf` file. A maximum of 100 TSs are printed in this file. If this number is reached, both
 `Energy_profile.pdf` and `RXNet.rel` would be incomplete, and the pathways drawn in `Energy_profile.pdf` could be less than those that appear in `RXNet.rel`.
 
-### rxn_x.txt (x = all, kin, stats) 
+### rxn_x.txt $\scriptstyle{(}$x = all, kin, stats$\scriptstyle{)}$ 
 
-These are files with information relevant for the reaction network analysis made with NetworkX python library. Each line of rxn_all.txt lists the nodes (first two columns) and the weight (last column), which is the number of paths connecting the two nodes. For rxn_kin.txt the weight is the total flux in the kinetics simulations. These two files are employed to construct graph_all.pdf and
+These are files with information relevant for the reaction network analysis made with NetworkX python library. Each line of rxn_all.txt lists the nodes, first two columns, and the weight, last column, which is the number of paths connecting the two nodes. For rxn_kin.txt the weight is the total flux in the kinetics simulations. These two files are employed to construct graph_all.pdf and
 graph_kin.pdf, respectively. In rxn_stats.txt, some properties of the reaction network are listed, like
 the average shortest path length, the average clustering coefficient, the transitivity, etc.
 
@@ -192,7 +192,7 @@ In this case, the file `rxn_stats.txt` is created in the working directory (not 
 ### kineticsFvalue 
 
 This file contains the kinetics results, namely, the final branching ratios and the population of
-every species as a function of time. In the name of the file, `F` is either `T` or `E` for temperature or energy, and `value` is the corresponding value. For instance, the kinetics results for a canonical calculation at 298 K would be printed in a file called `kineticsT298`. A file called `populationFvalue.pdf` is also available. This displays a plot with the population of each species as a function of time. A maximum of 20 species (the most populated ones) are plotted. The following figure shows an example of such a plot obtained for the decomposition of FA using the PM7 stationary points.
+every species as a function of time. In the name of the file, `F` is either `T` or `E` for temperature or energy, and `value` is the corresponding value. For instance, the kinetics results for a canonical calculation at 298 K would be printed in a file called `kineticsT298`. A file called `populationFvalue.pdf` is also available. This displays a plot with the population of each species as a function of time. A maximum of 20 species, the most populated ones, are plotted. The following figure shows an example of such a plot obtained for the decomposition of FA using the PM7 stationary points.
 
 <p align="center">
    <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/kin.jpg" alt="alt text" width="800" height="500">
@@ -200,7 +200,7 @@ every species as a function of time. In the name of the file, `F` is either `T` 
 
 ## Visualization tools
 
-The Python library [amk-tools](https://github.com/dgarayr/amk_tools) developed by Diego Garay (Institute of Chemical Research of Catalonia, Prof. Carles Bo Research group) is a useful package to parse, process and transform the reaction networks created by AutoMeKin. All the data contained in `FINALDIR` can be easily accessed using these tools.
+The Python library [amk-tools](https://github.com/dgarayr/amk_tools) developed by Diego Garay at  the Institute of Chemical Research of Catalonia, is a useful package to parse, process and transform the reaction networks created by AutoMeKin. All the data contained in `FINALDIR` can be easily accessed using these tools.
 
 The commandline script `amk_gen_view.py` allows to generate visualizations directly taking arguments
 from STDIN:
@@ -209,7 +209,7 @@ amk_gen.py FINALDIR RXNFILE
 ```` 
 where `RXNFILE` is the name of the `RXNet` files explained above (`RXNet`, `RXNet.cg` or `RXNet.rel`). Additional arguments that may be passed are [detailed here](https://github.com/dgarayr/amk_tools/blob/master/UserGuide.md).
 
-The following example shows how to create interactive plots from `RXNet.cg` file including all paths found at low level for Formic Acid (FA):
+The following example shows how to create interactive plots from `RXNet.cg` file including all paths found at low level for Formic Acid:
 ```
 amk_gen.py FINAL_LL_FA RXNet.cg --b --paths
 ```
@@ -219,20 +219,19 @@ amk_gen.py FINAL_LL_FA RXNet.cg --paths MIN1 H2+CO2
 ```
 More details can be found in the [user guide](https://github.com/dgarayr/amk_tools/blob/master/UserGuide.md)
 
-Example of an interactive dashboard (for FA), with the reaction network on the left and a selected edge (TS) on the right. Clicking on “Show profile” enables visualization of the energy profile as well.
+Example of an interactive dashboard for FA, with the reaction network on the left and a selected edge, _i.e._, TS, on the right. Clicking on “Show profile” enables visualization of the energy profile as well.
 <p align="center">
    <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/amk.jpg" alt="alt text" width="800" height="400">
 </p>
 
 ## Kinetics simulations at different temperatures
 
-The kinetics calculations can be rerun for a temperature/energy different from that specified in the input file after the keywords Temperature or Energy. You may also want to use the allstates option (see
-below). This can be easily done using the kinetics.sh command line script:
+The kinetics calculations can be rerun for a temperature/energy different from that specified in the input file after the keywords Temperature or Energy. You may also want to use the allstates option as seen below. This can be easily done using the kinetics.sh command line script:
 ```
 kinetics.sh value calc (allstates)
 ```
-where `value` is the new value of the temperature (in K) or energy (in kcal/mol) depending on your initial
-choice in the Kinetics section, and `calc` is either `ll` (for low-level) or `hl` (for high-level). Finally, with no other options, the conformational isomers will form a single state (default for all sampling except vdW). However, using `allstates` as the last argument, the calculations will regard every conformational isomer as a different state (default for vdW). Each calculation will create a new folder named `FINAL_XL_molecule_Fvalue` (with X = H,L and F=T,E)
+where `value` is the new value of the temperature in K or energy in kcal/mol, depending on your initial
+choice in the Kinetics section, and `calc` is either `ll`, for low-level, or `hl`, for high-level. Finally, with no other options, the conformational isomers will form a single state, which is the default for all sampling except vdW. However, using `allstates` as the last argument, the calculations will regard every conformational isomer as a different state, which is the default for vdW. Each calculation will create a new folder named `FINAL_XL_molecule_Fvalue`, with X = H,L and F=T,E.
 
 ## Removing unwanted TS structures
 
@@ -242,4 +241,4 @@ following example:
 ```
 remove_ts.sh 2 4 7
 ```
-where 2 , 4 and 7 are the labels of the TSs to be removed (for the LL calculations). The corresponding script for the HL calculations is `REMOVE_TS.sh`. These two scripts will create a new `FINAL_XL_FA` (with X = H,L) directory where the selected TS structures have been removed.
+where 2 , 4 and 7 are the labels of the TSs to be removed for the LL calculations. The corresponding script for the HL calculations is `REMOVE_TS.sh`. These two scripts will create a new `FINAL_XL_FA` $\scriptstyle{(}X = H,L$\scriptstyle{)}$ directory where the selected TS structures have been removed.
