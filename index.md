@@ -69,7 +69,7 @@ To download the file directly from your terminal, curl must be installed. The au
 ## 2. Singularity container <a name="singularity"></a>
 If singularity is already installed in your
 computer, you can obtain the container from sylabs. First check the
-latest image (Tag) by typing: 
+latest image, Tag, by typing: 
 
 ```
 singularity search automekin
@@ -134,10 +134,9 @@ If you prefer to install everything manually, follow the next steps.
 The following packages are required beforehand:   
 [GNU Autoconf](https://www.gnu.org/software/autoconf/), [GNU Bash](https://www.gnu.org/software/bash/), [GNU bc](https://www.gnu.org/software/bc/), [environment-modules](https://github.com/cea-hpc/modules), [GNU Awk, gawk](https://www.gnu.org/software/gawk/), [GNU C Compiler, gcc](https://gcc.gnu.org/), [Gnuplot](http://www.gnuplot.info/), [GNU Fortran Compiler, gfortran](https://gcc.gnu.org/wiki/GFortran), [GNU Parallel](https://www.gnu.org/software/bash/manual/html_node/GNU-Parallel.html), [SQLite\>= 3](https://www.sqlite.org/index.html), [Zenity](https://wiki.gnome.org/Projects/Zenity)
 
-For your convenience, you use the scripts: `install-required-packages-distro.sh` (where `distro`=ubuntu-16.4lts,
-centos7 or sl7), which will do the work for you.The ubuntu-16.4lts
-script installs all dependencies, but for the RHEL derivatives (centos7
-and sl7) you have to install parallel separately, and you have two
+For your convenience, you use the scripts: `install-required-packages-distro.sh` (where `distro`=ubuntu-16.4lts, centos7 or sl7), which will do the work for you.The ubuntu-16.4lts
+script installs all dependencies, but for the RHEL derivatives, centos7
+and sl7, you have to install parallel separately, and you have two
 choices:
 
 - `install-gnu-parallel-from-source.sh`. This script installs parallel
