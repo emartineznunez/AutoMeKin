@@ -7,7 +7,7 @@ nav_order: 1
 
 # Installation of AutoMeKin
 
-AutoMeKin offers three different installation and deployment methods. If you're eager to experience it firsthand, simply click on [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb) to quickly get a sense of the code.XYZ
+AutoMeKin offers three different installation and deployment methods. If you're eager to experience it firsthand, simply click on [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb) to quickly get a sense of the code.
 
 ## Intallation options
 1. [Auto installer](#autoinstaller)
