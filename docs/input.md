@@ -42,7 +42,7 @@ H  1.038843 0.000000 -1.634005
 ```
 Please provide here a stable conformer of the reactant molecule. A general recommendation is to use a
 structure previously optimized with the method selected with the keyword LowLevel or eventually
-`LowLevel_TSopt`. _If your input structure is fragmented, then, kinetics results (if available) are
+`LowLevel_TSopt`. _If your input structure is fragmented, then, kinetics results, if available, are
 meaningless. In this case you should use biased MD to smash together the fragments and obtain a TS for
 the bimolecular process, like in the diels_alder example._
 
