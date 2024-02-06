@@ -36,6 +36,9 @@ callouts:
     color: red
 
 logo: "/assets/images/Imagen1.png"
+kramdown:
+  input: GFM
+  math_engine: mathjax # you can also set this field to 'katex'
 
 
 # For copy button on code
