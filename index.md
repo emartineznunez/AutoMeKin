@@ -155,10 +155,10 @@ The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is hi
 
 #### Electronic structure packages
 
-While mopac comes with the distribution, gaussian and Entos Qcore should be installed by the user.
+While mopac comes with the distribution, [gaussian](https://gaussian.com/) and/or [Entos Qcore](https://software.entos.ai/qcore/documentation/) should be installed by the user.
 
 {: .highlight }   
-Finally, Entos Qcore can be installed for xtb and DFT calculations. To install Entos Qcore, we recommend following these steps:
+Entos Qcore, which is free for academica, can be easily installed following these steps:
 
 1. Install [miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
 2. Add the following line to `$HOME/.condarc`, creating the file if not present:
