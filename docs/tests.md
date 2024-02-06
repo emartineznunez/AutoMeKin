@@ -26,3 +26,5 @@ If you rather prefer to run a subset of tests use the following:
 run_test.sh --tests=FA, FAthermo
 ```
 which will run FA and FAthermo tests only. These are the tests available in this version: assoc, assoc_qcore rdiels_bias, diels_bias, FA_biasH2, FA_biasH2O, FA_bxde, FA_singletraj, FA, FAthermo, FA_programopt, vdW, FA_ck, FA_qcore, FA_bxde_qcore and ttors
+
+Some tests can be run using his Notebooks in Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin2.ipynb) 
