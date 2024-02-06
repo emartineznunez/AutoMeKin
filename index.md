@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Installing AutoMeKin
 layout: home
 nav_order: 1
 ---
