@@ -9,7 +9,7 @@ nav_order: 1
 
 AutoMeKin offers three different installation and deployment methods. If you're eager to experience it firsthand, simply click on **Try it on Colab** in the sidebar to quickly get a sense of the code.
 
-## Content
+## Intallation options
 1. [Auto installer](#autoinstaller)
 2. [Singularity container](#singularity)
 3. [Build from source](#build)
