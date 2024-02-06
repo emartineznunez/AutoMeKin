@@ -34,7 +34,7 @@ If you publish the statistics of the reaction network, NetworkX python library m
 
 {: .highlight }  
 Hagberg, A. A.; Shult, D. A.; Swart, P. J. In Exploring network structure, dynamics, and function using
-NetworkX, 7th Python in Science Conference (SciPy2008), Pasadena, CA USA, Varoquaux, G.;
+NetworkX, 7th Python in Science Conference (_SciPy2008_), Pasadena, CA USA, Varoquaux, G.;
 Vaught, T.; Millman, J., Eds. Pasadena, CA USA, **2008**; pp 11- 15.
 
 Finally, if you use the bots reactive event search algorithm, the following reference must be cited:
