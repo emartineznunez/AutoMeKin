@@ -9,15 +9,15 @@ nav_order: 6
 If you use AutoMeKin2021, please cite the following publications:
 
 {: .highlight }  
-[Martinez-Nunez, E. et al., J. Comput. Chem. **2021**, 42, 2036. https://doi.org/10.1002/jcc.26734](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26734)  
-[Martinez-Nunez, E., J. Comput. Chem. **2015**, 36, 222–234. DOI: 10.1002/jcc.23790](https://onlinelibrary.wiley.com/doi/10.1002/jcc.23790)  
-[Martinez-Nunez, E., Phys. Chem. Chem. Phys. **2015** , 17 , 14912– 14921. DOI: 10.1039/C5CP02175H](https://pubs.rsc.org/en/content/articlelanding/2015/cp/c5cp02175h)  
+[Martinez-Nunez, E. et al., J. Comput. Chem. **2021**, 42, 2036](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26734)  
+[Martinez-Nunez, E., J. Comput. Chem. **2015**, 36, 222](https://onlinelibrary.wiley.com/doi/10.1002/jcc.23790)  
+[Martinez-Nunez, E., Phys. Chem. Chem. Phys. **2015** , 17 , 14912](https://pubs.rsc.org/en/content/articlelanding/2015/cp/c5cp02175h)  
 [MOPAC2016, Version: 21. 129 , James J. P. Stewart, Stewart Computational Chemistry](https://github.com/openmopac/mopac)  
 
 If Entos Qcore code is employed for the low-level calculations, you must cite:
 
 {: .highlight }  
-[Manby, F. R. et al. , ChemRxiv.7762646 (**2019**). DOI: 10.26434/chemrxiv.7762646.v 2](https://chemrxiv.org/engage/chemrxiv/article-details/60c740e10f50db1f643959db)
+[Manby, F. R. et al. , ChemRxiv.7762646 (**2019**)](https://chemrxiv.org/engage/chemrxiv/article-details/60c740e10f50db1f643959db)
 
 If the vdW sampling is employed, you must cite this publication
 
