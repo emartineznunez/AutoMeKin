@@ -58,11 +58,11 @@ For <code>qcore</code>, the method is specified in an additional file named qcor
 
 {: .important }  
 <code>HL_rxn_network value(s)</code>  
-[one or two <code>values</code>: first is a string, and second $($if present$)$ is an integer; default value: <code>reduced</code>]
+[one or two <code>values</code>: first is a string, and second, if present, is an integer; default value: <code>reduced</code>]
 
 The first value can be <code>complete</code> or <code>reduced</code>. <code>complete</code> indicates that all the TSs will be reoptimized and in this case no second value is needed.
 
-Alternatively, you may use <code>reduced</code> as the first value $($the default$)$, followed by a second <code>value</code> $($an integer$)$ which indicates the maximum energy, in kcal/mol and relative to the reference starting structure, of a transition state to be calculated at the high level.
+Alternatively, you may use <code>reduced</code> as the first value, the default, followed by a second <code>value</code>, an integer, which indicates the maximum energy, in kcal/mol and relative to the reference starting structure, of a transition state to be calculated at the high level.
 
 {: .important }  
 <code>IRCpoints value</code>  
