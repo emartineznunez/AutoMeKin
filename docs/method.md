@@ -25,9 +25,9 @@ List of <code>Keyword value(s)</code> for this section:
 
 <code>MD</code> and <code>MD-micro</code> refer to the type of initial conditions used to run the MD simulations. <code>MD-micro</code> _has not been implemented yet for qcore. With <code>BXDE</code> the rare-event [acceleration method named BXDE](https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/syst.201900024) is invoked. 
 
-<code>MD</code> allows the user to include partial constraints in the trajectories, which may be useful for large systems (see the “advanced users” section for more details).
+<code>MD</code> allows the user to include partial constraints in the trajectories, which may be useful for large systems.
 
-<code>external</code> allows trajectory data to be read from the results of an external (MD) program. The trajectory data (in XYZ format) must be stored in a directory named coordir using one file per trajectory which should be called <code>name_dynX.xyz</code>, where name is <code>value[molecule]</code>, and X is the number of each trajectory (X = 1 - ntraj). The keyword <code>ntraj</code> must be set accordingly.
+<code>external</code> allows trajectory data to be read from the results of an external MD program. The trajectory data in XYZ format must be stored in a directory named coordir using one file per trajectory which should be called <code>name_dynX.xyz</code>, where name is <code>value[molecule]</code>, and X is the number of each trajectory, with X = 1 - ntraj. The keyword <code>ntraj</code> must be set accordingly.
 
 <code>ChemKnow</code> makes all possible combinations of bond breakages/formations which are consistent with preset
 valencies of the atoms and with products lying below the maximum energy of the system. Once the
@@ -49,7 +49,7 @@ To use <code>MD-micro</code> the initial structure needs to be fully optimized a
 
 {: .important }   
 <code>neighbors values</code>   
-[three <code>values</code>: first is a string and last two are floats; default values (see table below)]   
+[three <code>values</code>: first is a string and last two are floats; default values, see table below]   
 The first <code>value</code> is an atomic symbol and the two numbers are the minimum and maximum number of
 neighbors of the corresponding atoms. This keyword is needed if atoms other than those in the table below
 are present in your system and/or if you want to change the default values. The number of neighbors is
@@ -59,7 +59,7 @@ For instance, if you want to consider dissociations leading to atomic hydrogen, 
 ```
 neighbors H 0 1
 ```
-You can add as many lines as needed (one per atom). The default values are listed in this table:
+You can add as many lines as needed, one per atom. The default values are listed in this table:
 
 |Atom|Min # of neighbors|Max # of neighbors|Atom|Min # of neighbors|Max # of neighbors|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -98,7 +98,7 @@ Hookean       1 2 2.5 10.
 {: .important }  
 <code>Friction value</code>  
 [<code>value</code> is a float; default value: <code>0.5</code>]   
-<code>value</code> is the friction coefficient (in a.u.) employed in the Langevin dynamics of a BXDE simulation.
+<code>value</code> is the friction coefficient in a.u. employed in the Langevin dynamics of a BXDE simulation.
 
 {: .important }  
 <code>AdaptiveLimit value</code>  
@@ -112,7 +112,7 @@ Hookean       1 2 2.5 10.
 
 {: .important }   
 <code>Hookean values</code>   
-[four <code>values</code>: first (i) and second (j) are integers, third (rt) and fourth (k) are floats]   
+[four <code>values</code>: first (`i`) and second (`j`) are integers, third (`rt`) and fourth (`k`) are floats]   
 <code>Hookean</code> keyword can be employed with any BXDE-based dynamics sampling. It employs ASE’s [Hookean class](https://wiki.fysik.dtu.dk/ase/ase/constraints.html#the-hookean-class) to conserve molecular identity. A Hookean restorative force with spring constant given by the fourth value (in eV/Å<sup>2</sup>) is applied between two atoms of indices given by the first and second values if the distance between them exceeds a threshold (third value). 
 
 ## ChemKnow specific keywords 
