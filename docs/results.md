@@ -1,5 +1,5 @@
 ---
-title: Output files
+title: Output files & analysis
 layout: home
 parent: Tutorial
 nav_order: 4
