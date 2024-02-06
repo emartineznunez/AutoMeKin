@@ -12,7 +12,8 @@ AutoMeKin provides a collection of Bash and Python scripts to help you automate 
 ## Contents
 - [Production runs](#prodrun)
 - [Step-by-step low-level calculations](#sbsll)
-
+- [Step-by-step high-level calculations](#sbshl)
+- [Aborting the calculations](#abort)
 
 ## Production runs<a name="prodrun"></a>
 
@@ -149,7 +150,7 @@ final.sh
 ```
 This folder will gather all the relevant information data, which are described below.
 
-## Step-by-step high-level calculations
+## Step-by-step high-level calculations<a name="sbshl"></a>
 
 Although the recommended option for running the high-level calculations is to use `hlcalcs.sh`, it is
 possible to perform the calculations step by step, as described next:
@@ -194,7 +195,7 @@ FINAL.sh
 ```
 Notice that the high-level calculations also generate the directory `tsdirHL_FA`, whose structure is similar to `tsdirLL_FA`. Finally, remember that you can use the `kinetics.sh` to calculate rate coefficients and product branching rations for an energy or temperature different from that specified in the kinetics section.
 
-## Aborting the calculations
+## Aborting the calculations<a name="abort"></a>
 
 If, for any reason, you want to kill the iterative calculations, execute the following script from the  `wrkdir`:
 ```
