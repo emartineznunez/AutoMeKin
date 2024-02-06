@@ -1,11 +1,11 @@
 ---
-title: Results
+title: Output files
 layout: home
 parent: Tutorial
 nav_order: 4
 ---
 
-# Results
+# Ouput files
 
 ## Directory tree structure of `wrkdir`
 
