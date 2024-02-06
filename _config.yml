@@ -48,4 +48,4 @@ enable_copy_code_button: true
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Content by Emilio Martinez-Nunez emilio.nunez@usc.gal"
+footer_content: footer_content: "Copyright &copy; 2017-2020 Emilio Martinez-Nunez. Distributed by an <a href=\"https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt\">MIT license.</a> <a href=\"https://www.netlify.com/\">This site is powered by Netlify.</a>"
