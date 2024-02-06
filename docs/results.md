@@ -241,4 +241,4 @@ following example:
 ```
 remove_ts.sh 2 4 7
 ```
-where 2 , 4 and 7 are the labels of the TSs to be removed for the LL calculations. The corresponding script for the HL calculations is `REMOVE_TS.sh`. These two scripts will create a new `FINAL_XL_FA` $\scriptstyle{(}X = H,L$\scriptstyle{)}$ directory where the selected TS structures have been removed.
+where 2 , 4 and 7 are the labels of the TSs to be removed for the LL calculations. The corresponding script for the HL calculations is `REMOVE_TS.sh`. These two scripts will create a new `FINAL_XL_FA` $\scriptstyle{(}$X = H,L$\scriptstyle{)}$ directory where the selected TS structures have been removed.
