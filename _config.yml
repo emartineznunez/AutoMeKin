@@ -1,8 +1,6 @@
 title: AutoMeKin Documentation
-subtitle: AutoMeKin Documentation
-author: Emilio Martinez-Nunez
+description: Documentation for AutoMeKin
 theme: just-the-docs
-url: https://emartineznunez.github.io
 
 aux_links:
   AutoMeKin's Repository: https://github.com/emartineznunez/AutoMeKin
@@ -17,7 +15,6 @@ nav_external_links:
     url: https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb
   - title: Get it from sylabs
     url: https://cloud.sylabs.io/library/emartineznunez/default/automekin
-
     
 callouts_level: quiet # or loud
 callouts:
@@ -48,5 +45,4 @@ enable_copy_code_button: true
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: footer_content: "Copyright &copy; 2024 Emilio Martinez-Nunez."
 
