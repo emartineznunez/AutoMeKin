@@ -97,7 +97,7 @@ This will do the screening and stop. The process involves the use of tools from 
 utilizes `value[MAPEmax]`, `value[BAPEmax]` and `value[eigLmax]`. The redundant and fragmented
 structures are printed on screen as well as in the file `screening.log` which is located in `tsdirLL_FA`.
 MOPAC2016 ouput files are also gathered in `tsdirLL_FA`, and use filenames initiated by “REPEAT” and
-“DISCNT”, which refer to repeated and disconnected, i.e., fragmented structures, respectively. Please
+“DISCNT”, which refer to repeated and disconnected,_i.e._, fragmented structures, respectively. Please
 check these structures and, if needed, change the above parameters. Should you change some of the above
 parameters (`value[MAPEmax]`,`value[BAPEmax]`,`value[eigLmax]`), you need to redo the screening
 with the new parameters:
