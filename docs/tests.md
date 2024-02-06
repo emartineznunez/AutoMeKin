@@ -1,5 +1,5 @@
 ---
-title: Test examples
+title: Running the tests
 layout: home
 nav_order: 2
 ---
