@@ -9,7 +9,7 @@ nav_order: 2
 
 To run the tests follow these steps:
 
-1. Load the module (unless you use singularity):
+1. Load the module, unless you use singularity:
 ```
 module load amk/2021
 ```
