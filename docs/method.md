@@ -113,7 +113,7 @@ Hookean       1 2 2.5 10.
 {: .important }   
 <code>Hookean values</code>   
 [four <code>values</code>: first (`i`) and second (`j`) are integers, third (`rt`) and fourth (`k`) are floats]   
-<code>Hookean</code> keyword can be employed with any BXDE-based dynamics sampling. It employs ASE’s [Hookean class](https://wiki.fysik.dtu.dk/ase/ase/constraints.html#the-hookean-class) to conserve molecular identity. A Hookean restorative force with spring constant given by the fourth value (in eV/Å<sup>2</sup>) is applied between two atoms of indices given by the first and second values if the distance between them exceeds a threshold (third value). 
+<code>Hookean</code> keyword can be employed with any BXDE-based dynamics sampling. It employs ASE’s [Hookean class](https://wiki.fysik.dtu.dk/ase/ase/constraints.html#the-hookean-class) to conserve molecular identity. A Hookean restorative force with spring constant given by the fourth value (in eV/Å<sup>2</sup>) is applied between two atoms of indices given by the first and second values if the distance between them exceeds a threshold, `rt`. 
 
 ## ChemKnow specific keywords 
 
@@ -134,7 +134,7 @@ CK_minima all
 {: .important}  
 <code>Graphto3D value</code>   
 [<code>value</code> is a string: <code>POpt</code> or <code>Traj</code>; default value: <code>POpt</code>]   
-<code>value</code> is the method employed to transform the product Graph into a 3D geometry. <code>POpt</code> performs a series of partial optimizations (with the bonds involved in the reaction coordinate frozen) where the geometry is smootly changed from reactant to product. In <code>Traj</code>, an external force is applied for the same purpose.
+<code>value</code> is the method employed to transform the product Graph into a 3D geometry. <code>POpt</code> performs a series of partial optimizations, with the bonds involved in the reaction coordinate frozen, where the geometry is smootly changed from reactant to product. In <code>Traj</code>, an external force is applied for the same purpose.
 
 {: .important }  
 <code>active values</code>   
@@ -154,7 +154,7 @@ CK_minima all
 {: .important }   
 <code>comb22 value</code>   
 [<code>value</code> is a string: <code>yes</code> or <code>no</code>; default value: <code>no</code>]   
-By default, the (2,2) combination is not considered.
+By default, the $\scriptstyle{(}$2,2$\scriptstyle{(}$ combination is not considered.
 
 {: .important }   
 <code>crossb value</code>
