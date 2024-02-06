@@ -154,21 +154,21 @@ CK_minima all
 {: .important }   
 <code>comb22 value</code>   
 [<code>value</code> is a string: <code>yes</code> or <code>no</code>; default value: <code>no</code>]   
-By default, the $\scriptstyle{(}$2,2$\scriptstyle{(}$ combination is not considered.
+By default, the $\scriptstyle{(}$2,2$\scriptstyle{)}$ combination is not considered.
 
 {: .important }   
 <code>crossb value</code>
 [<code>value</code> is a string: <code>yes</code> or <code>no</code>; default value: <code>no</code>]   
 A check can be done to see if the closest distance between the paths followed by the atoms in their
-rearrangements is lower that a threshold value (a potential problem in planar molecules or planar regions
-of a molecule). By default, this check is not done.
+rearrangements is lower that a threshold value, a potential problem in planar molecules or planar regions
+of a molecule. By default, this check is not done.
 
 {: .important }   
 <code>BreakRing value</code>   
 [<code>value</code> is a string: <code>yes</code> or <code>no</code>; default value: <code>no</code>]  
-By default, a bond that belongs to a ring is not broken in (0,1) transformations. However, there might be ring opening reactions of our interest.
+By default, a bond that belongs to a ring is not broken in $\scriptstyle{(}$0,1$\scriptstyle{)}$ transformations. However, there might be ring opening reactions of our interest.
 
 {: .important }  
 <code>CK_minima value</code>   
 [<code>value</code> is a string: <code>all</code> or <code>cg</code>; default value: <code>all</code>]   
-By default, all minima are used for graph transformations (including conformers). With the value <code>cg</code>, only the lowest energy member of each family of conformers is utilized.
+By default, all minima are used for graph transformations including conformers. With the value <code>cg</code>, only the lowest energy member of each family of conformers is utilized.
