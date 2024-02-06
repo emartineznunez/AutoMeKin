@@ -120,7 +120,7 @@ And stop them as indicated above.
 
 The most recent and up to date version is avaialable at this repository.
 
-You can build (system-wide and including dependencies) using this script (on a CentOS):
+You can build, system-wide and including dependencies, using this CentOS-based script:
 ```
 curl -LJO https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Centos.sh
 ```
@@ -132,7 +132,7 @@ If you prefer to install everything manually, follow the next steps.
 
 {: .highlight }    
 The following packages are required beforehand:   
-[GNU Autoconf](https://www.gnu.org/software/autoconf/), [GNU Bash](https://www.gnu.org/software/bash/), [GNU bc](https://www.gnu.org/software/bc/), [environment-modules](https://github.com/cea-hpc/modules), [GNU Awk (gawk)](https://www.gnu.org/software/gawk/), [GNU C Compiler (gcc)](https://gcc.gnu.org/), [Gnuplot](http://www.gnuplot.info/), [GNU Fortran Compiler (gfortran)](https://gcc.gnu.org/wiki/GFortran), [GNU Parallel](https://www.gnu.org/software/bash/manual/html_node/GNU-Parallel.html), [SQLite (version \>= 3)](https://www.sqlite.org/index.html), [Zenity](https://wiki.gnome.org/Projects/Zenity)
+[GNU Autoconf](https://www.gnu.org/software/autoconf/), [GNU Bash](https://www.gnu.org/software/bash/), [GNU bc](https://www.gnu.org/software/bc/), [environment-modules](https://github.com/cea-hpc/modules), [GNU Awk, gawk](https://www.gnu.org/software/gawk/), [GNU C Compiler, gcc](https://gcc.gnu.org/), [Gnuplot](http://www.gnuplot.info/), [GNU Fortran Compiler, gfortran](https://gcc.gnu.org/wiki/GFortran), [GNU Parallel](https://www.gnu.org/software/bash/manual/html_node/GNU-Parallel.html), [SQLite\>= 3](https://www.sqlite.org/index.html), [Zenity](https://wiki.gnome.org/Projects/Zenity)
 
 For your convenience, you use the scripts: `install-required-packages-distro.sh` (where `distro`=ubuntu-16.4lts,
 centos7 or sl7), which will do the work for you.The ubuntu-16.4lts
@@ -141,7 +141,7 @@ and sl7) you have to install parallel separately, and you have two
 choices:
 
 - `install-gnu-parallel-from-source.sh`. This script installs parallel
-latest version from source thanks to Ole Tange (the author). Also it can
+latest version from source thanks to Ole Tange, the author. Also it can
 fallback to a user private installation into `$HOME/bin` if you have not
 administrator permisions to install it globally.
 
@@ -149,7 +149,7 @@ administrator permisions to install it globally.
 installs parallel from it.
 
 {: .highlight }    
-The following python3 libraries (easily installed with pip) are
+The following python3 libraries are
 needed:  
 [ASE>= 3.21.1](https://wiki.fysik.dtu.dk/ase/install.html), [Matplotlib>= 3.3.4](https://matplotlib.org/stable/users/installing/index.html), [NetworkX>= 2.5](https://networkx.org/documentation/stable/install.html), [NumPy>= 1.19.5](https://numpy.org/install/), [SciPy>= 1.5.4](https://scipy.org/install/)  
 The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is highly recommended to analyze the results.
@@ -158,12 +158,12 @@ The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is hi
 Finally, Entos Qcore can be installed for xtb and DFT calculations. To install Entos Qcore, we recommend following these steps:
 
 1. Install [miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
-2. Add the following line to `$HOME/.condarc` (create the file if not present):
+2. Add the following line to `$HOME/.condarc`, creating the file if not present:
 ```
 auto_activate_base: false
 ```
 which avoids activation of base environment.   
-3. Install qcore version 0.8.14 in a conda environment (qcore-0.8.14-env):
+3. Install qcore version 0.8.14 in the conda environment qcore-0.8.14-env:
 ```
 conda create -n qcore-0.8.14-env -c entos -c conda-forge qcore==0.8.14 'tbb<2021'
 ```
