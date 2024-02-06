@@ -7,7 +7,15 @@ nav_order: 5
 
 # Other capabilities
 
-## van der Waals complexes
+## Contents
+- [van der Walls Complexes](#vdw)
+- [Scanning dihedral angles](#dihed)
+- [Fragmentation](#frag)
+- [Advanced options](#adv)
+- [Biased dynamics](#bias)
+
+
+## van der Waals complexes<a name="vdw"></a>
 
 AutoMeKin includes an option to find van der Waals, vdW, complexes. In principle two related sampling
 options are available: association and vdW. While association runs a number of structure
@@ -102,7 +110,7 @@ Energy 150
 ```
 As with other MD-based sampling methods, `amk_parallel.sh` can be employed here as well.
 
-## Scanning dihedral angles
+## Scanning dihedral angles<a name="dihed"></a>
 
 Dihedral angles can be scanned using script tors.sh. You will need the inputfile and the XYZ file in your
 `wrkdir` and just type:
@@ -122,7 +130,7 @@ torsion  no
 ```
 The default value for `torsion` is `yes`.
 
-## Fragmentation
+## Fragmentation<a name="frag"></a>
 
 The fragmentation patterns and breakdown curves can be modelled using the script `amk_frag.sh`. This script provides a workflow to iteratively discover fragmentation pathways not only the parent molecule but also for the fragments resulting from the primary fragmentation. Usage:
 ```
@@ -161,7 +169,7 @@ fragmented and an additional system has been added: CH<sub>3</sub>O<sup>+</sup> 
 This workflow creates a new folder: `M3Cinp` containing files that can be read by program M3C to simulate
 the breakdown curves of the studied system.
 
-## Advanced options
+## Advanced options<a name="adv"></a>
 
 The following are keywords that can be useful for experienced users.
 
@@ -345,7 +353,7 @@ microcanonical kinetics]
 [`value` is a float; default value: `0` ]   
 `value` is the minimum percentage of processes occurring through a particular pathway that has to be achieved in order to be considered relevant and finally included in `Energy_profile.pdf` and in `RXNet.rel`. The default value means that pathways which are overcome at least once by the KMC simulations are included in these files. To reduce to number of channels drawn in `Energy_profile.pdf` and printed in `RXNet.rel` you can increase the default value. Notice that these pathways may refer to the “coarse-grained” mechanism or to the complete mechanism that includes conformational isomers, obtained by using the `allstates` option as described above. For practical reasons, _a maximum of 100 TSs_ will be drawn in `Energy_profile.pdf` and printed in `RXNet.rel`. If this maximum value is reached (which can be checked in `RXNet.rel`), it means that part of the channels are missing in these files.
 
-## Biased dynamics
+## Biased dynamics<a name="bias"></a>
 
 AutoMeKin includes several methods to bias the dynamics towards specific reaction pathways. So far, these
 are the available options, _only for MD and MD-micro_:
