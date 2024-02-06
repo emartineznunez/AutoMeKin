@@ -48,3 +48,4 @@ enable_copy_code_button: true
 back_to_top: true
 back_to_top_text: "Back to top"
 
+footer_content: "Content by Emilio Martinez-Nunez emilio.nunez@usc.gal"
