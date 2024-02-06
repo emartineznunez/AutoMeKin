@@ -19,7 +19,7 @@ AutoMeKin (formerly tsscds) has been designed to discover reaction mechanisms in
 - [Web for submitting simple examples](#web)
 
 ## Installation and documentation <a name="inst"></a>
-The installation instructions and much more are [detailed here](https://emartineznunez.github.io/AutoMeKin_doc)
+The installation instructions and much more are [detailed here](https://emartineznunez.github.io/AutoMeKin)
 
 ## Developers<a name="dev"></a>
 
