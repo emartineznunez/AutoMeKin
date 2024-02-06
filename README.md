@@ -15,7 +15,7 @@ AutoMeKin (formerly tsscds) has been designed to discover reaction mechanisms in
 ## Content
 - [Installation and documentation](#inst)
 - [Developers](#dev)
-- [Simple example in Colab](#colab)
+- [Simple examples in Colab](#colab)
 - [Web for submitting simple examples](#web)
 
 ## Installation and documentation <a name="inst"></a>
