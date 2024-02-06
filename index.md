@@ -153,7 +153,7 @@ needed:
 [ASE>= 3.21.1](https://wiki.fysik.dtu.dk/ase/install.html), [Matplotlib>= 3.3.4](https://matplotlib.org/stable/users/installing/index.html), [NetworkX>= 2.5](https://networkx.org/documentation/stable/install.html), [NumPy>= 1.19.5](https://numpy.org/install/), [SciPy>= 1.5.4](https://scipy.org/install/)  
 The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is highly recommended to analyze the results.
 
-#### Electronic structure packages
+#### **Electronic structure packages**
 
 While mopac comes with the distribution, [gaussian](https://gaussian.com/) and/or [Entos Qcore](https://software.entos.ai/qcore/documentation/) should be installed by the user.
 
