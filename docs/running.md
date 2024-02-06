@@ -6,7 +6,7 @@ nav_order: 3
 
 # Running the code
 
-Unless you donwloaded the singularity container (in that case skip this step), to start using any of the scripts of the program, load the module:
+Unless you donwloaded the singularity container, to start using any of the scripts of the program, load the module:
 ```
 module load amk/2021
 ```
