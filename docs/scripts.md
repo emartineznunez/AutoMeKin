@@ -37,7 +37,7 @@ ts # File name w_imag  Energy  w1  w2   w3   w4 traj #  Folder
 4    ts4_batch6 2010i -17.6124 327 473  523 1078     1  wrkdir
 ```
 where the first column is the label of each TS, the second is the filename of the optimized TS structure,
-located in the `tsdirLL_FA` directory, the third is the imaginary frequency in cm<sup>-1</sup, the fourth one is the absolute energy of the TS, in kcal/mol for MOPAC2016 and Hartrees for qcore and gaussian, and the next four numbers are the four lowest vibrational frequencies (in cm<sup>−1</sup>). Finally, the last two columns are the trajectory number and the name of the folder where the structure was obtained.
+located in the `tsdirLL_FA` directory, the third is the imaginary frequency in cm<sup>-1</sup>, the fourth one is the absolute energy of the TS, in kcal/mol for MOPAC2016 and Hartrees for qcore and gaussian, and the next four numbers are the four lowest vibrational frequencies (in cm<sup>−1</sup>). Finally, the last two columns are the trajectory number and the name of the folder where the structure was obtained.
 
 {: .warning }  
 Since the dynamics employ random number seeds, the above results may differ for this type of
