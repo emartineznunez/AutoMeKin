@@ -1,4 +1,4 @@
-title: AutoMeKin Documentation
+ intitle: AutoMeKin Documentation
 subtitle: AutoMeKin Documentation
 author: Emilio Martinez-Nunez
 theme: just-the-docs
@@ -13,7 +13,7 @@ nav_external_links:
     url: https://github.com/dgarayr/amk_tools
   - title: Try it on the Web
     url: https://rxnkin.usc.es/amk/
-  - title: Try it on Colab
+  - title: Open in Colab
     url: https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb
   - title: Get it from sylabs
     url: https://cloud.sylabs.io/library/emartineznunez/default/automekin
