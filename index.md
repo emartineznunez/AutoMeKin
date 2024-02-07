@@ -162,7 +162,7 @@ While mopac comes with the distribution, [gaussian](https://gaussian.com/) and/o
 Entos Qcore, which is free for academica, can be easily installed following these steps:
 
 1. Install [miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
-2. Add the following line to `$HOME/.condarc`, creating the file if not present:
+2. Add the following line to `$HOME/.condarc`{: .language-bash .highlight}, creating the file if not present:
 ```bash
 auto_activate_base: false
 ```
