@@ -21,7 +21,7 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 footer_content: "Copyright &copy; 2024 Emilio Martinez-Nunez"
-custom_nav_footer: true
+custom_nav_footer: false
 
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
