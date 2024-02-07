@@ -26,18 +26,18 @@ with the program and didactic purposes, but the recommended option for productio
 iterative llcalcs.sh and hlcalcs.sh scripts explained above.
 
 To run AutoMeKin in a _single processor_ use `amk.sh` script with the name of the input file as argument:
-```
+```yaml
 amk.sh FA.dat > amk.log &
 ```
 The ouput file `amk.log` provides information about the calculations. In addition, a directory called
 `tsdirLL_FA` is created, which contains information that may be useful for checking purposes. We notice
 that the program creates a symbolic link to the `FA.dat` file, named amk.dat, which is used internally by
 several amk scripts. At any time, you can _check the transition states that have been found_ using:
-```
+```yaml
 tsll_view.sh
 ```
 The output of this script will be something like this:
-```
+```yaml
 ts # File name w_imag  Energy  w1  w2   w3   w4 traj #  Folder
 --------------------------------------------------------------
 2    ts2_batch4 1588i -35.7105 206 438  461  727     1  wrkdir
