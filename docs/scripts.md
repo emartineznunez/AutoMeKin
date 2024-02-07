@@ -1,11 +1,11 @@
 ---
-title: Using the scripts
+title: Usage of scripts
 layout: home
 parent: Tutorial
 nav_order: 3
 ---
 
-# Using the scripts
+# Usage of scripts
 
 AutoMeKin provides a collection of Bash and Python scripts to help you automate all the tasks involved in reaction discovery. This section shows how to use these scripts. 
 
