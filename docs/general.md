@@ -10,7 +10,7 @@ nav_order: 1
 
 In this section the electronic structure details are provided. The following is an example of the
 keywords employed in this section for the FA molecule.
-```
+```yaml
 --General--  
 molecule       FA  
 LowLevel       mopac pm7 t=3m  
