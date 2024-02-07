@@ -1,7 +1,7 @@
 ---
 title: Works published using AutoMeKin
 layout: home
-nav_order: 5
+nav_order: 6
 ---
 
 # Works published from 2021
