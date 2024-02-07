@@ -236,7 +236,7 @@ Example of an interactive dashboard for FA, with the reaction network on the lef
 
 ## Kinetics simulations at different temperatures<a name="kint"></a>
 
-The kinetics calculations can be rerun for a temperature/energy different from that specified in the input file after the keywords Temperature or Energy. You may also want to use the allstates option as seen below. This can be easily done using the kinetics.sh command line script:
+The kinetics calculations can be rerun for a temperature/energy different from that specified in the input file after the keywords Temperature or Energy. You may also want to use the allstates option as seen below. This can be easily done using the `kinetics.sh` command line script:
 ```bash
 kinetics.sh value calc (allstates)
 ```
