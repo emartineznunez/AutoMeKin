@@ -37,12 +37,12 @@ several amk scripts. At any time, you can _check the transition states that have
 tsll_view.sh
 ```
 The output of this script will be something like this:
-```yaml
+```
 ts # File name w_imag  Energy  w1  w2   w3   w4 traj #  Folder
 --------------------------------------------------------------
-2    ts2_batch4 1588i -35.7105 206 438  461  727     1  wrkdir
-3    ts3_batch2  458i -78.1007 573 846 1034 1195     3  wrkdir
-4    ts4_batch6 2010i -17.6124 327 473  523 1078     1  wrkdir
+1    ts1_wrkdir 1588i -35.7105 206 438  461  727     1  wrkdir
+2    ts2_wrkdir  458i -78.1007 573 846 1034 1195     3  wrkdir
+3    ts3_wrkdir 2010i -17.6124 327 473  523 1078     2  wrkdir
 ```
 where the first column is the label of each TS, the second is the filename of the optimized TS structure,
 located in the `tsdirLL_FA` directory, the third is the imaginary frequency in cm<sup>-1</sup>, the fourth one is the absolute energy of the TS, in kcal/mol for MOPAC2016 and Hartrees for qcore and gaussian, and the next four numbers are the four lowest vibrational frequencies (in cm<sup>−1</sup>). Finally, the last two columns are the trajectory number and the name of the folder where the structure was obtained.
@@ -54,11 +54,11 @@ calculations although using a sufficiently large number of trajectories, the imp
 
 As already mentioned, the output files of the optimized TSs are stored in `tsdirLL_FA`. You can use a
 _visualization program, e.g., molden, to analyze your results_:
-```
+```yaml
 molden tsdirLL_FA/ts1_FA.molden
 ```` 
 You can also watch the _animation of trajectories_, which are stored in the coordir folder inside `wrkdir`:
-```
+```yaml
 molden coordir/FA_dyn1.xyz
 ```
 Notice that the `coordir` folder is temporary. It is removed during the execution of a subsequent script.
@@ -66,7 +66,7 @@ Notice that the `coordir` folder is temporary. It is removed during the executio
 If you have access to several processors and want to _run the dynamics in parallel_, you can use the script
 `amk_parallel.sh`, which is executed interactively. For
 instance, to submit 50 trajectories split in 5 different tasks, 10 trajectories each, you should use:
-```
+```yaml
 amk_parallel.sh FA.dat 5
 ```
 This will create temporary directories `batch1`, `batch2`, `batch3`, `batch4` and `batch5` that will be
@@ -79,12 +79,12 @@ purposes, and particularly to carry out the screening. To run many trajectories 
 recommend using the `llcalcs.sh` script.
 
 If the Slurm Workload Manager is installed on your computer, you can submit the jobs to Slurm using:
-```
+```yaml
 sbatch [ options ] amk_parallel.sh FA.dat ntasks
 ```
 where `ntasks` is the number of tasks. If no options are specified, sbatch employs the following default
 values:
-```
+```yaml
 #SBATCH --output=amk_parallel-%j.log
 #SBATCH --time=04:00:
 #SBATCH -c 1 --mem-per-cpu=
