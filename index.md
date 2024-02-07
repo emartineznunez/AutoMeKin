@@ -17,7 +17,7 @@ AutoMeKin offers three different installation and deployment methods. If you're 
 ## 1. Auto installer <a name="autoinstaller"></a>
 An auto installer script is provided to install singularity and
 download the last release container image from [sylabs](https://cloud.sylabs.io/library/emartineznunez/default/automekin) as
-`$HOME/automekin_<tag>.sif`. Note that this is done only the first time
+`$HOME/automekin_<tag>.sif`{: .language-bash .highlight}. Note that this is done only the first time
 you use it unless a new image is available. Then, the script will detect
 singularity and the image (that must be located in your `$HOME`) and will
 only start an instance of the container. The container includes
