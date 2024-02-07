@@ -26,4 +26,4 @@ To run the high-level calculations use:
 nohup hlcalcs.sh molecule.dat runningtasks >hlcalcs.log 2>&1 &
 ```
 
-In [this section](https://emartineznunez.github.io/AutoMeKin/docs/scripts.html) you have details about the workflow involved in `llcals.sh` and `hlcalcs.sh`   
+In [this section](https://emartineznunez.github.io/AutoMeKin/docs/scripts.html) you have details about the workflows involved in `llcals.sh` and `hlcalcs.sh`   
