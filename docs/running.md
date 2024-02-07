@@ -6,7 +6,7 @@ nav_order: 3
 
 # Get everything with a single script
 
-To obtain mechanistic and kinetic information of our system in a single step you can just run one script for each type of calculation: low-level and high-level.  
+To obtain all mechanistic and kinetic information for your system in a single step you can just run a single script per each type of calculation: low-level and high-level.  
 Load the module:
 ```bash
 module load amk/2021
