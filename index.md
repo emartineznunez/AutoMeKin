@@ -4,7 +4,8 @@ layout: home
 nav_order: 1
 ---
 
-# 🚀Quick Start
+# 🚀Quick Start![qs](https://github.com/emartineznunez/AutoMeKin/assets/50674314/2461a569-41bb-4abe-a5f3-15d3dcf1e961)
+
 
 If you're eager to experience it firsthand, simply click on the following badge:     
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb)
