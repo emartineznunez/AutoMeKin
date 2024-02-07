@@ -6,7 +6,8 @@ nav_order: 3
 
 # Get everything with a single script
 
-Unless you donwloaded the singularity container, to start using any of the scripts of the program, load the module:
+To obtain mechanistic and kinetic information of our system in a single step you can just run one script for each type of calculation: low-level and high-level.  
+Load the module:
 ```bash
 module load amk/2021
 ```
@@ -24,3 +25,5 @@ To run the high-level calculations use:
 ```bash
 nohup hlcalcs.sh molecule.dat runningtasks >hlcalcs.log 2>&1 &
 ```
+
+In [this section](https://emartineznunez.github.io/AutoMeKin/docs/scripts.html) you have details about the workflow involved in `llcals.sh` and `hlcalcs.sh`   
