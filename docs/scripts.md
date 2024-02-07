@@ -86,8 +86,8 @@ where `ntasks` is the number of tasks. If no options are specified, sbatch emplo
 values:
 ```
 #SBATCH --output=amk_parallel-%j.log
-#SBATCH --time=04:00:
-#SBATCH -c 1 --mem-per-cpu=
+#SBATCH --time=04:00:00
+#SBATCH -c 1 --mem-per-cpu=2048
 #SBATCH -n 8
 ```
 These values can be changed when you submit the job with `options`.
@@ -163,10 +163,10 @@ _Optimizing the TSs_:
 ```
 In this case, the default values for a job submitted to Slurm are:
 ```
-#SBATCH --time=04:00:
+#SBATCH --time=04:00:00
 #SBATCH -n 4
 #SBATCH --output=TS-%j.log
-#SBATCH --ntasks-per-node=
+#SBATCH --ntasks-per-node=2
 #SBATCH -c 12
 ```
 
