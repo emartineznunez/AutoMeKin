@@ -134,18 +134,18 @@ Once you have created the reaction network, you can grow your TS list by running
 from the main structure, specified in the name.xyz file. It is important to notice that, in general, trajectories run in separate batches, _i.e._, performed in several tasks, may be initialized from different minima and will have different energies. In this regard, the efficiency of the code may increase if the calculations are submitted using a large number for the ntasks parameter.
 
 _Convergence in the total number of TSs can be checked doing_:
-```
+```yaml
 track_view.sh
 ```
 When you are happy with the obtained TSs or you achieve convergence, you can proceed with the next
 steps.
 
 _Running the kinetics at the conditions of interest:_
-```
+```yaml
 kmc.sh
 ```
 _Gathering all relevant information in folder_ `FINAL_LL_FA`:
-```
+```yaml
 final.sh
 ```
 This folder will gather all the relevant information data, which are described below.
@@ -158,7 +158,7 @@ possible to perform the calculations step by step, as described next:
 From your `wrkdir` (`FA` in the example), run the following scripts:
 
 _Optimizing the TSs_:
-```
+```yaml
 (sbatch [ options ]) TS.sh FA.dat
 ```
 In this case, the default values for a job submitted to Slurm are:
@@ -171,7 +171,7 @@ In this case, the default values for a job submitted to Slurm are:
 ```
 
 _Building the high-level reaction network, optimizing the minima and running the kinetics_ :
-```
+```yaml
 (sbatch [ options ]) IRC.sh
 (sbatch [ options ]) MIN.sh
 RXN_NETWORK.sh
@@ -182,7 +182,7 @@ Remember that the use of Slurm involves checking that every script has finished 
 next one.
 
 _Optimizing the product fragments_ :
-```
+```yaml
 (sbatch [ options ]) PRODs.sh
 ```
 
@@ -190,7 +190,7 @@ _Optimizing the product fragments_ :
 The previous step is mandatory before proceeding gather all information in the final folder.
 
 _Gathering all relevant information in folder_ `FINAL_HL_FA`:
-```
+```yaml
 FINAL.sh
 ```
 Notice that the high-level calculations also generate the directory `tsdirHL_FA`, whose structure is similar to `tsdirLL_FA`. Finally, remember that you can use the `kinetics.sh` to calculate rate coefficients and product branching rations for an energy or temperature different from that specified in the kinetics section.
@@ -198,7 +198,7 @@ Notice that the high-level calculations also generate the directory `tsdirHL_FA`
 ## Aborting the calculations<a name="abort"></a>
 
 If, for any reason, you want to kill the iterative calculations, execute the following script from the  `wrkdir`:
-```
+```yaml
 abort.sh
 ```
 This script kills the processes whose PID are specified in these hidden files: `.parallel.pid` and
