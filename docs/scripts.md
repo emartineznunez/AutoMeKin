@@ -17,7 +17,7 @@ AutoMeKin provides a collection of Bash and Python scripts to help you automate 
 
 ## Everything in a single script<a name="prodrun"></a>
 
-Once you are familiar with the code, you can get everything in one shot [as indicated here](https://emartineznunez.github.io/AutoMeKin/docs/running.html).
+After gaining familiarity with the code, you have the option to retrieve everything in a single execution [as indicated here](https://emartineznunez.github.io/AutoMeKin/docs/running.html). Nevertheless, it is recommended that users follow the step-by-step procedures outlined below to gain a more comprehensive understanding of the code.
 
 ## Step-by-step low-level calculations<a name="sbsll"></a>
 
