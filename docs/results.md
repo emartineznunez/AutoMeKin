@@ -194,7 +194,7 @@ the average shortest path length, the average clustering coefficient, the transi
 
 {: .note }  
 To generate a meaningful rxn_stats.txt file use the following script from the amk_tools repository:
-```python
+```bash
 amk_rxn_stats.py FINALDIR
 ```
 In this case, the file `rxn_stats.txt` is created in the working directory (not inside `FINALDIR`).
