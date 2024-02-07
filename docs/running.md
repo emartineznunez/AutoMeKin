@@ -7,11 +7,11 @@ nav_order: 3
 # Running the code
 
 Unless you donwloaded the singularity container, to start using any of the scripts of the program, load the module:
-```yaml
+```bash
 module load amk/2021
 ```
 To run the low-level calculations use:
-```yaml
+```bash
 nohup llcalcs.sh molecule.dat ntasks niter runningtasks >llcalcs.log 2>&1 &
 ```
 where:  
@@ -21,6 +21,6 @@ where:
 <code>runningtasks</code> is the number of simultaneous tasks  
 
 To run the high-level calculations use:
-```yaml
+```bash
 nohup hlcalcs.sh molecule.dat runningtasks >hlcalcs.log 2>&1 &
 ```
