@@ -31,3 +31,4 @@ Finally, run the high-level calculations:
 ```bash
 nohup hlcalcs.sh molecule.dat runningtasks >hlcalcs.log 2>&1 &
 ```
+If something goes wrong, you might want to have a look [at this section](https://emartineznunez.github.io/AutoMeKin/docs/scripts.html#abort) describing how to stop the calculations.
