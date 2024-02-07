@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 ---
 
-# 🚀   ![qs](https://github.com/emartineznunez/AutoMeKin/assets/50674314/0fffaff1-3379-462a-8c3c-9d7b64251f1c) Quick Start 
+# 🚀 Quick Start 
 
 
 If you're eager to experience it firsthand, simply click on the following badge:     
