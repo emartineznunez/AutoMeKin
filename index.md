@@ -132,7 +132,6 @@ You can build, system-wide and including dependencies, using this CentOS-based s
 ```bash
 curl -LJO https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Centos.sh
 ```
-You can also check how to install AutoMeKin and its dependencies in this Notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb)
 
 If you prefer to install everything manually, follow the next steps.
 
