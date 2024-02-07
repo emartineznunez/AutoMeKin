@@ -66,7 +66,7 @@ The first two values are the pivot positions of the random rotations: the center
 `value` is the total number of intermolecular structures considered in the sampling. With this sampling, you cannot perform kinetics. However, you still need to provide the parameters for the screening. 
 
 _To run the calculations, just type_:
-```
+```yaml
 amk.sh assoc.dat
 ```
 This job will submit `value[Nassoc]` independent optimizations to find the structures. After the jobs finished, the script will automatically remove duplicates and select the best association “complex”.
@@ -114,7 +114,7 @@ As with other MD-based sampling methods, `amk_parallel.sh` can be employed here 
 
 Dihedral angles can be scanned using script tors.sh. You will need the inputfile and the XYZ file in your
 `wrkdir` and just type:
-```
+```yaml
 tors.sh inputfile file
 ```
 The first argument is the name of the inputfile and the second one can be: `all`, the default, or `file`. Using `all`, all the rotatable angles are scanned, while if you use `file`, the four indices that specify the dihedrals you want to scan must be present in file `dihedrals`.
@@ -133,7 +133,7 @@ The default value for `torsion` is `yes`.
 ## Fragmentation<a name="frag"></a>
 
 The fragmentation patterns and breakdown curves can be modelled using the script `amk_frag.sh`. This script provides a workflow to iteratively discover fragmentation pathways not only the parent molecule but also for the fragments resulting from the primary fragmentation. Usage:
-```
+```yaml
 nohup amk_frag.sh > amk_frag.log 2>&1 &
 ```
 The inputfile must have an additional section called “Fragmentation”, as in this example:
@@ -401,6 +401,6 @@ nbondsbreak 2
 A similar test can be performed on the same molecule to get the TS for H<sub>2</sub>O elimination. The corresponding input file, `FA_biasH2O.dat`, is also available in directory path_to_program/examples. Additionally, a retro Diels-Alder reaction has also been tested: cyclohexene$\scriptstyle{\rightarrow}$ethylene+1,3-butadiene, using the input files `rdiels_bias.dat` and `rdiels.xyz` provided in the amk distribution.
 
 The above examples can be tested using the `amk.sh` script:
-```
+```yaml
 amk.sh inputfile
 ```
