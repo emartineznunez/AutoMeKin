@@ -5,6 +5,12 @@ parent: Tutorial
 nav_order: 5
 ---
 
+# Analysis
+
+## Contents
+- [Visualization tools](#amktools)
+- [Kinetics simulations at different temperatures](#kint)
+- [Removing unwanted TS structures](#rmts)
 
 ## Visualization tools<a name="amktools"></a>
 
