@@ -16,7 +16,7 @@ reaction network has been predicted at the semiempirical level, the user can cal
 In a subsequent step, the collection of TSs located at the semiempirical level are reoptimized using a higher level of electronic structure theory. Notice that, depending on the selected level of theory, the total number of reoptimized TSs may differ from that obtained with the semiempirical Hamiltonian. For each reoptimized
 TS, IRC calculations are performed to obtain the associated reactant and products. The reaction
 network is then constructed for the high level of theory. As for the low-level computations, the last step
-involves the calculation of rate constants and product ratios. At present, the high-level electronic structure calculations can be performed with G 09 /G16 or with Entos Qcore.
+involves the calculation of rate constants and product ratios. At present, the high-level electronic structure calculations can be performed with G09/G16 or with Entos Qcore.
 
 _To follow the guidelines of this tutorial, you can try the formic acid, FA, test case that comes with the
 distribution_. Make a working directory (<code>wrkdir</code>) and copy files <code>FA.dat</code> and <code>FA.xyz</code> from <code>path_to_program/examples</code> to your <code>wrkdir</code>. All scripts must be run from your <code>wrkdir</code>.
