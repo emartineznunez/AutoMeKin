@@ -1,10 +1,10 @@
 ---
-title: Automated workflow
+title: Automated workflows
 layout: home
 nav_order: 3
 ---
 
-# Automated workflow
+# Automated workflows
 
 {: .highlight}  
 To obtain all mechanistic and kinetic information for your system, you can simply run a single script _per_ each type of calculation: low-level and high-level.  
