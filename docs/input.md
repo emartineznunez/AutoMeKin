@@ -53,6 +53,35 @@ keyword value(s)
 _At least one blank space must be kept between_ `keyword` and `value(s)`. A few keywords include some
 additional lines right below the keyword line (see _Biased dynamics_).
 
+Example of a `.dat` file:
+```
+--General--
+molecule       FA
+LowLevel       mopac pm7
+HighLevel      g09 hf/sto-3g
+HL_rxn_network complete
+IRCpoints      29
+charge         0
+mult           1
+
+--Method--
+sampling    MD
+ntraj       10
+barrierless yes
+
+--Screening--
+imagmin 200
+MAPEmax 0.008
+BAPEmax 2.5
+eigLmax 0.1
+
+--Kinetics--
+Energy 150
+``` 
+
+
+
+
 Next, you will find a detailed explanation of the keywords grouped together in the different sections. For
 each section, only the most important keywords are described. Additional keywords can be found in
 [Other capabilities](https://emartineznunez.github.io/AutoMeKin/docs/other.html).
