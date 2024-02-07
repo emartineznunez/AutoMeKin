@@ -10,14 +10,14 @@ nav_order: 3
 AutoMeKin provides a collection of Bash and Python scripts to help you automate all the tasks involved in reaction discovery. This section shows how to use these scripts. 
 
 ## Contents
-- [Production runs](#prodrun)
+- [Everything in a single script](#prodrun)
 - [Step-by-step low-level calculations](#sbsll)
 - [Step-by-step high-level calculations](#sbshl)
 - [Aborting the calculations](#abort)
 
-## Production runs<a name="prodrun"></a>
+## Everything in a single script<a name="prodrun"></a>
 
-For production runs, use the scripts [as indicated here](https://emartineznunez.github.io/AutoMeKin/docs/running.html).
+Once you are familiar with AutoMeKin, you can just simple use the scripts [as indicated here](https://emartineznunez.github.io/AutoMeKin/docs/running.html).
 
 ## Step-by-step low-level calculations<a name="sbsll"></a>
 
