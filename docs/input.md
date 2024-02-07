@@ -53,18 +53,18 @@ charge         0
 mult           1
 
 --Method--
-sampling    MD
-ntraj       10
-barrierless yes
+sampling       MD
+ntraj          10
+barrierless    yes
 
 --Screening--
-imagmin 200
-MAPEmax 0.008
-BAPEmax 2.5
-eigLmax 0.1
+imagmin        200
+MAPEmax        0.008
+BAPEmax        2.5
+eigLmax        0.1
 
 --Kinetics--
-Energy 150
+Energy         150
 ``` 
 The file `name.dat` is organized in four sections: General, Method, Screening and Kinetics, which are
 explained in detail below. Each section contains lines with several <code>keyword value(s)</code> pairs with the following syntax:
