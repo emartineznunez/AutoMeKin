@@ -22,10 +22,6 @@ back_to_top_text: "Back to top"
 
 footer_content: "Copyright &copy; 2024 Emilio Martinez-Nunez"
 
-# Footer "Edit this page on GitHub" link text
-gh_edit_link: true # show or hide edit this page link
-gh_edit_link_text: "Edit this page on GitHub"
-
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
 color_scheme: light
     
