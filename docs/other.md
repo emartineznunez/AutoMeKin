@@ -1,7 +1,6 @@
 ---
 title: Other capabilities
 layout: home
-parent: Tutorial
 nav_order: 5
 ---
 
