@@ -184,28 +184,28 @@ qcore --academic-license
 
 Once the above packages are installed, you can now install AutoMeKin
 following these steps:. Clone AutoMeKin from GitHub:
-```
+```yaml
 git clone https://github.com/emartineznunez/AutoMeKin.git
 ```
-```
+```yaml
 cd AutoMeKin
 ```
-```
+```yaml
 autoreconf -i
 ```
-```
+```yaml
 ./configure --prefix=path_to_program
 ```
 Where you can specify where you want to install it, _e.g._, `/opt/AutoMeKin`
-```
+```yaml
 make 
 ```
-```
+```yaml
 make install
 ```
 For convenience, and once “Environment Modules” has been installed, you
 should add the following line to your `.bashrc` file:
-```
+```yaml
 module use path_to_program/modules
 ```
 where `path_to_program` is the path where you installed amk (_e.g._,
