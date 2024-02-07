@@ -10,7 +10,7 @@ has_children: true
 
 The following are files read by amk, and therefore, they must be present in <code>wrkdir</code>.
 
-## name.xyz
+## `name.xyz`
 
 Where name refers to the name for our system (<code>FA.xyz</code> in our example). The recommendation
 is to use acronyms like FA for Formic Acid or short names. This file contains an initial input structure of our system in XYZ format:
@@ -35,7 +35,7 @@ _This file is mandatory except for association and vdW samplings_ where two XYZ 
 Avoid using integers for any of the XYZ coordinates, as this will cause problems with the high-level
 calculations.
 
-## name.dat
+## `name.dat`
 
 Where name can be any name, from just the name of the system to something that identifies the
 type of calculation you are carrying out; in our case `FA.dat`. This file contains all parameters of the
@@ -66,7 +66,7 @@ eigLmax 0.1
 --Kinetics--
 Energy 150
 ``` 
-The file name.dat is organized in four sections: General, Method, Screening and Kinetics, which are
+The file `name.dat` is organized in four sections: General, Method, Screening and Kinetics, which are
 explained in detail below. Each section contains lines with several <code>keyword value(s)</code> pairs with the following syntax:
 ```
 keyword value(s)
