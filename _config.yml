@@ -33,7 +33,7 @@ callouts:
     title: Warning
     color: red
 
-logo: "/assets/images/Imagen3.png"
+logo: "/assets/images/Imagen2.png"
 kramdown:
   input: GFM
   math_engine: mathjax # you can also set this field to 'katex'
