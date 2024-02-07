@@ -49,7 +49,7 @@ of the _ab initio_/DFT methods already at this stage for the TS optimizations us
 association_]
 
 The first <code>value</code> is the program (<code>g09</code>, <code>g16</code> or <code>qcore</code> are the possible choices) and the second indicates the level of theory employed in the high-level calculations. For gaussian, you can employ a dual-level approach, which includes a higher level to refine the energy, as shown in the following example:
-```
+```yaml
 HighLevel g16 ccsd(t)/6-311+G(2d,2p)//b3lyp/6-31G(d,p)
 ```
 For <code>g09/g16</code>, supported methods are HF, MP2 and DFT for geometry optimizations and HF, MP2, DFT and CCSD$($T$)$ for single point energy calculations.
