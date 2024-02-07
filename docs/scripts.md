@@ -84,7 +84,7 @@ sbatch [ options ] amk_parallel.sh FA.dat ntasks
 ```
 where `ntasks` is the number of tasks. If no options are specified, sbatch employs the following default
 values:
-```
+```bash
 #SBATCH --output=amk_parallel-%j.log
 #SBATCH --time=04:00:00
 #SBATCH -c 1 --mem-per-cpu=2048
