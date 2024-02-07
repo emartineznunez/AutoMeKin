@@ -19,9 +19,9 @@ nohup llcalcs.sh molecule.dat ntasks niter runningtasks >llcalcs.log 2>&1 &
 ```
 where:  
 <code>molecule</code> is the name of your molecule  
-<code>ntasks</code> is the number of tasks  
+<code>ntasks</code> is the number of tasks per iteration  
 <code>niter</code> is the number of iterations  
-<code>runningtasks</code> is the number of simultaneous tasks  
+<code>runningtasks</code> is the number of simultaneous parallel tasks   
 
 Finally, run the high-level calculations use:
 ```bash
