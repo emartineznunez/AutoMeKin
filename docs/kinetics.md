@@ -6,7 +6,7 @@ grand_parent: Tutorial
 nav_order: 4
 ---
 
-# Kinetics 
+# Kinetics section
 
 This part is employed to provide details for the kinetics calculations at the $\scriptstyle{(}$experimental$\scriptstyle{)}$
 conditions you want to simulate. _This section is compulsory except for association_.
