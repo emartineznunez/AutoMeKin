@@ -23,7 +23,7 @@ where:
 <code>niter</code> is the number of iterations  
 <code>runningtasks</code> is the number of simultaneous parallel tasks   
 
-Finally, run the high-level calculations use:
+Finally, run the high-level calculations:
 ```bash
 nohup hlcalcs.sh molecule.dat runningtasks >hlcalcs.log 2>&1 &
 ```
