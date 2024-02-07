@@ -57,4 +57,4 @@ This second [Notebook](https://colab.research.google.com/github/emartineznunez/A
 ## Web site for submitting simple examples<a name="web"></a>
 You can also test our [web site](https://rxnkin.usc.es/amk/), where you can submit a simple example.
 
-[^1]: For enquiries please contact: emilio.nunez@usc.es
+[^1]: For enquiries please contact: emilio.nunez@usc.gal
