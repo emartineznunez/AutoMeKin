@@ -4,6 +4,10 @@ layout: home
 nav_order: 1
 ---
 
+<p align="center">
+   <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/logo.png" alt="alt text" width="200" height="100">
+</p>
+
 
 # 🚀 Quick Start with AutoMeKin
 
@@ -12,12 +16,7 @@ If you're eager to experience it firsthand, simply click on the following badge:
 
 
 # Installation of AutoMeKin
-
-<p align="center">
-   <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/logo.png" alt="alt text" width="200" height="100">
-</p>
-
-AutoMeKin offers three different installation and deployment methods. 
+**AutoMeKin** offers three different installation and deployment methods. 
 
 
 ## Intallation options
