@@ -26,8 +26,8 @@ only start an instance of the container. The container includes
 _To start/stop the container follow these steps_:
 
 - Download script: 
-   ```shellscript
-   curl -LJO https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh
+   ```console
+   foo@bar:~$ curl -LJO https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh
    ```
 
 - ```bash
