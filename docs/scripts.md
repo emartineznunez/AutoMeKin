@@ -84,8 +84,7 @@ sbatch [ options ] amk_parallel.sh FA.dat ntasks
 ```
 where `ntasks` is the number of tasks. If no options are specified, sbatch employs the following default
 values:
-```yaml
-#!/bin/bash
+```
 #SBATCH --output=amk_parallel-%j.log
 #SBATCH --time=04:00:
 #SBATCH -c 1 --mem-per-cpu=
@@ -99,7 +98,7 @@ all tasks are completed before going on.
 
 The amk package includes the `irc.sh` script, which performs intrinsic reaction coordinate calculations for
 all the located TSs. This script also allows one to perform an initial screening of the TS structures before running the IRC calculations:
-```
+```yaml
 irc.sh screening
 ```
 This will do the screening and stop. The process involves the use of tools from Spectral Graph Theory and
@@ -110,7 +109,7 @@ MOPAC2016 ouput files are also gathered in `tsdirLL_FA`, and use filenames initi
 check these structures and, if needed, change the above parameters. Should you change some of the above
 parameters (`value[MAPEmax]`,`value[BAPEmax]`,`value[eigLmax]`), you need to redo the screening
 with the new parameters:
-```
+```yaml
 redo_screening.sh
 ```
 You can repeat the above process until you are happy with the screening.
@@ -119,15 +118,15 @@ Once you are confident with the threshold values, you can submit many trajectori
 exploration of the potential energy surface. Subsequently, you can proceed with the IRC calculations.
 
 _Obtaining the IRCs_:
-```
+```yaml
 (sbatch [ options ]) irc.sh
 ```
 _Optimizing the minima_:
-```
+```yaml
 (sbatch [ options ]) min.sh
 ```
 _Building the reaction network_:
-```
+```yaml
 rxn_network.sh
 ```
 Once you have created the reaction network, you can grow your TS list by running more trajectories (with
