@@ -38,22 +38,10 @@ calculations.
 ## name.dat
 
 Where name can be any name, from just the name of the system to something that identifies the
-type of calculation you are carrying out; in our case FA.dat. This file contains all parameters of the
+type of calculation you are carrying out; in our case `FA.dat`. This file contains all parameters of the
 calculation and has different sections, which are explained as follows. _This file is mandatory in all cases._
 
-The file name.dat is organized in four sections: General, Method, Screening and Kinetics, which are
-explained in detail below. Each section contains lines with several <code>keyword value(s)</code> pairs with the following syntax:
-```
-keyword value(s)
-```
-<code>keyword</code> is a case-sensitive string and it must be the first field of the line.
-
-<code>value(s)</code> can be strings, integers or floats and is/are the `value(s)` of the keyword.
-
-_At least one blank space must be kept between_ `keyword` and `value(s)`. A few keywords include some
-additional lines right below the keyword line (see _Biased dynamics_).
-
-Example of a `.dat` file:
+Example of the `FA.dat` file:
 ```
 --General--
 molecule       FA
@@ -78,9 +66,17 @@ eigLmax 0.1
 --Kinetics--
 Energy 150
 ``` 
+The file name.dat is organized in four sections: General, Method, Screening and Kinetics, which are
+explained in detail below. Each section contains lines with several <code>keyword value(s)</code> pairs with the following syntax:
+```
+keyword value(s)
+```
+<code>keyword</code> is a case-sensitive string and it must be the first field of the line.
 
+<code>value(s)</code> can be strings, integers or floats and is/are the `value(s)` of the keyword.
 
-
+_At least one blank space must be kept between_ `keyword` and `value(s)`. A few keywords include some
+additional lines right below the keyword line (see _Biased dynamics_).
 
 Next, you will find a detailed explanation of the keywords grouped together in the different sections. For
 each section, only the most important keywords are described. Additional keywords can be found in
