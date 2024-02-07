@@ -10,7 +10,7 @@ nav_order: 2
 
 Here the user provides details of the method employed for sampling the reaction space. In our FA
 example, we have the following:
-```yaml
+```
 --Method--
 sampling MD
 ntraj    10
@@ -56,7 +56,7 @@ are present in your system and/or if you want to change the default values. The 
 employed to locate _barrierless processes_ and are also employed by <code>ChemKnow</code>. 
 
 For instance, if you want to consider dissociations leading to atomic hydrogen, you must add the following line:
-```yaml
+```
 neighbors H 0 1
 ```
 You can add as many lines as needed, one per atom. The default values are listed in this table:
@@ -87,7 +87,7 @@ trajectories. Instead, the user should try to run different batches of trajector
 ## BXDE specific keywords 
 
 This sampling (and the other BXDE-based sampling based: <code>vdW</code>) has a number of specific keywords as shown in this example:
-```yaml
+```
 sampling      BXDE
 Friction      0.5
 AdaptiveLimit 100
@@ -118,7 +118,7 @@ Hookean       1 2 2.5 10.
 ## ChemKnow specific keywords 
 
 This sampling has a number of specific keywords as shown in this example:
-```yaml
+```
 sampling  ChemKnow
 Graphto3D POpt
 active    1 2 3 4
