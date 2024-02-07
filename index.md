@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 ---
 
-# 🚀Quick Start 
+# 🚀Quick Start <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/qs.jpg" alt="alt text" width="50" height="50">
 
 
 If you're eager to experience it firsthand, simply click on the following badge:     
