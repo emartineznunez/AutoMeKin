@@ -5,6 +5,7 @@ nav_order: 3
 ---
 
 # Everything automated
+
 {: .highlight}  
 To obtain all mechanistic and kinetic information for your system, you can simply run a single script per each type of calculation: low-level and high-level.  
 
