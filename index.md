@@ -19,7 +19,7 @@ An auto installer script is provided to install singularity and
 download the last release container image from [sylabs](https://cloud.sylabs.io/library/emartineznunez/default/automekin) as
 `$HOME/automekin_<tag>.sif`{: .language-bash .highlight}. Note that this is done only the first time
 you use it unless a new image is available. Then, the script will detect
-singularity and the image (that must be located in your `$HOME`) and will
+singularity and the image (that must be located in your `$HOME`{: .language-bash .highlight}) and will
 only start an instance of the container. The container includes
 [amk-tools](https://github.com/dgarayr/amk_tools). 
 
@@ -47,17 +47,17 @@ admin or root privilege will be needed. Return to your user account and
 run the auto installer again.
 
 Once the above steps are completed, singularity will be installed
-under `${TMPDIR-/tmp}/amk_installer-${USER}/software` in bash shell script
+under `${TMPDIR-/tmp}/amk_installer-${USER}/software`{: .language-bash .highlight} in bash shell script
 syntax and an instance of the container will be started using a sandbox
-image deployed under `/tmp/selfextract.XXXXXX` folder (where `XXXXXX` is a
+image deployed under `/tmp/selfextract.XXXXXX`{: .language-bash .highlight} folder (where `XXXXXX` is a
 randomly generated character sequence). The container comes with all
-AutoMeKin's tools installed in `$AMK` plus vim, gnuplot and molden which
-can be run from the container. A bash shell session under `$HOME` will
+AutoMeKin's tools installed in `$AMK`{: .language-bash .highlight} plus vim, gnuplot and molden which
+can be run from the container. A bash shell session under `$HOME`{: .language-bash .highlight} will
 start under the deployed instance. Note that you can open new sessions
 and access AutoMeKin's output files from your Linux environment and use
 your own tools as well.
 
-- To exit the container just type: `exit`
+- To exit the container just type: `exit`{: .language-bash .highlight}
 
 - Once your calculations are done, remember to stop the instance:
 ```bash
@@ -209,5 +209,5 @@ should add the following line to your `.bashrc` file:
 module use path_to_program/modules
 ```
 where `path_to_program` is the path where you installed amk (_e.g._,
-`$HOME/amk-2021`).
+`$HOME/amk-2021`{: .language-bash .highlight}).
 
