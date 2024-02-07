@@ -1,10 +1,10 @@
 ---
-title: Run everything with a single script
+title: Get everything with a single script
 layout: home
 nav_order: 3
 ---
 
-# Run everything with a single script
+# Get everything with a single script
 
 Unless you donwloaded the singularity container, to start using any of the scripts of the program, load the module:
 ```bash
