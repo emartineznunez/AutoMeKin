@@ -10,7 +10,7 @@ nav_order: 3
 To obtain all mechanistic and kinetic information for your system, you can just run a single script per each type of calculation: low-level and high-level.  
 
 {: .note }   
-In [this section](https://emartineznunez.github.io/AutoMeKin/docs/scripts.html) you have details about the workflows involved in `llcals.sh` and `hlcalcs.sh`   
+Details about the workflows involved in `llcals.sh` and `hlcalcs.sh` can be looked up in [this section](https://emartineznunez.github.io/AutoMeKin/docs/scripts.html).  
 
 
 First, load the module:
