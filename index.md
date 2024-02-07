@@ -1,5 +1,5 @@
 ---
-title: 🚀Quick start & Installion
+title: 🚀<img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/qs.jpg" alt="alt text" width="50" height="50"> Quick start & Installion
 layout: home
 nav_order: 1
 ---
