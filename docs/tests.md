@@ -10,11 +10,11 @@ nav_order: 2
 To run the tests follow these steps:
 
 1. Load the module, unless you use singularity:
-```
+```yaml
 module load amk/2021
 ```
 2. Run the following script to run all tests:
-```
+```yaml
 run_test.sh
 ```
 
@@ -22,7 +22,7 @@ run_test.sh
 Note that each test takes from a few seconds to several minutes. The results of each test will be gathered in a different directory.  
 
 If you rather prefer to run a subset of tests use the following:  
-```
+```yaml
 run_test.sh --tests=FA, FAthermo
 ```
 which will run FA and FAthermo tests only. These are the tests available in this version: `assoc`, `assoc_qcore`, `rdiels_bias`, `diels_bias`, `FA_biasH2`, `FA_biasH2O`, `FA_bxde`, `FA_singletraj`, `FA`, `FAthermo`, `FA_programopt`, `vdW`, `FA_ck`, `FA_qcore`, `FA_bxde_qcore` and `ttors`.
