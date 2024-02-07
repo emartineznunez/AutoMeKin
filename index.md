@@ -1,5 +1,5 @@
 ---
-title: Quick start & Installion
+title: 🚀Quick start & Installion
 layout: home
 nav_order: 1
 ---
@@ -9,7 +9,7 @@ nav_order: 1
 </p>
 
 
-# 🚀 Quick Start with AutoMeKin
+# 🚀Quick Start
 
 If you're eager to experience it firsthand, simply click on the following badge:     
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb)
