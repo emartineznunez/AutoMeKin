@@ -27,7 +27,7 @@ _To start/stop the container follow these steps_:
 
 - Download script: 
    ```console
-   foo@bar:~$ curl -LJO https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh
+   curl -LJO https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh
    ```
 
 - ```bash
