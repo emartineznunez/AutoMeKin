@@ -1,11 +1,10 @@
 ---
-title: Get everything with a single script
+title: All tasks automated
 layout: home
 nav_order: 3
 ---
 
-# Get everything with a single script
-
+# All tasks automated
 {: .highlight}  
 To obtain all mechanistic and kinetic information for your system, you can just run a single script per each type of calculation: low-level and high-level.  
 
