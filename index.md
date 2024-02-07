@@ -30,11 +30,11 @@ _To start/stop the container follow these steps_:
    curl -LJO https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh
    ```
 
-- ```yaml
+- ```bash
    chmod +x Automekin.sh
    ```
 
-- ```yaml
+- ```bash
    ./Automekin.sh
    ```
 
@@ -60,7 +60,7 @@ your own tools as well.
 - To exit the container just type: `exit`
 
 - Once your calculations are done, remember to stop the instance:
-```yaml
+```bash
 ./Automekin.sh stop
 ```
 
@@ -72,47 +72,47 @@ If singularity is already installed in your
 computer, you can obtain the container from sylabs. First check the
 latest image, Tag, by typing: 
 
-```yaml
+```bash
 singularity search automekin
 ```
 
 and replace `<Tag>` below by that number.
 Then, from your `$HOME` type: 
 
-```yaml
+```bash
 singularity pull library://emartineznunez/default/automekin:<Tag>
 ```
 
 You can start an instance of the container and run it using:
 
-```yaml
+```bash
 singularity instance start automekin_<Tag>.sif automekin
 ```
-```yaml
+```bash
 singularity run instance://automekin
 ```
 
 which will allow you to run low-level scripts. You can stop the instance
 using:
 
-```yaml
+```bash
 singularity instance stop automekin
 ```
 
 Note, however, that if you want to use G09/G16 you must bind it to the
 container. To help you do so, we created the scripts `SingularitygXX.sh`
 (replace `XX` with 09 or 16), which can be downloaded as:
-```yaml
+```bash
 curl -LJO https://github.com/emartineznunez/Singularity_amk/raw/main/SingularitygXX.sh
 ```
 The script should be run with the complete path to the sif file as
 argument as in the example:
-```yaml
+```bash
 SingularitygXX.sh $HOME/automekin_<Tag>.sif
 ```
 Note that `SingularitygXX.sh` will start a new instance of the container
 every time it is executed. To list the instances use:
-```yaml
+```bash
 singularity instance list
 ```
 And stop them as indicated above.
@@ -122,7 +122,7 @@ And stop them as indicated above.
 The most recent and up to date version is avaialable at this repository.
 
 You can build, system-wide and including dependencies, using this CentOS-based script:
-```yaml
+```bash
 curl -LJO https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Centos.sh
 ```
 You can also check how to install AutoMeKin and its dependencies in this Notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb)
@@ -163,20 +163,20 @@ Entos Qcore, which is free for academica, can be easily installed following thes
 
 1. Install [miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
 2. Add the following line to `$HOME/.condarc`, creating the file if not present:
-```yaml
+```bash
 auto_activate_base: false
 ```
 which avoids activation of base environment.   
 3. Install qcore version 0.8.14 in the conda environment qcore-0.8.14-env:
-```yaml
+```bash
 conda create -n qcore-0.8.14-env -c entos -c conda-forge qcore==0.8.14 'tbb<2021'
 ```
 4. Activate the newly created environment:
-```yaml
+```bash
 conda activate qcore-0.8.14-env
 ```
 5. After installation, each user will be asked to read the Software License Agreement to generate a unique token:
-```yaml
+```bash
 qcore --academic-license
 ```
 
@@ -187,25 +187,25 @@ following these steps:. Clone AutoMeKin from GitHub:
 ```yaml
 git clone https://github.com/emartineznunez/AutoMeKin.git
 ```
-```yaml
+```bash
 cd AutoMeKin
 ```
-```yaml
+```bash
 autoreconf -i
 ```
-```yaml
+```bash
 ./configure --prefix=path_to_program
 ```
 Where you can specify where you want to install it, _e.g._, `/opt/AutoMeKin`
-```yaml
+```bash
 make 
 ```
-```yaml
+```bash
 make install
 ```
 For convenience, and once “Environment Modules” has been installed, you
 should add the following line to your `.bashrc` file:
-```yaml
+```bash
 module use path_to_program/modules
 ```
 where `path_to_program` is the path where you installed amk (_e.g._,
