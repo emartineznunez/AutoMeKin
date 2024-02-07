@@ -1,10 +1,10 @@
 ---
-title: Quick start <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/qs2.jpg" alt="alt text" width="25" height="25"> & Installion
+title: <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/qs2.jpg" alt="alt text" width="25" height="25"> Quick start&Installion
 layout: home
 nav_order: 1
 ---
 
-# 🚀Quick Start <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/qs2.jpg" alt="alt text" width="50" height="50">
+# <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/qs2.jpg" alt="alt text" width="50" height="50"> Quick Start 
 
 
 If you're eager to experience it firsthand, simply click on the following badge:     
