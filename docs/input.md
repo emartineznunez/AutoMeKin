@@ -31,7 +31,7 @@ The following are files read by amk, and therefore, they must be present in <cod
 
 Where name refers to the name for our system (<code>FA.xyz</code> in our example). The recommendation
 is to use acronyms like FA for Formic Acid or short names. This file contains an initial input structure of our system in XYZ format:
-```yaml
+```
 5  
   
 C  0.000000 0.000000  0.000000    
@@ -60,7 +60,7 @@ calculation and has different sections, which are explained as follows. _This fi
 
 The file name.dat is organized in four sections: General, Method, Screening and Kinetics, which are
 explained in detail below. Each section contains lines with several <code>keyword value(s)</code> pairs with the following syntax:
-```yaml
+```
 keyword value(s)
 ```
 <code>keyword</code> is a case-sensitive string and it must be the first field of the line.
