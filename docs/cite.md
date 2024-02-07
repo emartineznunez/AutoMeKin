@@ -1,7 +1,7 @@
 ---
 title: Citation
 layout: home
-nav_order: 6
+nav_order: 7
 ---
 
 # How to cite the program
