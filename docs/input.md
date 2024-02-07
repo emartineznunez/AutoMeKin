@@ -60,9 +60,9 @@ calculation and has different sections, which are explained as follows. _This fi
 
 The file name.dat is organized in four sections: General, Method, Screening and Kinetics, which are
 explained in detail below. Each section contains lines with several <code>keyword value(s)</code> pairs with the following syntax:
-
-<code>keyword value(s)</code>
-
+```yaml
+keyword value(s)
+```
 <code>keyword</code> is a case-sensitive string and it must be the first field of the line.
 
 <code>value(s)</code> can be strings, integers or floats and is/are the `value(s)` of the keyword.
