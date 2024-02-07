@@ -16,7 +16,7 @@ coordinates](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.08550
 
 In this section we set a minimum value for the imaginary frequency and maximum values for MAPE, BAPE
 and eigL, as explained below:
-```
+```yaml
 --Screening --
 imagmin 200
 MAPEmax 0.008
