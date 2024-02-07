@@ -26,14 +26,14 @@ with the program and didactic purposes, but the recommended option for productio
 iterative llcalcs.sh and hlcalcs.sh scripts explained above.
 
 To run AutoMeKin in a _single processor_ use `amk.sh` script with the name of the input file as argument:
-```yaml
+```bash
 amk.sh FA.dat > amk.log &
 ```
 The ouput file `amk.log` provides information about the calculations. In addition, a directory called
 `tsdirLL_FA` is created, which contains information that may be useful for checking purposes. We notice
 that the program creates a symbolic link to the `FA.dat` file, named amk.dat, which is used internally by
 several amk scripts. At any time, you can _check the transition states that have been found_ using:
-```yaml
+```bash
 tsll_view.sh
 ```
 The output of this script will be something like this:
@@ -54,11 +54,11 @@ calculations although using a sufficiently large number of trajectories, the imp
 
 As already mentioned, the output files of the optimized TSs are stored in `tsdirLL_FA`. You can use a
 _visualization program, e.g., molden, to analyze your results_:
-```yaml
+```bash
 molden tsdirLL_FA/ts1_FA.molden
 ```` 
 You can also watch the _animation of trajectories_, which are stored in the coordir folder inside `wrkdir`:
-```yaml
+```bash
 molden coordir/FA_dyn1.xyz
 ```
 Notice that the `coordir` folder is temporary. It is removed during the execution of a subsequent script.
@@ -66,7 +66,7 @@ Notice that the `coordir` folder is temporary. It is removed during the executio
 If you have access to several processors and want to _run the dynamics in parallel_, you can use the script
 `amk_parallel.sh`, which is executed interactively. For
 instance, to submit 50 trajectories split in 5 different tasks, 10 trajectories each, you should use:
-```yaml
+```bash
 amk_parallel.sh FA.dat 5
 ```
 This will create temporary directories `batch1`, `batch2`, `batch3`, `batch4` and `batch5` that will be
@@ -79,7 +79,7 @@ purposes, and particularly to carry out the screening. To run many trajectories 
 recommend using the `llcalcs.sh` script.
 
 If the Slurm Workload Manager is installed on your computer, you can submit the jobs to Slurm using:
-```yaml
+```bash
 sbatch [ options ] amk_parallel.sh FA.dat ntasks
 ```
 where `ntasks` is the number of tasks. If no options are specified, sbatch employs the following default
@@ -98,7 +98,7 @@ all tasks are completed before going on.
 
 The amk package includes the `irc.sh` script, which performs intrinsic reaction coordinate calculations for
 all the located TSs. This script also allows one to perform an initial screening of the TS structures before running the IRC calculations:
-```yaml
+```bash
 irc.sh screening
 ```
 This will do the screening and stop. The process involves the use of tools from Spectral Graph Theory and
@@ -109,7 +109,7 @@ MOPAC2016 ouput files are also gathered in `tsdirLL_FA`, and use filenames initi
 check these structures and, if needed, change the above parameters. Should you change some of the above
 parameters (`value[MAPEmax]`,`value[BAPEmax]`,`value[eigLmax]`), you need to redo the screening
 with the new parameters:
-```yaml
+```bash
 redo_screening.sh
 ```
 You can repeat the above process until you are happy with the screening.
@@ -118,15 +118,15 @@ Once you are confident with the threshold values, you can submit many trajectori
 exploration of the potential energy surface. Subsequently, you can proceed with the IRC calculations.
 
 _Obtaining the IRCs_:
-```yaml
+```bash
 (sbatch [ options ]) irc.sh
 ```
 _Optimizing the minima_:
-```yaml
+```bash
 (sbatch [ options ]) min.sh
 ```
 _Building the reaction network_:
-```yaml
+```bash
 rxn_network.sh
 ```
 Once you have created the reaction network, you can grow your TS list by running more trajectories (with
@@ -134,18 +134,18 @@ Once you have created the reaction network, you can grow your TS list by running
 from the main structure, specified in the name.xyz file. It is important to notice that, in general, trajectories run in separate batches, _i.e._, performed in several tasks, may be initialized from different minima and will have different energies. In this regard, the efficiency of the code may increase if the calculations are submitted using a large number for the ntasks parameter.
 
 _Convergence in the total number of TSs can be checked doing_:
-```yaml
+```bash
 track_view.sh
 ```
 When you are happy with the obtained TSs or you achieve convergence, you can proceed with the next
 steps.
 
 _Running the kinetics at the conditions of interest:_
-```yaml
+```bash
 kmc.sh
 ```
 _Gathering all relevant information in folder_ `FINAL_LL_FA`:
-```yaml
+```bash
 final.sh
 ```
 This folder will gather all the relevant information data, which are described below.
@@ -158,7 +158,7 @@ possible to perform the calculations step by step, as described next:
 From your `wrkdir` (`FA` in the example), run the following scripts:
 
 _Optimizing the TSs_:
-```yaml
+```bash
 (sbatch [ options ]) TS.sh FA.dat
 ```
 In this case, the default values for a job submitted to Slurm are:
@@ -171,7 +171,7 @@ In this case, the default values for a job submitted to Slurm are:
 ```
 
 _Building the high-level reaction network, optimizing the minima and running the kinetics_ :
-```yaml
+```bash
 (sbatch [ options ]) IRC.sh
 (sbatch [ options ]) MIN.sh
 RXN_NETWORK.sh
@@ -182,7 +182,7 @@ Remember that the use of Slurm involves checking that every script has finished 
 next one.
 
 _Optimizing the product fragments_ :
-```yaml
+```bash
 (sbatch [ options ]) PRODs.sh
 ```
 
@@ -190,7 +190,7 @@ _Optimizing the product fragments_ :
 The previous step is mandatory before proceeding gather all information in the final folder.
 
 _Gathering all relevant information in folder_ `FINAL_HL_FA`:
-```yaml
+```bash
 FINAL.sh
 ```
 Notice that the high-level calculations also generate the directory `tsdirHL_FA`, whose structure is similar to `tsdirLL_FA`. Finally, remember that you can use the `kinetics.sh` to calculate rate coefficients and product branching rations for an energy or temperature different from that specified in the kinetics section.
@@ -198,7 +198,7 @@ Notice that the high-level calculations also generate the directory `tsdirHL_FA`
 ## Aborting the calculations<a name="abort"></a>
 
 If, for any reason, you want to kill the iterative calculations, execute the following script from the  `wrkdir`:
-```yaml
+```bash
 abort.sh
 ```
 This script kills the processes whose PID are specified in these hidden files: `.parallel.pid` and
