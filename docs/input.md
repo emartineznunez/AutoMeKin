@@ -31,7 +31,7 @@ The following are files read by amk, and therefore, they must be present in <cod
 
 Where name refers to the name for our system (<code>FA.xyz</code> in our example). The recommendation
 is to use acronyms like FA for Formic Acid or short names. This file contains an initial input structure of our system in XYZ format:
-```
+```bash
 5  
   
 C  0.000000 0.000000  0.000000    
