@@ -1,5 +1,5 @@
 ---
-title: Installing AutoMeKin
+title: Quick start & Installion
 layout: home
 nav_order: 1
 ---
