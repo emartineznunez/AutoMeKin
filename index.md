@@ -209,5 +209,5 @@ should add the following line to your `.bashrc` file:
 module use path_to_program/modules
 ```
 where `path_to_program` is the path where you installed amk (_e.g._,
-`yaml$HOME/amk-2021`).
+`yaml $HOME/amk-2021`).
 
