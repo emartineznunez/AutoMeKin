@@ -1,5 +1,5 @@
 ---
-title: Quick start & Installion
+title: 🚀Quick start & Installion
 layout: home
 nav_order: 1
 ---
