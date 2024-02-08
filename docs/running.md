@@ -13,7 +13,7 @@ First, load the module:
 ```bash
 module load amk/2021
 ```
-Then, run the low-level calculations:
+Then, the `llcalcs.sh` script can be employed to run the low-level workflow:
 ```bash
 nohup llcalcs.sh molecule.dat ntasks niter runningtasks >llcalcs.log 2>&1 &
 ```
@@ -23,7 +23,7 @@ where:
 <code>niter</code> is the number of iterations  
 <code>runningtasks</code> is the number of simultaneous parallel tasks   
 
-Finally, run the high-level calculations:
+Finally, all high-level calculations can be accomplished using `hlcalcs.sh`:
 ```bash
 nohup hlcalcs.sh molecule.dat runningtasks >hlcalcs.log 2>&1 &
 ```
