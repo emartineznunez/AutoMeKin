@@ -14,10 +14,7 @@ If you're eager to experience it firsthand, simply click on the following badge:
 
 
 # Installation of AutoMeKin
-**AutoMeKin** offers three different installation and deployment methods. 
-
-
-## Intallation options
+**AutoMeKin** offers three different installation and deployment methods: 
 1. [Auto installer](#autoinstaller)
 2. [Singularity container](#singularity)
 3. [Build from source](#build)
