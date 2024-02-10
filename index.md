@@ -12,7 +12,6 @@ If you're eager to experience it firsthand, simply click on the following badge:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb)
 
-
 # Installation of AutoMeKin
 **AutoMeKin** offers three different installation and deployment methods: 
 1. [Auto installer](#autoinstaller)
@@ -124,14 +123,14 @@ And stop them as indicated above.
 
 ## 3. Build from source <a name="build"></a>
 
-The most recent and up to date version is avaialable at this repository.
+The most recent version is avaialable at GitHub and can be installed as indicated in this section.
 
 You can build, system-wide and including dependencies, using this CentOS-based script:
 ```bash
 curl -LJO https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Centos.sh
 ```
 
-If you prefer to install everything manually, follow the next steps.
+To install everything manually, follow the next steps.
 
 ### Installing dependencies 
 
@@ -139,7 +138,7 @@ If you prefer to install everything manually, follow the next steps.
 The following packages are required beforehand:   
 [GNU Autoconf](https://www.gnu.org/software/autoconf/), [GNU Bash](https://www.gnu.org/software/bash/), [GNU bc](https://www.gnu.org/software/bc/), [environment-modules](https://github.com/cea-hpc/modules), [GNU Awk, gawk](https://www.gnu.org/software/gawk/), [GNU C Compiler, gcc](https://gcc.gnu.org/), [Gnuplot](http://www.gnuplot.info/), [GNU Fortran Compiler, gfortran](https://gcc.gnu.org/wiki/GFortran), [GNU Parallel](https://www.gnu.org/software/bash/manual/html_node/GNU-Parallel.html), [SQLite\>= 3](https://www.sqlite.org/index.html), [Zenity](https://wiki.gnome.org/Projects/Zenity)
 
-For your convenience, you use the scripts: `install-required-packages-distro.sh` (where `distro`=ubuntu-16.4lts, centos7 or sl7), which will do the work for you.The ubuntu-16.4lts
+For your convenience, you can use these scripts: `install-required-packages-distro.sh` (where `distro`=ubuntu-16.4lts, centos7 or sl7), which will do the work for you.The ubuntu-16.4lts
 script installs all dependencies, but for the RHEL derivatives, centos7
 and sl7, you have to install parallel separately, and you have two
 choices:
