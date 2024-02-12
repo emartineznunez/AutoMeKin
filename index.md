@@ -7,10 +7,7 @@ nav_order: 1
 # 🚀Quick Start 
 
 
-If you're eager to experience it firsthand, simply click on the following badge:     
-
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb)
+If you're eager to experience it firsthand, you can try this Notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb)
 
 # Installation of AutoMeKin
 **AutoMeKin** offers three different installation and deployment methods: 
