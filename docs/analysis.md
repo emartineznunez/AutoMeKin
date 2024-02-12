@@ -14,7 +14,7 @@ nav_order: 5
 
 ## Visualization tools<a name="amktools"></a>
 
-The Python library [amk-tools](https://github.com/dgarayr/amk_tools) developed by Diego Garay at  the Institute of Chemical Research of Catalonia, is a useful package to parse, process and transform the reaction networks created by AutoMeKin. All the data contained in `FINALDIR` can be easily accessed using these tools.
+The Python library [![GitHub - amk_tools](https://img.shields.io/badge/GitHub-amk_tools-blue?logo=github)](https://github.com/dgarayr/amk_tools/) developed by Diego Garay at  the Institute of Chemical Research of Catalonia, is a useful package to parse, process and transform the reaction networks created by AutoMeKin. All the data contained in `FINALDIR` can be easily accessed using these tools.
 
 The commandline script `amk_gen_view.py` allows to generate visualizations directly taking arguments
 from STDIN:
