@@ -28,4 +28,4 @@ run_test.sh --tests=FA, FAthermo
 which will run `FA` and `FAthermo` tests only. These are the tests available in this version: `assoc`, `assoc_qcore`, `rdiels_bias`, `diels_bias`, `FA_biasH2`, `FA_biasH2O`, `FA_bxde`, `FA_singletraj`, `FA`, `FAthermo`, `FA_programopt`, `vdW`, `FA_ck`, `FA_qcore`, `FA_bxde_qcore` and `ttors`.
 
 {: .highlight}   
-Some tests can be run [using this Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin2.ipynb)
+Some tests can be run [using this Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin2.ipynb)
