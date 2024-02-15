@@ -53,9 +53,9 @@ Pablo G. Tahoces (Universidade de Santiago de Compostela, Spain)
 Saulo A. Vazquez (Universidade de Santiago de Compostela, Spain)
 
 ## Simple example in Colab<a name="colab"></a>
-You can have a look at this [Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb) to install it, test a simple example and more...
+You can have a look at this [Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb) to install it, test a simple example and more...
 
-This second [Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin2.ipynb) can be used to try some further tests.
+This second [Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin2.ipynb) can be used to try some further tests.
 
 ## Web site for submitting simple examples<a name="web"></a>
 You can also test our [web site](https://rxnkin.usc.es/amk/), where you can submit a simple example.
