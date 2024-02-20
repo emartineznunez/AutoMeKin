@@ -17,40 +17,16 @@ AutoMeKin (formerly tsscds) has been designed to discover reaction mechanisms in
 
 ## Content
 - [Installation and documentation](#inst)
-- [Developers](#dev)
+- [Main developer](#dev)
 - [Simple examples in Colab](#colab)
 - [Web for submitting simple examples](#web)
 
 ## Installation and documentation <a name="inst"></a>
 The installation instructions and much more are [detailed here](https://emartineznunez.github.io/AutoMeKin)
 
-## Developers<a name="dev"></a>
+## Main developer<a name="dev"></a>
 
 [Emilio Martínez-Núñez (Universidade de Santiago de Compostela, Spain)](https://emartineznunez.github.io/)
-
-George L. Barnes (Siena College, USA)
-
-Carles Bo (ICIQ, Spain)
-
-Diego Garay-Ruiz (ICIQ, Spain)
-
-David R. Glowacki (University of Bristol, UK)
-
-Sabine Kopec (Université Paris-Saclay, Orsay, France)
-
-Daniel Pelaez-Ruiz (Université Paris-Saclay, Orsay, France)
-
-Aurelio Rodriguez (CESGA, Spain)
-
-Roberto Rodriguez-Fernandez (Universidade de Santiago de Compostela, Spain)
-
-Robin J. Shannon (University of Bristol, UK)
-
-James J. P. Stewart (Stewart Computational Chemistry, USA)
-
-Pablo G. Tahoces (Universidade de Santiago de Compostela, Spain)
-
-Saulo A. Vazquez (Universidade de Santiago de Compostela, Spain)
 
 ## Simple example in Colab<a name="colab"></a>
 You can have a look at this [Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb) to install it, test a simple example and more...
