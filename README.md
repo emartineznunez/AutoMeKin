@@ -26,7 +26,7 @@ The installation instructions and much more are [detailed here](https://emartine
 
 ## Main developer<a name="dev"></a>
 
-[Emilio Martínez-Núñez (Universidade de Santiago de Compostela, Spain)](https://emartineznunez.github.io/) emilio.nunez@usc.gal
+[Emilio Martínez-Núñez](https://emartineznunez.github.io/) (Santiago de Compostela, Spain) emilio.nunez@usc.gal
 
 ## Simple example in Colab<a name="colab"></a>
 You can have a look at this [Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb) to install it, test a simple example and more...
