@@ -12,7 +12,7 @@ nav_external_links:
   - title: Try it on the Web
     url: https://rxnkin.usc.es/amk/
   - title: Open in Colab
-    url: https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/AutoMeKin.ipynb
+    url: https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb
   - title: Get it from sylabs
     url: https://cloud.sylabs.io/library/emartineznunez/default/automekin
 
