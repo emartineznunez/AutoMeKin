@@ -27,13 +27,22 @@ source utils.sh
 print_ref
 #
 if [ $# -eq 0 ]; then
-   FILE="$(zenity --file-selection --filename="$PWD/*.dat" --file-filter="*.dat" --title="Select the input file" 2> /dev/null)"
+   if [[ ${DIALOG} == "zenity" ]]; then FILE="$(zenity --file-selection --filename="$PWD/*.dat" --file-filter="*.dat" --title="Select the input file" 2> /dev/null)";fi
+   if [[ ${DIALOG} == "yad" ]]; then FILE="$(yad --file --filename="$PWD/*.dat" --file-filter="*.dat" --title="Select the input file" 2> /dev/null)";fi
    inputfile="$(basename $FILE)"
    echo "Selected input file: $inputfile"
+   if [[ ${DIALOG} == "zenity" ]]; then
    answer="$(zenity --forms --title="llcalcs.sh GUI" --text="Add input data" \
       --add-entry="Number of tasks" \
       --add-entry="Number of iterations" \
       --add-entry="Max number of running tasks" 2>/dev/null | awk 'BEGIN{FS="|"};{print $1,$2,$3}' )"
+   fi
+   if [[ ${DIALOG} == "yad" ]]; then
+   answer="$(zenity --form --title="llcalcs.sh GUI" --text="Add input data" \
+      --field="Number of tasks":NUM \
+      --field="Number of iterations":NUM \
+      --field="Max number of running tasks":NUM 2>/dev/null | awk 'BEGIN{FS="|"};{print $1,$2,$3}' )"
+   fi
    nbatch=$(echo "$answer" | awk '{print $1}')
    niter=$(echo "$answer" | awk '{print $2}')
    runningtasks=$(echo "$answer" | awk '{print $3}')

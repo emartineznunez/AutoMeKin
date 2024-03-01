@@ -45,6 +45,21 @@ function print_ref {
    echo "==================================="
 }
 
+#Function to select dialog engine (zenity/yad)
+function dialog {
+	if yad --help-gtk &>/dev/null; then DIALOG="yad";fi
+	if zenity --help-gt k&>/dev/null; then DIALOG="zenity";fi
+	if [ -z "$DIALOG" ]
+      then
+      echo "Please install zenity (https://gitlab.gnome.org/GNOME/zenity) or yad (https://github.com/v1cont/yad)"
+      exit 1
+    else
+      export DIALOG
+    fi
+}
+
+dialog
+
 #Function to submit jobs using slurm
 function slurm {
 #lets the user specify memory
@@ -114,9 +129,9 @@ TASKS=$2
 if [ -z "$SRUN" ]; then
    if [ -z $inter ]; then
       if [ -z $iter ]; then
-         $parallel $COMMAND ::: $TASKS 2> >(zenity --progress --auto-close --no-cancel --title="parallel progress bar $exe" --width=500 --height=100 2> /dev/null) &
+         $parallel $COMMAND ::: $TASKS 2> >(${DIALOG} --progress --auto-close --no-cancel --title="parallel progress bar $exe" --width=500 --height=100 2> /dev/null) &
       else
-         $parallel $COMMAND ::: $TASKS 2> >(zenity --progress --auto-close --no-cancel --title="parallel progress bar $exe iter=$iter" --width=500 --height=100 2> /dev/null)  &
+         $parallel $COMMAND ::: $TASKS 2> >(${DIALOG} --progress --auto-close --no-cancel --title="parallel progress bar $exe iter=$iter" --width=500 --height=100 2> /dev/null)  &
       fi
    else
       nohup $parallel $COMMAND ::: $TASKS  >/dev/null 2>&1 & 

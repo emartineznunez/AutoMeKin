@@ -1,0 +1,28 @@
+name: amk_env
+channels:
+  - entos
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - qcore=0.8.14
+  - yad
+  - parallel
+  - lmod
+  - networkx
+  - gxx
+  - gfortran
+  - cmake
+  - gnuplot
+  - ase
+  - matplotlib
+  - sqlite
+  - bc
+  - nodejs
+  - curl
+  - pillow
+  - tbb[version='<2021']
+  - pip
+  - pip:
+      - git+https://github.com/dgarayr/amk_tools.git
+
