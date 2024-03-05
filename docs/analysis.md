@@ -20,17 +20,17 @@ The Python library [![GitHub - amk_tools](https://img.shields.io/badge/GitHub-am
 The commandline script `amk_gen_view.py` allows to generate visualizations directly taking arguments
 from STDIN:
 ```bash
-amk_gen.py FINALDIR RXNFILE
+amk_gen_view.py FINALDIR RXNFILE
 ```` 
 where `RXNFILE` is the name of the `RXNet` files explained above (`RXNet`, `RXNet.cg` or `RXNet.rel`). Additional arguments that may be passed are [detailed here](https://github.com/dgarayr/amk_tools/blob/master/UserGuide.md).
 
 The following example shows how to create interactive plots from `RXNet.cg` file including all paths found at low level for Formic Acid:
 ```bash
-amk_gen.py FINAL_LL_FA RXNet.cg --b --paths
+amk_gen_view.py FINAL_LL_FA RXNet.cg --b --paths
 ```
 While this one creates the corresponding plots for the paths that connect MIN1 with the H<sub>2</sub>+CO<sub>2</sub> products:
 ```bash
-amk_gen.py FINAL_LL_FA RXNet.cg --paths MIN1 H2+CO2
+amk_gen_view.py FINAL_LL_FA RXNet.cg --paths MIN1 H2+CO2
 ```
 More details can be found in the [user guide](https://github.com/dgarayr/amk_tools/blob/master/UserGuide.md)
 
@@ -43,8 +43,10 @@ Example of an interactive dashboard for FA, with the reaction network on the lef
 
 Another commandline script from the same Python library [![GitHub - amk_tools](https://img.shields.io/badge/GitHub-amk_tools-blue?logo=github)](https://github.com/dgarayr/amk_tools/) can be used to obtain the properties of the reaction network: 
 ```bash
-amk_rxn_stats.py FINALDIR
+amk_rxn_stats.py FINALDIR -r RXNFILE
 ```
+
+With `FINALDIR` and `RXNFILE` having the same meaning as for `amk_gen_view.py`. 
 
 Properties like the average shortest path length, the average clustering coefficient or the transitivity will be printed in a file called `rxn_stats.txt`.
 
