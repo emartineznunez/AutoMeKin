@@ -417,7 +417,7 @@ if [ -f ${tsdirhl}/KMC/RXN_barrless2 ]; then
    rm -rf tmp_minprod tmp_rxnetbarrless_screened tmp_minprod.barrless tmp_ref_barr
    awk 'NR>2{$1="";$2="";$3="";$5="";$6="";print $0 }' ${final}/RXNet.barrless | sed 's@ + @+@g' | awk '{rf=$1" "$2;r[rf]+=1};END{for (key in r) {print key,r[key]} }' >> ${final}/rxn_all.txt
 fi
-rxn.py HL ${molecule}
+#rxn.py HL ${molecule}
 ###
 if [ -f ${tsdirhl}/KMC/RXNet.relevant ]; then
    awk '{if($1=="TS") print $1,$2}' ${tsdirhl}/KMC/RXNet.relevant > tmp_rel
