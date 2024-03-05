@@ -184,8 +184,7 @@ This ifle is similar to `RXNet.cg`, but only collects the relevant paths, that i
 
 ### rxn_x.txt $\scriptstyle{(}$x = all, kin$\scriptstyle{)}$ 
 
-These are files with information relevant for the reaction network analysis made with NetworkX python library. Each line of rxn_all.txt lists the nodes, first two columns, and the weight, last column, which is the number of paths connecting the two nodes. For rxn_kin.txt the weight is the total flux in the kinetics simulations. These two files are employed to construct graph_all.pdf and
-graph_kin.pdf, respectively. 
+These are files with information relevant for the reaction network analysis made with NetworkX python library. Each line of rxn_all.txt lists the nodes, first two columns, and the weight, last column, which is the number of paths connecting the two nodes. For rxn_kin.txt the weight is the total flux in the kinetics simulations.  
 
 {: .note }
 
