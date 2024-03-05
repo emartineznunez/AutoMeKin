@@ -43,9 +43,11 @@ if test x"$SQLITE_CHECK" != x"yes" ; then
     AC_MSG_ERROR([Please install sqlite3 package before proceeding.])
 fi
 
-AC_PATH_PROG(ZENITY, zenity, no)
 if test x"$ZENITY" = xno; then
-	AC_MSG_ERROR([Please install zenity package before proceeding.])
+        AC_PATH_PROG(YAD, yad, no)
+        if test x"$YAD" = xno; then
+          AC_MSG_ERROR([Please install zenity/yad package before proceeding.])
+        fi
 fi
 
 AC_PATH_PROG(GNUPLOT, gnuplot, no)
