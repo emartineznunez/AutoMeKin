@@ -343,7 +343,7 @@ if [ -f ${tsdirll}/KMC/RXN_barrless ]; then
    awk 'NR>2{$1="";$2="";$3="";$5="";$6="";print $0 }' ${final}/RXNet.barrless | sed 's@ + @+@g' | awk '{rf=$1" "$2;r[rf]+=1};END{for (key in r) {print key,r[key]} }' >> ${final}/rxn_all.txt
 fi
 ##Adding barrless to rxn_all.txt
-rxn.py LL ${molecule} 
+#rxn.py LL ${molecule} 
 ###change format of RXNet and RXNet.cg
 format_rxnet.sh RXNet0 RXNet0 > ${final}/RXNet
 if [ -f RXNetcg0 ]; then format_rxnet.sh RXNetcg0 RXNetcg0 > ${final}/RXNet.cg ; fi
