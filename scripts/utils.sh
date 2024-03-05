@@ -48,7 +48,7 @@ function print_ref {
 #Function to select dialog engine (zenity/yad)
 function dialog {
 	if yad --help-gtk &>/dev/null; then DIALOG="yad";fi
-	if zenity --help-gt k&>/dev/null; then DIALOG="zenity";fi
+	if zenity --help-gtk &>/dev/null; then DIALOG="zenity";fi
 	if [ -z "$DIALOG" ]
       then
       echo "Please install zenity (https://gitlab.gnome.org/GNOME/zenity) or yad (https://github.com/v1cont/yad)"
