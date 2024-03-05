@@ -38,6 +38,19 @@ Example of an interactive dashboard for FA, with the reaction network on the lef
    <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/amk.jpg" alt="alt text" width="800" height="400">
 </p>
 
+
+Additionally, the properties of the reaction network can be obtained, like
+the average shortest path length, the average clustering coefficient, the transitivity, etc. 
+
+To generate those properties run the following script:
+```bash
+amk_rxn_stats.py FINALDIR
+```
+
+the properties will be printed in a file called `rxn_stats.txt`.
+
+
+
 ## Kinetics simulations at different temperatures<a name="kint"></a>
 
 The kinetics calculations can be rerun for a temperature/energy different from that specified in the input file after the keywords Temperature or Energy. You may also want to use the allstates option as seen below. This can be easily done using the `kinetics.sh` command line script:
