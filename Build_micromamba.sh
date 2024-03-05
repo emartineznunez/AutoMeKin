@@ -20,7 +20,7 @@ curl -L -o $CONDA_PREFIX/bin/amk_rxn_stats.py https://github.com/dgarayr/amk_too
 chmod +x $CONDA_PREFIX/bin/amk_rxn_stats.py
 } &>$0.log
 
-echo "aml_env installed ..."
+echo "amk_env installed ..."
 
 {
 mkdir $CONDA_PREFIX/install_dir
