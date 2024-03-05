@@ -9,6 +9,7 @@ nav_order: 5
 
 ## Contents
 - [Visualization tools](#amktools)
+- [Properties of the reaction network](#amktools2)
 - [Kinetics simulations at different temperatures](#kint)
 - [Removing unwanted TS structures](#rmts)
 
@@ -38,8 +39,9 @@ Example of an interactive dashboard for FA, with the reaction network on the lef
    <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/amk.jpg" alt="alt text" width="800" height="400">
 </p>
 
+## Properties of the reaction network<a name="amktools2"></a>
 
-Additionally, the properties of the reaction network can be obtained using the following script:
+Another commandline script from the same Python library [![GitHub - amk_tools](https://img.shields.io/badge/GitHub-amk_tools-blue?logo=github)](https://github.com/dgarayr/amk_tools/) can be used to obtain the properties of the reaction network: 
 ```bash
 amk_rxn_stats.py FINALDIR
 ```
