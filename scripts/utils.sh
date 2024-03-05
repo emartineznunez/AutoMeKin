@@ -51,8 +51,10 @@ function dialog {
 	if zenity --help-gtk &>/dev/null; then DIALOG="zenity";fi
 	if [ -z "$DIALOG" ]
       then
-      echo "Please install zenity (https://gitlab.gnome.org/GNOME/zenity) or yad (https://github.com/v1cont/yad)"
-      if [ -z $inter ] && [ -z $iter ]; then exit 1 ; fi
+      if [ -z $inter ] && [ -z $iter ]; then
+         echo "Please install zenity (https://gitlab.gnome.org/GNOME/zenity) or yad (https://github.com/v1cont/yad)"
+         exit 1 
+      fi
     else
       export DIALOG
     fi
