@@ -182,14 +182,16 @@ This ifle is similar to `RXNet.cg`, but only collects the relevant paths, that i
 `Energy_profile.pdf` file. A maximum of 100 TSs are printed in this file. If this number is reached, both
 `Energy_profile.pdf` and `RXNet.rel` would be incomplete, and the pathways drawn in `Energy_profile.pdf` could be less than those that appear in `RXNet.rel`.
 
-### rxn_x.txt $\scriptstyle{(}$x = all, kin, stats$\scriptstyle{)}$ 
+### rxn_x.txt $\scriptstyle{(}$x = all, kin$\scriptstyle{)}$ 
 
 These are files with information relevant for the reaction network analysis made with NetworkX python library. Each line of rxn_all.txt lists the nodes, first two columns, and the weight, last column, which is the number of paths connecting the two nodes. For rxn_kin.txt the weight is the total flux in the kinetics simulations. These two files are employed to construct graph_all.pdf and
-graph_kin.pdf, respectively. In rxn_stats.txt, some properties of the reaction network are listed, like
-the average shortest path length, the average clustering coefficient, the transitivity, etc.
+graph_kin.pdf, respectively. 
 
-{: .note }  
-To generate a meaningful `rxn_stats.txt file` use the following script from [![GitHub - amk_tools](https://img.shields.io/badge/GitHub-amk_tools-blue?logo=github)](https://github.com/dgarayr/amk_tools/)
+{: .note }
+
+A file called `rxn_stats.txt` can also be generated. The file provides some properties of the reaction network, like
+the average shortest path length, the average clustering coefficient, the transitivity, etc.
+To generate a meaningful  use the following script from [![GitHub - amk_tools](https://img.shields.io/badge/GitHub-amk_tools-blue?logo=github)](https://github.com/dgarayr/amk_tools/)
 ```bash
 amk_rxn_stats.py FINALDIR
 ```
