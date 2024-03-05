@@ -39,15 +39,12 @@ Example of an interactive dashboard for FA, with the reaction network on the lef
 </p>
 
 
-Additionally, the properties of the reaction network can be obtained, like
-the average shortest path length, the average clustering coefficient, the transitivity, etc. 
-
-To generate those properties run the following script:
+Additionally, the properties of the reaction network can be obtained using the following script:
 ```bash
 amk_rxn_stats.py FINALDIR
 ```
 
-the properties will be printed in a file called `rxn_stats.txt`.
+Properties like the average shortest path length, the average clustering coefficient or the transitivity will be printed in a file called `rxn_stats.txt`.
 
 
 
