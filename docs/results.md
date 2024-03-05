@@ -190,7 +190,7 @@ These are files with information relevant for the reaction network analysis made
 
 A file called `rxn_stats.txt` can also be generated. The file provides some properties of the reaction network, like
 the average shortest path length, the average clustering coefficient, the transitivity, etc.
-To generate a meaningful  use the following script from [![GitHub - amk_tools](https://img.shields.io/badge/GitHub-amk_tools-blue?logo=github)](https://github.com/dgarayr/amk_tools/)
+To generate `rxn_stats.txt` use the following script from [![GitHub - amk_tools](https://img.shields.io/badge/GitHub-amk_tools-blue?logo=github)](https://github.com/dgarayr/amk_tools/)
 ```bash
 amk_rxn_stats.py FINALDIR
 ```
