@@ -184,17 +184,7 @@ This ifle is similar to `RXNet.cg`, but only collects the relevant paths, that i
 
 ### rxn_x.txt $\scriptstyle{(}$x = all, kin$\scriptstyle{)}$ 
 
-These are files with information relevant for the reaction network analysis made with NetworkX python library. Each line of `rxn_all.txt` lists the nodes, first two columns, and the weight, last column, which is the number of paths connecting the two nodes. For `rxn_kin.txt` the weight is the total flux in the kinetics simulations.  
-
-{: .note }
-
-A file called `rxn_stats.txt` can also be generated. The file provides some properties of the reaction network, like
-the average shortest path length, the average clustering coefficient, the transitivity, etc.
-To generate `rxn_stats.txt`, run the following script from `wrkdir`:
-```bash
-amk_rxn_stats.py FINALDIR
-```
-The script is part of the [![GitHub - amk_tools](https://img.shields.io/badge/GitHub-amk_tools-blue?logo=github)](https://github.com/dgarayr/amk_tools/) repository. In this case, the file `rxn_stats.txt` is created in `wrkdir` (not inside `FINALDIR`).
+Each line of `rxn_all.txt` lists the nodes, first two columns, and the weight, last column, which is the number of paths connecting the two nodes. For `rxn_kin.txt` the weight is the total flux in the kinetics simulations.  
 
 ### kineticsFvalue 
 
