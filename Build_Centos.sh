@@ -20,7 +20,6 @@ yum -y install gnuplot
 yum -y install gcc-gfortran 
 yum -y install parallel 
 yum -y install sqlite 
-yum -y install zenity 
 yum -y install vim-common 
 yum -y install vim-minimal 
 yum -y install vim-enhanced 
