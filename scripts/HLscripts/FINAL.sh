@@ -362,6 +362,8 @@ if [ -f $kmcfile ]; then
      echo "${pre}plot 'pop_data_$postb' u 1:$j w l title '$title'"  >>${final}/population${postb}.gnu
    done
    echo pause -1  >> ${final}/population${postb}.gnu
+   #run simpliflyRXN.sh
+   simplifyRXN.sh 1
    #PLOT_RELEVANT.sh
    #if [ -f diagram.gnu ]; then
    #   mv diagram.gnu ${final}/Energy_profile.gnu
