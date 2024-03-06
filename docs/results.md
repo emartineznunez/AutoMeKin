@@ -186,7 +186,7 @@ This file contains the kinetics results, namely, the final branching ratios and 
 every species as a function of time. In the name of the file, `F` is either `T` or `E` for temperature or energy, and `value` is the corresponding value. For instance, the kinetics results for a microcanonical calculation at 150 kcal/mol would be printed in a file called `kineticsE150`. This file can be plotted using `matplotlib` and this is an example:
 
 <p align="center">
-   <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/kin.jpg" alt="alt text" width="800" height="500">
+   <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/kinetics.png" alt="alt text" width="800" height="500">
 </p>
 
 [This Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb) shows some how you can build the plot using `matplotlib`.
