@@ -54,7 +54,7 @@ under `${TMPDIR-/tmp}/amk_installer-${USER}/software`{: .language-bash .highligh
 syntax and an instance of the container will be started using a sandbox
 image deployed under `/tmp/selfextract.XXXXXX`{: .language-bash .highlight} folder (where `XXXXXX` is a
 randomly generated character sequence). The container comes with all
-AutoMeKin's tools installed in `$AMK`{: .language-bash .highlight} plus vim, gnuplot and molden which
+AutoMeKin's tools installed in `$AMK`{: .language-bash .highlight}, which
 can be run from the container. A bash shell session under `$HOME`{: .language-bash .highlight} will
 start under the deployed instance. Note that you can open new sessions
 and access AutoMeKin's output files from your Linux environment and use
