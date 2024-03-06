@@ -33,7 +33,7 @@ elif [ $# -eq 2 ]; then
    inputfile=$1
    runningtasks=$2
 else
-   echo You run this script as:
+   echo You must run this script as:
    echo "nohup $exe inputfile runningtasks >hlcalcs.log 2>&1 &"
    exit 1
 fi
