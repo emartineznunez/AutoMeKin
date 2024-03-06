@@ -37,12 +37,6 @@ Scripts `final.sh` and `FINAL.sh` are employed to collect all relevant informati
 This file lists the number of located transition states as a function of the number of trajectories
 and iteration (Only in `FINAL_LL_FA`).
 
-### Energy_profile.pdf 
-
-This is an energy diagram with the _relevant paths_ , which are those that participate in
-the dynamics at the conditions of interest. If you change the `value[ImpPaths]` in the kinetics section of
-the input data, you can incorporate/remove some pathways; the maximum number of TSs in the profile is 100. This file is deprecated.
-
 ### frag_warnings 
 
 This ifle contains information on failed ab initio calculations of the fragments. If all calculations
