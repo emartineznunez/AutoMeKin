@@ -45,22 +45,6 @@ function print_ref {
    echo "==================================="
 }
 
-#Function to select dialog engine (zenity/yad)
-function dialog {
-	if yad --help-gtk &>/dev/null; then DIALOG="yad";fi
-	if zenity --help-gtk &>/dev/null; then DIALOG="zenity";fi
-	if [ -z "$DIALOG" ]
-      then
-      if [ -z $inter ] && [ -z $iter ]; then
-         echo "Please install zenity (https://gitlab.gnome.org/GNOME/zenity) or yad (https://github.com/v1cont/yad)"
-         exit 1 
-      fi
-    else
-      export DIALOG
-    fi
-}
-
-dialog
 
 #Function to submit jobs using slurm
 function slurm {
@@ -130,11 +114,7 @@ TASKS=$2
 #$parallel "runGP.sh {1} $molecule" ::: $(seq $noj1 $nojf)
 if [ -z "$SRUN" ]; then
    if [ -z $inter ]; then
-      if [ -z $iter ]; then
-         $parallel $COMMAND ::: $TASKS 2> >(${DIALOG} --progress --auto-close --no-cancel --title="parallel progress bar $exe" --width=500 --height=100 2> /dev/null) &
-      else
-         $parallel $COMMAND ::: $TASKS 2> >(${DIALOG} --progress --auto-close --no-cancel --title="parallel progress bar $exe iter=$iter" --width=500 --height=100 2> /dev/null)  &
-      fi
+      $parallel $COMMAND ::: $TASKS 2> /dev/null
    else
       nohup $parallel $COMMAND ::: $TASKS  >/dev/null 2>&1 & 
       echo $! > .parallel.pid

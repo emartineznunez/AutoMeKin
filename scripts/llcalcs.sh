@@ -26,27 +26,7 @@ source utils.sh
 # Printing the references of the method
 print_ref
 #
-if [ $# -eq 0 ]; then
-   if [[ ${DIALOG} == "zenity" ]]; then FILE="$(zenity --file-selection --filename="$PWD/*.dat" --file-filter="*.dat" --title="Select the input file" 2> /dev/null)";fi
-   if [[ ${DIALOG} == "yad" ]]; then FILE="$(yad --file --filename="$PWD/*.dat" --file-filter="*.dat" --title="Select the input file" 2> /dev/null)";fi
-   inputfile="$(basename $FILE)"
-   echo "Selected input file: $inputfile"
-   if [[ ${DIALOG} == "zenity" ]]; then
-   answer="$(zenity --forms --title="llcalcs.sh GUI" --text="Add input data" \
-      --add-entry="Number of tasks" \
-      --add-entry="Number of iterations" \
-      --add-entry="Max number of running tasks" 2>/dev/null | awk 'BEGIN{FS="|"};{print $1,$2,$3}' )"
-   fi
-   if [[ ${DIALOG} == "yad" ]]; then
-   answer="$(zenity --form --title="llcalcs.sh GUI" --text="Add input data" \
-      --field="Number of tasks":NUM \
-      --field="Number of iterations":NUM \
-      --field="Max number of running tasks":NUM 2>/dev/null | awk 'BEGIN{FS="|"};{print $1,$2,$3}' )"
-   fi
-   nbatch=$(echo "$answer" | awk '{print $1}')
-   niter=$(echo "$answer" | awk '{print $2}')
-   runningtasks=$(echo "$answer" | awk '{print $3}')
-elif [ $# -eq 3 ]; then
+if [ $# -eq 3 ]; then
    inputfile=$1
    nbatch=$2
    niter=$3
@@ -63,9 +43,7 @@ elif [ $# -eq 4 ]; then
    niter=$3
    runningtasks=$4
 else
-   echo You must provide zero or four arguments:
-   echo "nohup $exe >llcalcs.log 2>&1 &"
-   echo or
+   echo You must run this script as:
    echo "nohup $exe inputfile ntasks niter runningtasks >llcalcs.log 2>&1 &" 
    exit 1
 fi

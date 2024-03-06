@@ -130,7 +130,7 @@ fi
 fi
 ###
 echo ""
-echo "A progress bar will pop up very shortly"
+echo "Running amk_parallel interactively..."
 #The last job is tors.sh
 nojf=$((nojf + 1))
 #Then we submit the nojf-noj1+1 trajectory jobs
@@ -142,4 +142,5 @@ if [ ! -z $SLURM_JOB_ID ] && [ ! -z $SLURM_NTASKS ]; then
 fi
 doparallel "runGP.sh {1} $molecule $cwd $nojf $nchan $e0" "$(seq $noj1 $nojf)"
 
+echo "End of calculations."
 rm -rf fort.* min.xyz ScalMat
