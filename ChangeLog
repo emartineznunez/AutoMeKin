@@ -1,5 +1,5 @@
 Latest revision: 1137
-03/06/2024	Remove dependence with zenity/yad
+03/06/2024	Remove dependence with zenity, yad and gnuplot
 01/15/2024	Fixed some bugs with llcalcs.sh and improved ChemKnow algorithm (new keyword CK_minima)
 11/07/2023	Fixed some issues with the HL calcs of fragments
 05/12/2022	Fixed some issues with qcore calcs
