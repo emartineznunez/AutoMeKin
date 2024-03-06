@@ -20,20 +20,7 @@ source utils.sh
 print_ref
 ##
 #if no arguments are provided, then a gui pops up 
-if [ $# -eq 0 ]; then
-   if [[ ${DIALOG} == "zenity" ]]; then FILE="$(zenity --file-selection --filename="$PWD/*.dat" --file-filter="*.dat" --title="Select the input file" 2> /dev/null)";fi
-   if [[ ${DIALOG} == "yad" ]]; then FILE="$(yad --file --filename="$PWD/*.dat" --file-filter="*.dat" --title="Select the input file" 2> /dev/null)";fi
-   inputfile="$(basename $FILE)"
-   echo "Selected input file: $inputfile"
-   if [[ ${DIALOG} == "zenity" ]]; then
-      runningtasks="$(zenity --forms --title="hlcalcs.sh GUI" --text="Add input data" \
-      --add-entry="Max number of running tasks" 2>/dev/null  )"
-   fi
-   if [[ ${DIALOG} == "yad" ]]; then 
-      runningtasks="$(yad --form --title="hlcalcs.sh GUI" --text="Add input data" \
-      --field="Max number of running tasks":NUM 2>/dev/null | awk 'BEGIN{FS="|"};{print $1}' )"
-   fi
-elif [ $# -eq 1 ]; then
+if [ $# -eq 1 ]; then
    inputfile=$1
    if [ ! -z $SLURM_JOB_ID ] && [ ! -z $SLURM_NTASKS ]; then
       runningtasks=$SLURM_NTASKS
@@ -46,9 +33,7 @@ elif [ $# -eq 2 ]; then
    inputfile=$1
    runningtasks=$2
 else
-   echo You must provide zero or two arguments:
-   echo "nohup $exe >hlcalcs.log 2>&1 &"
-   echo or
+   echo You run this script as:
    echo "nohup $exe inputfile runningtasks >hlcalcs.log 2>&1 &"
    exit 1
 fi

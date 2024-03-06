@@ -446,7 +446,7 @@ if [ -f RXNet.rel ]; then
 fi
 
 #####################################################^
-rm -rf population${postb}.gnu Energy_profile.gnu
+rm -rf population${postb}.gnu Energy_profile.*
 #####################################################v
 if ! [ -z "$AMK_REPORT" ]
 then
