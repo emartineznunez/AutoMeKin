@@ -189,3 +189,4 @@ every species as a function of time. In the name of the file, `F` is either `T` 
    <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/kin.jpg" alt="alt text" width="800" height="500">
 </p>
 
+[This Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb) shows some how you can build the plot using `matplotlib`.
