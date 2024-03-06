@@ -16,7 +16,6 @@ yum -y install environment-modules
 yum -y install gawk 
 yum -y install gcc 
 yum -y install gcc-c++ 
-yum -y install gnuplot 
 yum -y install gcc-gfortran 
 yum -y install parallel 
 yum -y install sqlite 
