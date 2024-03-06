@@ -442,10 +442,10 @@ fi
 ######################################################v
 cd ${final}
 ######################################################v
-if [ -f RXNet.rel ]; then
-   gnuplot <population${postb}.gnu>population${postb}.pdf
-   #gnuplot <Energy_profile.gnu>Energy_profile.pdf
-fi
+#if [ -f RXNet.rel ]; then
+#   gnuplot <population${postb}.gnu>population${postb}.pdf
+#   #gnuplot <Energy_profile.gnu>Energy_profile.pdf
+#fi
 
 #####################################################^
 rm -rf population${postb}.gnu 
