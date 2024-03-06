@@ -43,11 +43,6 @@ if test x"$SQLITE_CHECK" != x"yes" ; then
     AC_MSG_ERROR([Please install sqlite3 package before proceeding.])
 fi
 
-AC_PATH_PROG(GNUPLOT, gnuplot, no)
-if test x"$GNUPLOT" = xno; then
-	AC_MSG_ERROR([Please install gnuplot package before proceeding.])
-fi
-
 AC_PATH_PROG(BC_CALCULATOR, bc, no)
 if test x"$BC_CALCULATOR" = xno; then
 	AC_MSG_ERROR([Please install bc package before proceeding.])
