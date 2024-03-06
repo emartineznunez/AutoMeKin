@@ -362,10 +362,10 @@ if [ -f $kmcfile ]; then
      echo "${pre}plot 'pop_data_$postb' u 1:$j w l title '$title'"  >>${final}/population${postb}.gnu
    done
    echo pause -1  >> ${final}/population${postb}.gnu
-   PLOT_RELEVANT.sh
-   if [ -f diagram.gnu ]; then
-      mv diagram.gnu ${final}/Energy_profile.gnu
-   fi
+   #PLOT_RELEVANT.sh
+   #if [ -f diagram.gnu ]; then
+   #   mv diagram.gnu ${final}/Energy_profile.gnu
+   #fi
 fi
 nx.sh HL
 ###Change format of RXNet and RXNet.cg
@@ -442,11 +442,11 @@ cd ${final}
 ######################################################v
 if [ -f RXNet.rel ]; then
    gnuplot <population${postb}.gnu>population${postb}.pdf
-   gnuplot <Energy_profile.gnu>Energy_profile.pdf
+   #gnuplot <Energy_profile.gnu>Energy_profile.pdf
 fi
 
 #####################################################^
-rm -rf population${postb}.gnu Energy_profile.*
+rm -rf population${postb}.gnu 
 #####################################################v
 if ! [ -z "$AMK_REPORT" ]
 then
