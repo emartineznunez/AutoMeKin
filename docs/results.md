@@ -193,4 +193,33 @@ The file kineticsFvalue can be plotted. To facilitate it, we also provide a _csv
    <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/kinetics.png" alt="alt text" width="800" height="500">
 </p>
 
-[This Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb) shows how to build the plot using `pandas` and `matplotlib`.
+[This Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb) shows how to build the plot using `pandas` and `matplotlib`. This is the code snippet:
+```
+!sudo apt install cm-super dvipng texlive-latex-extra texlive-latex-recommended
+
+import pandas as pd
+from matplotlib import pyplot
+
+pyplot.rcParams['text.usetex'] = True
+pyplot.xticks(fontsize=14)
+pyplot.yticks(fontsize=14)
+
+data = pd.read_csv('kinetics.csv')
+for count,col in enumerate(data.columns):
+  if count == 0:
+    x=data[col]
+    xcol=col
+  if count >=1: pyplot.plot(x,data[col],label=col,linewidth=1.0)
+
+pyplot.ylabel('Population',fontsize=20)
+pyplot.xlabel(xcol,fontsize=20)
+
+pyplot.legend()
+pyplot.xlim(0,max(x))
+pyplot.ylim(0,1000)
+pyplot.tight_layout()
+pyplot.savefig('kinetics.png')
+pyplot.show()
+```
+
+
