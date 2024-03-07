@@ -189,4 +189,4 @@ every species as a function of time. In the name of the file, `F` is either `T` 
    <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/kinetics.png" alt="alt text" width="800" height="500">
 </p>
 
-[This Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb) shows some how to build the plot using `matplotlib`.
+[This Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb) shows how to build the plot using `matplotlib`.
