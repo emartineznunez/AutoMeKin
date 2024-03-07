@@ -448,7 +448,7 @@ cd ${final}
 #fi
 
 #####################################################^
-rm -rf population${postb}.gnu 
+rm -rf population${postb}.gnu pop_data*
 #####################################################v
 if ! [ -z "$AMK_REPORT" ]
 then
