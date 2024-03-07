@@ -446,7 +446,9 @@ cd ${final}
 #   gnuplot <population${postb}.gnu>population${postb}.pdf
 #   #gnuplot <Energy_profile.gnu>Energy_profile.pdf
 #fi
-
+##Create csv file
+awk '/Time/,0 {for(i=1;i<=NF-1;i++) printf "%s, ",$i;print $NF}' kinetics$postb > kinetics.csv
+##End of create csv file
 #####################################################^
 rm -rf population${postb}.gnu pop_data*
 #####################################################v
