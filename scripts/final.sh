@@ -381,7 +381,7 @@ cd ${final}
 awk '/Time/,0 {for(i=1;i<=NF-1;i++) printf "%s, ",$i;print $NF}' kinetics$postb > kinetics.csv
 ##End of create csv file
 #####################################################^
-rm -rf population${postb}.gnu pop_data*
+rm -rf population${postb}.gnu pop_data* kinetics$postb
 #####################################################v
 if ! [ -z "$AMK_REPORT" ]
 then
