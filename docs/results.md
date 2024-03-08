@@ -180,14 +180,10 @@ This ifle is similar to `RXNet.cg`, but only collects the relevant paths, that i
 
 Each line of `rxn_all.txt` lists the nodes, first two columns, and the weight, last column, which is the number of paths connecting the two nodes. For `rxn_kin.txt` the weight is the total flux in the kinetics simulations.  
 
-### kineticsFvalue 
-
-This file contains the kinetics results, namely, the final branching ratios and the population of
-every species as a function of time. In the name of the file, `F` is either `T` or `E` for temperature or energy, and `value` is the corresponding value. For instance, the kinetics results for a microcanonical calculation at 150 kcal/mol would be printed in a file called `kineticsE150`. 
 
 ### kinetics.csv
 
-The file kineticsFvalue can be plotted. To facilitate it, we also provide a _csv_ that can be used with `pandas` and `matplotlib` to produce a figure like this:
+This file includes the population data for each species over time. To simplify the process of generating a plot from this file, we have used a `CSV` format that can be used with `pandas` and `matplotlib` to create a figure like this:
 
 <p align="center">
    <img src="https://raw.githubusercontent.com/emartineznunez/AutoMeKin/gh-pages/assets/images/kinetics.png" alt="alt text" width="800" height="500">
