@@ -20,7 +20,7 @@ If you're eager to experience it firsthand, you can try this Notebook:
 4. [Build from source](#build)
 
 ## 1. Build with micromamba <a name="mm"></a>
-This is the recommended option. To build AutoMeKin and its dependencies, including `amk_tools` and `qcore`, just type
+This is the recommended option. To build `AutoMeKin` and its dependencies (including `amk_tools` and `qcore`) just type
 
 ```
 bash Build_micormamba.sh
