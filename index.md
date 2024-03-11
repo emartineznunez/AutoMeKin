@@ -15,9 +15,9 @@ If you're eager to experience it firsthand, you can try this Notebook:
 # Installation of AutoMeKin
 **AutoMeKin** offers three different installation and deployment methods: 
 1. [Build with micromamba(recommended option)](#mm)
-1. [Auto installer](#autoinstaller)
-2. [Singularity container](#singularity)
-3. [Build from source](#build)
+2. [Auto installer](#autoinstaller)
+3. [Singularity container](#singularity)
+4. [Build from source](#build)
 
 ## 1. Build with micromamba <a name="mm"></a>
 This is the recommended option. To build AutoMeKin and its dependencies (including `amk_tools` and `qcore`), just type
@@ -29,7 +29,7 @@ bash Build_micormamba.sh
 and follow the instructions to activate the environment.
 
 
-## 1. Auto installer <a name="autoinstaller"></a>
+## 3. Auto installer <a name="autoinstaller"></a>
 An auto installer script is provided to install singularity and
 download the last release container image from [sylabs](https://cloud.sylabs.io/library/emartineznunez/default/automekin) as
 `$HOME/automekin_<tag>.sif`{: .language-bash .highlight}. Note that this is done only the first time
@@ -131,7 +131,7 @@ singularity instance list
 ```
 And stop them as indicated above.
 
-## 3. Build from source <a name="build"></a>
+## 4. Build from source <a name="build"></a>
 
 The most recent version is avaialable at GitHub and can be installed as indicated in this section.
 
