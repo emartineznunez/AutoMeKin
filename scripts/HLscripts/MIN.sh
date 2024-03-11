@@ -1,15 +1,11 @@
 #!/bin/bash
-#default sbatch FT2 resources
+#default sbatch resources
 #SBATCH --time=08:00:00
 #SBATCH -n 4
 #SBATCH --output=MIN-%j.log
-#_remove_this_in_ft_SBATCH --partition=cola-corta,thinnodes
 #SBATCH --ntasks-per-node=2
 #SBATCH -c 12
 #
-# SBATCH -p shared --qos=shared
-# SBATCH --ntasks-per-node=2
-# SBATCH -c 10
 
 sharedir=${AMK}/share
 
