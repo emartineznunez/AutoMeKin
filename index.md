@@ -14,7 +14,7 @@ If you're eager to experience it firsthand, you can try this Notebook:
 
 # Installation of AutoMeKin
 **AutoMeKin** offers three different installation and deployment methods: 
-1. [Build with micromamba $\scriptstyle($recommended option$)$](#mm)
+1. [Build with micromamba $\scriptstyle($recommended option$\scriptstyle)$](#mm)
 2. [Auto installer](#autoinstaller)
 3. [Singularity container](#singularity)
 4. [Build from source](#build)
