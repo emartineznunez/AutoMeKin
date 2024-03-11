@@ -8,8 +8,8 @@ then
   export PATH=$HOME/.local/bin:$PATH
   micromamba shell deinit
 fi
+MB=$(type -P micromamba)
 eval "$(micromamba shell hook --shell bash)"
-MB=$(which micromamba)
 
 micromamba create -y -f automekin.yml
 micromamba activate amk_env
