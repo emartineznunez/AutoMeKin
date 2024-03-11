@@ -20,7 +20,7 @@ If you're eager to experience it firsthand, you can try this Notebook:
 4. [Build from source](#build)
 
 ## 1. Build with `micromamba` <a name="mm"></a>
-This is the recommended option. 
+This is the recommended option. A minimumal linux installation is required with at least `git`, `curl`, `make`, `autoconf` and `autotools`.
 
 To build `AutoMeKin` and its dependencies (including `amk_tools` and `qcore`) using `micromamba`, just type
 
