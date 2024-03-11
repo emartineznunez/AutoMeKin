@@ -29,7 +29,7 @@ bash Build_micormamba.sh
 and follow the instructions to activate the environment.
 
 
-## 3. Auto installer <a name="autoinstaller"></a>
+## 2. Auto installer <a name="autoinstaller"></a>
 An auto installer script is provided to install singularity and
 download the last release container image from [sylabs](https://cloud.sylabs.io/library/emartineznunez/default/automekin) as
 `$HOME/automekin_<tag>.sif`{: .language-bash .highlight}. Note that this is done only the first time
@@ -81,7 +81,7 @@ your own tools as well.
 {: .note }  
 To download the file directly from your terminal, curl must be installed. The autoinstaller also works on Ubuntu 20.04 LTS on Windows.  
 
-## 2. Singularity container <a name="singularity"></a>
+## 3. Singularity container <a name="singularity"></a>
 If singularity is already installed in your
 computer, you can obtain the container from sylabs. First check the
 latest image, Tag, by typing: 
