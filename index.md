@@ -40,7 +40,7 @@ and follow the instructions to activate the environment.
 Before using `qcore`, remember to agree to the Software License Agreement and to set your token by running:
 
 ```
-qcore --license
+entos --license
 ```
 
 
