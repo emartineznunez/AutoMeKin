@@ -22,7 +22,7 @@ If you're eager to experience it firsthand, you can try this Notebook:
 ## 1. Build with `micromamba` <a name="mm"></a>
 This is the recommended option. A minimumal linux installation is required with at least `git`, `curl`, `make`, `autoconf` and `autotools`.
 
-To build `AutoMeKin` and its dependencies (including `amk_tools` and `qcore`) using `micromamba`, just type
+To build `AutoMeKin` and its dependencies (including `amk_tools`, `qcore` and `molden`) using `micromamba`, just type
 
 ```
 bash Build_micormamba.sh
