@@ -41,7 +41,6 @@ autoreconf -i
 ./configure --prefix=/opt/AutoMeKin
 make
 make install
-rm -f /opt/AutoMeKin/modules/amk/2021ft2
 cd /install_dir
 curl -O https://rxnkin.usc.es/images/5/56/molden6.2.full.ubuntu.64.tar.gz
 cd /opt

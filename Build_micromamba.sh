@@ -31,11 +31,11 @@ autoreconf -i
 ./configure --prefix=$CONDA_PREFIX/opt/AutoMeKin
 make
 make install
-rm -f $CONDA_PREFIX/opt/AutoMeKin/modules/amk/2021ft2
 cd $CONDA_PREFIX/install_dir
 curl -s -L  https://github.com/emartineznunez/amk_utils/raw/main/molden6.2.full.ubuntu.64.tar.gz| tar -xvz -C $CONDA_PREFIX/opt
+ln -s -i $CONDA_PREFIX/lib/libgfortran.so.3 $CONDA_PREFIX/opt/molden/libgfortran.so.3
+rm -f $CONDA_PREFIX/opt/molden/libstdc++.so.6
 rm -rf $CONDA_PREFIX/install_dir
-
 } &>>$0.log
 
 echo "AutoMeKin installation done  ..."

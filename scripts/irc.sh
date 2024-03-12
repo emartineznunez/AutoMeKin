@@ -1,18 +1,10 @@
 #!/bin/bash
 
-# default sbatch FT2
 #SBATCH --output=irc-%j.log
 #SBATCH --time=04:00:00
-# partition selection
 
-#_remove_this_in_ft_SBATCH -p shared --qos=shared
 #SBATCH -c 1 --mem-per-cpu=2048
 #SBATCH -n 8
-
-# SBATCH --partition=cola-corta,thinnodes
-# SBATCH -c 1
-# SBATCH -n 24
-
 
 #exe=$(basename $0)
 # under batchs systems the scripts are copied to a generic script (in slurm slurm_script)
@@ -222,7 +214,7 @@ done
 echo Performing a total of $m irc calculations
 #Perform m parallel calculations
 if [ $m -gt 0 ]; then
-#ft2 slurm
+#slurm
 if [ ! -z $SLURM_JOB_ID ] && [ ! -z $SLURM_NTASKS ]; then
   if (( $m < $SLURM_NTASKS )); then 
     echo "WARNING: Number of irc calculations ($m) lower than allocated tasks ($SLURM_NTASKS)."

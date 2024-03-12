@@ -11,7 +11,11 @@ dependencies:
   - networkx
   - gxx
   - gfortran
-  - gawk
+  - libgfortran
+  - git
+  - make
+  - autoconf
+  - automake
   - cmake
   - ase
   - matplotlib

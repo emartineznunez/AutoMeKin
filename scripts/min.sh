@@ -1,16 +1,10 @@
 #!/bin/bash
-# default sbatch FT2
+# default sbatch
 #SBATCH --output=min-%j.log
 #SBATCH --time=04:00:00
-# partition selection
 
-#_remove_this_in_ft_SBATCH -p shared --qos=shared
 #SBATCH -c 1 --mem-per-cpu=2048
 #SBATCH -n 8
-
-# SBATCH --partition=cola-corta,thinnodes
-# SBATCH -c 1
-# SBATCH -n 24
 
 source utils.sh
 #remove tmp files

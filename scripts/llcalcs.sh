@@ -1,16 +1,10 @@
 #!/bin/bash
-# default sbatch FT2
+# default sbatch
 #SBATCH --output=llcalcs-%j.log
 #SBATCH --time=04:00:00
-# partition selection
 
-#_remove_this_in_ft_SBATCH -p shared --qos=shared
 #SBATCH -c 1 --mem-per-cpu=2048
 #SBATCH -n 32
-
-# SBATCH --partition=cola-corta,thinnodes
-# SBATCH -c 1
-# SBATCH -n 48
 
 # first  arg is inputfile
 # second arg is nbatches (200 is a good number)

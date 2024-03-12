@@ -16,7 +16,7 @@ dist_bin_SCRIPTS = chemical_formula.sh \
 	      utils.sh llcalcs.sh final.sh get_NM_mopac.sh get_geom_thermo_mopac.sh  \
               conf_isomer_ts.sh tsll_view.sh track_view.sh \
               select.sh redo_screening.sh  kinetics.sh \
-              slurm_settings_ft2.sh abort.sh remove_ts.sh run_test.sh nx.sh \
+              abort.sh remove_ts.sh run_test.sh nx.sh \
               rxn.py track.py Langevin.py check_ts_structure.sh \
               bxde.py check_vdw_atoms.py bots.py mopacamk.py Heuristics.py \
               format_rxnet.sh DVV.py DVV_hl.py entos.py amk_frag.sh \

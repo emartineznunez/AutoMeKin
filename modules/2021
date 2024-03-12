@@ -33,8 +33,8 @@ set modroot $rootdir
 ## setting variables used in AMK
 #export AMK=/home/usc/qf/emn/Programs/TSSCDS1.1
 #export PATH=${AMK}/bin:${TSSCDS}/bin/CATscripts:${TSSCDS}/bin/HLscripts:$PATH
-prepend-path PATH $modroot/bin:$modroot/bin/CATscripts:$modroot/bin/HLscripts:$modroot/bin/MOPAC_DEV
-prepend-path LD_LIBRARY_PATH $modroot/lib:$modroot/bin/MOPAC_DEV
+prepend-path PATH $modroot/bin:$modroot/bin/CATscripts:$modroot/bin/HLscripts:$modroot/bin/MOPAC_DEV:$modroot/../molden
+prepend-path LD_LIBRARY_PATH $modroot/lib:$modroot/bin/MOPAC_DEV:$modroot/../molden
 #prepend-path LIBRARY_PATH $modroot/lib
 #prepend-path LD_RUN_PATH $modroot/lib
 #prepend-path CMAKE_LIBRARY_PATH $modroot/lib
