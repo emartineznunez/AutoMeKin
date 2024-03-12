@@ -10,6 +10,7 @@ dependencies:
   - lmod
   - networkx
   - gxx
+  - gawk
   - gfortran
   - libgfortran
   - git
