@@ -37,6 +37,12 @@ bash Build_micromamba.sh
 
 and follow the instructions to activate the environment.
 
+Before using `qcore`, remember to agree to the Software License Agreement and to set your token by running:
+
+```
+qcore --license
+```
+
 
 ## 2. Auto installer <a name="autoinstaller"></a>
 An auto installer script is provided to install singularity and
