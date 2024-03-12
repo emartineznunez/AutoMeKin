@@ -32,7 +32,7 @@ git clone https://github.com/emartineznunez/AutoMeKin.git
 To build `AutoMeKin` and its dependencies (including `amk_tools`, `qcore` and `molden`) using `micromamba`, just type
 
 ```
-bash Build_micormamba.sh
+bash Build_micromamba.sh
 ```
 
 and follow the instructions to activate the environment.
