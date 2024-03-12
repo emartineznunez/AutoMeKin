@@ -28,6 +28,11 @@ A minimal linux installation with at least `git` is required to clone the reposi
 git clone https://github.com/emartineznunez/AutoMeKin.git
 ```
 
+Go to the AutoMeKin directory:
+
+```
+cd AutoMeKin
+```
 
 To build `AutoMeKin` and its dependencies (including `amk_tools`, `qcore` and `molden`) using `micromamba`, just type
 
