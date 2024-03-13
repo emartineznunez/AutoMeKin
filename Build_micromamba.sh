@@ -33,8 +33,11 @@ make
 make install
 cd $CONDA_PREFIX/install_dir
 curl -s -L  https://github.com/emartineznunez/amk_utils/raw/main/molden6.2.full.ubuntu.64.tar.gz| tar -xvz -C $CONDA_PREFIX/opt
-ln -s -i $CONDA_PREFIX/lib/libgfortran.so.3 $CONDA_PREFIX/opt/molden/libgfortran.so.3
 rm -f $CONDA_PREFIX/opt/molden/libstdc++.so.6
+for exe in obabel ambmd gmolden obenergy surf open3dqsar ambmd ambfor molden pharmer
+  do
+  patchelf --set-rpath $CONDA_PREFIX/lib:$CONDA_PREFIX/opt/molden $CONDA_PREFIX/opt/molden/$exe
+done
 rm -rf $CONDA_PREFIX/install_dir
 } &>>$0.log
 
