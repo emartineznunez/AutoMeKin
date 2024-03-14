@@ -13,11 +13,13 @@ dependencies:
   - gawk
   - gfortran
   - libgfortran
+  - tar
   - git
   - make
   - autoconf
   - automake
   - cmake
+  - patchelf
   - ase
   - matplotlib
   - sqlite
