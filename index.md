@@ -34,7 +34,7 @@ Go to the AutoMeKin directory:
 cd AutoMeKin
 ```
 
-To build `AutoMeKin` and its dependencies (including `amk_tools`, `qcore` and `molden`) using `micromamba`, just type
+To build `AutoMeKin` and its dependencies (including `amk_tools`, `qcore` and `molden`) using `micromamba`, just type (it needs `curl` installed in your system):
 
 ```
 bash Build_micromamba.sh
