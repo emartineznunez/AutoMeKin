@@ -55,11 +55,10 @@ entos --license
 
 The most recent version is avaialable at GitHub and can be installed as indicated in this section.
 
-You can build, system-wide and including dependencies, using [this CentOS-based script](https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Centos.sh)
+You can build, system-wide and including dependencies, following the steps indicated in these scripts: 
+- [CentOS-based script](https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Centos.sh)
+- [Ubuntu-based script](https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Ubuntu.sh)
 
-```bash
-curl -LJO https://raw.githubusercontent.com/emartineznunez/AutoMeKin/main/Build_Centos.sh
-```
 
 To install everything manually, follow the next steps.
 
