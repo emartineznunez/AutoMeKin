@@ -27,7 +27,7 @@ yum -y install python3-pip
 yum -y install openblas 
 yum -y install curl
 update-mime-database /usr/share/mime
-curl -sL https://rpm.nodesource.com/setup_14.x | bash -
+curl -fsSL https://rpm.nodesource.com/setup_21.x | bash -
 yum -y install nodejs
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade Pillow
