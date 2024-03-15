@@ -192,7 +192,7 @@ download the last release container image from [sylabs](https://cloud.sylabs.io/
 `$HOME/automekin_<tag>.sif`{: .language-bash .highlight}. Note that this is done only the first time
 you use it unless a new image is available. Then, the script will detect
 singularity and the image (that must be located in your `$HOME`{: .language-bash .highlight}) and will
-only start an instance of the container. The container includes [![GitHub - amk_tools](https://img.shields.io/badge/GitHub-amk_tools-blue?logo=github)](https://github.com/dgarayr/amk_tools/). 
+only start an instance of the container. The container includes [`amk_tools`](https://github.com/dgarayr/amk_tools). 
 
 {: .warning }  
 This option offers an outdated version of singularity, lacking proper image verifying capabilities. Consequently, an error is consistently triggered upon downloading a new image.
