@@ -31,7 +31,7 @@ autoreconf -i
 make
 make install
 cd /install_dir
-curl -O https://rxnkin.usc.es/images/5/56/molden6.2.full.ubuntu.64.tar.gz
+curl -O https://github.com/emartineznunez/amk_utils/raw/main/molden6.2.full.ubuntu.64.tar.gz
 cd /opt
 tar zxvf /install_dir/molden6.2.full.ubuntu.64.tar.gz
 git clone https://github.com/dgarayr/amk_tools.git
