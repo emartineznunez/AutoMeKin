@@ -16,8 +16,8 @@ apt --assume-yes install sqlite
 apt --assume-yes install python3-pip 
 apt --assume-yes install curl
 source /etc/profile.d/modules.sh
-curl -fsSL https://deb.nodesource.com/setup_20.x | bash - &&\
-apt --assume-yes install nodejs
+curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+apt --assume-yes install nodejs -y
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade Pillow
 pip3 install ase
