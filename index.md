@@ -20,7 +20,7 @@ If you're eager to experience it firsthand, you can try this Notebook:
 4. [Auto installer](#autoinstaller)
 
 ## 1. Build with `micromamba` <a name="mm"></a>
-This is the recommended option. 
+This is the recommended option. The packages `git` and `curl` must be installed beforehand.
 
 First, clone the repository:
 
@@ -34,7 +34,7 @@ Go to the AutoMeKin directory:
 cd AutoMeKin
 ```
 
-To build `AutoMeKin` and its dependencies (including [`amk_tools`](https://github.com/dgarayr/amk_tools), `qcore` and `molden`) using `micromamba`, just type (it needs `curl` installed in your system):
+To build `AutoMeKin` and its dependencies (including [`amk_tools`](https://github.com/dgarayr/amk_tools), `qcore` and `molden`) using `micromamba`, just type:
 
 ```
 bash Build_micromamba.sh
