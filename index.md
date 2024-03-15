@@ -68,18 +68,7 @@ To install everything manually, follow the next steps.
 The following packages are required beforehand:   
 [GNU Autoconf](https://www.gnu.org/software/autoconf/), [GNU Bash](https://www.gnu.org/software/bash/), [GNU bc](https://www.gnu.org/software/bc/), [environment-modules](https://github.com/cea-hpc/modules), [GNU Awk, gawk](https://www.gnu.org/software/gawk/), [GNU C Compiler, gcc](https://gcc.gnu.org/), [GNU Fortran Compiler, gfortran](https://gcc.gnu.org/wiki/GFortran), [GNU Parallel](https://www.gnu.org/software/bash/manual/html_node/GNU-Parallel.html), [SQLite\>= 3](https://www.sqlite.org/index.html)
 
-For your convenience, you can use these scripts: `install-required-packages-distro.sh` (where `distro`=ubuntu-16.4lts, centos7 or sl7), which will do the work for you.The ubuntu-16.4lts
-script installs all dependencies, but for the RHEL derivatives, centos7
-and sl7, you have to install parallel separately, and you have two
-choices:
-
-- `install-gnu-parallel-from-source.sh`. This script installs parallel
-latest version from source thanks to Ole Tange, the author. Also it can
-fallback to a user private installation into `$HOME/bin` if you have not
-administrator permisions to install it globally.
-
-- `install-gnu-parallel-from-epel.sh`. Enables the EPEL repository and
-installs parallel from it.
+Additionally,
 
 {: .highlight }    
 The following python3 libraries are
