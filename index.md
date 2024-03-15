@@ -65,13 +65,13 @@ To install everything manually, follow the next steps.
 ### Installing dependencies 
 
 {: .highlight }    
-The following packages are required beforehand:   
+The following **packages** are required beforehand:   
 [GNU Autoconf](https://www.gnu.org/software/autoconf/), [GNU Bash](https://www.gnu.org/software/bash/), [GNU bc](https://www.gnu.org/software/bc/), [environment-modules](https://github.com/cea-hpc/modules), [GNU Awk, gawk](https://www.gnu.org/software/gawk/), [GNU C Compiler, gcc](https://gcc.gnu.org/), [GNU Fortran Compiler, gfortran](https://gcc.gnu.org/wiki/GFortran), [GNU Parallel](https://www.gnu.org/software/bash/manual/html_node/GNU-Parallel.html), [SQLite\>= 3](https://www.sqlite.org/index.html)
 
 Additionally,
 
 {: .highlight }    
-The following python3 libraries are
+The following **Python3 libraries** are
 needed:  
 [ASE>= 3.21.1](https://wiki.fysik.dtu.dk/ase/install.html), [Matplotlib>= 3.3.4](https://matplotlib.org/stable/users/installing/index.html), [NetworkX>= 2.5](https://networkx.org/documentation/stable/install.html), [NumPy>= 1.19.5](https://numpy.org/install/), [SciPy>= 1.5.4](https://scipy.org/install/)  
 The installation of [molden](https://www.theochem.ru.nl/molden/linux.html) is highly recommended to analyze the results.
