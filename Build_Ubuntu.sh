@@ -15,7 +15,9 @@ apt --assume-yes install parallel
 apt --assume-yes install sqlite 
 apt --assume-yes install python3-pip 
 apt --assume-yes install curl
+apt --assume-yes install snapd
 source /etc/profile.d/modules.sh
+snap install molden
 curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
 apt --assume-yes install nodejs -y
 python3 -m pip install --upgrade pip
@@ -30,10 +32,7 @@ autoreconf -i
 ./configure --prefix=/opt/AutoMeKin
 make
 make install
-cd /install_dir
-curl -O https://github.com/emartineznunez/amk_utils/raw/main/molden6.2.full.ubuntu.64.tar.gz
 cd /opt
-tar zxvf /install_dir/molden6.2.full.ubuntu.64.tar.gz
 git clone https://github.com/dgarayr/amk_tools.git
 cd amk_tools
 pip3 install -e .
