@@ -13,7 +13,7 @@ If you're eager to experience it firsthand, you can try this Notebook:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb)
 
 # Installation of AutoMeKin
-**AutoMeKin** offers three different installation and deployment methods: 
+**AutoMeKin** offers four different installation and deployment methods: 
 1. [Build with `micromamba` $\scriptstyle($recommended option$\scriptstyle)$](#mm)
 2. [Build from source](#build)
 3. [Singularity container](#singularity)
