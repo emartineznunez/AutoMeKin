@@ -40,7 +40,9 @@ To build `AutoMeKin` and its dependencies (including [`amk_tools`](https://githu
 bash Build_micromamba.sh
 ```
 
-and follow the instructions to activate the environment.
+{: .highlight }    
+`Build_micromamba.sh` is a script designed to install `AutoMeKin` and all its dependencies within a micromamba environment named `amk_env`. Therefore, it should be executed only when installing a new version or when using the code for the first time.   
+After successfully creating the environment, you must activate it and load the AutoMeKin module. These four instructions will be displayed once the build process is complete. For your convenience, you can copy these sentences into a script or file.
 
 Before using `qcore` for the first time, remember to agree to the Software License Agreement and to set your token by running:
 
