@@ -71,7 +71,8 @@ function slurm {
    fi
 
 #  SRUN="srun --exclusive -N1 -n1 --mem-per-cpu=$MEMPERCORE"
-   SRUN="srun -N1 -n1 --mem=$(( $MEMPERCORE*$corespertask )) -c $corespertask --cpu_bind=none"
+#  SRUN="srun -N1 -n1 --mem=$(( $MEMPERCORE*$corespertask )) -c $corespertask --cpu_bind=none"
+   SRUN="srun --exclusive -N1 -n1 --mem=$(( $MEMPERCORE*$corespertask )) -c $corespertask"
    runningtasks=$SLURM_NTASKS
 }
 
