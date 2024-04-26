@@ -8,6 +8,7 @@ nav_order: 6
 
 The following works employ AutoMeKin or its algorithms:
 
+- [CPC 2024](https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cphc.202301001)
 - [TCA 2023](https://link.springer.com/article/10.1007/s00214-023-03062-0)  
 - [ESC_1 2023](https://pubs.acs.org/doi/10.1021/acsearthspacechem.3c00107#)   
 - [PCCP_1 2023](https://pubs.rsc.org/en/content/articlelanding/2023/cp/d3cp02571c)     
