@@ -533,7 +533,7 @@ except Exception as e:
 #Get max value along the NEB
 pot_max = -np.Inf
 print('')
-print('#      E(kcal/mol)')
+print('#           E(eV)')
 for i in range(n_max):
     pot = autoneb.all_images[i].get_potential_energy()
     write('ts_'+str(i)+'.xyz',autoneb.all_images[i].copy())
