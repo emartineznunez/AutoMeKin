@@ -533,7 +533,7 @@ except Exception as e:
 #Get max value along the NEB
 pot_max = -np.Inf
 print('')
-print('#           E(eV)')
+print(' #            E(eV)')
 for i in range(n_max):
     pot = autoneb.all_images[i].get_potential_energy()
     write('ts_'+str(i)+'.xyz',autoneb.all_images[i].copy())
@@ -543,7 +543,7 @@ for i in range(n_max):
         tsint = autoneb.all_images[i].copy()
         tslet = autoneb.all_images[i].copy()
         write('ts_inp.xyz',ts)
-    print('{:1.0f} {:16.2f}'.format(i, pot))
+    print('{:2.0f} {:16.2f}'.format(i, pot))
 print('selected image',imax)
 if imax == n_max-2:
     print('The highest energy point corresponds to products')
