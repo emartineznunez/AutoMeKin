@@ -73,7 +73,7 @@ fi
    minrf=${tsdirll}/mins.inp
    mindb=${tsdirll}/MINs/SORTED/mins.db
 #   rm -rf ${tsdirll}/ts_bonds.inp
-   if [ -f $minsf ];then
+   if [ -f $minsf ] && [ -f $minrf ] ; then
       min=$(awk 'NR==FNR{e[NR]=$1;++n};NR>FNR{ok=1;for(i=1;i<=n;i++) {d=$NF-e[i];if($3 ~/min0/ || d*d < .001) ok=0}; if(ok==1) {print $2;exit} } ' $minrf $minsf)
       emin=$(awk 'NR==FNR{e[NR]=$1;++n};NR>FNR{ok=1;for(i=1;i<=n;i++) {d=$NF-e[i];if($3 ~/min0/ || d*d < .001) ok=0}; if(ok==1) {print $NF;exit} } ' $minrf $minsf)
       if [ -z $min ]; then

@@ -22,10 +22,30 @@ read_input
 inter=0
 export inter
 
+##Build PRODs again in case of multiple runs of this script
+cp ${molecule}_ref.xyz ${molecule}.xyz
+rm -rf tsdir${tag}_${molecule}/TSs/ts.db
+rm -rf tsdir${tag}_${molecule}/PRODs
+sqlite3 tsdir${tag}_${molecule}/MINs/data.db "delete from data where name like '%minf%'"
+sqlite3 tsdir${tag}_${molecule}/MINs/data.db "delete from data where name like '%minr%'"
+sqlite3 tsdir${tag}_${molecule}/MINs/min.db "delete from min where name like '%minf%'"
+sqlite3 tsdir${tag}_${molecule}/MINs/min.db "delete from min where name like '%minr%'"
+if [ $# -eq 0 ]; then
+   rxn_network.sh
+else
+   rxn_network.sh $1
+fi
+kmc.sh
+natom=$(sqlite3 tsdir${tag}_${molecule}/MINs/min.db "select natom from min where id=1")
+echo Number of atoms: $natom
+###
+
 ##Remove barrless dissociations from prod in case of previous calcs and make PRlist_tags file
 sqlite3 tsdir${tag}_${molecule}/PRODs/prod.db "delete from prod where name like '%min_diss%'"
 sed -i '/min_diss/d' tsdir${tag}_${molecule}/PRODs/PRlist
 rm -rf tsdir${tag}_${molecule}/PRODs/PRlist_tags.log
+###
+
 for name in $(sqlite3 tsdir${tag}_${molecule}/PRODs/prod.db "select name from prod")
 do
    named=$(echo $name | sed 's/_min/ min/' | awk '{print $2}')

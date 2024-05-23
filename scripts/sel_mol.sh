@@ -79,5 +79,7 @@ if [ -f $minfilell ] && [ -f $kmcfilell ] && [ $mm -eq 1 ]; then
    names="MIN"$selm
    sqlite3 $mindirll/mins.db "select natom,geom from mins where name='$names'" | sed 's@|@\n\n@g' > ${molecule}.xyz
 else
-   cp ${molecule}.xyz ${molecule}_ref.xyz
+   if [ ! -f ${molecule}_ref.xyz ]; then
+      cp ${molecule}.xyz ${molecule}_ref.xyz
+   fi
 fi

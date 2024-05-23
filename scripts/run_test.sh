@@ -73,7 +73,7 @@ do
       echo "Considering all states"
       rxn_network.sh allstates > allstates.log
       kmc.sh >> allstates.log
-      locate_barrierless.sh  >> allstates.log 
+      locate_barrierless.sh allstates >> allstates.log 
       final.sh >> allstates.log
       mv FINAL_LL_FA FINAL_LL_FA_all_states
       echo "One-level HL calculations"

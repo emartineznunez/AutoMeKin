@@ -138,11 +138,11 @@ echo "$newif" > $origif
 ##
 echo "Running the kinetics now..."
 $kmc_script >/dev/null
-##
-if [ "$program_opt" = "mopac" ] && [ $calc == "ll" ] && [ "$barrierless" = "yes" ]; then
-   echo "Adding Barrierless reactions"
-   locate_barrierless.sh  > /dev/null
-fi
+##Do not add barrless rxns to the new temp
+#if [ "$program_opt" = "mopac" ] && [ $calc == "ll" ] && [ "$barrierless" = "yes" ]; then
+#   echo "Adding Barrierless reactions"
+#   locate_barrierless.sh  > /dev/null
+#fi
 ##
 if [ $calc == "ll" ]; then track_view.sh > final.log ; fi
 ##
