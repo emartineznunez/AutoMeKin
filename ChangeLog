@@ -1,5 +1,6 @@
-Revision # 	1138
+Revision # 	1139
 ==========	====
+05/23/2024      Bugfixes in amk_parallel and sel_mol. locate_barrless modified to allow multiple searchs
 03/06/2024	Removed dependence with zenity and gnuplot
 01/15/2024	Fixed some bugs with llcalcs.sh and improved ChemKnow algorithm (new keyword CK_minima)
 11/07/2023	Fixed some issues with the HL calcs of fragments
