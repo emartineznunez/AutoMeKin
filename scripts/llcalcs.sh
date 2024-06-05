@@ -193,7 +193,7 @@ done
 if [ "$program_opt" = "mopac" ] && [ "$barrierless" = "yes" ]; then
    echo "Adding Barrierless reactions"
    start=$(date +%s.%N)
-   locate_barrierless.sh  > /dev/null
+   locate_barrierless.sh  2> barrless.err 1> barrless.log
    end=$(date +%s.%N)    
    tt=$( echo "$end - $start" | bc -l | awk '{printf "%4.0f",$1}')
    echo "   time: $tt s"
