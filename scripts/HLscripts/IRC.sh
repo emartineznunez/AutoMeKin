@@ -53,7 +53,7 @@ sqlite3 ${tsdirhl}/MINs/minhl.db "insert into minhl (natom,name,energy,zpe,g,geo
 # Now we do things specific of IRC 
 set_up_irc_stuff
 
-en_min0=$(sqlite3 $tsdirhl/MINs/minhl.db "select energy,g from minhl where name='min0'" | sed 's@|@ @g' | awk '{printf "%20.10f\n",$1+$2}')
+en_min0=$(sqlite3 $tsdirhl/MINs/minhl.db "select energy,zpe from minhl where name='min0'" | sed 's@|@ @g' | awk '{printf "%20.10f\n",$1*627.51+$2}')
 ###tshl and tshldscnt tshlrep tshlhe table
 sqlite3 ${tsdirhl}/TSs/tshl.db "drop table if exists tshl; create table tshl (id INTEGER PRIMARY KEY,natom INTEGER, name TEXT, energy REAL,zpe REAL,g REAL,geom TEXT,freq TEXT,number INTEGER,sigma INTEGER);"
 sqlite3 ${tsdirhl}/TSs/tshldscnt.db "drop table if exists tshldscnt; create table tshldscnt (id INTEGER PRIMARY KEY,natom INTEGER, name TEXT, energy REAL,zpe REAL,g REAL,geom TEXT,freq TEXT,number INTEGER);"
@@ -98,8 +98,8 @@ m=0
 sqlite3 ${tsdirhl}/IRC/inputs.db "drop table if exists gaussian; create table gaussian (id INTEGER PRIMARY KEY,name TEXT, input TEXT, unique (name));"
 for i in $(sqlite3 ${tsdirhl}/TSs/tshl.db "select name from tshl")
 do
-  en_ts=$(sqlite3 ${tsdirhl}/TSs/tshl.db "select energy,g from tshl where name='$i'" | sed 's@|@ @g' | awk '{printf "%20.10f\n",$1+$2}')
-  deltg="$(echo "$en_min0" "$en_ts" | awk '{printf "%20.10f\n",($2-$1)*627.51}')"
+  en_ts=$(sqlite3 ${tsdirhl}/TSs/tshl.db "select energy,zpe from tshl where name='$i'" | sed 's@|@ @g' | awk '{printf "%20.10f\n",$1*627.51+$2}')
+  deltg="$(echo "$en_min0" "$en_ts" | awk '{printf "%20.10f\n",$2-$1}')"
   res=$(echo "$deltg < $maxen" | bc )
   #if gaussian's irc is not complete, remove output 
   if [ -f ${tsdirhl}/IRC/ircf_${i}.log ] && [ -f ${tsdirhl}/IRC/ircr_${i}.log ]; then  
