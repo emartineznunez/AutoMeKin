@@ -134,6 +134,8 @@ HL_rxn_network reduced 55
 In this case, besides the above TSs, all TSs having relative energies larger than 55 kcal/mol will not be
 considered for HL optimizations, that is, they will not be included in the HL reaction network. We notice that the last argument must be an integer.
 
+Another useful keyword for reducing the number of high-level calculations is `Energy` in the Kinetics section.
+
 ### RXNet.barrless 
 
 Barrierless reactions are included in this file; only when MOPAC and g09/g16 are employed. The user must be aware that the channels are those consistent with the values of the keyword neighbors explained above. These channels are not considered in the kinetics, but they are plotted in the complete graph indicated below.
