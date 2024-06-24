@@ -130,14 +130,20 @@ TS # DE(kcal/mol)    Reaction path information
 As can be seen, for each transition state, this file specifies the associated minima and/or product fragments and their corresponding identification numbers. Notice that TS, MIN and PR have independent identification numbers. 
 
 {: .note }  
-If you use the option complete for the keyword `HL_rxn_network` in the [General section](https://emartineznunez.github.io/AutoMeKin/docs/general.html) , all the TSs will be reoptimized in the high-level calculations. You may reduce significantly the number of TSs to be reoptimized in the HL calculations and therefore the reaction network, using the option reduced as explained below. 
+As indicated in the [General section](https://emartineznunez.github.io/AutoMeKin/docs/general.html) , you can use the keyword  `HL_rxn_network` to significantly reduce significantly the number of TSs to be reoptimized in the HL calculations and therefore the reaction network. 
 
-Without a third argument, TSs associated to `PR <---> PR` steps (_i.e._, bimolecular reactions) and to interconversion between optical isomers will not be reoptimized in the HL calculations. You may include a number as a third argument:
+By using the keyword like this:
+```
+HL_rxn_network reduced
+```
+TSs associated to `PR <---> PR` steps (_i.e._, bimolecular reactions) and interconversions between optical isomers will not be reoptimized in the HL calculations. 
+
+You may include a number as a third argument:
 ```
 HL_rxn_network reduced 55
 ```
-In this case, besides the above TSs, all TSs having relative energies larger than 55 kcal/mol will not be
-considered for HL optimizations, that is, they will not be included in the HL reaction network. We notice that the last argument must be an integer.
+In this case, not only TSs associated to bimolecular reactions and interconversions between optical isomers, but also TSs having relative energies larger than 55 kcal/mol will not be
+considered for HL optimizations, _i.e._, they will not be included in the HL reaction network. We notice that the last argument must be an integer.
 
 {: .note }  
 Another useful keyword for reducing the number of high-level calculations is `Energy` in the [Kinetics section](https://emartineznunez.github.io/AutoMeKin/docs/kinetics.html)
