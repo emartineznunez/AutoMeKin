@@ -26,6 +26,9 @@ List of `Keyword value(s)` for this section:
 [`value` is an integer; default value: `0` ]   
 `value` is the energy in kcal/mol for which microcanonical rate coefficients will be calculated.
 
+{: .warning }  
+Be careful, as the value of energy is crucial; it determines the maximum energy of the transition states in high-level calculations.
+
 {: .important }   
 `Temperature value`   
 [`value` is an integer; default value: `298`]   
