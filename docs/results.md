@@ -134,6 +134,7 @@ HL_rxn_network reduced 55
 In this case, besides the above TSs, all TSs having relative energies larger than 55 kcal/mol will not be
 considered for HL optimizations, that is, they will not be included in the HL reaction network. We notice that the last argument must be an integer.
 
+{: .note }  
 Another useful keyword for reducing the number of high-level calculations is `Energy` in the Kinetics section.
 
 ### RXNet.barrless 
