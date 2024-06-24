@@ -130,7 +130,9 @@ TS # DE(kcal/mol)    Reaction path information
 As can be seen, for each transition state, this file specifies the associated minima and/or product fragments and their corresponding identification numbers. Notice that TS, MIN and PR have independent identification numbers. 
 
 {: .note }  
-If you use the option complete for the keyword `HL_rxn_network`, in the General section of the input data, all the TSs will be reoptimized in the high-level calculations. You may reduce significantly the number of TSs to be reoptimized in the HL calculations, and therefore the reaction network, if you use the option reduced. If it is employed without an argument, TSs associated to `PR <---> PR` steps (_i.e._, bimolecular reactions) and to interconversion between optical isomers will not be reoptimized in the HL calculations. You may include a number as an argument of this option:
+If you use the option complete for the keyword `HL_rxn_network` in the [General section](https://emartineznunez.github.io/AutoMeKin/docs/general.html) , all the TSs will be reoptimized in the high-level calculations. You may reduce significantly the number of TSs to be reoptimized in the HL calculations and therefore the reaction network, using the option reduced as explained below. 
+
+Without a third argument, TSs associated to `PR <---> PR` steps (_i.e._, bimolecular reactions) and to interconversion between optical isomers will not be reoptimized in the HL calculations. You may include a number as a third argument:
 ```
 HL_rxn_network reduced 55
 ```
