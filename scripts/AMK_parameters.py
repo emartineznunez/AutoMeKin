@@ -19,4 +19,5 @@ brrng    = False
 charge   = '0'
 MaxBoB   = 2
 MaxBoF   = 2
+MaxBO    = 1.5
 gto3d    = 'POpt'
