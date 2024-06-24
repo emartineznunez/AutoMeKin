@@ -45,7 +45,12 @@ To use <code>MD-micro</code> the initial structure needs to be fully optimized a
 {: .important }  
 <code>barrierless value</code>   
 [<code>value</code> is one string: <code>yes</code> or <code>no</code>; default value: <code>no</code>]   
-<code>value</code> can be <code>yes</code>, in which case barrierless processes are searched. The keyword neighbors explained below is related to this one.
+<code>value</code> can be <code>yes</code>, in which case barrierless processes are searched. The keywords neighbors and MaxBO explained below are related to this one.
+
+{: .important }   
+<code>MaxBO value</code>   
+[<code>value</code> is a number; default value: <code>1.5</code>]   
+MaxBO sets the maximum bond order value for a bond to be susceptible to breakage. This keyword can also be employed by <code>ChemKnow</code>  
 
 {: .important }   
 <code>neighbors values</code>   
