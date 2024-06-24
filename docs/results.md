@@ -130,7 +130,7 @@ TS # DE(kcal/mol)    Reaction path information
 As can be seen, for each transition state, this file specifies the associated minima and/or product fragments and their corresponding identification numbers. Notice that TS, MIN and PR have independent identification numbers. 
 
 {: .note }  
-As indicated in the [General section](https://emartineznunez.github.io/AutoMeKin/docs/general.html) , you can use the keyword  `HL_rxn_network` to significantly reduce significantly the number of TSs to be reoptimized in the HL calculations and therefore the reaction network. 
+As indicated in the [General section](https://emartineznunez.github.io/AutoMeKin/docs/general.html) , you can use the keyword  `HL_rxn_network` to significantly reduce the number of TSs to be reoptimized in the HL calculations and therefore the reaction network. 
 
 By using the keyword like this:
 ```
