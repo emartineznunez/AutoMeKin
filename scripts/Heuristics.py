@@ -155,7 +155,7 @@ with open('amk.dat') as inp:
             else: Crossb = False
         if line.find('MaxBoF')    !=-1: MaxBoF = int(line.split()[1]) 
         if line.find('MaxBoB')    !=-1: MaxBoB = int(line.split()[1]) 
-        if line.find('MaxBO')     !=-1: MaxBO  = int(line.split()[1]) 
+        if line.find('MaxBO')     !=-1: MaxBO  = float(line.split()[1]) 
         if line.find('neighbors') !=-1: 
             atom = str(line.split()[1]) 
             vale = [int(x) for x in re.sub('[^0-9]',' ', line).split(' ') if x != '' ]
