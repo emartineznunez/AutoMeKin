@@ -2,15 +2,15 @@
 | ----------	 | ----------|
 |09/20/2024|	new keyword <code>timeout</code>. This is used for jobs taking more than a certain time fail, and known to fail.|
 |06/24/2024|	Fixed a bug in <code>IRC.sh</code> and added keyword <code>MaxBO</code> to set the maximum bond order for breaking a bond |
-|06/05/2024|      mopacamk changed to make it compatible with ASE's newest version. FutureWarnings from locate_barrless to barrless.err|
-| 05/23/2024|       Bugfixes in amk_parallel and sel_mol. locate_barrless modified to allow multiple searchs.| 
+|06/05/2024|    <code>mopacamk</code> changed to make it compatible with ASE's newest version. FutureWarnings from locate_barrless to barrless.err|
+| 05/23/2024|   Bugfixes in <code>amk_parallel.sh</code> and <code>sel_mol.sh</code>. locate_barrless modified to allow multiple searchs.| 
 | 03/06/2024| 	Removed dependence with zenity and gnuplot| 
-| 01/15/2024| 	Fixed some bugs with llcalcs.sh and improved ChemKnow algorithm (new keyword CK_minima)| 
+| 01/15/2024| 	Fixed some bugs with <code>llcalcs.sh</code> and improved ChemKnow algorithm (new keyword <code>CK_minima</code>)| 
 | 11/07/2023| 	Fixed some issues with the HL calcs of fragments| 
 | 05/12/2022| 	Fixed some issues with qcore calcs| 
 | 04/26/2022| 	Bugfix in utils and improved performace hl calcs| 
-| 04/13/2022| 	Removed STOP in diag.f.| 
-| 03/17/2022| 	Bugfix in final.sh.| 
+| 04/13/2022| 	Removed STOP in <code>diag.f</code>.| 
+| 03/17/2022| 	Bugfix in <code>final.sh</code>.| 
 | 03/11/2022| 	Interface with Gaussian 16.| 
 | 02/03/2022| 	Min and Max temperatures for the kinetics set to 100 K and 9999 K, respectively.| 
 | 12/10/2021| 	Bugfixes in Python scripts that read inputfile (charge and long mopac inputs were not read correctly).| 
