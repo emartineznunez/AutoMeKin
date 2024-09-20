@@ -87,7 +87,7 @@ trajectories. Instead, the user should try to run different batches of trajector
 
 {: .important }  
 <code>seed value</code>  
-[<code>value</code> is an integer; _only valid for <code>MD</code> and <code>MD-micro</code>_ ; default value: <code>0</code> ]   
+[<code>value</code> is an integer; __only valid for <code>MD</code> and <code>MD-micro</code>__ ; default value: <code>0</code> ]   
 <code>value</code> is the seed of the random number generator. It can be employed to run a test trajectory. See the <code>FA_singletraj.dat</code> file in the examples. _Only use this keyword for testing_.
 
 {: .important }  
