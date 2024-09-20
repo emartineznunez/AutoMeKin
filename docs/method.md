@@ -50,16 +50,15 @@ To use <code>MD-micro</code> the initial structure needs to be fully optimized a
 
 {: .important }   
 <code>MaxBO value</code>   
-[<code>value</code> is a number; default value: <code>1.5</code>]   
-MaxBO sets the maximum bond order value for a bond to be susceptible to breakage. This keyword can also be employed by <code>ChemKnow</code>  
+[<code>value</code> is a number; __also for <code>ChemKnow</code>__;default value: <code>1.5</code>]   
+MaxBO sets the maximum bond order value for a bond to be susceptible to breakage.  
 
 {: .important }   
 <code>neighbors values</code>   
-[three <code>values</code>: first is a string and last two are floats; default values, see table below]   
+[three <code>values</code>: first is a string and last two are floats; __also for <code>ChemKnow</code>__; default values, see table below]   
 The first <code>value</code> is an atomic symbol and the two numbers are the minimum and maximum number of
 neighbors of the corresponding atoms. This keyword is needed if atoms other than those in the table below
-are present in your system and/or if you want to change the default values. The number of neighbors is
-employed to locate _barrierless processes_ and are also employed by <code>ChemKnow</code>. 
+are present in your system and/or if you want to change the default values. 
 
 For instance, if you want to consider dissociations leading to atomic hydrogen, you must add the following line:
 ```
@@ -87,13 +86,13 @@ trajectories. Instead, the user should try to run different batches of trajector
 
 {: .important }  
 <code>seed value</code>  
-[<code>value</code> is an integer; __only valid for <code>MD</code> and <code>MD-micro</code>__ ; default value: <code>0</code> ]   
+[<code>value</code> is an integer; __only for <code>MD</code> and <code>MD-micro</code>__ ; default value: <code>0</code> ]   
 <code>value</code> is the seed of the random number generator. It can be employed to run a test trajectory. See the <code>FA_singletraj.dat</code> file in the examples. _Only use this keyword for testing_.
 
 {: .important }  
 <code>timeout value</code>   
-[<code>value</code> is an integer; default value: <code>600</code> ]  
-<code>value</code> is the maximum time, in seconds, allowed for a parallel job to complete. This helps terminate lengthy jobs that are likely to fail and act as bottlenecks in parallel compuations. This keyword can also be employed by <code>ChemKnow</code>.
+[<code>value</code> is an integer; __also for <code>ChemKnow</code>__; default value: <code>600</code> ]  
+<code>value</code> is the maximum time, in seconds, allowed for a parallel job to complete. This helps terminate lengthy jobs that are likely to fail and act as bottlenecks in parallel compuations.
 
 ## BXDE specific keywords 
 
