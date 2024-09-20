@@ -40,7 +40,7 @@ To use <code>MD-micro</code> the initial structure needs to be fully optimized a
 
 <code>association</code> and <code>vdW</code> are employed to sample van der Waals structures, present some peculiarities and therefore are explained in detail in van der Waals complexes.
 
-<code>MD</code>, <code>MD-micro</code>, <code>external</code> and <code>BXDE</code> samplings accept the following keywords (<code>BXDE</code> and <code>ChemKnow</code> also accept additional keywords as seen below):
+<code>MD</code>, <code>MD-micro</code>, <code>external</code> and <code>BXDE</code> samplings accept the following keywords:
 
 {: .important }  
 <code>barrierless value</code>   
