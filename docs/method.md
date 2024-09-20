@@ -24,7 +24,7 @@ List of <code>Keyword value(s)</code> for this section:
 [<code>value</code> is one string with no blank spaces; default value: <code>MD</code>]  
 <code>value</code> can be: <code>MD</code>, <code>MD-micro</code>, <code>BXDE</code>, <code>external</code>, <code>ChemKnow</code>, <code>association</code> and <code>vdW</code>
 
-<code>MD</code> and <code>MD-micro</code> refer to the type of initial conditions used to run the MD simulations. <code>MD-micro</code> _has not been implemented yet for qcore. With <code>BXDE</code> the rare-event [acceleration method named BXDE](https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/syst.201900024) is invoked. 
+<code>MD</code> and <code>MD-micro</code> refer to the type of initial conditions used to run the MD simulations. <code>MD-micro</code> _has not been implemented yet for qcore. With <code>BXDE</code> the [rare-event acceleration method named BXDE](https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/syst.201900024) is invoked. 
 
 <code>MD</code> allows the user to include partial constraints in the trajectories, which may be useful for large systems.
 
