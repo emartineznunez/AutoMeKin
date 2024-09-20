@@ -1,8 +1,8 @@
-Revision # 	1141
-==========	====
-09/20/2024	new keyword timeout. This is used for jobs taking more than a certain time fail, and known to fail.
-06/24/2024	Fixed a bug in IRC.sh and added keyword MaxBO to set the maximum bond order for breaking a bond 
-06/05/2024      mopacamk changed to make it compatible with ASE's newest version. FutureWarnings from locate_barrless to barrless.err
+| Revision # | 	1141 |
+| ==========	 | ====|
+|09/20/2024|	new keyword timeout. This is used for jobs taking more than a certain time fail, and known to fail.|
+|06/24/2024|	Fixed a bug in IRC.sh and added keyword MaxBO to set the maximum bond order for breaking a bond |
+|06/05/2024|      mopacamk changed to make it compatible with ASE's newest version. FutureWarnings from locate_barrless to barrless.err|
 05/23/2024      Bugfixes in amk_parallel and sel_mol. locate_barrless modified to allow multiple searchs
 03/06/2024	Removed dependence with zenity and gnuplot
 01/15/2024	Fixed some bugs with llcalcs.sh and improved ChemKnow algorithm (new keyword CK_minima)
