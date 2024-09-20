@@ -1,4 +1,6 @@
-| Revision # | 	1141 |
+## Revision number 1141
+
+| Date | 	Changes |
 | ----------	 | ----------|
 |09/20/2024|	new keyword <code>timeout</code>. This is used for jobs taking more than a certain time fail, and known to fail.|
 |06/24/2024|	Fixed a bug in <code>IRC.sh</code> and added keyword <code>MaxBO</code> to set the maximum bond order for breaking a bond |
