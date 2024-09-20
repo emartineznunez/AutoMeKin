@@ -101,9 +101,9 @@ fi
 
 #progress bar only in interactive mode
 if [ -z $inter ] && [ -z "$SRUN" ]; then
-   parallel="parallel --bar --delay 0.2 -j $runningtasks --joblog amk_parallel-logs/${exe}-${iter}-tasks.log"
+   parallel="parallel --timeout $timeout --bar --delay 0.2 -j $runningtasks --joblog amk_parallel-logs/${exe}-${iter}-tasks.log"
 else
-   parallel="parallel --delay 0.2 -j $runningtasks --joblog amk_parallel-logs/${exe}-${iter}-task.log"
+   parallel="parallel --timeout $timeout --delay 0.2 -j $runningtasks --joblog amk_parallel-logs/${exe}-${iter}-task.log"
 fi
 # this runs the parallel command we want
 # in this case, we are running a script named runGP.sh
@@ -174,6 +174,9 @@ function read_input {
    multiple_minima=$(awk 'BEGIN{mm=1};{if($1=="multiple_minima" && $2=="yes") mm=1};{if($1=="multiple_minima" && $2=="no") mm=0};END{print mm}' $inputfile)
    barrierless=$(awk 'BEGIN{bl="no"};{if($1=="barrierless" && $2=="yes") bl="yes"};{if($1=="barrierless" && $2=="no") bl="no"};END{print bl}' $inputfile)
    mult=$(awk 'BEGIN{mult=1};{if($1=="mult") mult=$2};END{print mult}' $inputfile)
+   
+   timeout=$(awk 'BEGIN{to=600};{if($1=="timeout") to=$2};END{print to}' $inputfile)
+
 # sampling:			md:	
 # 0  ---> BXDE			0
 # 1  ---> MD-micro		1
