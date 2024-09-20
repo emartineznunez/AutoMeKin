@@ -14,6 +14,7 @@ example, we have the following:
 --Method--
 sampling MD
 ntraj    10
+timeout  600
 ```
 
 List of <code>Keyword value(s)</code> for this section:
@@ -88,6 +89,11 @@ trajectories. Instead, the user should try to run different batches of trajector
 <code>seed value</code>  
 [<code>value</code> is an integer; _only valid for <code>MD</code> and <code>MD-micro</code>_ ; default value: <code>0</code> ]   
 <code>value</code> is the seed of the random number generator. It can be employed to run a test trajectory. See the <code>FA_singletraj.dat</code> file in the examples. _Only use this keyword for testing_.
+
+{: .important }  
+<code>timeout value</code>   
+[<code>value</code> is an integer; default value: <code>600</code> ]  
+<code>value</code> is the maximum time (in seconds) allowed for a parallel job to complete. This helps terminate lengthy jobs that are likely to fail and act as bottlenecks in parallel compuations. This keyword can also be employed by <code>ChemKnow</code>.
 
 ## BXDE specific keywords 
 
