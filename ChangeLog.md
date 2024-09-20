@@ -1,5 +1,5 @@
 | Revision # | 	1141 |
-| ==========	 | ====|
+| ----------	 | ----------|
 |09/20/2024|	new keyword timeout. This is used for jobs taking more than a certain time fail, and known to fail.|
 |06/24/2024|	Fixed a bug in IRC.sh and added keyword MaxBO to set the maximum bond order for breaking a bond |
 |06/05/2024|      mopacamk changed to make it compatible with ASE's newest version. FutureWarnings from locate_barrless to barrless.err|
