@@ -19,17 +19,12 @@ Our custom version of [MOPAC](https://github.com/openmopac/mopac) is built-in, a
 
 ## Content
 - [Installation and documentation](#inst)
-- [Main developer](#dev)
 - [Simple examples in Colab](#colab)
 - [Web for submitting simple examples](#web)
 
 ## Installation and documentation <a name="inst"></a>
 Verify if your version is up to date [here](https://github.com/emartineznunez/AutoMeKin/blob/main/ChangeLog.md)    
 The installation instructions and much more are [detailed here](https://emartineznunez.github.io/AutoMeKin)
-
-## Main developer<a name="dev"></a>
-
-[Emilio Martínez-Núñez](https://emartineznunez.github.io/)[^1]
 
 ## Simple example in Colab<a name="colab"></a>
 You can have a look at this [Notebook](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb) to install it, test a simple example and more...
