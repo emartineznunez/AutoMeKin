@@ -2,7 +2,7 @@
 
 | Date | 	Changes |
 | ----------	 | ----------|
-|09/20/2024|	new keyword <code>timeout</code>. This is used for jobs taking more than a certain time, and known to fail.|
+|09/20/2024|	New keyword; <code>timeout</code>. This is used for jobs taking more than a certain time, and known to fail.|
 |06/24/2024|	Fixed a bug in <code>IRC.sh</code> and added keyword <code>MaxBO</code> to set the maximum bond order for breaking a bond |
 |06/05/2024|    <code>mopacamk</code> changed to make it compatible with ASE's newest version. FutureWarnings from locate_barrless to barrless.err|
 | 05/23/2024|   Bugfixes in <code>amk_parallel.sh</code> and <code>sel_mol.sh</code>. locate_barrless modified to allow multiple searchs.| 
