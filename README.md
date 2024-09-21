@@ -15,7 +15,7 @@
 
 <code>AutoMeKin</code> (formerly <code>tsscds</code>) has been designed to discover reaction mechanisms in an automated fashion. Transition states are located using MD simulations and Graph Theory algorithms. Monte Carlo simulations afford kinetic results. The only input is a starting structure in XYZ format. The method is described in these two publications: [1](https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.23790) [2](https://pubs.rsc.org/en/content/articlelanding/2015/cp/c5cp02175h#!divAbstract). 
 
-Our custom version of <code>MOPAC</code> is built-in, and the following quantum engines are interfaced with <code>AutoMeKin</code>: [Entos Qcore](https://software.entos.ai/qcore/documentation/) and [Gaussian (G09/G16)](https://gaussian.com/). 
+Our custom version of [MOPAC](https://github.com/openmopac/mopac) is built-in, and the following quantum engines are interfaced with <code>AutoMeKin</code>: [Entos Qcore](https://software.entos.ai/qcore/documentation/) and [Gaussian (G09/G16)](https://gaussian.com/). 
 
 ## Content
 - [Installation and documentation](#inst)
