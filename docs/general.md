@@ -35,7 +35,7 @@ List of <code>Keyword value(s)</code> for this section:
 <code>LowLevel values</code>   
 [two <code>values</code>: two strings; the second string accepts blank spaces; default: <code>mopac pm7</code>]  
 
-The first <code>value</code> is the program and the second the semiempirical method. So far, <code>qcore</code> and <code>mopac</code> are valid programs. For <code>qcore</code> only <code>xtb</code> method is implemented, and for <code>mopac</code>, any of the semiempirical methods of MOPAC2016 can be employed to run the MD simulations. You can use a combination of MOPAC keywords. In the example above, for instance, the pm7 semiempirical level together with a maximum CPU time, for any type of mopac calculation, of 3 minutes is requested. The use of the MOPAC keyword `t=`, followed by an amount of time, is highly recommended to enhance the efficiency of the calculations.
+The first <code>value</code> is the program and the second the semiempirical method. So far, <code>qcore</code> and <code>mopac</code> are valid programs. For <code>qcore</code> only <code>xtb</code> method is implemented, and for <code>mopac</code>, any of the semiempirical methods of MOPAC2016 can be employed to run the MD simulations. You can use a combination of MOPAC keywords. In the example above, for instance, the pm7 semiempirical level together with a maximum CPU time, for any type of mopac calculation, of 3 minutes is requested. The use of the MOPAC keyword `t=`, followed by an amount of time, is highly recommended to enhance the efficiency of the calculations. 
 
 If you do not employ the keyword <code>LowLevel_TSopt</code>, explained below in advanced options, both the low-level TS optimizations and MD simulations are carried out using the semiempirical method specified by the second value. This is in general a good choice both in terms of efficacy and efficiency, and also because all structures will be re-optimized later using ab initio/DFT methods as specified with the keyword HighLevel.
 
@@ -85,3 +85,11 @@ Alternatively, you may use <code>reduced</code> as the first value, the default,
 <code>mult value</code>  
 [<code>value</code> is an integer; default value: <code>1</code> ]   
 <code>value</code> is the multiplicity of the system. Note that this keyword is only employed in the HL calculations. If you want to run the LL calculations with a specific multiplicity, this should be specified in the <code>LowLevel</code> keyword using any of the possibilities that MOPAC offers.
+
+{: .important }  
+<code>timeout value</code>   
+[<code>value</code> is an integer; __also for <code>ChemKnow</code>__; default value: <code>1000000</code> ]  
+<code>value</code> is the maximum time, in seconds, allowed for a parallel job to complete. This helps terminate lengthy jobs that are likely to fail and act as bottlenecks in parallel compuations. This keyword is similar to MOPAC's `t=` keyword, but it is more general and can be applied to any job.
+
+{: .warning }  
+The user is advised to use <code>timeout</code> exclusively for low-level calculations. It should be omitted from the input when performing high-level calculations.
