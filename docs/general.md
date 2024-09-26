@@ -88,7 +88,7 @@ Alternatively, you may use <code>reduced</code> as the first value, the default,
 
 {: .important }  
 <code>timeout value</code>   
-[<code>value</code> is an integer; __also for <code>ChemKnow</code>__; default value: <code>1000000</code> ]  
+[<code>value</code> is an integer; default value: <code>1000000</code> ]  
 <code>value</code> is the maximum time, in seconds, allowed for a parallel job to complete. This helps terminate lengthy jobs that are likely to fail and act as bottlenecks in parallel compuations. This keyword is similar to MOPAC's `t=` keyword, but it is more general and can be applied to any job.
 
 {: .warning }  
