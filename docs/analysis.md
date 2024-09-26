@@ -76,6 +76,6 @@ where 2 , 4 and 7 are the labels of the TSs to be removed for the LL calculation
 
 If the algorithm to identify conformational isomers fails, the following steps can be taken:
 
-1. Modify the families in the files `tsdirXL_molecule/working/conf_isomer.out` and/or `tsdirXL_molecule/working/conf_isomer_ts.out` as needed $\scriptstyle{(}$X = H,L$\scriptstyle{)}$.
+1. Modify the families of conformational isomers in the files `tsdirXL_molecule/working/conf_isomer.out` and/or `tsdirXL_molecule/working/conf_isomer_ts.out` as needed $\scriptstyle{(}$X = H,L$\scriptstyle{)}$.
 2. Then, run the script `tweak_rxnet.sh` for low-level or `TWEAK_RXNET.sh` for high-level adjustments, respectively.
 
