@@ -18,7 +18,8 @@ HighLevel      g16 b3lyp/6-31G(d,p)
 HL_rxn_network complete  
 IRCpoints      30  
 charge         0  
-mult           1  
+mult           1
+timeout        600
 ```
 List of <code>Keyword value(s)</code> for this section:
 
