@@ -88,14 +88,6 @@ trajectories. Instead, the user should try to run different batches of trajector
 [<code>value</code> is an integer; __only for <code>MD</code> and <code>MD-micro</code>__ ; default value: <code>0</code> ]   
 <code>value</code> is the seed of the random number generator. It can be employed to run a test trajectory. See the <code>FA_singletraj.dat</code> file in the examples. _Only use this keyword for testing_.
 
-{: .important }  
-<code>timeout value</code>   
-[<code>value</code> is an integer; __also for <code>ChemKnow</code>__; default value: <code>1000000</code> ]  
-<code>value</code> is the maximum time, in seconds, allowed for a parallel job to complete. This helps terminate lengthy jobs that are likely to fail and act as bottlenecks in parallel compuations.
-
-{: .warning }  
-The user is advised to use <code>timeout</code> exclusively for low-level calculations. It should be omitted from the input when performing high-level calculations.
-
 ## BXDE specific keywords 
 
 This sampling (and the other BXDE-based sampling based: <code>vdW</code>) has a number of specific keywords as shown in this example:
