@@ -175,7 +175,7 @@ function read_input {
    barrierless=$(awk 'BEGIN{bl="no"};{if($1=="barrierless" && $2=="yes") bl="yes"};{if($1=="barrierless" && $2=="no") bl="no"};END{print bl}' $inputfile)
    mult=$(awk 'BEGIN{mult=1};{if($1=="mult") mult=$2};END{print mult}' $inputfile)
    
-   timeout=$(awk 'BEGIN{to=600};{if($1=="timeout") to=$2};END{print to}' $inputfile)
+   timeout=$(awk 'BEGIN{to=1000000};{if($1=="timeout") to=$2};END{print to}' $inputfile)
 
 # sampling:			md:	
 # 0  ---> BXDE			0
