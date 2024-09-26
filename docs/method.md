@@ -93,8 +93,9 @@ trajectories. Instead, the user should try to run different batches of trajector
 <code>timeout value</code>   
 [<code>value</code> is an integer; __also for <code>ChemKnow</code>__; default value: <code>1000000</code> ]  
 <code>value</code> is the maximum time, in seconds, allowed for a parallel job to complete. This helps terminate lengthy jobs that are likely to fail and act as bottlenecks in parallel compuations.
+
 {: .warning }  
-The user is advised to use this keyword exclusively for low-level calculations. It should be omitted from the input when performing high-level calculations.
+The user is advised to use <code>timeout</code> exclusively for low-level calculations. It should be omitted from the input when performing high-level calculations.
 
 ## BXDE specific keywords 
 
