@@ -12,6 +12,7 @@ nav_order: 5
 - [Properties of the reaction network](#amktools2)
 - [Kinetics simulations at different temperatures](#kint)
 - [Removing unwanted TS structures](#rmts)
+- [Modifying the reaction network](#trxn)
 
 ## Visualization tools<a name="amktools"></a>
 
@@ -70,3 +71,11 @@ following example:
 remove_ts.sh 2 4 7
 ```
 where 2 , 4 and 7 are the labels of the TSs to be removed for the LL calculations. The corresponding script for the HL calculations is `REMOVE_TS.sh`. These two scripts will create a new `FINAL_XL_FA` $\scriptstyle{(}$X = H,L$\scriptstyle{)}$ directory where the selected TS structures have been removed.
+
+## Modifying the reaction network<a name="trxn"></a>
+
+If the algorithm to identify conformational isomers fails (with the families of conformers listed in either MINinfo or TSinfo), the following steps can be taken:
+
+1. Modify the families in the files `tsdirXL_molecule/working/conf_isomer.out` and/or `tsdirXL_molecule/working/conf_isomer_ts.out` (with X=L or H) as needed.
+2. Then, run the script `tweak_rxnet.sh` for low-level or `TWEAK_RXNET.sh` for high-level adjustments, respectively.
+
