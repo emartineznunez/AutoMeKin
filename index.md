@@ -17,7 +17,6 @@ If you're eager to experience it firsthand, you can try this Notebook:
 1. [Build with `micromamba` $\scriptstyle($recommended option$\scriptstyle)$](#mm)
 2. [Build from source](#build)
 3. [Singularity container](#singularity)
-4. [Auto installer](#autoinstaller)
 
 ## 1. Build with `micromamba` <a name="mm"></a>
 This is the recommended option. The packages `git` and `curl` must be installed beforehand.
@@ -188,63 +187,7 @@ And stop them as indicated above.
 
 
 
-## 4. Auto installer <a name="autoinstaller"></a>
-An auto installer script is provided to install singularity and
-download the last release container image from [sylabs](https://cloud.sylabs.io/library/emartineznunez/default/automekin) as
-`$HOME/automekin_<tag>.sif`{: .language-bash .highlight}. Note that this is done only the first time
-you use it unless a new image is available. Then, the script will detect
-singularity and the image (that must be located in your `$HOME`{: .language-bash .highlight}) and will
-only start an instance of the container. The container includes [`amk_tools`](https://github.com/dgarayr/amk_tools). 
 
-{: .warning }  
-This option offers an outdated version of singularity, lacking proper image verifying capabilities. Consequently, an error is consistently triggered upon downloading a new image.
-
-
-
-
-_To start/stop the container follow these steps_:
-
-- Download script: 
-   ```bash
-   curl -LJO https://github.com/emartineznunez/Singularity_amk/raw/main/installer/Automekin.sh
-   ```
-
-- ```bash
-   chmod +x Automekin.sh
-   ```
-
-- ```bash
-   ./Automekin.sh
-   ```
-
-{: .note }  
-Depending on your Linux configuration, before running the
-autoinstaller you might need to change some parameters which will
-require admin or root privilege. If that is the case and once you
-changed the parameters with your admin or root accounts, no further
-admin or root privilege will be needed. Return to your user account and
-run the auto installer again.
-
-Once the above steps are completed, singularity will be installed
-under `${TMPDIR-/tmp}/amk_installer-${USER}/software`{: .language-bash .highlight} in bash shell script
-syntax and an instance of the container will be started using a sandbox
-image deployed under `/tmp/selfextract.XXXXXX`{: .language-bash .highlight} folder (where `XXXXXX` is a
-randomly generated character sequence). The container comes with all
-AutoMeKin's tools installed in `$AMK`{: .language-bash .highlight}, which
-can be run from the container. A bash shell session under `$HOME`{: .language-bash .highlight} will
-start under the deployed instance. Note that you can open new sessions
-and access AutoMeKin's output files from your Linux environment and use
-your own tools as well.
-
-- To exit the container just type: `exit`{: .language-bash .highlight}
-
-- Once your calculations are done, remember to stop the instance:
-```bash
-./Automekin.sh stop
-```
-
-{: .note }  
-To download the file directly from your terminal, curl must be installed. The autoinstaller also works on Ubuntu 20.04 LTS on Windows.  
 
 
 
