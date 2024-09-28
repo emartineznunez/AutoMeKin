@@ -185,8 +185,9 @@ conda activate qcore-0.8.14-env
 qcore --academic-license
 ```
 
+### Installing `amk_tools`
 
-
+Installing`amk_tools` is strongly recommended for result analysis. 
 
 
 
