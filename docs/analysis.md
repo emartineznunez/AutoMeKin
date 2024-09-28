@@ -79,3 +79,6 @@ If the algorithm to identify conformational isomers fails, the following steps c
 1. Modify the families of conformational isomers in the files `tsdirXL_molecule/working/conf_isomer.out` and/or `tsdirXL_molecule/working/conf_isomer_ts.out` as needed $\scriptstyle{(}$X = H,L$\scriptstyle{)}$.
 2. Then, run the script `tweak_rxnet.sh` for low-level or `TWEAK_RXNET.sh` for high-level adjustments, respectively.
 
+This will create a new `FINALDIR` with the manually modified reaction network structure.
+
+
