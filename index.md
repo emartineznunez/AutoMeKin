@@ -109,6 +109,39 @@ module use path_to_program/modules
 where `path_to_program` is the path where you installed amk (_e.g._,
 `$HOME/amk-2021`{: .language-bash .highlight}).
 
+
+### Installing other electronic structure packages
+
+While mopac comes with the distribution, [gaussian](https://gaussian.com/) and/or [Entos Qcore](https://software.entos.ai/qcore/documentation/) should be installed by the user.
+
+{: .highlight }   
+Entos Qcore, which is free for academia, can be easily installed following these steps:
+
+1. Install [miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
+2. Add the following line to `$HOME/.condarc`{: .language-bash .highlight}, creating the file if not present:
+```bash
+auto_activate_base: false
+```
+which avoids activation of base environment.   
+3. Install qcore version 0.8.14 in the conda environment qcore-0.8.14-env:
+```bash
+conda create -n qcore-0.8.14-env -c entos -c conda-forge qcore==0.8.14 'tbb<2021'
+```
+4. Activate the newly created environment:
+```bash
+conda activate qcore-0.8.14-env
+```
+5. After installation, each user will be asked to read the Software License Agreement to generate a unique token:
+```bash
+qcore --academic-license
+```
+
+### Installing `amk_tools`
+
+Installing`amk_tools` is strongly recommended for result analysis. 
+
+You can install this Python package by following the instructions provided [here](https://github.com/dgarayr/amk_tools)
+
 ## 3. Singularity container <a name="singularity"></a>
 If singularity is already installed in your
 computer, you can obtain the container from sylabs. First check the
@@ -158,36 +191,3 @@ every time it is executed. To list the instances use:
 singularity instance list
 ```
 And stop them as indicated above.
-
-### Installing other electronic structure packages
-
-While mopac comes with the distribution, [gaussian](https://gaussian.com/) and/or [Entos Qcore](https://software.entos.ai/qcore/documentation/) should be installed by the user.
-
-{: .highlight }   
-Entos Qcore, which is free for academia, can be easily installed following these steps:
-
-1. Install [miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
-2. Add the following line to `$HOME/.condarc`{: .language-bash .highlight}, creating the file if not present:
-```bash
-auto_activate_base: false
-```
-which avoids activation of base environment.   
-3. Install qcore version 0.8.14 in the conda environment qcore-0.8.14-env:
-```bash
-conda create -n qcore-0.8.14-env -c entos -c conda-forge qcore==0.8.14 'tbb<2021'
-```
-4. Activate the newly created environment:
-```bash
-conda activate qcore-0.8.14-env
-```
-5. After installation, each user will be asked to read the Software License Agreement to generate a unique token:
-```bash
-qcore --academic-license
-```
-
-### Installing `amk_tools`
-
-Installing`amk_tools` is strongly recommended for result analysis. 
-
-You can install this Python package by following the instructions provided [here](https://github.com/dgarayr/amk_tools)
-
