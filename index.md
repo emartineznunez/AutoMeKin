@@ -78,32 +78,6 @@ needed:
 [ASE>= 3.21.1](https://wiki.fysik.dtu.dk/ase/install.html), [Matplotlib>= 3.3.4](https://matplotlib.org/stable/users/installing/index.html), [NetworkX>= 2.5](https://networkx.org/documentation/stable/install.html), [NumPy>= 1.19.5](https://numpy.org/install/), [SciPy>= 1.5.4](https://scipy.org/install/), [amk_tools](https://github.com/dgarayr/amk_tools)
 
 
-### Installing other electronic structure packages
-
-While mopac comes with the distribution, [gaussian](https://gaussian.com/) and/or [Entos Qcore](https://software.entos.ai/qcore/documentation/) should be installed by the user.
-
-{: .highlight }   
-Entos Qcore, which is free for academia, can be easily installed following these steps:
-
-1. Install [miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
-2. Add the following line to `$HOME/.condarc`{: .language-bash .highlight}, creating the file if not present:
-```bash
-auto_activate_base: false
-```
-which avoids activation of base environment.   
-3. Install qcore version 0.8.14 in the conda environment qcore-0.8.14-env:
-```bash
-conda create -n qcore-0.8.14-env -c entos -c conda-forge qcore==0.8.14 'tbb<2021'
-```
-4. Activate the newly created environment:
-```bash
-conda activate qcore-0.8.14-env
-```
-5. After installation, each user will be asked to read the Software License Agreement to generate a unique token:
-```bash
-qcore --academic-license
-```
-
 ### Installing AutoMeKin
 
 Once the above packages are installed, you can now install AutoMeKin
@@ -185,7 +159,31 @@ singularity instance list
 ```
 And stop them as indicated above.
 
+### Installing other electronic structure packages
 
+While mopac comes with the distribution, [gaussian](https://gaussian.com/) and/or [Entos Qcore](https://software.entos.ai/qcore/documentation/) should be installed by the user.
+
+{: .highlight }   
+Entos Qcore, which is free for academia, can be easily installed following these steps:
+
+1. Install [miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
+2. Add the following line to `$HOME/.condarc`{: .language-bash .highlight}, creating the file if not present:
+```bash
+auto_activate_base: false
+```
+which avoids activation of base environment.   
+3. Install qcore version 0.8.14 in the conda environment qcore-0.8.14-env:
+```bash
+conda create -n qcore-0.8.14-env -c entos -c conda-forge qcore==0.8.14 'tbb<2021'
+```
+4. Activate the newly created environment:
+```bash
+conda activate qcore-0.8.14-env
+```
+5. After installation, each user will be asked to read the Software License Agreement to generate a unique token:
+```bash
+qcore --academic-license
+```
 
 
 
