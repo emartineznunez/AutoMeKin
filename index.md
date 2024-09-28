@@ -189,5 +189,5 @@ qcore --academic-license
 
 Installing`amk_tools` is strongly recommended for result analysis. 
 
-
+You can install this Python package by following the instructions provided [here](https://github.com/dgarayr/amk_tools)
 
