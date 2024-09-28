@@ -74,7 +74,7 @@ where 2 , 4 and 7 are the labels of the TSs to be removed for the LL calculation
 
 ## Modifying the reaction network<a name="trxn"></a>
 
-If the algorithm to identify conformational isomers fails, the following steps can be taken:
+Although unlikely, the algorithm for identifying conformational isomers may fail. The conformer families are stored in the `MINinfo` and `TSinfo` files within the `FINALDIR` folder. If one or more conformers are mistakenly assigned, the user can follow these steps to modify them:
 
 1. Modify the families of conformational isomers in the files `tsdirXL_molecule/working/conf_isomer.out` and/or `tsdirXL_molecule/working/conf_isomer_ts.out` as needed $\scriptstyle{(}$X = H,L$\scriptstyle{)}$.
 2. Then, run the script `tweak_rxnet.sh` for low-level or `TWEAK_RXNET.sh` for high-level adjustments, respectively.
