@@ -1,5 +1,5 @@
 ---
-title: Publications utilizing AutoMeKin since 2021
+title: Publications utilizing AutoMeKin
 layout: home
 nav_order: 6
 ---
