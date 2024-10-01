@@ -4,7 +4,7 @@ layout: home
 nav_order: 6
 ---
 
-# Works published from 2021
+# Publications utilizing AutoMeKin since 2021
 
 The following works employ AutoMeKin or its algorithms:
 
