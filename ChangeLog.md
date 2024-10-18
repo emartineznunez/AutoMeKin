@@ -2,6 +2,7 @@
 
 | Date | 	Changes |
 | ----------	 | ----------|
+|10/18/2024|	createMat.py, Heuristics.py, mopacamk.py and tag_prod.py have been updated to avoid futurewarning with networkx3.0|
 |09/26/2024|	New keyword: <code>timeout</code>. This is used for jobs taking more than a certain time, and known to fail.|
 |06/24/2024|	Fixed a bug in <code>IRC.sh</code> and added keyword <code>MaxBO</code> to set the maximum bond order for breaking a bond |
 |06/05/2024|    <code>mopacamk</code> changed to make it compatible with ASE's newest version. FutureWarnings from locate_barrless to barrless.err|
