@@ -237,7 +237,7 @@ class MOPACamk(FileIOCalculator):
                         self.bond_order.append(str(b_o[i][j]))
                 break
             elif bo == 1 and len(line.split()) > 2:
-                if re.search("\) ",line): ind0 = int(line.split()[0]) -1
+                if re.search(r'\) ',line): ind0 = int(line.split()[0]) -1
                 for k in (x for x in range(len(line.split())) if x%3==0): 
                     ind1 = int(line.split()[k])-1
                     if ind1 != ind0: b_o[ind0][ind1] = line.split()[k+2]

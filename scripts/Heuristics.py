@@ -116,7 +116,7 @@ def comb_process(comb):
     for ele in comb[1]: G.remove_edge(ind[ele],jnd[ele])
     ##Check valencies and stuff
     if CheckMove(G):
-        A   = nx.adjacency_matrix(G) ; Ap  = A.toarray()
+        Ap  = nx.to_numpy_array(G) 
         for z in range(natom): Ap[z][z] = aton[z]
         Ats = 0.5 * (Ar + Ap)
         tag = sorted( [np.round(elem,3) for elem in np.linalg.eigvals(Ats) ] )
@@ -235,7 +235,7 @@ for i in act_dist:
         if add_bond and dij < startd: act_form.append(i)
 
 G_orig = G.copy() 
-A  = nx.adjacency_matrix(G) ; Ar = A.toarray()
+Ar  = nx.to_numpy_array(G) 
 for z in range(natom): Ar[z][z] = aton[z]
 nts = 0 ; dict_ts = {} 
 

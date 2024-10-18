@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-from networkx import Graph, adjacency_matrix
+from networkx import Graph, adjacency_matrix, to_numpy_array
 from sys import argv
 from ase.io import read
 import numpy as np
 from AMK_parameters import cov_rad, vdw_rad
+import csv 
 
 def get_G_index(rmol,weig,na,prt):
     '''
@@ -31,11 +32,9 @@ def get_G_index(rmol,weig,na,prt):
                 G2.add_edge(i,j,weight=weight)
     #Printing connectivity matrix(ces)
     if prt and weig >=2:
-        A = adjacency_matrix(G2) 
-        for line in np.matrix(A.toarray()): np.savetxt(cm, line, fmt='%.5f')
+        np.savetxt(cm, to_numpy_array(G2), fmt='%.5f')
     if prt and weig !=2:
-        A = adjacency_matrix(G1) 
-        for line in np.matrix(A.toarray()): np.savetxt(cm, line, fmt='%.0f')
+        np.savetxt(cm, to_numpy_array(G1), fmt='%.0f')
     return G1,ind,jnd,ibn,jbn
 
 if __name__ == '__main__':
