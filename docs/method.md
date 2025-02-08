@@ -153,7 +153,7 @@ CK_minima all
 {: .important }   
 <code>MaxBoF/MaxBoB value</code>   
 [<code>value</code> is an integer; default value: <code>2</code>]   
-<code>value</code> is the maximum number of bonds formed (n<sub>F</sub>)/broken (<sub>nB</sub>) to make all possible (n<sub>F</sub>,n<sub>B</sub>) combinations for Graph transformations.
+<code>value</code> is the maximum number of bonds formed (n<sub>F</sub>)/broken (n<sub>B</sub>) to make all possible (n<sub>F</sub>,n<sub>B</sub>) combinations for Graph transformations.
 
 {: .important }   
 <code>comb22 value</code>   
