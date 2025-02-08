@@ -8,7 +8,7 @@ nav_order: 6
 
 The following works employ AutoMeKin or its algorithms:
 
-- [Combus. Flame 2025]([https://www.sciencedirect.com/science/article/pii/S0010218025000343?casa_token=q5CH18tbNgAAAAAA:TMvWSC6z0eyQGmX5Ou-KdUnP4tiK2alAgMIM82hthIMmV9nmJaYAgkeiXJTk_zkmR9cuAm9P](https://doi.org/10.1016/j.combustflame.2025.113996))
+- [Combus. Flame 2025](https://www.sciencedirect.com/science/article/pii/S0010218025000343?casa_token=q5CH18tbNgAAAAAA:TMvWSC6z0eyQGmX5Ou-KdUnP4tiK2alAgMIM82hthIMmV9nmJaYAgkeiXJTk_zkmR9cuAm9P](https://doi.org/10.1016/j.combustflame.2025.113996)
 - [Sci.Adv. 2024](https://www.science.org/doi/10.1126/sciadv.adq4077)
 - [PCCP 2024](https://pubs.rsc.org/en/Content/ArticleLanding/2024/CP/D4CP01453G)
 - [CPC 2024](https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cphc.202301001)
