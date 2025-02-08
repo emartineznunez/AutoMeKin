@@ -13,7 +13,7 @@ example, we have the following:
 ```
 --Method--
 sampling MD
-ntraj    10 
+ntraj    10 dagadg
 ```
 
 List of <code>Keyword value(s)</code> for this section:
