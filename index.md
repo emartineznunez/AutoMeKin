@@ -40,8 +40,8 @@ bash Build_micromamba.sh
 ```
 
 {: .highlight }    
-`Build_micromamba.sh` should be executed only when installing a new version or when using the code for the first time.   
-After successfully creating the environment, you must activate it and load the `AutoMeKin` module. These four instructions will be displayed once the build process is complete. For your convenience, you can copy these sentences into a script or file.
+`Build_micromamba.sh` should be run only when installing a new version or using the code for the first time.   
+Once the environment is successfully created, you must activate it and load the `AutoMeKin` module. These four instructions will be displayed once the build process is complete. For convenience, you can copy them into a file for future use.
 
 Before using `qcore` for the first time, remember to agree to the Software License Agreement and to set your token by running:
 
