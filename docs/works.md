@@ -8,6 +8,7 @@ nav_order: 6
 
 The following works employ AutoMeKin or its algorithms:
 
+- [JCIM 2025](https://pubs.acs.org/doi/full/10.1021/acs.jcim.5c01286?casa_token=ZGgf41-Nw9AAAAAA%3A-5_nAtXP2pLmgOAsHddot-zxUmq24Sx2f7LLjLr9V3okwZXsCECLTMhtt8yqz2BuSHSKQjDWpNo9Qgs)
 - [CEJ 2025](https://www.sciencedirect.com/science/article/pii/S1385894725100910)
 - [JCC 2025](https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.70151)
 - [PCCP 2025](https://pubs.rsc.org/en/content/articlelanding/2025/cp/d5cp01690h)
