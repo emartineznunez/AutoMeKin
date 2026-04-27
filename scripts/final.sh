@@ -34,7 +34,7 @@ elif [ $rate -eq 1 ]; then
    postb="E$energy"
    units="ps"
 else
-   echo "No kinetics: please specify Temperature or Energy in the input file"
+   echo "Cannot calculate kinetics: Temperature or Energy not specified in input file"
    postb=""
    units=""
 fi

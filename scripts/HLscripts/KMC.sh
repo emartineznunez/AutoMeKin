@@ -63,7 +63,7 @@ if [ $npaths -le 0 ]; then
    exit 1
 fi
 if [ $rate -eq -1 ]; then
-   echo "No kinetics: please specify Temperature or Energy in the input file"
+   echo "Cannot calculate kinetics: Temperature or Energy not specified in input file"
    exit 1
 fi
 if [ $rate -eq 1 ]; then
