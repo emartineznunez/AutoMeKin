@@ -49,8 +49,12 @@ else
 fi
 ##is there any connected path?
 npaths=$(awk 'END{print NR-2}' ${tsdirll}/KMC/$rxnfile)
-if [ $npaths -eq 0 ]; then
+if [ $npaths -le 0 ]; then
    echo "No connected paths"
+   exit 1
+fi
+if [ $rate -eq -1 ]; then
+   echo "No kinetics: please specify Temperature or Energy in the input file"
    exit 1
 fi
 if [ $rate -eq 1 ]; then

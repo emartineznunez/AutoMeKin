@@ -10,6 +10,8 @@ emax = float(sys.argv[3])
 G = nx.Graph()
 inp = open(rxnf, "r")
 for line in inp:
+   if not line.split():
+      continue
    if str(line.split()[0]) == "TS" and float(line.split()[4]) < emax:
       node1 = int(line.split()[7])
       G.add_node(node1)
@@ -27,6 +29,9 @@ islands=list(flatten(islands))
 
 inp = open(rxnf, "r")
 for line in inp:
+   if not line.split():
+      print(line, end='')
+      continue
    if str(line.split()[0]) == "TS":
       if float(line.split()[4]) < emax:
          min1 = int(line.split()[7])

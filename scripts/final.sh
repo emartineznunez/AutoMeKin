@@ -24,7 +24,7 @@ nts=$(wc -l $tslistll | awk '{print $1}')
 if [ $nts -eq 0 ]; then
    echo AMK did not find TSs in this run
    echo Aborting
-q  exit 
+   exit 
 fi
 ###
 if [ $rate -eq 0 ]; then
@@ -33,6 +33,10 @@ if [ $rate -eq 0 ]; then
 elif [ $rate -eq 1 ]; then
    postb="E$energy"
    units="ps"
+else
+   echo "No kinetics: please specify Temperature or Energy in the input file"
+   postb=""
+   units=""
 fi
 ##
 
@@ -378,7 +382,9 @@ cd ${final}
 #   #gnuplot <Energy_profile.gnu>Energy_profile.pdf
 #fi
 ##Create csv file
-awk '/Time/,0 {for(i=1;i<=NF-1;i++) printf "%s, ",$i;print $NF}' kinetics$postb > kinetics.csv
+if [ -f kinetics$postb ]; then
+   awk '/Time/,0 {for(i=1;i<=NF-1;i++) printf "%s, ",$i;print $NF}' kinetics$postb > kinetics.csv
+fi
 ##End of create csv file
 #####################################################^
 rm -rf population${postb}.gnu pop_data* kinetics$postb

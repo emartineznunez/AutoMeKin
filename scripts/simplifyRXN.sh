@@ -57,7 +57,7 @@ if(p==1) print n[NR]
 cat $tsdir/KMC/RXNet_long.cg_groupedprods tmp_grothzts | awk 'NR<=2{print $0} 
 {if($1=="TS") {ts=$2;line[ts]=$0}}
 {if(NF==1) {++npath
-    if(npath<=100) print line[$1]
+    if(npath<=100 && length(line[$1])>0) print line[$1]
     }
 }' > tmp2 
 #Once relevant file has been limited to the most important 100 rxns, make sure those 100 rxns are connected:
