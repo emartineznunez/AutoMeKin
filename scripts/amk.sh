@@ -273,6 +273,13 @@ do
        elif [[ ("$fi" -eq -4) ]]; then
           printf "     Pt%2s: failed-->EF algorithm was unable to optimize a TS\n" $npo
           continue
+       fi
+       if [[ -z "$ei" || -z "$emaxts" || "$ei" == "nan" || "$emaxts" == "nan" ]]; then
+          printf "     Pt%2s: failed-->invalid energy values ei=%s emaxts=%s\n" $npo "$ei" "$emaxts"
+          continue
+       elif ! [[ "$ei" =~ ^[+-]?[0-9]+([.][0-9]+)?([eE][+-]?[0-9]+)?$ ]] || ! [[ "$emaxts" =~ ^[+-]?[0-9]+([.][0-9]+)?([eE][+-]?[0-9]+)?$ ]]; then
+          printf "     Pt%2s: failed-->invalid energy values ei=%s emaxts=%s\n" $npo "$ei" "$emaxts"
+          continue
        elif (( $(echo "$ei > $emaxts" |bc -l) )); then
           printf "     Pt%2s: TS optimized but not added-->E=%20s > %20s \n" $npo $ei $emaxts
           continue

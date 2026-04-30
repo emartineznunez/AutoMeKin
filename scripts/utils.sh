@@ -534,8 +534,15 @@ if [ $sampling -lt 30 ]; then
    else
       xyz_exists=1
 ##remove second line if it exists
+      tmpfile=$(mktemp)
       awk 'NR==1{natom=$1;print natom"\n";getline
-           for(i=1;i<=natom;i++) {getline; print $1,$2,$3,$4} }' ${molecule}.xyz > tmp && mv tmp ${molecule}.xyz 
+           for(i=1;i<=natom;i++) {getline; print $1,$2,$3,$4} }' ${molecule}.xyz > "$tmpfile"
+      if [ ! -s "$tmpfile" ]; then
+         echo "Error cleaning ${molecule}.xyz: output file is empty. Please check the original XYZ format."
+         rm -f "$tmpfile"
+         exit 1
+      fi
+      mv "$tmpfile" ${molecule}.xyz
 ##create reference distances : cov
    fi
 else
@@ -544,16 +551,30 @@ else
       exit 1
    else
 ##remove second line if it exists
+      tmpfile=$(mktemp)
       awk 'NR==1{natom=$1;print natom"\n";getline
-           for(i=1;i<=natom;i++) {getline; print $1,$2,$3,$4} }' ${frA}.xyz > tmp && mv tmp ${frA}.xyz 
+           for(i=1;i<=natom;i++) {getline; print $1,$2,$3,$4} }' ${frA}.xyz > "$tmpfile"
+      if [ ! -s "$tmpfile" ]; then
+         echo "Error cleaning ${frA}.xyz: output file is empty. Please check the original XYZ format."
+         rm -f "$tmpfile"
+         exit 1
+      fi
+      mv "$tmpfile" ${frA}.xyz
   fi
    if [ ! -f ${frB}.xyz ]; then
       echo $frB".xyz does not exist"
       exit 1
    else
 ##remove second line if it exists
+      tmpfile=$(mktemp)
       awk 'NR==1{natom=$1;print natom"\n";getline
-           for(i=1;i<=natom;i++) {getline; print $1,$2,$3,$4} }' ${frB}.xyz > tmp && mv tmp ${frB}.xyz 
+           for(i=1;i<=natom;i++) {getline; print $1,$2,$3,$4} }' ${frB}.xyz > "$tmpfile"
+      if [ ! -s "$tmpfile" ]; then
+         echo "Error cleaning ${frB}.xyz: output file is empty. Please check the original XYZ format."
+         rm -f "$tmpfile"
+         exit 1
+      fi
+      mv "$tmpfile" ${frB}.xyz
    fi
    if [ -f ${molecule}.xyz ]; then
       xyz_exists=1
