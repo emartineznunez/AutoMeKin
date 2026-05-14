@@ -94,16 +94,20 @@ if [ -f tsdir${tag}_${molecule}/min_diss.inp ]; then
       fi
       echo "Found $nchan possible channels"
 ###EMN
-      doparallel "runbarless.sh {1} $molecule $cwd $e0" "$(seq 1 $nchan)"
+      doparallel "runbarless.sh {1} $molecule $cwd $e0" "$(seq 1 $nchan)" || true
       #echo "threshold $emaxts kcal/mol"
       for chan in $(seq $nchan)
       do
          l1=$(awk 'NR=='$chan'{print $2+1}' tsdir${tag}_${molecule}/ts_bonds.inp)
          l2=$(awk 'NR=='$chan'{print $3+1}' tsdir${tag}_${molecule}/ts_bonds.inp)
          echo "Channel ${chan}: breakage of bond ${l1}-${l2}"
-         if [ $(awk 'BEGIN{a=0};/Abort/{a=1};END{print a}' batch${chan}/amk.log ) -eq 1 ]; then 
+         if [ ! -f batch${chan}/amk.log ]; then
+            echo "Channel ${chan}: timed out or failed before producing output, skipping"
+            continue
+         fi
+         if [ $(awk 'BEGIN{a=0};/Abort/{a=1};END{print a}' batch${chan}/amk.log ) -eq 1 ]; then
             grep -B1 Abort batch${chan}/amk.log | awk 'NR==1'
-            continue 
+            continue
          fi
          if [ -f batch${chan}/prod.xyz ]; then
             cat batch${chan}/prod.xyz | awk '{if(NR==2) {print ""} else print $1,$2,$3,$4}' > tmp_geom 
