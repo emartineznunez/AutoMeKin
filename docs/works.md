@@ -8,13 +8,14 @@ nav_order: 6
 
 The following works employ AutoMeKin or its algorithms:
 
+- [PCCP_2 2026](https://doi.org/10.1039/d6cp03002e)
 - [Fuel_2 2026](https://www.sciencedirect.com/science/article/pii/S0016236126025007)
 - [Pharm 2026](https://www.mdpi.com/1424-8247/19/7/1108)
 - [Fuel_1 2026](https://www.sciencedirect.com/science/article/pii/S0016236126021307#b0360)
 - [sm. struct. 2026](https://onlinelibrary.wiley.com/doi/10.1002/sstr.70504?fbclid=IwY2xjawSpoN1leHRuA2FlbQIxMABicmlkETFFdEVic1JyU2dTMldaenJMc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHrKmLCweCP3sBNgEg0ELJ6ssIrRN13Qxm037lWEb5rlBVJt5TjUCxAahza7t_aem_n_PDmYLvNdAh2a51BqlVrw)
 - [Combus. Flame 2026](https://www.sciencedirect.com/science/article/abs/pii/S0010218026003329)
 - [Book Chapter 2026](https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780443265969000144?via%3Dihub)
-- [PCCP 2026](https://pubs.rsc.org/en/content/articlelanding/2026/cp/d6cp00606j)
+- [PCCP_1 2026](https://pubs.rsc.org/en/content/articlelanding/2026/cp/d6cp00606j)
 - [CPC 2026](https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cphc.202500844)
 - [ApJ 2026](https://iopscience.iop.org/article/10.3847/1538-4357/ae421d)
 - [JML 2025](https://www.sciencedirect.com/science/article/pii/S0167732225016654)
