@@ -1,8 +1,6 @@
-
-
 ## Ongoing Development: AutoMeKin-X
 
-Major developments of AutoMeKin are currently underway, led by **Omar Rodriguez López**, including the integration of **ORCA** and the use of **machine-learning interatomic potentials (MLIPs)** as computationally efficient alternatives to density functional theory (DFT) for automated reaction discovery.
+Major developments of AutoMeKin are currently underway, led by [Omar Rodriguez López](https://github.com/OmarRodriguezLopez1398), including the integration of [ORCA](https://orcaforum.kofo.mpg.de/) and the use of **machine-learning interatomic potentials (MLIPs)** as computationally efficient alternatives to density functional theory (DFT) for automated reaction discovery.
 
 These new implementations are currently under testing and are available in the [AutoMeKin-X repository](https://github.com/ComputationalChem-USC/AutoMeKin-X).
 
