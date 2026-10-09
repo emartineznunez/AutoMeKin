@@ -1,3 +1,15 @@
+
+
+## Ongoing Development: AutoMeKin-X
+
+Major developments of AutoMeKin are currently underway, led by **Omar Rodriguez López**, including the integration of **ORCA** and the use of **machine-learning interatomic potentials (MLIPs)** as computationally efficient alternatives to density functional theory (DFT) for automated reaction discovery.
+
+These new implementations are currently under testing and are available in the [AutoMeKin-X repository](https://github.com/ComputationalChem-USC/AutoMeKin-X).
+
+For the latest experimental features and ongoing development, please visit the [AutoMeKin-X GitHub repository](https://github.com/ComputationalChem-USC/AutoMeKin-X).
+
+
+
 # Automated Mechanisms and Kinetics (AutoMeKin)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/emartineznunez/AutoMeKin/blob/main/notebooks/AutoMeKin.ipynb)  [![Sylabs - AutoMeKin](https://img.shields.io/badge/Sylabs-AutoMeKin-2ea44f)](https://cloud.sylabs.io/library/emartineznunez/default/automekin) [![DOI](https://zenodo.org/badge/476189550.svg)](https://zenodo.org/doi/10.5281/zenodo.10674957)  [![AutoMeKin - SOURCEFORGE](https://img.shields.io/badge/AutoMeKin-SOURCEFORGE-2ea44f?logo=%23FF6600)](https://sourceforge.net/projects/automekin-rev1140/)
