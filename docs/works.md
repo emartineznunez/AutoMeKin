@@ -8,6 +8,7 @@ nav_order: 6
 
 The following works employ AutoMeKin or its algorithms:
 
+- [ChemRxiv_2026](https://chemrxiv.org/doi/abs/10.26434/chemrxiv.15010937/v1)
 - [JCTC 2026](https://doi.org/10.1021/acs.jctc.6c01565)
 - [PCCP_2 2026](https://doi.org/10.1039/d6cp03002e)
 - [Fuel_2 2026](https://www.sciencedirect.com/science/article/pii/S0016236126025007)
