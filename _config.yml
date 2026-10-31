@@ -8,6 +8,7 @@ remote_theme: just-the-docs/just-the-docs
 # 3. Asegúrate de tener el plugin habilitado en tu sección de plugins
 plugins:
   - jekyll-remote-theme
+  - jekyll-include-cache
 
 aux_links:
   AutoMeKin's Repository: https://github.com/emartineznunez/AutoMeKin
