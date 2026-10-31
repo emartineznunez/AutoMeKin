@@ -1,18 +1,16 @@
 title: AutoMeKin Documentation
 description: Documentation for AutoMeKin
-# theme: just-the-docs
+theme: just-the-docs
 
-
-
-
-
-# 2. Usa remote_theme apuntando al repositorio oficial
-remote_theme: just-the-docs/just-the-docs
-
-# 3. Asegúrate de tener el plugin habilitado en tu sección de plugins
 plugins:
-  - jekyll-remote-theme
   - jekyll-include-cache
+  - jekyll-seo-tag
+
+# Files that must not be processed by Jekyll
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
 
 aux_links:
   AutoMeKin's Repository: https://github.com/emartineznunez/AutoMeKin
