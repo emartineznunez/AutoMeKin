@@ -17,7 +17,12 @@ jobs:
         with:
           ruby-version: '3.3' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          deployment: false
           cache-version: 0 # Increment this number if you need to re-download cached gems
+      
+      - name: Configure and Install Dependencies
+        run: |
+          bundle config unset deployment
+          bundle install --jobs 4 --retry 3
+      
       - name: Build with Jekyll
         run: bundle exec jekyll build
