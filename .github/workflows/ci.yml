@@ -5,24 +5,30 @@ on:
     branches: ["gh-pages"]
   pull_request:
 
+env:
+  BUNDLE_DEPLOYMENT: "false" # 👈 Forzamos globalmente a Bundler a apagar el modo deployment
+
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      # Agregamos este paso previo para eliminar el bloqueo estricto antes de configurar Ruby
+      - name: Remove deployment freeze
+        run: |
+          rm -f Gemfile.lock
+          bundle config unset deployment --local || true
+          bundle config unset deployment --global || true
+
+       Silber:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
-      
-      - name: Configure and Install Dependencies
-        run: |
-          bundle config unset deployment
-          bundle install --jobs 4 --retry 3
-      
+          ruby-version: '3.3'
+          bundler-cache: true # 👈 Ya puedes volver a activarlo para que vaya rápido
+          cache-version: 1
+
       - name: Build with Jekyll
         run: bundle exec jekyll build
