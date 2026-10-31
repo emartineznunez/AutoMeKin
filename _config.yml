@@ -2,11 +2,7 @@ title: AutoMeKin Documentation
 description: Documentation for AutoMeKin
 # theme: just-the-docs
 
-- name: Set up Ruby
-  uses: ruby/setup-ruby@v1
-  with:
-    ruby-version: '3.3' # 👈 Cambia de 3.1.7 a 3.3
-    bundler-cache: true # Esto agiliza la instalación de tus gemas
+
 
 
 
