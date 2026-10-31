@@ -1,8 +1,15 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3.3" # installed by `gem jekyll`
+gem "jekyll", "~> 4.3"
+gem "just-the-docs", "~> 0.10"  # theme
 
-gem "just-the-docs", "0.7.0" # pinned to the current release
+group :jekyll_plugins do
+  gem "jekyll-include-cache"
+  gem "jekyll-seo-tag"
+end
 
-
-gem "jekyll-remote-theme", group: :jekyll_plugins
+# Required by Ruby >= 3.4 (no longer default gems)
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "logger"
